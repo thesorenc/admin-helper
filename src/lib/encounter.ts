@@ -12,13 +12,13 @@ export interface Encounter {
 
 // Walter Reed OMFS attending staff. "Other…" lets the user type a name inline.
 export const ATTENDINGS = [
+  'Dr. Bensing',
   'Dr. Betz',
   'Dr. Combs',
-  'Dr. Bensing',
-  'Dr. Palau',
-  'Dr. Lee',
   'Dr. Dullnig',
   'Dr. Fisher',
+  'Dr. Lee',
+  'Dr. Palau',
   'Dr. Park',
 ]
 export const ANESTHESIA = ['Local only', 'Local + nitrous', 'IV moderate sedation', 'General anesthesia']

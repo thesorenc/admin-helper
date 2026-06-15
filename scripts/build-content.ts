@@ -123,6 +123,7 @@ function build() {
   const components: ParsedComponent[] = []
   const opTemplates: ParsedComponent[] = []
   const skeletons: ParsedComponent[] = []
+  const pullSheets: ParsedComponent[] = []
 
   // 1. Components
   const compDir = join(VAULT, 'Note Templates', 'Components')
@@ -155,11 +156,17 @@ function build() {
     }
   }
 
+  // 4. Pull sheets (team OR setup sheets)
+  const psDir = join(VAULT, 'Note Templates', 'Pull Sheets')
+  for (const f of walk(psDir)) {
+    pullSheets.push(parseFile(f, 'Pull Sheet', ['pullsheet', 'library']))
+  }
+
   // Report
-  const all = [...components, ...opTemplates, ...skeletons]
+  const all = [...components, ...opTemplates, ...skeletons, ...pullSheets]
   const warned = all.filter((c) => c.warnings.length)
   console.log(
-    `Parsed: ${components.length} components, ${opTemplates.length} op templates, ${skeletons.length} skeletons.`,
+    `Parsed: ${components.length} components, ${opTemplates.length} op templates, ${skeletons.length} skeletons, ${pullSheets.length} pull sheets.`,
   )
   for (const c of warned) {
     for (const w of c.warnings) console.warn(`  warn [${c.id}]: ${w}`)
@@ -169,6 +176,7 @@ function build() {
     'components.generated.json': components,
     'optemplates.generated.json': opTemplates,
     'skeletons.generated.json': skeletons,
+    'pullsheets.generated.json': pullSheets,
   }
 
   if (CHECK) {
@@ -194,11 +202,13 @@ import type { ParsedComponent } from '@/lib/types'
 import components from './components.generated.json'
 import opTemplates from './optemplates.generated.json'
 import skeletons from './skeletons.generated.json'
+import pullSheets from './pullsheets.generated.json'
 
 export const COMPONENTS = components as ParsedComponent[]
 export const OP_TEMPLATES = opTemplates as ParsedComponent[]
 export const SKELETONS = skeletons as ParsedComponent[]
-export const ALL_CONTENT = [...COMPONENTS, ...OP_TEMPLATES, ...SKELETONS]
+export const PULL_SHEETS = pullSheets as ParsedComponent[]
+export const ALL_CONTENT = [...COMPONENTS, ...OP_TEMPLATES, ...SKELETONS, ...PULL_SHEETS]
 `
   writeFileSync(join(OUT_DIR, 'index.ts'), index)
   console.log(`Wrote JSON + index to ${relative(process.cwd(), OUT_DIR)}`)

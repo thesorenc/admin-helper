@@ -3,8 +3,10 @@ import type { ParsedComponent } from '@/lib/types'
 import components from './components.generated.json'
 import opTemplates from './optemplates.generated.json'
 import skeletons from './skeletons.generated.json'
+import pullSheets from './pullsheets.generated.json'
 
 export const COMPONENTS = components as ParsedComponent[]
 export const OP_TEMPLATES = opTemplates as ParsedComponent[]
 export const SKELETONS = skeletons as ParsedComponent[]
-export const ALL_CONTENT = [...COMPONENTS, ...OP_TEMPLATES, ...SKELETONS]
+export const PULL_SHEETS = pullSheets as ParsedComponent[]
+export const ALL_CONTENT = [...COMPONENTS, ...OP_TEMPLATES, ...SKELETONS, ...PULL_SHEETS]

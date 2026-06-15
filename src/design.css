@@ -229,6 +229,9 @@ button{font-family:inherit;cursor:pointer}
 .doc-ul{margin:0 0 12px;padding-left:18px}
 .doc-ul li{font-size:13.5px;line-height:1.55;margin-bottom:6px;color:var(--ink-2)}
 .doc-note{background:var(--rose-soft);border:1px solid var(--rose-line);border-radius:10px;padding:12px 14px;margin:0 0 16px;font-size:12.5px;line-height:1.5;color:#7a2e25;font-weight:600}
+.pullsheet-doc{min-height:320px}
+.pullsheet-doc:focus{outline:none;border-color:var(--accent-2);box-shadow:0 0 0 3px var(--accent-soft)}
+.pullsheet-doc:empty::before{content:"Add a procedure to generate the pull sheet.";color:var(--faint)}
 
 /* structured patient handout */
 .sheet h3{font-size:14px;font-weight:800;color:var(--accent-ink);margin:20px 0 8px;display:flex;align-items:center;gap:9px}

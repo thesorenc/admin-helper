@@ -1,5 +1,5 @@
 import type { ParsedComponent } from './types'
-import { OP_TEMPLATES, COMPONENTS } from '@/content'
+import { OP_TEMPLATES, COMPONENTS, PULL_SHEETS } from '@/content'
 
 /**
  * A procedure = one operative template plus the post-op handout(s) and Rx that
@@ -14,6 +14,8 @@ export interface Procedure {
   opTemplateId: string
   postopIds: string[]
   rxIds: string[]
+  /** team OR setup sheet id (undefined if none authored for this procedure) */
+  pullSheetId?: string
   /** true when the post-op pairing is a best-guess worth confirming */
   review: boolean
 }
@@ -78,6 +80,22 @@ function linkFor(op: ParsedComponent): { postop: string[]; rx: string[]; review:
   return { postop: keep([...new Set(postop)]), rx: keep([...new Set(rx)]), review }
 }
 
+const PULL_SHEET_IDS = new Set(PULL_SHEETS.map((p) => p.id))
+function pullSheetFor(op: ParsedComponent): string | undefined {
+  const t = op.title.toLowerCase()
+  const cat = op.category
+  let id: string | undefined
+  if (/arthroscop/.test(t)) id = 'pull-sheet-arthroscopy'
+  else if (/discopexy/.test(t)) id = 'pull-sheet-discopexy'
+  else if (/all-on|subperiosteal/.test(t)) id = 'pull-sheet-all-on-x'
+  else if (cat === 'Orthognathic') id = 'pull-sheet-orthognathic'
+  else if (/hardware/.test(t)) id = 'pull-sheet-hardware-exchange'
+  else if (/cyst|enucleation|excision|ameloblastoma/.test(t)) id = 'pull-sheet-ameloblastoma-ec'
+  else if (/endobrow|midface|facelift/.test(t)) id = 'pull-sheet-endobrow-midface-lift'
+  else if (/blephar|canthopexy|brow/.test(t)) id = 'pull-sheet-endobrow-blepharoplasty'
+  return id && PULL_SHEET_IDS.has(id) ? id : undefined
+}
+
 export const PROCEDURES: Procedure[] = OP_TEMPLATES.map((op) => {
   const { postop, rx, review } = linkFor(op)
   return {
@@ -87,6 +105,7 @@ export const PROCEDURES: Procedure[] = OP_TEMPLATES.map((op) => {
     opTemplateId: op.id,
     postopIds: postop,
     rxIds: rx,
+    pullSheetId: pullSheetFor(op),
     review,
   }
 })
@@ -94,5 +113,5 @@ export const PROCEDURES: Procedure[] = OP_TEMPLATES.map((op) => {
 const BY_ID = new Map(PROCEDURES.map((p) => [p.id, p]))
 export const procedureById = (id: string) => BY_ID.get(id)
 
-const COMP_BY_ID = new Map([...OP_TEMPLATES, ...COMPONENTS].map((c) => [c.id, c]))
+const COMP_BY_ID = new Map([...OP_TEMPLATES, ...COMPONENTS, ...PULL_SHEETS].map((c) => [c.id, c]))
 export const contentById = (id: string) => COMP_BY_ID.get(id)

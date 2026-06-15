@@ -42,7 +42,7 @@ export function Library() {
               <span className="pc-icon">{abbrev(c.title)}</span>
               <span className="pc-body">
                 <span className="pc-name">{c.title}</span>
-                <span className="pc-desc">{c.description ?? c.category}</span>
+                {c.description && <span className="pc-desc">{c.description}</span>}
               </span>
             </button>
           ))}

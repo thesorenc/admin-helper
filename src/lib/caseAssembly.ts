@@ -5,7 +5,7 @@ import { procedureById, contentById } from './procedures'
 import { encounterHeader, type Encounter } from './encounter'
 import type { CaseItem } from '@/state/useCaseStore'
 
-export type DocKind = 'opnote' | 'preop' | 'postop' | 'rx'
+export type DocKind = 'opnote' | 'preop' | 'postop' | 'rx' | 'pullsheet'
 
 export interface CaseDocument {
   text: string
@@ -58,6 +58,23 @@ export function buildDocument(
 
   if (kind === 'preop') {
     return { text: normalizePlainText(PREOP_TEXT), flags: [], smartlinks: [] }
+  }
+
+  if (kind === 'pullsheet') {
+    const ids: string[] = []
+    for (const item of items) {
+      const pid = procedureById(item.procedureId)?.pullSheetId
+      if (pid && !ids.includes(pid)) ids.push(pid)
+    }
+    for (const id of ids) {
+      const comp = contentById(id)
+      if (!comp) continue
+      const r = assemble(comp, {}, { surfaceFlags: true })
+      flags.push(...r.flags)
+      r.smartlinks.forEach((s) => smartlinks.add(s))
+      blocks.push(r.text.trim())
+    }
+    return { text: normalizePlainText(blocks.join('\n\n')), flags, smartlinks: [...smartlinks] }
   }
 
   if (kind === 'opnote') {

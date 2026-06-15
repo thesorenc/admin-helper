@@ -66,6 +66,14 @@ describe('caseAssembly — documents', () => {
     expect(clinic).not.toBe(or)
   })
 
+  it('pull sheet assembles for a procedure that has one', () => {
+    const proc = PROCEDURES.find((p) => p.pullSheetId)
+    expect(proc).toBeTruthy()
+    const { text } = buildDocument([{ instanceId: 'a', procedureId: proc!.id }], {}, enc, 'pullsheet')
+    expect(text.toUpperCase()).toContain('PULL SHEET')
+    expect(text.toUpperCase()).toContain('CONSUMABLES')
+  })
+
   it('smartlinks list does not include unfilled app fields', () => {
     const proc = PROCEDURES.find((p) => contentById(p.opTemplateId)!.fields.length > 0)!
     const { smartlinks } = buildDocument([{ instanceId: 'a', procedureId: proc.id }], {}, enc, 'opnote')

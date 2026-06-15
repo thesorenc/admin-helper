@@ -4,6 +4,75 @@ import type { ReactNode } from 'react'
 // document. The COPY/DOWNLOAD paths still use the raw text — this is display only.
 
 const SECTION_LABEL = /^([A-Z][A-Z0-9 ()/&.-]{1,34}):\s+(.*)$/s
+const LABEL_LINE = /^[A-Z0-9 ()/&.-]{2,40}:?$/
+
+function esc(s: string): string {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+}
+
+/**
+ * Same block logic as formatBlocks, but emits an escaped HTML string for use in a
+ * contentEditable region (editable, well-formatted pull sheets that print cleanly).
+ */
+export function formatHtml(text: string): string {
+  const out: string[] = []
+  text
+    .split(/\n{2,}/)
+    .map((b) => b.trimEnd())
+    .filter(Boolean)
+    .forEach((blk) => {
+      const lines = blk.split('\n')
+      if (/^===\s*UNRESOLVED/m.test(blk) || /^Missing \/ to confirm:/i.test(blk)) {
+        out.push(`<div class="doc-note">${esc(blk)}</div>`)
+        return
+      }
+      if (lines.length >= 2 && lines.every((l) => /^[A-Za-z][A-Za-z ()/-]{0,34}:\s+\S/.test(l))) {
+        const rows = lines
+          .map((l) => {
+            const i = l.indexOf(':')
+            return `<div class="doc-kv-row"><span class="k">${esc(l.slice(0, i))}</span><span class="v">${esc(l.slice(i + 1).trim())}</span></div>`
+          })
+          .join('')
+        out.push(`<div class="doc-kv">${rows}</div>`)
+        return
+      }
+      if (/—\s*#\d/.test(lines[0]) && /^-{4,}$/.test(lines[1] ?? '')) {
+        out.push(`<h3 class="doc-h">${esc(lines[0])}</h3>`)
+        const rest = lines.slice(2).join('\n').trim()
+        if (rest) out.push(`<p class="doc-p">${esc(rest)}</p>`)
+        return
+      }
+      if (lines.length > 1 && LABEL_LINE.test(lines[0]) && lines[0] === lines[0].toUpperCase()) {
+        out.push(`<h3 class="doc-h">${esc(lines[0].replace(/:$/, ''))}</h3>`)
+        const rest = lines.slice(1)
+        if (rest.every((l) => /^[-•]\s/.test(l))) {
+          out.push(`<ul class="doc-ul">${rest.map((l) => `<li>${esc(l.replace(/^[-•]\s/, ''))}</li>`).join('')}</ul>`)
+        } else {
+          out.push(`<p class="doc-p">${esc(rest.join('\n'))}</p>`)
+        }
+        return
+      }
+      if (lines.length && lines.every((l) => /^[-•]\s/.test(l))) {
+        const li = lines.map((l) => `<li>${esc(l.replace(/^[-•]\s/, ''))}</li>`).join('')
+        out.push(`<ul class="doc-ul">${li}</ul>`)
+        return
+      }
+      if (lines.length === 1 && LABEL_LINE.test(lines[0])) {
+        out.push(`<h3 class="doc-h">${esc(lines[0].replace(/:$/, ''))}</h3>`)
+        return
+      }
+      const m = blk.match(SECTION_LABEL)
+      if (m && m[1] === m[1].toUpperCase()) {
+        out.push(`<p class="doc-p"><b>${esc(m[1])}:</b> ${esc(m[2])}</p>`)
+      } else {
+        out.push(`<p class="doc-p">${esc(blk)}</p>`)
+      }
+    })
+  return out.join('\n')
+}
 
 function paragraph(text: string, cls: string, key: string): ReactNode {
   const m = text.match(SECTION_LABEL)
@@ -79,6 +148,28 @@ export function formatBlocks(text: string, variant: 'doc' | 'sheet'): ReactNode[
         return
       }
 
+      // Section label line followed by its body (bullets or prose)
+      if (lines.length > 1 && LABEL_LINE.test(lines[0]) && lines[0] === lines[0].toUpperCase()) {
+        out.push(
+          <h3 className={hCls} key={key}>
+            {lines[0].replace(/:$/, '')}
+          </h3>,
+        )
+        const rest = lines.slice(1)
+        if (rest.every((l) => /^[-•]\s/.test(l))) {
+          out.push(
+            <ul className={ulCls} key={key + 'u'}>
+              {rest.map((l, j) => (
+                <li key={j}>{l.replace(/^[-•]\s/, '')}</li>
+              ))}
+            </ul>,
+          )
+        } else {
+          out.push(paragraph(rest.join('\n'), pCls ?? '', key + 'p'))
+        }
+        return
+      }
+
       // Bullet list
       if (lines.length && lines.every((l) => /^[-•]\s/.test(l))) {
         out.push(
@@ -92,7 +183,7 @@ export function formatBlocks(text: string, variant: 'doc' | 'sheet'): ReactNode[
       }
 
       // Standalone all-caps section label
-      if (lines.length === 1 && /^[A-Z0-9 ()/&.-]{2,40}:?$/.test(lines[0])) {
+      if (lines.length === 1 && LABEL_LINE.test(lines[0])) {
         out.push(
           <h3 className={hCls} key={key}>
             {lines[0].replace(/:$/, '')}

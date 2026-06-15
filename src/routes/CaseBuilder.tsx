@@ -4,6 +4,7 @@ import { buildDocument, type DocKind } from '@/lib/caseAssembly'
 import { useCaseStore } from '@/state/useCaseStore'
 import { FieldRenderer } from '@/components/FieldRenderer'
 import { OutputPanel } from '@/components/OutputPanel'
+import { EditableOutput } from '@/components/EditableOutput'
 import { EncounterBar } from '@/components/EncounterBar'
 
 function abbrev(title: string): string {
@@ -30,6 +31,7 @@ const TABS: { kind: DocKind; label: string }[] = [
   { kind: 'preop', label: 'Pre-op' },
   { kind: 'postop', label: 'Post-op' },
   { kind: 'rx', label: 'Rx' },
+  { kind: 'pullsheet', label: 'Pull sheet' },
 ]
 
 export function CaseBuilder() {
@@ -79,7 +81,6 @@ export function CaseBuilder() {
                   <span className="pc-icon">{abbrev(p.name)}</span>
                   <span className="pc-body">
                     <span className="pc-name">{p.name}</span>
-                    <span className="pc-desc">{p.category}</span>
                   </span>
                   {count > 0 ? <span className="pc-count">{count}</span> : <span className="pc-add">+</span>}
                 </button>
@@ -193,6 +194,8 @@ export function CaseBuilder() {
               <p>Add a procedure to generate the Operative Note, Pre-op, Post-op handout, and Rx.</p>
             </div>
           </div>
+        ) : tab === 'pullsheet' ? (
+          <EditableOutput key={tab} text={doc.text} filename="pull-sheet.txt" />
         ) : (
           <OutputPanel
             key={tab}

@@ -47,7 +47,7 @@ export interface FlagAnnotation {
   text: string
 }
 
-export type ComponentMode = 'postop' | 'opnote' | 'clinical' | 'library'
+export type ComponentMode = 'postop' | 'opnote' | 'clinical' | 'library' | 'pullsheet'
 
 export interface ParsedComponent {
   /** Slug of filename, e.g. 'post-op-instructions-orif'. */

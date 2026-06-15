@@ -10,12 +10,6 @@ export default function App() {
   return (
     <div className="app">
       <header className="topbar no-print">
-        <NavLink to="/" className="brand">
-          <span className="mark">Om</span>
-          OMFS Notes
-          <span className="sub">· Admin Helper</span>
-        </NavLink>
-        <div className="spacer" />
         <nav className="topnav">
           {tabs.map((t) => (
             <NavLink
