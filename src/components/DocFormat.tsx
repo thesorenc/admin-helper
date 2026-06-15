@@ -39,7 +39,7 @@ export function formatHtml(text: string): string {
         out.push(`<div class="doc-kv">${rows}</div>`)
         return
       }
-      if (/—\s*#\d/.test(lines[0]) && /^-{4,}$/.test(lines[1] ?? '')) {
+      if (/[—-]\s*#\d/.test(lines[0]) && /^-{4,}$/.test(lines[1] ?? '')) {
         out.push(`<h3 class="doc-h">${esc(lines[0])}</h3>`)
         const rest = lines.slice(2).join('\n').trim()
         if (rest) out.push(`<p class="doc-p">${esc(rest)}</p>`)
@@ -136,8 +136,8 @@ export function formatBlocks(text: string, variant: 'doc' | 'sheet'): ReactNode[
         return
       }
 
-      // Procedure header: "Name — #n" then a dashed rule
-      if (/—\s*#\d/.test(lines[0]) && /^-{4,}$/.test(lines[1] ?? '')) {
+      // Procedure header: "Name - #n" then a dashed rule
+      if (/[—-]\s*#\d/.test(lines[0]) && /^-{4,}$/.test(lines[1] ?? '')) {
         out.push(
           <h3 className={hCls} key={key}>
             {lines[0]}

@@ -8,7 +8,7 @@
   --ink:#1b231f;
   --ink-2:#3c4742;
   --muted:#5f6862; /* darkened for WCAG AA on surface-2 */
-  --faint:#727b75; /* darkened for WCAG AA */
+  --faint:#686f69; /* darkened to ~4.9:1 for WCAG AA on small text */
   --line:#e7e3da;
   --line-2:#efece4;
   --accent:#3a6b4c;
@@ -228,7 +228,7 @@ button{font-family:inherit;cursor:pointer}
 .doc-p{font-size:13.5px;line-height:1.64;margin:0 0 10px;color:var(--ink-2);white-space:pre-wrap}
 .doc-ul{margin:0 0 12px;padding-left:18px}
 .doc-ul li{font-size:13.5px;line-height:1.55;margin-bottom:6px;color:var(--ink-2)}
-.doc-note{background:var(--rose-soft);border:1px solid var(--rose-line);border-radius:10px;padding:12px 14px;margin:0 0 16px;font-size:12.5px;line-height:1.5;color:#7a2e25;font-weight:600}
+.doc-note{background:var(--amber-soft);border:1px solid #ecdcbd;border-radius:10px;padding:12px 14px;margin:0 0 16px;font-size:12.5px;line-height:1.5;color:#5e4a25;font-weight:600;white-space:pre-wrap}
 .pullsheet-doc{min-height:320px}
 .pullsheet-doc:focus{outline:none;border-color:var(--accent-2);box-shadow:0 0 0 3px var(--accent-soft)}
 .pullsheet-doc:empty::before{content:"Add a procedure to generate the pull sheet.";color:var(--faint)}
@@ -281,5 +281,8 @@ button{font-family:inherit;cursor:pointer}
   .pane.output{border:none;position:static;transform:none;width:auto}
   .out-scroll{padding:0;overflow:visible}
   .sheet,.emr,.doc{border:none;box-shadow:none;max-width:none;padding:0}
+  /* keep headings with their content and avoid splitting list items / kv rows across pages */
+  .doc-h,.sheet h3{break-after:avoid;page-break-after:avoid}
+  .doc-kv,.doc-kv-row,.doc-ul li,.sheet ul li,.doc-note{break-inside:avoid;page-break-inside:avoid}
   @page{margin:18mm}
 }

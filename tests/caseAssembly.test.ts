@@ -58,12 +58,16 @@ describe('caseAssembly — documents', () => {
     expect(text.toLowerCase()).toMatch(/wire cutter/)
   })
 
-  it('Rx pain regimen follows the setting (OR -> inpatient)', () => {
-    const proc = PROCEDURES.find((p) => p.rxIds.length > 0)!
+  it('Rx does not double the pain regimen or vary by setting (no auto-append)', () => {
+    // The pain/opioid regimen lives inside the linked Rx component(s). caseAssembly must
+    // NOT also append a second pain set — that would print overlapping NSAID+opioid orders.
+    const proc = PROCEDURES.find((p) => p.rxIds.includes('post-op-rx'))!
     const items: CaseItem[] = [{ instanceId: 'a', procedureId: proc.id }]
     const clinic = buildDocument(items, {}, { ...enc, setting: 'Clinic' }, 'rx').text
     const or = buildDocument(items, {}, { ...enc, setting: 'OR' }, 'rx').text
-    expect(clinic).not.toBe(or)
+    expect(clinic).toBe(or) // setting no longer injects a second regimen
+    const opioidHits = (clinic.toLowerCase().match(/oxycodone/g) ?? []).length
+    expect(opioidHits).toBeLessThanOrEqual(1) // not double-dosed
   })
 
   it('pull sheet assembles for a procedure that has one', () => {

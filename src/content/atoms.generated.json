@@ -1227,8 +1227,7 @@
     "links": {
       "pullSheet": "pull-sheet-orthognathic",
       "postop": [
-        "post-op-instructions-orif",
-        "post-op-instructions-mmf"
+        "post-op-instructions-orif"
       ],
       "rx": [
         "post-op-rx"
@@ -1312,8 +1311,7 @@
       "pullSheet": "pull-sheet-orthognathic",
       "postop": [
         "post-op-instructions-orif",
-        "sinus-precautions",
-        "post-op-instructions-mmf"
+        "sinus-precautions"
       ],
       "rx": [
         "post-op-rx"
@@ -2826,8 +2824,7 @@
     "smartlinks": [],
     "links": {
       "postop": [
-        "post-op-instructions-orif",
-        "post-op-instructions-mmf"
+        "post-op-instructions-orif"
       ],
       "rx": [
         "post-op-rx",

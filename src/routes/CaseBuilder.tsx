@@ -1,6 +1,8 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { ATOMS } from '@/content'
 import { PROCEDURES, procedureById, contentById } from '@/lib/procedures'
 import { buildDocument, type DocKind } from '@/lib/caseAssembly'
+import { makeSearch } from '@/lib/search'
 import { useCaseStore } from '@/state/useCaseStore'
 import { FieldRenderer } from '@/components/FieldRenderer'
 import { OutputPanel } from '@/components/OutputPanel'
@@ -35,15 +37,24 @@ const TABS: { kind: DocKind; label: string }[] = [
 ]
 
 export function CaseBuilder() {
-  const { items, values, encounter, add, remove, setValue, setEncounter, countOf } = useCaseStore()
+  const { items, values, encounter, add, remove, setValue, setEncounter, countOf, reset } =
+    useCaseStore()
   const [tab, setTab] = useState<DocKind>('opnote')
   const [q, setQ] = useState('')
   const [drawerOpen, setDrawerOpen] = useState(false)
 
+  const fuse = useMemo(() => makeSearch(ATOMS), [])
+
+  useEffect(() => {
+    if (!drawerOpen) return
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setDrawerOpen(false)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [drawerOpen])
+
   const groups = useMemo(() => {
-    const filtered = q.trim()
-      ? PROCEDURES.filter((p) => p.name.toLowerCase().includes(q.toLowerCase()))
-      : PROCEDURES
+    const matched = q.trim() ? new Set(fuse.search(q).map((r) => r.item.id)) : null
+    const filtered = matched ? PROCEDURES.filter((p) => matched.has(p.id)) : PROCEDURES
     const map = new Map<string, typeof PROCEDURES>()
     for (const p of filtered) {
       const arr = map.get(p.category) ?? []
@@ -51,7 +62,7 @@ export function CaseBuilder() {
       map.set(p.category, arr)
     }
     return [...map.entries()].sort((a, b) => a[0].localeCompare(b[0]))
-  }, [q])
+  }, [q, fuse])
 
   const doc = useMemo(
     () => buildDocument(items, values, encounter, tab),
@@ -99,6 +110,18 @@ export function CaseBuilder() {
               Add procedures from the library and fill the variables. The Op Note, Post-op, and Rx
               documents on the right update instantly. Identifiers stay as EHR placeholders.
             </p>
+            {items.length > 0 && (
+              <button
+                className="btn ghost"
+                style={{ marginTop: 10 }}
+                onClick={() => {
+                  if (window.confirm('Clear the case? This removes all procedures and entered values.'))
+                    reset()
+                }}
+              >
+                Clear case
+              </button>
+            )}
           </div>
 
           <EncounterBar value={encounter} onChange={setEncounter} />
@@ -128,16 +151,16 @@ export function CaseBuilder() {
                       </div>
                       <div className="s">{proc.category}</div>
                     </div>
-                    <button className="res-x" title="Remove" onClick={() => remove(item.instanceId)}>
+                    <button
+                      className="res-x"
+                      aria-label={`Remove ${proc.name}`}
+                      title="Remove"
+                      onClick={() => remove(item.instanceId)}
+                    >
                       ✕
                     </button>
                   </div>
                   <div className="proc-block-body">
-                    {proc.review && (
-                      <div className="flag-note smartlink">
-                        Post-op / Rx pairing for this procedure is a best guess — review before use.
-                      </div>
-                    )}
                     {fields.length ? (
                       <div className="field-grid">
                         {fields.map((f) => (
@@ -169,8 +192,10 @@ export function CaseBuilder() {
           {TABS.map((t) => (
             <button
               key={t.kind}
+              id={`tab-${t.kind}`}
               role="tab"
               aria-selected={tab === t.kind}
+              aria-controls="docs-panel"
               className="out-tab"
               onClick={() => setTab(t.kind)}
             >
@@ -182,30 +207,32 @@ export function CaseBuilder() {
             ✕
           </button>
         </div>
-        {items.length === 0 ? (
-          <div className="empty-out">
-            <div>
-              <div className="eo-mark">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <path d="M14 2v6h6" />
-                </svg>
+        <div id="docs-panel" role="tabpanel" aria-labelledby={`tab-${tab}`} style={{ display: 'contents' }}>
+          {items.length === 0 && tab !== 'preop' ? (
+            <div className="empty-out">
+              <div>
+                <div className="eo-mark">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <path d="M14 2v6h6" />
+                  </svg>
+                </div>
+                <p>Add a procedure to generate the Operative Note, Post-op handout, Rx, and pull sheet.</p>
               </div>
-              <p>Add a procedure to generate the Operative Note, Pre-op, Post-op handout, and Rx.</p>
             </div>
-          </div>
-        ) : tab === 'pullsheet' ? (
-          <EditableOutput key={tab} text={doc.text} filename="pull-sheet.txt" />
-        ) : (
-          <OutputPanel
-            key={tab}
-            text={doc.text}
-            flags={doc.flags}
-            smartlinks={doc.smartlinks}
-            filename={`${tab}.txt`}
-            patientFacing={tab === 'postop' || tab === 'preop'}
-          />
-        )}
+          ) : tab === 'pullsheet' ? (
+            <EditableOutput key={tab} text={doc.text} filename="pull-sheet.txt" />
+          ) : (
+            <OutputPanel
+              key={tab}
+              text={doc.text}
+              flags={doc.flags}
+              smartlinks={doc.smartlinks}
+              filename={`${tab}.txt`}
+              patientFacing={tab === 'postop' || tab === 'preop'}
+            />
+          )}
+        </div>
       </section>
 
       {drawerOpen && <div className="drawer-backdrop no-print" onClick={() => setDrawerOpen(false)} />}

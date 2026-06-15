@@ -60,6 +60,9 @@ export function EditableOutput({ text, filename = 'pull-sheet.txt' }: { text: st
           contentEditable
           suppressContentEditableWarning
           spellCheck={false}
+          role="textbox"
+          aria-multiline="true"
+          aria-label="Editable pull sheet — click to edit, then print"
           ref={ref}
         />
       </div>

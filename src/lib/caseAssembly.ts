@@ -91,9 +91,14 @@ export function buildDocument(
       })
       flags.push(...r.flags)
       r.smartlinks.forEach((s) => smartlinks.add(s))
-      // Strip the snippet's own "PROCEDURE:" line; the "Name - #n" heading names it.
-      const snippet = r.text.trim().replace(/^PROCEDURE:.*\n+/i, '')
-      blocks.push(`${proc.name} — #${idx + 1}\n${'-'.repeat(40)}\n${snippet}`)
+      // Strip the snippet's own "PROCEDURE:" line and the authoring [TEMPLATE: ...] markers;
+      // the "Name - #n" heading names it and the markers shouldn't paste into the EMR.
+      const snippet = r.text
+        .trim()
+        .replace(/^PROCEDURE:.*\n+/i, '')
+        .replace(/\[TEMPLATE:[^\]]*\]\s*/gi, '')
+        .trim()
+      blocks.push(`${proc.name} - #${idx + 1}\n${'-'.repeat(40)}\n${snippet}`)
     })
   } else {
     // Post-op / Rx: dedupe linked component ids across the case.
@@ -104,11 +109,6 @@ export function buildDocument(
       for (const id of kind === 'postop' ? proc.postopIds : proc.rxIds) {
         if (!ids.includes(id)) ids.push(id)
       }
-    }
-    // Rx: append the pain regimen matched to the setting (OR -> inpatient).
-    if (kind === 'rx' && ids.length) {
-      const pain = encounter.setting === 'OR' ? 'pain-inpatient' : 'pain-outpatient'
-      if (!ids.includes(pain)) ids.push(pain)
     }
     for (const id of ids) {
       const comp = contentById(id)

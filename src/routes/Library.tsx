@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { ALL_CONTENT } from '@/content'
 import { makeSearch } from '@/lib/search'
 import { exportAutoText, exportMarkdown, downloadText } from '@/lib/export'
@@ -16,6 +16,13 @@ export function Library() {
   const fuse = useMemo(() => makeSearch(ALL_CONTENT), [])
   const results = q.trim() ? fuse.search(q).map((r) => r.item) : ALL_CONTENT
   const selected = ALL_CONTENT.find((c) => c.id === selectedId)
+
+  useEffect(() => {
+    if (!drawerOpen) return
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setDrawerOpen(false)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [drawerOpen])
 
   return (
     <div className="workbench two">
