@@ -1,16 +1,29 @@
 import type { ReactNode } from 'react'
 import type { Field } from '@/lib/types'
-import { useFormStore } from '@/state/useFormStore'
 import { canonicalSide, valueKey } from '@/lib/assembler'
 
-export function FieldRenderer({ field }: { field: Field }) {
-  const values = useFormStore((s) => s.values)
-  const setValue = useFormStore((s) => s.setValue)
+/**
+ * Store-agnostic field control. Reads/writes through the provided `values` map
+ * and `setValue`. `scope` (an instance id) namespaces keys so the same procedure
+ * can appear multiple times in one case without collisions.
+ */
+export function FieldRenderer({
+  field,
+  values,
+  setValue,
+  scope,
+}: {
+  field: Field
+  values: Record<string, string>
+  setValue: (key: string, value: string) => void
+  scope?: string
+}) {
+  const k = (key: string) => (scope ? `${scope}::${key}` : key)
 
   let control: ReactNode
 
   if (field.kind === 'side') {
-    const key = valueKey(field)
+    const key = k(valueKey(field))
     const current = values[key]
     const opts = field.options ?? ['right', 'left']
     control = (
@@ -34,7 +47,8 @@ export function FieldRenderer({ field }: { field: Field }) {
     )
   } else if (field.kind === 'enumText') {
     const opts = field.options ?? []
-    const v = values[field.id] ?? ''
+    const key = k(field.id)
+    const v = values[key] ?? ''
     const isOther = v !== '' && !opts.includes(v)
     control = (
       <div className="field" style={{ gap: 7 }}>
@@ -44,7 +58,7 @@ export function FieldRenderer({ field }: { field: Field }) {
               key={o}
               type="button"
               className={'chip' + (v === o ? ' on' : '')}
-              onClick={() => setValue(field.id, o)}
+              onClick={() => setValue(key, o)}
             >
               <span className="ck">✓</span>
               {o}
@@ -53,7 +67,7 @@ export function FieldRenderer({ field }: { field: Field }) {
           <button
             type="button"
             className={'chip' + (isOther ? ' on' : '')}
-            onClick={() => setValue(field.id, isOther ? '' : ' ')}
+            onClick={() => setValue(key, isOther ? '' : ' ')}
           >
             Other…
           </button>
@@ -64,7 +78,7 @@ export function FieldRenderer({ field }: { field: Field }) {
             autoFocus
             placeholder="custom value"
             value={v.trim()}
-            onChange={(e) => setValue(field.id, e.target.value)}
+            onChange={(e) => setValue(key, e.target.value)}
           />
         )}
       </div>
@@ -77,8 +91,8 @@ export function FieldRenderer({ field }: { field: Field }) {
           style={{ width: 90 }}
           placeholder="Ø"
           inputMode="decimal"
-          value={values[`${field.id}:d`] ?? ''}
-          onChange={(e) => setValue(`${field.id}:d`, e.target.value)}
+          value={values[k(`${field.id}:d`)] ?? ''}
+          onChange={(e) => setValue(k(`${field.id}:d`), e.target.value)}
         />
         <span style={{ color: 'var(--muted)' }}>×</span>
         <input
@@ -86,14 +100,15 @@ export function FieldRenderer({ field }: { field: Field }) {
           style={{ width: 90 }}
           placeholder="length"
           inputMode="decimal"
-          value={values[`${field.id}:l`] ?? ''}
-          onChange={(e) => setValue(`${field.id}:l`, e.target.value)}
+          value={values[k(`${field.id}:l`)] ?? ''}
+          onChange={(e) => setValue(k(`${field.id}:l`), e.target.value)}
         />
       </div>
     )
   } else if (field.kind === 'hardwareCount') {
-    const v = parseInt(values[field.id] ?? '', 10)
-    const set = (n: number) => setValue(field.id, String(Math.max(0, n)))
+    const key = k(field.id)
+    const v = parseInt(values[key] ?? '', 10)
+    const set = (n: number) => setValue(key, String(Math.max(0, n)))
     control = (
       <div className="stepper">
         <button type="button" onClick={() => set((isNaN(v) ? 0 : v) - 1)}>
@@ -101,8 +116,8 @@ export function FieldRenderer({ field }: { field: Field }) {
         </button>
         <input
           inputMode="numeric"
-          value={values[field.id] ?? ''}
-          onChange={(e) => setValue(field.id, e.target.value)}
+          value={values[key] ?? ''}
+          onChange={(e) => setValue(key, e.target.value)}
         />
         <button type="button" onClick={() => set((isNaN(v) ? 0 : v) + 1)}>
           +
@@ -110,15 +125,15 @@ export function FieldRenderer({ field }: { field: Field }) {
       </div>
     )
   } else {
-    // measurement / toothNumber / text / blank
     const mono = field.kind === 'measurement' || field.kind === 'toothNumber'
+    const key = k(field.id)
     control = (
       <input
         className={'f-input' + (mono ? ' mono' : '')}
         inputMode={field.kind === 'measurement' ? 'decimal' : 'text'}
         placeholder={field.hint ?? field.raw}
-        value={values[field.id] ?? ''}
-        onChange={(e) => setValue(field.id, e.target.value)}
+        value={values[key] ?? ''}
+        onChange={(e) => setValue(key, e.target.value)}
       />
     )
   }

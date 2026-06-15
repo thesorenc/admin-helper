@@ -2,7 +2,8 @@
   {
     "id": "abx-odontogenic",
     "dotPhrase": ".sacxabxod",
-    "title": ".sacxabxod — Abx - Odontogenic",
+    "title": "Abx - Odontogenic",
+    "description": "Antibiotic regimens for odontogenic infections — outpatient and inpatient options",
     "category": "Abx",
     "modes": [
       "clinical",
@@ -26,7 +27,8 @@
   {
     "id": "abx-trauma",
     "dotPhrase": ".sacxabxtrauma",
-    "title": ".sacxabxtrauma — Abx - Trauma",
+    "title": "Abx - Trauma",
+    "description": "Antibiotic prophylaxis regimens for facial trauma",
     "category": "Abx",
     "modes": [
       "clinical",
@@ -50,7 +52,8 @@
   {
     "id": "closure-and-post-op",
     "dotPhrase": ".sacxclosure",
-    "title": ".sacxclosure — Closure and Post-Op",
+    "title": "Closure and Post-Op",
+    "description": "Standard procedure closure, post-op vitals, and discharge block",
     "category": "Component",
     "modes": [
       "clinical",
@@ -141,7 +144,8 @@
   {
     "id": "consent-anesthesia",
     "dotPhrase": ".sacxconsentanesthesia",
-    "title": ".sacxconsentanesthesia — Consent - Anesthesia",
+    "title": "Consent - Anesthesia",
+    "description": "Informed consent language for IV sedation and general anesthesia",
     "category": "Consent",
     "modes": [
       "clinical",
@@ -178,7 +182,8 @@
   {
     "id": "consent-extraction",
     "dotPhrase": ".sacxconsentexo",
-    "title": ".sacxconsentexo — Consent - Extraction",
+    "title": "Consent - Extraction",
+    "description": "Informed consent language for dental extractions",
     "category": "Consent",
     "modes": [
       "clinical",
@@ -210,7 +215,8 @@
   {
     "id": "consent-implant",
     "dotPhrase": ".sacxconsentimplant",
-    "title": ".sacxconsentimplant — Consent - Implant",
+    "title": "Consent - Implant",
+    "description": "Informed consent language for dental implant placement",
     "category": "Consent",
     "modes": [
       "clinical",
@@ -235,7 +241,8 @@
   {
     "id": "exam-airway",
     "dotPhrase": ".sacxexamairway",
-    "title": ".sacxexamairway — Exam - Airway",
+    "title": "Exam - Airway",
+    "description": "Physical exam with airway assessment for sedation cases",
     "category": "Exam",
     "modes": [
       "clinical",
@@ -323,7 +330,8 @@
   {
     "id": "exam-general",
     "dotPhrase": ".sacxexam",
-    "title": ".sacxexam — Exam - General",
+    "title": "Exam - General",
+    "description": "Standard OMFS physical exam for H&P and general consults",
     "category": "Exam",
     "modes": [
       "clinical",
@@ -377,7 +385,8 @@
   {
     "id": "exam-post-op-clinic",
     "dotPhrase": ".sacxexamclinic",
-    "title": ".sacxexamclinic — Exam - Post-Op Clinic",
+    "title": "Exam - Post-Op Clinic",
+    "description": "Clinic post-op follow-up physical exam",
     "category": "Exam",
     "modes": [
       "clinical",
@@ -546,7 +555,8 @@
   {
     "id": "exam-post-op-flap",
     "dotPhrase": ".sacxexamflap",
-    "title": ".sacxexamflap — Exam - Post-Op Flap",
+    "title": "Exam - Post-Op Flap",
+    "description": "Post-op exam for free flap patients including doppler and donor site assessment",
     "category": "Exam",
     "modes": [
       "clinical",
@@ -837,7 +847,8 @@
   {
     "id": "exam-post-op-inpatient",
     "dotPhrase": ".sacxexaminpatient",
-    "title": ".sacxexaminpatient — Exam - Post-Op Inpatient",
+    "title": "Exam - Post-Op Inpatient",
+    "description": "Inpatient post-op physical exam for daily progress notes",
     "category": "Exam",
     "modes": [
       "clinical",
@@ -981,7 +992,8 @@
   {
     "id": "exam-tmj",
     "dotPhrase": ".sacxexamtmj",
-    "title": ".sacxexamtmj — Exam - TMJ",
+    "title": "Exam - TMJ",
+    "description": "TMJ-focused physical exam for TMD evaluations",
     "category": "Exam",
     "modes": [
       "clinical",
@@ -1378,7 +1390,8 @@
   {
     "id": "facial-analysis",
     "dotPhrase": ".sacxfacialanalysis",
-    "title": ".sacxfacialanalysis — Facial Analysis",
+    "title": "Facial Analysis",
+    "description": "Structured facial analysis for orthognathic surgery evaluation",
     "category": "Component",
     "modes": [
       "clinical",
@@ -1830,7 +1843,8 @@
   {
     "id": "imaging-ct-face",
     "dotPhrase": ".sacximgctface",
-    "title": ".sacximgctface — Imaging - CT Face",
+    "title": "Imaging - CT Face",
+    "description": "Systematic CT face/maxillofacial interpretation template",
     "category": "Imaging",
     "modes": [
       "clinical",
@@ -1981,7 +1995,8 @@
   {
     "id": "imaging-ct-mandible",
     "dotPhrase": ".sacximgctmand",
-    "title": ".sacximgctmand — Imaging - CT Mandible",
+    "title": "Imaging - CT Mandible",
+    "description": "Systematic CT mandible interpretation — site-by-site assessment",
     "category": "Imaging",
     "modes": [
       "clinical",
@@ -2144,7 +2159,8 @@
   {
     "id": "imaging-panorex",
     "dotPhrase": ".sacximgpano",
-    "title": ".sacximgpano — Imaging - Panorex",
+    "title": "Imaging - Panorex",
+    "description": "Systematic panoramic radiograph interpretation template",
     "category": "Imaging",
     "modes": [
       "clinical",
@@ -2263,7 +2279,8 @@
   {
     "id": "pain-inpatient",
     "dotPhrase": ".sacxpainin",
-    "title": ".sacxpainin — Pain - Inpatient",
+    "title": "Pain - Inpatient",
+    "description": "Inpatient multimodal pain management regimen",
     "category": "Pain",
     "modes": [
       "clinical",
@@ -2287,7 +2304,8 @@
   {
     "id": "pain-outpatient",
     "dotPhrase": ".sacxpainout",
-    "title": ".sacxpainout — Pain - Outpatient",
+    "title": "Pain - Outpatient",
+    "description": "Outpatient multimodal pain management regimen",
     "category": "Pain",
     "modes": [
       "postop",
@@ -2312,7 +2330,8 @@
   {
     "id": "plan-full-arch",
     "dotPhrase": ".sacxplanfullarch",
-    "title": ".sacxplanfullarch — Plan - Full Arch",
+    "title": "Plan - Full Arch",
+    "description": "Assessment and plan block for full arch implant discussion",
     "category": "Plan",
     "modes": [
       "clinical",
@@ -2479,7 +2498,8 @@
   {
     "id": "post-op-instructions-extraction",
     "dotPhrase": ".sacxpiexo",
-    "title": ".sacxpiexo — Post-Op Instructions - Extraction",
+    "title": "Post-Op Instructions - Extraction",
+    "description": "Post-operative instructions handout — tooth extraction",
     "category": "Post-Op Instructions",
     "modes": [
       "postop",
@@ -2511,7 +2531,8 @@
   {
     "id": "post-op-instructions-id",
     "dotPhrase": ".sacxpiid",
-    "title": ".sacxpiid — Post-Op Instructions - ID",
+    "title": "Post-Op Instructions - ID",
+    "description": "Post-operative instructions handout — incision and drainage",
     "category": "Post-Op Instructions",
     "modes": [
       "postop",
@@ -2575,7 +2596,8 @@
   {
     "id": "post-op-instructions-mmf",
     "dotPhrase": ".sacxpimmf",
-    "title": ".sacxpimmf — Post-Op Instructions - MMF",
+    "title": "Post-Op Instructions - MMF",
+    "description": "Patient instructions for maxillomandibular fixation (wired shut)",
     "category": "Post-Op Instructions",
     "modes": [
       "postop",
@@ -2614,7 +2636,8 @@
   {
     "id": "post-op-instructions-orif",
     "dotPhrase": ".sacxpiorif",
-    "title": ".sacxpiorif — Post-Op Instructions - ORIF",
+    "title": "Post-Op Instructions - ORIF",
+    "description": "Post-operative instructions handout — jaw fracture repair (ORIF)",
     "category": "Post-Op Instructions",
     "modes": [
       "postop",
@@ -2666,7 +2689,8 @@
   {
     "id": "post-op-rx",
     "dotPhrase": ".sacxrx",
-    "title": ".sacxrx — Post-Op Rx",
+    "title": "Post-Op Rx",
+    "description": "Standard post-op prescription block for OMFS procedures",
     "category": "Component",
     "modes": [
       "postop",
@@ -2715,7 +2739,8 @@
   {
     "id": "proc-arch-bars",
     "dotPhrase": ".sacxprocarchbars",
-    "title": ".sacxprocarchbars — Proc - Arch Bars",
+    "title": "Proc - Arch Bars",
+    "description": "Erich arch bar application procedure block",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -2767,7 +2792,8 @@
   {
     "id": "proc-biopsy",
     "dotPhrase": ".sacxprocbiopsy",
-    "title": ".sacxprocbiopsy — Proc - Biopsy",
+    "title": "Proc - Biopsy",
+    "description": "Procedure block for intraoral biopsy",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -2860,7 +2886,8 @@
   {
     "id": "proc-closed-reduction",
     "dotPhrase": ".sacxproccrmmf",
-    "title": ".sacxproccrmmf — Proc - Closed Reduction",
+    "title": "Proc - Closed Reduction",
+    "description": "Closed reduction and maxillomandibular fixation procedure block",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -2927,7 +2954,8 @@
   {
     "id": "proc-coronectomy",
     "dotPhrase": ".sacxproccorono",
-    "title": ".sacxproccorono — Proc - Coronectomy",
+    "title": "Proc - Coronectomy",
+    "description": "Procedure block for mandibular third molar coronectomy",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -2959,7 +2987,8 @@
   {
     "id": "proc-extraction-with-gbr",
     "dotPhrase": ".sacxprocextgbr",
-    "title": ".sacxprocextgbr — Proc - Extraction with GBR",
+    "title": "Proc - Extraction with GBR",
+    "description": "Procedure block for extraction with guided bone regeneration",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -3034,7 +3063,8 @@
   {
     "id": "proc-id-extraoral",
     "dotPhrase": ".sacxprocidext",
-    "title": ".sacxprocidext — Proc - ID Extraoral",
+    "title": "Proc - ID Extraoral",
+    "description": "Extraoral incision and drainage procedure block",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -3139,7 +3169,8 @@
   {
     "id": "proc-id-intraoral",
     "dotPhrase": ".sacxprocid",
-    "title": ".sacxprocid — Proc - ID Intraoral",
+    "title": "Proc - ID Intraoral",
+    "description": "Intraoral incision and drainage procedure block",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -3220,7 +3251,8 @@
   {
     "id": "proc-implant-stage-ii",
     "dotPhrase": ".sacxprocimplantstage2",
-    "title": ".sacxprocimplantstage2 — Proc - Implant Stage II",
+    "title": "Proc - Implant Stage II",
+    "description": "Procedure block for implant stage II uncovery and healing abutment placement",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -3336,7 +3368,8 @@
   {
     "id": "proc-implant-with-gbr",
     "dotPhrase": ".sacxprocimplantgbr",
-    "title": ".sacxprocimplantgbr — Proc - Implant with GBR",
+    "title": "Proc - Implant with GBR",
+    "description": "Procedure block for implant placement with guided bone regeneration",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -3412,7 +3445,8 @@
   {
     "id": "proc-implant-with-sinus-lift",
     "dotPhrase": ".sacxprocimplantsinus",
-    "title": ".sacxprocimplantsinus — Proc - Implant with Sinus Lift",
+    "title": "Proc - Implant with Sinus Lift",
+    "description": "Procedure block for implant placement with osteotome sinus lift",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -3493,7 +3527,8 @@
   {
     "id": "proc-laceration-repair",
     "dotPhrase": ".sacxproclac",
-    "title": ".sacxproclac — Proc - Laceration Repair",
+    "title": "Proc - Laceration Repair",
+    "description": "Laceration repair procedure block — wound assessment and closure",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -3675,7 +3710,8 @@
   {
     "id": "proc-mand-third-erupted",
     "dotPhrase": ".sacxprocmand3erupt",
-    "title": ".sacxprocmand3erupt — Proc - Mand Third Erupted",
+    "title": "Proc - Mand Third Erupted",
+    "description": "Procedure block for erupted mandibular third molar extraction",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -3707,7 +3743,8 @@
   {
     "id": "proc-mand-third-impacted",
     "dotPhrase": ".sacxprocmand3imp",
-    "title": ".sacxprocmand3imp — Proc - Mand Third Impacted",
+    "title": "Proc - Mand Third Impacted",
+    "description": "Procedure block for impacted mandibular third molar extraction",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -3751,7 +3788,8 @@
   {
     "id": "proc-max-third-erupted",
     "dotPhrase": ".sacxprocmax3erupt",
-    "title": ".sacxprocmax3erupt — Proc - Max Third Erupted",
+    "title": "Proc - Max Third Erupted",
+    "description": "Procedure block for erupted maxillary third molar extraction",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -3783,7 +3821,8 @@
   {
     "id": "proc-max-third-impacted",
     "dotPhrase": ".sacxprocmax3imp",
-    "title": ".sacxprocmax3imp — Proc - Max Third Impacted",
+    "title": "Proc - Max Third Impacted",
+    "description": "Procedure block for impacted maxillary third molar extraction",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -3833,7 +3872,8 @@
   {
     "id": "proc-simple-extraction",
     "dotPhrase": ".sacxprocexosimple",
-    "title": ".sacxprocexosimple — Proc - Simple Extraction",
+    "title": "Proc - Simple Extraction",
+    "description": "Procedure block for simple (non-third-molar) extraction",
     "category": "Proc",
     "modes": [
       "clinical",
@@ -3888,7 +3928,8 @@
   {
     "id": "signature",
     "dotPhrase": ".sacsign",
-    "title": ".sacsign — Signature",
+    "title": "Signature",
+    "description": "Attending/resident signature block",
     "category": "Component",
     "modes": [
       "clinical",
@@ -3917,7 +3958,8 @@
   {
     "id": "sinus-precautions",
     "dotPhrase": ".sacxsinusprecautions",
-    "title": ".sacxsinusprecautions — Sinus Precautions",
+    "title": "Sinus Precautions",
+    "description": "Sinus precautions patient instructions",
     "category": "Component",
     "modes": [
       "postop",

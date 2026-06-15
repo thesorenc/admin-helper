@@ -13,9 +13,7 @@ import '@fontsource/ibm-plex-mono/700.css'
 import './index.css'
 import './design.css'
 import App from './App.tsx'
-import { Home } from './routes/Home.tsx'
-import { PostOpInstructions } from './routes/PostOpInstructions.tsx'
-import { OpNoteBuilder } from './routes/OpNoteBuilder.tsx'
+import { CaseBuilder } from './routes/CaseBuilder.tsx'
 import { ClinicalNoteBuilder } from './routes/ClinicalNoteBuilder.tsx'
 import { Library } from './routes/Library.tsx'
 
@@ -24,9 +22,7 @@ const router = createHashRouter([
     path: '/',
     element: <App />,
     children: [
-      { index: true, element: <Home /> },
-      { path: 'postop', element: <PostOpInstructions /> },
-      { path: 'opnote', element: <OpNoteBuilder /> },
+      { index: true, element: <CaseBuilder /> },
       { path: 'clinical', element: <ClinicalNoteBuilder /> },
       { path: 'library', element: <Library /> },
     ],

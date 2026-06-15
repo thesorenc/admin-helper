@@ -1,33 +1,43 @@
 import { describe, it, expect } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
-import { OpNoteBuilder } from '../src/routes/OpNoteBuilder'
-import { PostOpInstructions } from '../src/routes/PostOpInstructions'
+import { CaseBuilder } from '../src/routes/CaseBuilder'
+import { ClinicalNoteBuilder } from '../src/routes/ClinicalNoteBuilder'
 import { Library } from '../src/routes/Library'
+import { useCaseStore } from '../src/state/useCaseStore'
 
 describe('UI smoke', () => {
-  it('Op Note Builder renders a template, encounter bar, and output', () => {
+  it('Case builder: adding a procedure generates a document with Copy', () => {
+    useCaseStore.getState().reset()
     render(
       <MemoryRouter>
-        <OpNoteBuilder />
+        <CaseBuilder />
       </MemoryRouter>,
     )
-    expect(screen.getByText('Operative note')).toBeInTheDocument()
+    expect(screen.getByText('Case builder')).toBeInTheDocument()
     expect(screen.getByText('Attending')).toBeInTheDocument() // encounter bar
+    // empty state until a procedure is added
+    expect(screen.getByText(/No procedures yet/)).toBeInTheDocument()
+
+    const procButtons = screen.getAllByRole('button')
+    const proc = procButtons.find((b) => /ORIF|Extraction|BSSO|Implant|All-On/i.test(b.textContent ?? ''))
+    expect(proc).toBeTruthy()
+    fireEvent.click(proc!)
+
     expect(screen.getByRole('button', { name: 'Copy text' })).toBeInTheDocument()
+    // op note / post-op / rx tabs
+    expect(screen.getByText('Op Note')).toBeInTheDocument()
+    expect(screen.getByText('Post-op')).toBeInTheDocument()
+    expect(screen.getByText('Rx')).toBeInTheDocument()
   })
 
-  it('Post-Op shows components and builds a handout after selection', () => {
+  it('Clinical notes render with a template', () => {
     render(
       <MemoryRouter>
-        <PostOpInstructions />
+        <ClinicalNoteBuilder />
       </MemoryRouter>,
     )
-    const buttons = screen.getAllByRole('button')
-    const comp = buttons.find((b) => /extraction|orif|sinus|mmf|i&d|rx|pain/i.test(b.textContent ?? ''))
-    expect(comp).toBeTruthy()
-    fireEvent.click(comp!)
-    expect(screen.getByRole('button', { name: 'Copy text' })).toBeInTheDocument()
+    expect(screen.getByText('Clinical note')).toBeInTheDocument()
   })
 
   it('Library renders items and a count', () => {

@@ -73,17 +73,20 @@ function parseFile(
   const { frontmatter, body } = prepareBody(raw)
   const file = basename(path)
   const dotPhrase = (frontmatter.dot_phrase as string) ?? undefined
+  const description = (frontmatter.description as string) ?? undefined
   const tags = Array.isArray(frontmatter.tags) ? (frontmatter.tags as string[]) : []
 
   const id = slug(file)
   const { bodyTemplate, fields, flags, includes, warnings } = tokenize(body, id)
 
-  // Title: PROCEDURE line for op notes; dot-phrase + name for components; filename otherwise.
+  // Human title. Dot phrases are EHR shortcuts and must NEVER appear in a title.
+  //  - op notes: the PROCEDURE line.
+  //  - skeletons: drop the "OMFS Template - " prefix.
+  //  - components: the clean filename (already human, e.g. "Post-Op Instructions - Extraction").
   const procMatch = body.match(/^PROCEDURE:\s*(.+)$/m)
   let title: string
   if (procMatch) title = procMatch[1].trim()
-  else if (dotPhrase) title = `${dotPhrase} — ${file.replace(/\.md$/, '')}`
-  else title = file.replace(/\.md$/, '')
+  else title = file.replace(/\.md$/, '').replace(/^OMFS Template - /i, '')
 
   const modes = baseModes ?? componentModes(file, dotPhrase)
 
@@ -91,6 +94,7 @@ function parseFile(
     id,
     dotPhrase,
     title,
+    description,
     category,
     modes,
     sourcePath: relative(VAULT, path),

@@ -52,10 +52,12 @@ export type ComponentMode = 'postop' | 'opnote' | 'clinical' | 'library'
 export interface ParsedComponent {
   /** Slug of filename, e.g. 'post-op-instructions-orif'. */
   id: string
-  /** '.sacxpiorif' when known (frontmatter or catalog). */
+  /** '.sacxpiorif' when known. EHR Auto Text shortcut only — never a display label. */
   dotPhrase?: string
-  /** Display title. */
+  /** Human display title. */
   title: string
+  /** Short human description (from frontmatter), shown under the title. */
+  description?: string
   category: string
   /** Which feature modes can use this component. */
   modes: ComponentMode[]

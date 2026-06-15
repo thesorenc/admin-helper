@@ -1,7 +1,7 @@
 [
   {
     "id": "omfs-template-consult",
-    "title": "OMFS Template - Consult",
+    "title": "Consult",
     "category": "Clinical Skeleton",
     "modes": [
       "clinical",
@@ -46,7 +46,7 @@
   },
   {
     "id": "omfs-template-follow-up",
-    "title": "OMFS Template - Follow-up",
+    "title": "Follow-up",
     "category": "Clinical Skeleton",
     "modes": [
       "clinical",
@@ -102,7 +102,7 @@
   },
   {
     "id": "omfs-template-h-p",
-    "title": "OMFS Template - H&P",
+    "title": "H&P",
     "category": "Clinical Skeleton",
     "modes": [
       "clinical",
@@ -159,7 +159,7 @@
   },
   {
     "id": "omfs-template-signature-block",
-    "title": "OMFS Template - Signature block",
+    "title": "Signature block",
     "category": "Clinical Skeleton",
     "modes": [
       "clinical",

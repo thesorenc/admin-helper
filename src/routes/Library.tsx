@@ -38,7 +38,7 @@ export function Library() {
               <span className="pc-icon">{abbrev(c.title)}</span>
               <span className="pc-body">
                 <span className="pc-name">{c.title}</span>
-                <span className="pc-desc">{c.dotPhrase ?? c.category}</span>
+                <span className="pc-desc">{c.description ?? c.category}</span>
               </span>
             </button>
           ))}
@@ -52,7 +52,7 @@ export function Library() {
             <div className="out-toolbar no-print">
               <span className="out-kind">
                 <span className="dot" />
-                {selected.dotPhrase ?? selected.category}
+                {selected.category}
               </span>
               <span className="spacer" />
               <button
@@ -78,7 +78,12 @@ export function Library() {
             <div className="out-scroll">
               <div className="config-hero" style={{ marginBottom: 12 }}>
                 <h1 style={{ fontSize: 18 }}>{selected.title}</h1>
-                <p style={{ fontSize: 12 }}>Source: {selected.sourcePath}</p>
+                {selected.description && <p style={{ fontSize: 13 }}>{selected.description}</p>}
+                {selected.dotPhrase && (
+                  <p style={{ fontSize: 12, color: 'var(--faint)' }}>
+                    EHR Auto Text: <span style={{ fontFamily: 'var(--mono)' }}>{selected.dotPhrase}</span>
+                  </p>
+                )}
               </div>
               <pre className="emr">{selected.rawBody}</pre>
             </div>

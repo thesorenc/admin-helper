@@ -49,6 +49,7 @@ export function NoteAssembler({
   prependText?: string
 }) {
   const values = useFormStore((s) => s.values)
+  const setValue = useFormStore((s) => s.setValue)
   const resetAll = useFormStore((s) => s.resetAll)
   const unfilledPolicy = usePrefs((s) => s.unfilledPolicy)
 
@@ -93,7 +94,7 @@ export function NoteAssembler({
                   {fields.length ? (
                     <div className="field-grid">
                       {fields.map((f) => (
-                        <FieldRenderer key={f.id} field={f} />
+                        <FieldRenderer key={f.id} field={f} values={values} setValue={setValue} />
                       ))}
                     </div>
                   ) : (

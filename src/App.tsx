@@ -1,10 +1,8 @@
 import { NavLink, Outlet } from 'react-router-dom'
 
 const tabs = [
-  { to: '/', label: 'Home', end: true },
-  { to: '/postop', label: 'Post-Op' },
-  { to: '/opnote', label: 'Op Note' },
-  { to: '/clinical', label: 'Clinical' },
+  { to: '/', label: 'Case builder', end: true },
+  { to: '/clinical', label: 'Clinical notes' },
   { to: '/library', label: 'Library' },
 ]
 
