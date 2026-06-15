@@ -40,7 +40,7 @@ npm run build && npm run preview
 Deploy `dist/` to any static host (Netlify / Vercel: base `/`). The app uses a hash router, so
 deep links work with no server rewrites. For GitHub Pages set the base path:
 ```bash
-DEPLOY_BASE=/omfs-note-builder/ npm run build
+DEPLOY_BASE=/admin-helper/ npm run build
 ```
 
 ## How content flows

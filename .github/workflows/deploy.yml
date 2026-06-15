@@ -28,7 +28,7 @@ jobs:
       - run: npm run build
         env:
           # Project Pages serve under /<repo>/; the hash router handles in-app routes.
-          DEPLOY_BASE: /omfs-note-builder/
+          DEPLOY_BASE: /admin-helper/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

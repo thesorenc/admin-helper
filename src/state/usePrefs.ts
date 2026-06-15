@@ -13,6 +13,6 @@ export const usePrefs = create<PrefsState>()(
       unfilledPolicy: 'keepRaw',
       setUnfilledPolicy: (unfilledPolicy) => set({ unfilledPolicy }),
     }),
-    { name: 'omfs-note-builder-prefs' },
+    { name: 'admin-helper-prefs' },
   ),
 )

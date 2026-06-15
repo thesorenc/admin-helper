@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { fileURLToPath } from 'node:url'
 
-// Base path: '/' for Netlify/Vercel. For GitHub Pages set DEPLOY_BASE=/omfs-note-builder/.
+// Base path: '/' for Netlify/Vercel. For GitHub Pages set DEPLOY_BASE=/admin-helper/.
 export default defineConfig({
   base: process.env.DEPLOY_BASE ?? '/',
   plugins: [react()],
