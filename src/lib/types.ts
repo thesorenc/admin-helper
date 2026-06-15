@@ -47,7 +47,7 @@ export interface FlagAnnotation {
   text: string
 }
 
-export type ComponentMode = 'postop' | 'opnote' | 'clinical' | 'library' | 'pullsheet'
+export type ComponentMode = 'postop' | 'opnote' | 'clinical' | 'library' | 'pullsheet' | 'atom'
 
 export interface ParsedComponent {
   /** Slug of filename, e.g. 'post-op-instructions-orif'. */
@@ -74,6 +74,8 @@ export interface ParsedComponent {
   tags: string[]
   /** Original body text (for the edit -> download-md feature). */
   rawBody: string
+  /** For atomic procedures: links to the documents this procedure contributes to. */
+  links?: { pullSheet?: string; postop?: string[]; rx?: string[]; est?: string }
   /** Non-fatal parse warnings (unrecognized tokens, etc.). */
   warnings: string[]
 }

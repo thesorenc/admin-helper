@@ -91,7 +91,9 @@ export function buildDocument(
       })
       flags.push(...r.flags)
       r.smartlinks.forEach((s) => smartlinks.add(s))
-      blocks.push(`${proc.name} — #${idx + 1}\n${'-'.repeat(40)}\n${r.text.trim()}`)
+      // Strip the snippet's own "PROCEDURE:" line; the "Name - #n" heading names it.
+      const snippet = r.text.trim().replace(/^PROCEDURE:.*\n+/i, '')
+      blocks.push(`${proc.name} — #${idx + 1}\n${'-'.repeat(40)}\n${snippet}`)
     })
   } else {
     // Post-op / Rx: dedupe linked component ids across the case.

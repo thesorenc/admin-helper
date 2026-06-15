@@ -75,6 +75,16 @@ function parseFile(
   const dotPhrase = (frontmatter.dot_phrase as string) ?? undefined
   const description = (frontmatter.description as string) ?? undefined
   const tags = Array.isArray(frontmatter.tags) ? (frontmatter.tags as string[]) : []
+  const asArr = (v: unknown) => (Array.isArray(v) ? (v as string[]) : v ? [String(v)] : undefined)
+  const links =
+    frontmatter.pull_sheet || frontmatter.postop || frontmatter.rx || frontmatter.est_time
+      ? {
+          pullSheet: (frontmatter.pull_sheet as string) ?? undefined,
+          postop: asArr(frontmatter.postop),
+          rx: asArr(frontmatter.rx),
+          est: (frontmatter.est_time as string) ?? undefined,
+        }
+      : undefined
 
   const id = slug(file)
   const { bodyTemplate, fields, flags, includes, smartlinks, warnings } = tokenize(body, id)
@@ -95,7 +105,7 @@ function parseFile(
     dotPhrase,
     title,
     description,
-    category,
+    category: (frontmatter.category as string) ?? category,
     modes,
     sourcePath: relative(VAULT, path),
     bodyTemplate,
@@ -103,6 +113,7 @@ function parseFile(
     flags,
     includes,
     smartlinks,
+    links,
     tags,
     rawBody: body,
     warnings,
@@ -162,11 +173,20 @@ function build() {
     pullSheets.push(parseFile(f, 'Pull Sheet', ['pullsheet', 'library']))
   }
 
+  // 5. Atomic procedures (composable building blocks; the Case builder library)
+  const atoms: ParsedComponent[] = []
+  const atomDir = join(VAULT, 'Note Templates', 'Procedures')
+  for (const f of walk(atomDir)) {
+    // category comes from frontmatter; folder name is the fallback
+    const folderCat = basename(join(f, '..'))
+    atoms.push(parseFile(f, folderCat, ['atom', 'library']))
+  }
+
   // Report
-  const all = [...components, ...opTemplates, ...skeletons, ...pullSheets]
+  const all = [...components, ...opTemplates, ...skeletons, ...pullSheets, ...atoms]
   const warned = all.filter((c) => c.warnings.length)
   console.log(
-    `Parsed: ${components.length} components, ${opTemplates.length} op templates, ${skeletons.length} skeletons, ${pullSheets.length} pull sheets.`,
+    `Parsed: ${components.length} components, ${opTemplates.length} op templates, ${skeletons.length} skeletons, ${pullSheets.length} pull sheets, ${atoms.length} atoms.`,
   )
   for (const c of warned) {
     for (const w of c.warnings) console.warn(`  warn [${c.id}]: ${w}`)
@@ -177,6 +197,7 @@ function build() {
     'optemplates.generated.json': opTemplates,
     'skeletons.generated.json': skeletons,
     'pullsheets.generated.json': pullSheets,
+    'atoms.generated.json': atoms,
   }
 
   if (CHECK) {
@@ -203,12 +224,14 @@ import components from './components.generated.json'
 import opTemplates from './optemplates.generated.json'
 import skeletons from './skeletons.generated.json'
 import pullSheets from './pullsheets.generated.json'
+import atoms from './atoms.generated.json'
 
 export const COMPONENTS = components as ParsedComponent[]
 export const OP_TEMPLATES = opTemplates as ParsedComponent[]
 export const SKELETONS = skeletons as ParsedComponent[]
 export const PULL_SHEETS = pullSheets as ParsedComponent[]
-export const ALL_CONTENT = [...COMPONENTS, ...OP_TEMPLATES, ...SKELETONS, ...PULL_SHEETS]
+export const ATOMS = atoms as ParsedComponent[]
+export const ALL_CONTENT = [...COMPONENTS, ...OP_TEMPLATES, ...SKELETONS, ...PULL_SHEETS, ...ATOMS]
 `
   writeFileSync(join(OUT_DIR, 'index.ts'), index)
   console.log(`Wrote JSON + index to ${relative(process.cwd(), OUT_DIR)}`)
