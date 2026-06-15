@@ -10,9 +10,17 @@ export interface Encounter {
   complications: string
 }
 
-// Placeholder roster — replace with the real Walter Reed OMFS staff. "Other…" lets
-// the user type a name inline meanwhile.
-export const ATTENDINGS = ['Dr. Whitman', 'Dr. Patel', 'Dr. Nguyen', 'Dr. Okafor']
+// Walter Reed OMFS attending staff. "Other…" lets the user type a name inline.
+export const ATTENDINGS = [
+  'Dr. Betz',
+  'Dr. Combs',
+  'Dr. Bensing',
+  'Dr. Palau',
+  'Dr. Lee',
+  'Dr. Dullnig',
+  'Dr. Fisher',
+  'Dr. Park',
+]
 export const ANESTHESIA = ['Local only', 'Local + nitrous', 'IV moderate sedation', 'General anesthesia']
 export const AIRWAY = ['N/A', 'Nasal ETT', 'Oral ETT', 'LMA', 'Awake fiberoptic', 'Tracheostomy']
 export const SETTINGS = ['Clinic', 'OR']
