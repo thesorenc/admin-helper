@@ -38,8 +38,7 @@ const TABS: { kind: DocKind; label: string }[] = [
 ]
 
 export function CaseBuilder() {
-  const { items, values, encounter, add, remove, setValue, setEncounter, countOf, reset } =
-    useCaseStore()
+  const { items, values, encounter, add, remove, setValue, setEncounter, countOf } = useCaseStore()
   const [tab, setTab] = useState<DocKind>('opnote')
   const [q, setQ] = useState('')
   const [drawerOpen, setDrawerOpen] = useState(false)
@@ -111,18 +110,6 @@ export function CaseBuilder() {
               Add procedures from the library and fill the variables. The Op Note, Post-op, and Rx
               documents on the right update instantly. Identifiers stay as EHR placeholders.
             </p>
-            {items.length > 0 && (
-              <button
-                className="btn ghost"
-                style={{ marginTop: 10 }}
-                onClick={() => {
-                  if (window.confirm('Clear the case? This removes all procedures and entered values.'))
-                    reset()
-                }}
-              >
-                Clear case
-              </button>
-            )}
           </div>
 
           <EncounterBar value={encounter} onChange={setEncounter} />
