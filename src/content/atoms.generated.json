@@ -75,7 +75,7 @@
     "links": {
       "pullSheet": "pull-sheet-aicbg",
       "postop": [
-        "post-op-instructions-extraction",
+        "post-op-instructions-implant-graft",
         "post-op-instructions-hip-donor-site"
       ],
       "rx": [
@@ -170,7 +170,7 @@
     "smartlinks": [],
     "links": {
       "postop": [
-        "post-op-instructions-extraction"
+        "post-op-instructions-implant-graft"
       ],
       "rx": [
         "post-op-rx-implant-graft"
@@ -243,7 +243,7 @@
     "links": {
       "pullSheet": "pull-sheet-orthognathic",
       "postop": [
-        "post-op-instructions-orif"
+        "post-op-instructions-orthognathic"
       ],
       "rx": [
         "post-op-rx-orthognathic"
@@ -279,7 +279,9 @@
     "smartlinks": [],
     "links": {
       "pullSheet": "pull-sheet-endobrow-blepharoplasty",
-      "postop": [],
+      "postop": [
+        "post-op-instructions-facial-cosmetic"
+      ],
       "rx": [
         "post-op-rx-facial"
       ],
@@ -501,7 +503,7 @@
     "smartlinks": [],
     "links": {
       "postop": [
-        "post-op-instructions-extraction"
+        "post-op-instructions-implant-graft"
       ],
       "rx": [
         "post-op-rx-implant-graft"
@@ -546,7 +548,9 @@
     "smartlinks": [],
     "links": {
       "pullSheet": "pull-sheet-endobrow-blepharoplasty",
-      "postop": [],
+      "postop": [
+        "post-op-instructions-facial-cosmetic"
+      ],
       "rx": [
         "post-op-rx-facial"
       ],
@@ -731,7 +735,7 @@
     "links": {
       "pullSheet": "pull-sheet-ameloblastoma-ec",
       "postop": [
-        "post-op-instructions-extraction"
+        "post-op-instructions-oral-surgery"
       ],
       "rx": [
         "post-op-rx-oral-minor"
@@ -827,7 +831,7 @@
     "smartlinks": [],
     "links": {
       "postop": [
-        "post-op-instructions-extraction"
+        "post-op-instructions-oral-surgery"
       ],
       "rx": [
         "post-op-rx-oral-minor"
@@ -933,7 +937,7 @@
     "smartlinks": [],
     "links": {
       "postop": [
-        "post-op-instructions-extraction"
+        "post-op-instructions-oral-surgery"
       ],
       "rx": [
         "post-op-rx-oral-minor"
@@ -1059,7 +1063,9 @@
     "smartlinks": [],
     "links": {
       "pullSheet": "pull-sheet-endobrow-midface-lift",
-      "postop": [],
+      "postop": [
+        "post-op-instructions-facial-cosmetic"
+      ],
       "rx": [
         "post-op-rx-facial"
       ],
@@ -1142,7 +1148,7 @@
     "smartlinks": [],
     "links": {
       "postop": [
-        "post-op-instructions-extraction"
+        "post-op-instructions-implant-graft"
       ],
       "rx": [
         "post-op-rx-implant-graft"
@@ -1178,7 +1184,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-implant-graft"
+      ],
       "rx": [
         "post-op-rx-implant-graft"
       ],
@@ -1211,7 +1219,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-implant-graft"
+      ],
       "rx": [
         "post-op-rx-implant-graft"
       ],
@@ -1247,7 +1257,7 @@
     "links": {
       "pullSheet": "pull-sheet-orthognathic",
       "postop": [
-        "post-op-instructions-orif"
+        "post-op-instructions-orthognathic"
       ],
       "rx": [
         "post-op-rx-orthognathic"
@@ -1545,7 +1555,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-implant-graft"
+      ],
       "rx": [
         "post-op-rx-implant-graft"
       ],
@@ -1682,7 +1694,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-rhinoplasty"
+      ],
       "rx": [
         "post-op-rx-facial"
       ],
@@ -1765,7 +1779,9 @@
     "smartlinks": [],
     "links": {
       "pullSheet": "pull-sheet-endobrow-blepharoplasty",
-      "postop": [],
+      "postop": [
+        "post-op-instructions-laser-resurfacing"
+      ],
       "rx": [
         "post-op-rx-laser"
       ],
@@ -1812,8 +1828,7 @@
     "links": {
       "pullSheet": "pull-sheet-orthognathic",
       "postop": [
-        "post-op-instructions-orif",
-        "sinus-precautions"
+        "post-op-instructions-orthognathic"
       ],
       "rx": [
         "post-op-rx-orthognathic"
@@ -1855,7 +1870,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-filler"
+      ],
       "rx": [
         "post-op-rx-filler"
       ],
@@ -1881,7 +1898,9 @@
     "smartlinks": [],
     "links": {
       "pullSheet": "pull-sheet-endobrow-blepharoplasty",
-      "postop": [],
+      "postop": [
+        "post-op-instructions-facial-cosmetic"
+      ],
       "rx": [
         "post-op-rx-facial"
       ],
@@ -1928,7 +1947,7 @@
     "smartlinks": [],
     "links": {
       "postop": [
-        "post-op-instructions-extraction"
+        "post-op-instructions-oral-surgery"
       ],
       "rx": [
         "post-op-rx-oral-minor"
@@ -2085,7 +2104,9 @@
     "smartlinks": [],
     "links": {
       "pullSheet": "pull-sheet-endobrow-midface-lift",
-      "postop": [],
+      "postop": [
+        "post-op-instructions-facial-cosmetic"
+      ],
       "rx": [
         "post-op-rx-facial"
       ],
@@ -2176,7 +2197,7 @@
     "smartlinks": [],
     "links": {
       "postop": [
-        "post-op-instructions-orif"
+        "post-op-instructions-rhinoplasty"
       ],
       "rx": [
         "post-op-rx-facial",
@@ -3024,7 +3045,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-facial-cosmetic"
+      ],
       "rx": [
         "post-op-rx-facial"
       ],
@@ -3077,7 +3100,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-facial-cosmetic"
+      ],
       "rx": [
         "post-op-rx-facial"
       ],
@@ -3281,8 +3306,7 @@
     "links": {
       "pullSheet": "pull-sheet-orthognathic",
       "postop": [
-        "post-op-instructions-orif",
-        "sinus-precautions"
+        "post-op-instructions-orthognathic"
       ],
       "rx": [
         "post-op-rx-orthognathic"
@@ -3377,7 +3401,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-rhinoplasty"
+      ],
       "rx": [
         "post-op-rx-facial"
       ],
@@ -3431,7 +3457,7 @@
     "smartlinks": [],
     "links": {
       "postop": [
-        "post-op-instructions-extraction"
+        "post-op-instructions-oral-surgery"
       ],
       "rx": [
         "post-op-rx-oral-minor"
@@ -3512,8 +3538,7 @@
     "smartlinks": [],
     "links": {
       "postop": [
-        "post-op-instructions-extraction",
-        "sinus-precautions"
+        "post-op-instructions-implant-graft"
       ],
       "rx": [
         "post-op-rx-implant-graft"
@@ -3603,7 +3628,7 @@
     "smartlinks": [],
     "links": {
       "postop": [
-        "post-op-instructions-extraction"
+        "post-op-instructions-implant-graft"
       ],
       "rx": [
         "post-op-rx-implant-graft"
@@ -3716,7 +3741,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-facial-cosmetic"
+      ],
       "rx": [
         "post-op-rx-facial"
       ],
@@ -3758,7 +3785,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-facial-cosmetic"
+      ],
       "rx": [
         "post-op-rx-facial"
       ],
@@ -3801,7 +3830,7 @@
     "smartlinks": [],
     "links": {
       "postop": [
-        "post-op-instructions-extraction"
+        "post-op-instructions-implant-graft"
       ],
       "rx": [
         "post-op-rx-implant-graft"
@@ -3969,7 +3998,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-tmj"
+      ],
       "rx": [
         "post-op-rx-tmj"
       ],
@@ -4034,7 +4065,9 @@
     "smartlinks": [],
     "links": {
       "pullSheet": "pull-sheet-arthroscopy",
-      "postop": [],
+      "postop": [
+        "post-op-instructions-tmj"
+      ],
       "rx": [
         "post-op-rx-tmj"
       ],
@@ -4124,7 +4157,9 @@
     "smartlinks": [],
     "links": {
       "pullSheet": "pull-sheet-arthroscopy",
-      "postop": [],
+      "postop": [
+        "post-op-instructions-tmj"
+      ],
       "rx": [
         "post-op-rx-tmj"
       ],
@@ -4218,7 +4253,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-tmj"
+      ],
       "rx": [
         "post-op-rx-tmj"
       ],
@@ -4269,7 +4306,9 @@
     "smartlinks": [],
     "links": {
       "pullSheet": "pull-sheet-discopexy",
-      "postop": [],
+      "postop": [
+        "post-op-instructions-tmj"
+      ],
       "rx": [
         "post-op-rx-tmj"
       ],
@@ -4342,7 +4381,7 @@
     "smartlinks": [],
     "links": {
       "postop": [
-        "post-op-instructions-orif"
+        "post-op-instructions-tmj"
       ],
       "rx": [
         "post-op-rx-tmj"
@@ -4445,7 +4484,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-tmj"
+      ],
       "rx": [
         "post-op-rx-tmj"
       ],
@@ -4628,7 +4669,7 @@
     "smartlinks": [],
     "links": {
       "postop": [
-        "post-op-instructions-orif"
+        "post-op-instructions-tjr"
       ],
       "rx": [
         "post-op-rx-tmj"
@@ -4733,7 +4774,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-tjr"
+      ],
       "rx": [
         "post-op-rx-tmj"
       ],
@@ -4885,7 +4928,9 @@
     "includes": [],
     "smartlinks": [],
     "links": {
-      "postop": [],
+      "postop": [
+        "post-op-instructions-tjr"
+      ],
       "rx": [
         "post-op-rx-tmj"
       ],
@@ -4928,7 +4973,9 @@
     "smartlinks": [],
     "links": {
       "pullSheet": "pull-sheet-endobrow-blepharoplasty",
-      "postop": [],
+      "postop": [
+        "post-op-instructions-facial-cosmetic"
+      ],
       "rx": [
         "post-op-rx-facial"
       ],

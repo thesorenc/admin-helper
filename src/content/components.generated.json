@@ -2819,6 +2819,114 @@
     "warnings": []
   },
   {
+    "id": "post-op-instructions-facial-cosmetic",
+    "dotPhrase": ".sacxpicos",
+    "title": "Post-Op Instructions - Facial Cosmetic",
+    "description": "Post-operative instructions handout - facial cosmetic surgery",
+    "category": "Post-Op Instructions",
+    "modes": [
+      "postop",
+      "clinical",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Components/Post-Op Instructions - Facial Cosmetic.md",
+    "bodyTemplate": "POST-OPERATIVE INSTRUCTIONS - FACIAL COSMETIC SURGERY\n\nHEAD ELEVATION: Keep your head raised above your heart at all times, even when sleeping. Use 2 to 3 pillows or sleep in a recliner so your head stays higher than 30 degrees. Do this for at least the first week. This lowers swelling and bruising.\n\nICE AND COOL COMPRESSES: Apply cool compresses or covered ice packs to the area 20 minutes on and 20 minutes off while awake for the first 48 hours. Always wrap ice in a thin cloth. Do not place ice directly on the skin or on numb areas.\n\nINCISION AND WOUND CARE: Keep your incisions clean and moist. Apply a thin layer of the ointment we give you so the incisions stay soft and do not dry out. Do not let thick crusts or scabs form, and do not pick, scratch, or rub the incisions. Gently clean as instructed and reapply ointment.\n\nEYE CARE: For eyelid or brow surgery, your eyelids and the skin around your eyes will be swollen and bruised. This is normal and improves over 1 to 2 weeks. Use preservative-free artificial tears during the day to keep your eyes comfortable. Apply the lubricating eye ointment we recommend at bedtime. Your eyes may feel dry, gritty, or hard to fully close at first.\n\nBRUISING AND SWELLING: Bruising and swelling are expected and usually peak around 48 to 72 hours, then slowly improve over 2 to 3 weeks. Some firmness, numbness, and unevenness can last several weeks and is part of normal healing.\n\nMAKEUP: Do not wear makeup over the surgical areas or incisions for 1 to 2 weeks, or until we tell you it is safe.\n\nSUN PROTECTION: Strictly avoid sun exposure to the healing areas. When you do go outside, wear a wide-brimmed hat and use SPF 30 or higher once incisions are healed and we have cleared you. Sun can cause incisions and scars to darken permanently.\n\nACTIVITY: Rest and take it easy. For the first 1 to 2 weeks do not bend over, strain, or lift anything heavy (nothing heavier than about 10 pounds). Avoid exercise, straining, and activities that raise your blood pressure, since these can cause bleeding and more swelling.\n\nMEDICATIONS: Take all medications exactly as directed. Take pain medication with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nHEMATOMA (BLOOD COLLECTION) - CALL IMMEDIATELY: Sudden swelling on one side, severe or increasing pain, or a tight, firm feeling under the skin can mean bleeding under the skin (a hematoma). This needs to be treated quickly. Call us right away.\n\nVISION WARNING (EYELID SURGERY) - EMERGENCY: A sudden change in your vision, sudden severe eye pain, or rapidly increasing swelling and pressure around the eye is an emergency. Do not wait. Call 911 or go to the nearest emergency room.\n\nFOLLOW-UP: Your next visit is on post-op-instructions-facial-cosmetic:enumText:0. If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Uncontrolled bleeding, trouble breathing, sudden vision change, or rapidly worsening swelling or pain - contact our clinic right away. Call us: post-op-instructions-facial-cosmetic:blank:0 . After hours: post-op-instructions-facial-cosmetic:blank:1 . For a life-threatening emergency, call 911 or go to the nearest emergency room.",
+    "fields": [
+      {
+        "id": "post-op-instructions-facial-cosmetic:enumText:0",
+        "kind": "enumText",
+        "raw": "______ (date/time)",
+        "label": "Select",
+        "context": "Your next visit is on ___.",
+        "options": [
+          "date",
+          "time"
+        ],
+        "hint": "date/time"
+      },
+      {
+        "id": "post-op-instructions-facial-cosmetic:blank:0",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      },
+      {
+        "id": "post-op-instructions-facial-cosmetic:blank:1",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      }
+    ],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [
+      "dot-phrase",
+      "component",
+      "post-op",
+      "instructions",
+      "cosmetic"
+    ],
+    "rawBody": "POST-OPERATIVE INSTRUCTIONS - FACIAL COSMETIC SURGERY\n\nHEAD ELEVATION: Keep your head raised above your heart at all times, even when sleeping. Use 2 to 3 pillows or sleep in a recliner so your head stays higher than 30 degrees. Do this for at least the first week. This lowers swelling and bruising.\n\nICE AND COOL COMPRESSES: Apply cool compresses or covered ice packs to the area 20 minutes on and 20 minutes off while awake for the first 48 hours. Always wrap ice in a thin cloth. Do not place ice directly on the skin or on numb areas.\n\nINCISION AND WOUND CARE: Keep your incisions clean and moist. Apply a thin layer of the ointment we give you so the incisions stay soft and do not dry out. Do not let thick crusts or scabs form, and do not pick, scratch, or rub the incisions. Gently clean as instructed and reapply ointment.\n\nEYE CARE: For eyelid or brow surgery, your eyelids and the skin around your eyes will be swollen and bruised. This is normal and improves over 1 to 2 weeks. Use preservative-free artificial tears during the day to keep your eyes comfortable. Apply the lubricating eye ointment we recommend at bedtime. Your eyes may feel dry, gritty, or hard to fully close at first.\n\nBRUISING AND SWELLING: Bruising and swelling are expected and usually peak around 48 to 72 hours, then slowly improve over 2 to 3 weeks. Some firmness, numbness, and unevenness can last several weeks and is part of normal healing.\n\nMAKEUP: Do not wear makeup over the surgical areas or incisions for 1 to 2 weeks, or until we tell you it is safe.\n\nSUN PROTECTION: Strictly avoid sun exposure to the healing areas. When you do go outside, wear a wide-brimmed hat and use SPF 30 or higher once incisions are healed and we have cleared you. Sun can cause incisions and scars to darken permanently.\n\nACTIVITY: Rest and take it easy. For the first 1 to 2 weeks do not bend over, strain, or lift anything heavy (nothing heavier than about 10 pounds). Avoid exercise, straining, and activities that raise your blood pressure, since these can cause bleeding and more swelling.\n\nMEDICATIONS: Take all medications exactly as directed. Take pain medication with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nHEMATOMA (BLOOD COLLECTION) - CALL IMMEDIATELY: Sudden swelling on one side, severe or increasing pain, or a tight, firm feeling under the skin can mean bleeding under the skin (a hematoma). This needs to be treated quickly. Call us right away.\n\nVISION WARNING (EYELID SURGERY) - EMERGENCY: A sudden change in your vision, sudden severe eye pain, or rapidly increasing swelling and pressure around the eye is an emergency. Do not wait. Call 911 or go to the nearest emergency room.\n\nFOLLOW-UP: Your next visit is on ______ (date/time). If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Uncontrolled bleeding, trouble breathing, sudden vision change, or rapidly worsening swelling or pain - contact our clinic right away. Call us: ____ . After hours: ____ . For a life-threatening emergency, call 911 or go to the nearest emergency room.",
+    "warnings": []
+  },
+  {
+    "id": "post-op-instructions-filler",
+    "dotPhrase": ".sacxpifill",
+    "title": "Post-Op Instructions - Filler",
+    "description": "Post-operative instructions handout - soft-tissue filler",
+    "category": "Post-Op Instructions",
+    "modes": [
+      "postop",
+      "clinical",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Components/Post-Op Instructions - Filler.md",
+    "bodyTemplate": "POST-OPERATIVE INSTRUCTIONS - SOFT-TISSUE FILLER\n\nCOLD COMPRESS: Apply a cool compress or covered ice pack gently to the treated area for 10 to 15 minutes at a time during the first day to ease swelling and bruising. Wrap ice in a thin cloth and use light pressure only.\n\nEXPECTED SWELLING AND BRUISING: Some swelling, bruising, redness, and tenderness are normal and usually last 3 to 7 days. Lips tend to swell more and may look uneven at first. This settles as the area heals.\n\nAVOID PRESSURE AND MASSAGE: Do not press on, rub, or massage the treated area for 1 to 2 weeks unless we specifically tell you to. Try not to sleep face-down on the area. This helps the filler stay in place.\n\nAVOID HEAT, EXERCISE, AND ALCOHOL: For the first 24 hours avoid strenuous exercise, hot environments (saunas, hot tubs, very hot showers), and alcohol. These can increase swelling and bruising.\n\nVASCULAR OCCLUSION (BLOCKED BLOOD VESSEL) - CALL IMMEDIATELY: In rare cases filler can block a blood vessel, which is an emergency. Call us right away if you notice skin that turns white or pale (blanching), skin that looks dusky, blue, or gray, severe or increasing pain that is out of proportion to what you expect, skin that blisters or breaks down, or any change in your vision. Do not wait.\n\nMEDICATIONS: For discomfort you may take acetaminophen (Tylenol) as directed. Do not take more than 3000 mg of acetaminophen in 24 hours from all sources. Avoid NSAIDs such as ibuprofen (Advil, Motrin) and naproxen (Aleve) right around the treatment, since they may increase bruising, unless we tell you otherwise.\n\nFOLLOW-UP: Your next visit is on post-op-instructions-filler:enumText:0. If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Any change in your vision, severe or increasing pain, or skin turning white, blue, or gray after filler is an emergency - call us now. Call us: post-op-instructions-filler:blank:0 . After hours: post-op-instructions-filler:blank:1 . For a life-threatening emergency, or if you cannot reach us and have vision change or severe pain, call 911 or go to the nearest emergency room.",
+    "fields": [
+      {
+        "id": "post-op-instructions-filler:enumText:0",
+        "kind": "enumText",
+        "raw": "______ (date/time)",
+        "label": "Select",
+        "context": "Your next visit is on ___.",
+        "options": [
+          "date",
+          "time"
+        ],
+        "hint": "date/time"
+      },
+      {
+        "id": "post-op-instructions-filler:blank:0",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      },
+      {
+        "id": "post-op-instructions-filler:blank:1",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      }
+    ],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [
+      "dot-phrase",
+      "component",
+      "post-op",
+      "instructions",
+      "filler"
+    ],
+    "rawBody": "POST-OPERATIVE INSTRUCTIONS - SOFT-TISSUE FILLER\n\nCOLD COMPRESS: Apply a cool compress or covered ice pack gently to the treated area for 10 to 15 minutes at a time during the first day to ease swelling and bruising. Wrap ice in a thin cloth and use light pressure only.\n\nEXPECTED SWELLING AND BRUISING: Some swelling, bruising, redness, and tenderness are normal and usually last 3 to 7 days. Lips tend to swell more and may look uneven at first. This settles as the area heals.\n\nAVOID PRESSURE AND MASSAGE: Do not press on, rub, or massage the treated area for 1 to 2 weeks unless we specifically tell you to. Try not to sleep face-down on the area. This helps the filler stay in place.\n\nAVOID HEAT, EXERCISE, AND ALCOHOL: For the first 24 hours avoid strenuous exercise, hot environments (saunas, hot tubs, very hot showers), and alcohol. These can increase swelling and bruising.\n\nVASCULAR OCCLUSION (BLOCKED BLOOD VESSEL) - CALL IMMEDIATELY: In rare cases filler can block a blood vessel, which is an emergency. Call us right away if you notice skin that turns white or pale (blanching), skin that looks dusky, blue, or gray, severe or increasing pain that is out of proportion to what you expect, skin that blisters or breaks down, or any change in your vision. Do not wait.\n\nMEDICATIONS: For discomfort you may take acetaminophen (Tylenol) as directed. Do not take more than 3000 mg of acetaminophen in 24 hours from all sources. Avoid NSAIDs such as ibuprofen (Advil, Motrin) and naproxen (Aleve) right around the treatment, since they may increase bruising, unless we tell you otherwise.\n\nFOLLOW-UP: Your next visit is on ______ (date/time). If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Any change in your vision, severe or increasing pain, or skin turning white, blue, or gray after filler is an emergency - call us now. Call us: ____ . After hours: ____ . For a life-threatening emergency, or if you cannot reach us and have vision change or severe pain, call 911 or go to the nearest emergency room.",
+    "warnings": []
+  },
+  {
     "id": "post-op-instructions-hip-donor-site",
     "dotPhrase": ".sacxpihip",
     "title": "Post-Op Instructions - Hip Donor Site",
@@ -2982,6 +3090,116 @@
     "warnings": []
   },
   {
+    "id": "post-op-instructions-implant-graft",
+    "dotPhrase": ".sacxpiimp",
+    "title": "Post-Op Instructions - Implant Graft",
+    "description": "Post-operative instructions handout - dental implant / bone graft / sinus augmentation",
+    "category": "Post-Op Instructions",
+    "modes": [
+      "postop",
+      "clinical",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Components/Post-Op Instructions - Implant Graft.md",
+    "bodyTemplate": "POST-OPERATIVE INSTRUCTIONS - DENTAL IMPLANT / BONE GRAFT\n\nBLEEDING: Some oozing is normal for the first 24-48 hours. If a site is bleeding, place clean gauze over it and bite or hold firm pressure for 30-45 minutes. Avoid spitting, sucking through straws, or smoking for at least 72 hours.\n\nPROTECT THE SITE: Do not poke or probe the surgical site with your tongue, fingers, or any object. Avoid putting pressure on the site and do not chew on that side. If you wear a denture or flipper over the area, do NOT wear it until your surgeon tells you it is safe. Do NOT use a Waterpik or any water-jet device near the site for 2-4 weeks.\n\nSWELLING: Apply ice packs 20 minutes on, 20 minutes off for the first 48 hours. Swelling typically peaks at 48-72 hours and resolves over 5-7 days.\n\nDIET: Soft diet for at least 1-2 weeks (yogurt, smoothies without straws, mashed potatoes, scrambled eggs, soup, pasta). Avoid hard, crunchy, spicy, or acidic foods and chew away from the surgical site. Stay well hydrated.\n\nSINUS PRECAUTIONS: For upper or sinus surgery, do NOT blow your nose for 2 weeks. If you must sneeze, sneeze with your mouth open. Do not drink through straws or do anything that creates suction or pressure. Avoid heavy lifting and bending over. Take any decongestant exactly as prescribed.\n\nORAL HYGIENE: Do not rinse, spit, or use mouthwash for the first 24 hours. After 24 hours, rinse gently with warm salt water (1/2 tsp salt in 8 oz water) after meals. Brush your other teeth normally, but be gentle near the surgical site. Use Peridex (a prescription chlorhexidine mouth rinse) twice a day if prescribed.\n\nMEDICATIONS: Take all medications as directed. Complete the full course of antibiotics if prescribed. Take pain medicine with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nACTIVITY: Rest the day of surgery. No vigorous exercise, heavy lifting, or bending for 48-72 hours. Keep your head elevated.\n\nSMOKING: No smoking, vaping, or tobacco. Smoking sharply impairs bone and gum healing and is one of the most common reasons implants and grafts fail. Stop for as long as possible before and after surgery.\n\nFOLLOW-UP: Your next visit is on post-op-instructions-implant-graft:enumText:0. If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Uncontrolled bleeding, difficulty breathing or swallowing, fever greater than 101.5°F, rapidly worsening swelling - go to the nearest ED or call our clinic. Call us: post-op-instructions-implant-graft:blank:0 . After hours: post-op-instructions-implant-graft:blank:1 . For a life-threatening emergency (trouble breathing, severe bleeding you cannot control), call 911 or go to the nearest emergency room.",
+    "fields": [
+      {
+        "id": "post-op-instructions-implant-graft:enumText:0",
+        "kind": "enumText",
+        "raw": "______ (date/time)",
+        "label": "Select",
+        "context": "Your next visit is on ___.",
+        "options": [
+          "date",
+          "time"
+        ],
+        "hint": "date/time"
+      },
+      {
+        "id": "post-op-instructions-implant-graft:blank:0",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      },
+      {
+        "id": "post-op-instructions-implant-graft:blank:1",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      }
+    ],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [
+      "dot-phrase",
+      "component",
+      "post-op",
+      "instructions",
+      "implant",
+      "graft",
+      "sinus"
+    ],
+    "rawBody": "POST-OPERATIVE INSTRUCTIONS - DENTAL IMPLANT / BONE GRAFT\n\nBLEEDING: Some oozing is normal for the first 24-48 hours. If a site is bleeding, place clean gauze over it and bite or hold firm pressure for 30-45 minutes. Avoid spitting, sucking through straws, or smoking for at least 72 hours.\n\nPROTECT THE SITE: Do not poke or probe the surgical site with your tongue, fingers, or any object. Avoid putting pressure on the site and do not chew on that side. If you wear a denture or flipper over the area, do NOT wear it until your surgeon tells you it is safe. Do NOT use a Waterpik or any water-jet device near the site for 2-4 weeks.\n\nSWELLING: Apply ice packs 20 minutes on, 20 minutes off for the first 48 hours. Swelling typically peaks at 48-72 hours and resolves over 5-7 days.\n\nDIET: Soft diet for at least 1-2 weeks (yogurt, smoothies without straws, mashed potatoes, scrambled eggs, soup, pasta). Avoid hard, crunchy, spicy, or acidic foods and chew away from the surgical site. Stay well hydrated.\n\nSINUS PRECAUTIONS: For upper or sinus surgery, do NOT blow your nose for 2 weeks. If you must sneeze, sneeze with your mouth open. Do not drink through straws or do anything that creates suction or pressure. Avoid heavy lifting and bending over. Take any decongestant exactly as prescribed.\n\nORAL HYGIENE: Do not rinse, spit, or use mouthwash for the first 24 hours. After 24 hours, rinse gently with warm salt water (1/2 tsp salt in 8 oz water) after meals. Brush your other teeth normally, but be gentle near the surgical site. Use Peridex (a prescription chlorhexidine mouth rinse) twice a day if prescribed.\n\nMEDICATIONS: Take all medications as directed. Complete the full course of antibiotics if prescribed. Take pain medicine with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nACTIVITY: Rest the day of surgery. No vigorous exercise, heavy lifting, or bending for 48-72 hours. Keep your head elevated.\n\nSMOKING: No smoking, vaping, or tobacco. Smoking sharply impairs bone and gum healing and is one of the most common reasons implants and grafts fail. Stop for as long as possible before and after surgery.\n\nFOLLOW-UP: Your next visit is on ______ (date/time). If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Uncontrolled bleeding, difficulty breathing or swallowing, fever greater than 101.5°F, rapidly worsening swelling - go to the nearest ED or call our clinic. Call us: ____ . After hours: ____ . For a life-threatening emergency (trouble breathing, severe bleeding you cannot control), call 911 or go to the nearest emergency room.",
+    "warnings": []
+  },
+  {
+    "id": "post-op-instructions-laser-resurfacing",
+    "dotPhrase": ".sacxpilsr",
+    "title": "Post-Op Instructions - Laser Resurfacing",
+    "description": "Post-operative instructions handout - laser resurfacing",
+    "category": "Post-Op Instructions",
+    "modes": [
+      "postop",
+      "clinical",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Components/Post-Op Instructions - Laser Resurfacing.md",
+    "bodyTemplate": "POST-OPERATIVE INSTRUCTIONS - LASER RESURFACING / DEEP PEEL\n\nWOUND CARE: Keep the treated skin moist at all times. Apply a thick layer of petrolatum (such as plain Vaseline or Aquaphor) or the occlusive ointment we give you, and reapply often so the skin never dries out. Do not let the skin dry, crust, or scab. Cleanse gently as directed with cool water and a mild soak; do not scrub.\n\nEXPECTED HEALING: Redness, swelling, oozing, and weeping are normal in the first few days. Over the next several days the skin will form a thin film, then peel as new skin appears underneath. Redness can last several weeks to a few months and slowly fades. This is all part of normal healing.\n\nANTIVIRAL COMPLIANCE: Take all of the antiviral medication we prescribed, exactly as directed, even if your skin looks fine. This prevents a serious viral (cold sore / herpes) infection that can damage the new skin. Do not stop early.\n\nINFECTION AND HSV WARNING SIGNS: Call us if you notice worsening pain, pus or yellow-green drainage, fever, spreading redness, or new painful blisters or sores. These can be signs of infection and need prompt treatment.\n\nNO PICKING: Do not pick, peel, scratch, or rub the treated skin. Let the old skin shed on its own. Picking can cause scarring and color changes.\n\nSUN PROTECTION: Strictly avoid sun exposure to the treated skin for many months. Once we clear you, use SPF 30 or higher every day and wear a wide-brimmed hat. New skin burns and discolors very easily, and sun can cause permanent dark spots.\n\nMAKEUP: Do not wear makeup on the treated skin until we tell you it is fully healed and safe.\n\nMEDICATIONS: Take all medications exactly as directed, including the antiviral. Take pain medication with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nFOLLOW-UP: Your next visit is on post-op-instructions-laser-resurfacing:enumText:0. If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Spreading redness, severe or worsening pain, fever, pus, or signs of a serious infection - contact our clinic right away. Call us: post-op-instructions-laser-resurfacing:blank:0 . After hours: post-op-instructions-laser-resurfacing:blank:1 . For a life-threatening emergency, such as trouble breathing or a high fever you cannot control, call 911 or go to the nearest emergency room.",
+    "fields": [
+      {
+        "id": "post-op-instructions-laser-resurfacing:enumText:0",
+        "kind": "enumText",
+        "raw": "______ (date/time)",
+        "label": "Select",
+        "context": "Your next visit is on ___.",
+        "options": [
+          "date",
+          "time"
+        ],
+        "hint": "date/time"
+      },
+      {
+        "id": "post-op-instructions-laser-resurfacing:blank:0",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      },
+      {
+        "id": "post-op-instructions-laser-resurfacing:blank:1",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      }
+    ],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [
+      "dot-phrase",
+      "component",
+      "post-op",
+      "instructions",
+      "laser"
+    ],
+    "rawBody": "POST-OPERATIVE INSTRUCTIONS - LASER RESURFACING / DEEP PEEL\n\nWOUND CARE: Keep the treated skin moist at all times. Apply a thick layer of petrolatum (such as plain Vaseline or Aquaphor) or the occlusive ointment we give you, and reapply often so the skin never dries out. Do not let the skin dry, crust, or scab. Cleanse gently as directed with cool water and a mild soak; do not scrub.\n\nEXPECTED HEALING: Redness, swelling, oozing, and weeping are normal in the first few days. Over the next several days the skin will form a thin film, then peel as new skin appears underneath. Redness can last several weeks to a few months and slowly fades. This is all part of normal healing.\n\nANTIVIRAL COMPLIANCE: Take all of the antiviral medication we prescribed, exactly as directed, even if your skin looks fine. This prevents a serious viral (cold sore / herpes) infection that can damage the new skin. Do not stop early.\n\nINFECTION AND HSV WARNING SIGNS: Call us if you notice worsening pain, pus or yellow-green drainage, fever, spreading redness, or new painful blisters or sores. These can be signs of infection and need prompt treatment.\n\nNO PICKING: Do not pick, peel, scratch, or rub the treated skin. Let the old skin shed on its own. Picking can cause scarring and color changes.\n\nSUN PROTECTION: Strictly avoid sun exposure to the treated skin for many months. Once we clear you, use SPF 30 or higher every day and wear a wide-brimmed hat. New skin burns and discolors very easily, and sun can cause permanent dark spots.\n\nMAKEUP: Do not wear makeup on the treated skin until we tell you it is fully healed and safe.\n\nMEDICATIONS: Take all medications exactly as directed, including the antiviral. Take pain medication with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nFOLLOW-UP: Your next visit is on ______ (date/time). If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Spreading redness, severe or worsening pain, fever, pus, or signs of a serious infection - contact our clinic right away. Call us: ____ . After hours: ____ . For a life-threatening emergency, such as trouble breathing or a high fever you cannot control, call 911 or go to the nearest emergency room.",
+    "warnings": []
+  },
+  {
     "id": "post-op-instructions-mmf",
     "dotPhrase": ".sacxpimmf",
     "title": "Post-Op Instructions - MMF",
@@ -3035,6 +3253,60 @@
       "wired-shut"
     ],
     "rawBody": "INSTRUCTIONS FOR MAXILLOMANDIBULAR FIXATION (WIRED SHUT)\n\nSAFETY:\nWire cutters have been provided. CARRY THEM AT ALL TIMES.\nIf you vomit or cannot breathe: CUT THE WIRES IMMEDIATELY to open your airway, then call 911.\nFamily members should know where the wire cutters are and how to use them.\n\nDIET (LIQUID ONLY):\nAll nutrition must be liquid. Use a blender for everything. Drink through gaps between teeth or use a 60 mL catheter-tip syringe. Good options: smoothies, blended soups, milkshakes, Ensure/Boost, broth, juice, yogurt drinks, pureed meals. Aim for 2000+ calories/day and 60-80g protein/day. Stay hydrated: 2-3 liters of fluid daily.\n\nORAL HYGIENE:\nRinse after every meal. Peridex (a prescription mouth rinse) twice a day - swish gently, let flow between teeth. Use curved-tip syringe with warm salt water (mix 1/2 teaspoon of salt in 8 ounces / 1 cup of warm water) to flush between teeth and around wires after every meal. Use child-sized soft toothbrush on outer surfaces. Water pick on lowest setting optional.\n\nMEDICATIONS: All medications must be in liquid or crushable form. Do not take whole tablets or capsules. Take pain medicine with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nTOBACCO & NICOTINE: Do not smoke, vape, or use any tobacco or nicotine while you are healing. It slows healing and raises your risk of infection and (for bone procedures) poor bone healing.\n\nFOLLOW-UP: Weekly for first 2 weeks, then every 2 weeks. Anticipated duration: ___ (4 / 6 / 8 weeks). After removal: progressive mouth opening exercises, gradual diet advancement over 2-4 weeks. If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Vomiting/choking (CUT WIRES FIRST), difficulty breathing, loose/broken wires, fever greater than 101.5°F, worsening swelling, foul drainage. Call us: ____ . After hours: ____ . For a life-threatening emergency (trouble breathing, severe bleeding you cannot control), call 911 or go to the nearest emergency room.",
+    "warnings": []
+  },
+  {
+    "id": "post-op-instructions-oral-surgery",
+    "dotPhrase": ".sacxpios",
+    "title": "Post-Op Instructions - Oral Surgery",
+    "description": "Post-operative instructions handout - general oral surgery",
+    "category": "Post-Op Instructions",
+    "modes": [
+      "postop",
+      "clinical",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Components/Post-Op Instructions - Oral Surgery.md",
+    "bodyTemplate": "POST-OPERATIVE INSTRUCTIONS - ORAL SURGERY\n\nBLEEDING: Some oozing is normal for the first 24-48 hours. If you have a surgical site that is bleeding, place clean gauze over it and bite or hold firm pressure for 30-45 minutes. For bleeding that does not stop, bite on a moistened black tea bag for 30 minutes. Avoid spitting, sucking through straws, or smoking for at least 72 hours.\n\nSWELLING: Apply ice packs 20 minutes on, 20 minutes off for the first 48 hours. Swelling typically peaks at 48-72 hours and resolves over 5-7 days.\n\nDIET: Soft diet for 5-7 days (yogurt, smoothies without straws, mashed potatoes, scrambled eggs, soup, pasta). Avoid hard, crunchy, spicy, or acidic foods. Stay well hydrated.\n\nORAL HYGIENE: Do not rinse, spit, or use mouthwash for the first 24 hours. After 24 hours, rinse gently with warm salt water (1/2 tsp salt in 8 oz water) after meals. Brush your other teeth normally, but be gentle near the surgical site. Begin Peridex (a prescription mouth rinse) if prescribed.\n\nMEDICATIONS: Take all medications as directed. Take pain medicine with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nACTIVITY: Rest the day of surgery. No vigorous exercise, heavy lifting, or bending for 48-72 hours. Keep your head elevated.\n\nSMOKING: No smoking, vaping, or tobacco for at least 72 hours (preferably 1 week). It slows healing and raises your risk of infection.\n\nFOLLOW-UP: Your next visit is on post-op-instructions-oral-surgery:enumText:0. If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Uncontrolled bleeding, difficulty breathing or swallowing, fever greater than 101.5°F, rapidly worsening swelling - go to the nearest ED or call our clinic. Call us: post-op-instructions-oral-surgery:blank:0 . After hours: post-op-instructions-oral-surgery:blank:1 . For a life-threatening emergency (trouble breathing, severe bleeding you cannot control), call 911 or go to the nearest emergency room.",
+    "fields": [
+      {
+        "id": "post-op-instructions-oral-surgery:enumText:0",
+        "kind": "enumText",
+        "raw": "______ (date/time)",
+        "label": "Select",
+        "context": "Your next visit is on ___.",
+        "options": [
+          "date",
+          "time"
+        ],
+        "hint": "date/time"
+      },
+      {
+        "id": "post-op-instructions-oral-surgery:blank:0",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      },
+      {
+        "id": "post-op-instructions-oral-surgery:blank:1",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      }
+    ],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [
+      "dot-phrase",
+      "component",
+      "post-op",
+      "instructions",
+      "oral-surgery"
+    ],
+    "rawBody": "POST-OPERATIVE INSTRUCTIONS - ORAL SURGERY\n\nBLEEDING: Some oozing is normal for the first 24-48 hours. If you have a surgical site that is bleeding, place clean gauze over it and bite or hold firm pressure for 30-45 minutes. For bleeding that does not stop, bite on a moistened black tea bag for 30 minutes. Avoid spitting, sucking through straws, or smoking for at least 72 hours.\n\nSWELLING: Apply ice packs 20 minutes on, 20 minutes off for the first 48 hours. Swelling typically peaks at 48-72 hours and resolves over 5-7 days.\n\nDIET: Soft diet for 5-7 days (yogurt, smoothies without straws, mashed potatoes, scrambled eggs, soup, pasta). Avoid hard, crunchy, spicy, or acidic foods. Stay well hydrated.\n\nORAL HYGIENE: Do not rinse, spit, or use mouthwash for the first 24 hours. After 24 hours, rinse gently with warm salt water (1/2 tsp salt in 8 oz water) after meals. Brush your other teeth normally, but be gentle near the surgical site. Begin Peridex (a prescription mouth rinse) if prescribed.\n\nMEDICATIONS: Take all medications as directed. Take pain medicine with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nACTIVITY: Rest the day of surgery. No vigorous exercise, heavy lifting, or bending for 48-72 hours. Keep your head elevated.\n\nSMOKING: No smoking, vaping, or tobacco for at least 72 hours (preferably 1 week). It slows healing and raises your risk of infection.\n\nFOLLOW-UP: Your next visit is on ______ (date/time). If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Uncontrolled bleeding, difficulty breathing or swallowing, fever greater than 101.5°F, rapidly worsening swelling - go to the nearest ED or call our clinic. Call us: ____ . After hours: ____ . For a life-threatening emergency (trouble breathing, severe bleeding you cannot control), call 911 or go to the nearest emergency room.",
     "warnings": []
   },
   {
@@ -3105,6 +3377,254 @@
       "fracture"
     ],
     "rawBody": "POST-OPERATIVE INSTRUCTIONS - JAW FRACTURE REPAIR (ORIF)\n\nSWELLING: Significant swelling is expected, peaking at 48-72 hours. Ice packs 20 min on/off for the first 48 hours. After 48 hours, switch to warm moist compresses.\n\nDIET: ___ (soft no-chew diet x 6 weeks / liquid/puree diet x 2 weeks then soft x 4 weeks / strict liquid diet while in MMF). Ensure adequate protein and calories (goal 2000+ kcal/day). Supplement with Ensure/Boost if needed.\n\nORAL HYGIENE: Peridex (a prescription mouth rinse; chlorhexidine) rinse twice a day starting POD1. Gently brush accessible teeth with a soft, child-sized toothbrush. Use a curved-tip syringe with warm salt water (mix 1/2 teaspoon of salt in 8 ounces / 1 cup of warm water) to irrigate surgical sites.\n\nMEDICATIONS: Take all medications as directed. Complete the full course of antibiotics. Take pain medicine with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nACTIVITY: No contact sports, heavy lifting (greater than 15 lbs), or strenuous exercise for 6 weeks. No forceful nose blowing (especially midface fractures). Sneeze with mouth open.\n\nNUMBNESS: Facial numbness is common, particularly lower lip/chin. Usually improves over weeks to months; may be permanent in some cases.\n\nHARDWARE: Titanium plates and screws are MRI-compatible. Typically left permanently unless symptomatic.\n\nELASTICS: ___ (wear guiding elastics at all times except eating and oral hygiene / N/A)\n\nTOBACCO & NICOTINE: Do not smoke, vape, or use any tobacco or nicotine while you are healing. It slows healing and raises your risk of infection and (for bone procedures) poor bone healing.\n\nFOLLOW-UP: 1 week, then 2, 4, and 6 weeks post-op. If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Difficulty breathing, uncontrolled bleeding, inability to open airway (if MMF), fever greater than 101.5°F, vision changes, rapidly expanding swelling - go to the ED. Call us: ____ . After hours: ____ . For a life-threatening emergency (trouble breathing, severe bleeding you cannot control), call 911 or go to the nearest emergency room.",
+    "warnings": []
+  },
+  {
+    "id": "post-op-instructions-orthognathic",
+    "dotPhrase": ".sacxpiortho",
+    "title": "Post-Op Instructions - Orthognathic",
+    "description": "Post-operative instructions handout - orthognathic surgery (BSSO / LeFort / SARPE / genioplasty)",
+    "category": "Post-Op Instructions",
+    "modes": [
+      "postop",
+      "clinical",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Components/Post-Op Instructions - Orthognathic.md",
+    "bodyTemplate": "POST-OPERATIVE INSTRUCTIONS - JAW SURGERY (ORTHOGNATHIC)\n\nAIRWAY AND NAUSEA: This is the most important safety section. If you are in elastics or your jaws are wired together, keep wire cutters or small scissors with you at all times. If you cannot breathe or are choking, cut or remove the elastics right away. If you feel like vomiting, sit up and lean forward so fluid can drain out of your mouth, and remove or cut the elastics if needed. Never lie flat on your back if you feel sick. Call us if nausea or vomiting will not stop.\n\nELASTICS AND BANDING: post-op-instructions-orthognathic:enumText:0. Replace them as instructed and bring spares with you. Do not change the pattern unless your surgeon tells you to.\n\nSWELLING: Significant swelling is expected and peaks at 48-72 hours. Apply ice packs 20 minutes on, 20 minutes off for the first 48 hours. After 48 hours, switch to warm moist compresses. Keep your head elevated, even while sleeping.\n\nDIET: post-op-instructions-orthognathic:blank:0. Use a syringe or cup rather than a straw. Aim for plenty of protein and calories (goal 2000+ kcal/day) and supplement with Ensure or Boost if needed. Stay well hydrated.\n\nORAL HYGIENE: Keep your mouth clean to prevent infection. Use Peridex (a prescription chlorhexidine mouth rinse) twice a day starting the day after surgery. Gently brush accessible teeth with a soft or baby-sized toothbrush. Use a curved-tip syringe with warm salt water (1/2 tsp salt in 8 oz water) to rinse food from the surgical areas after meals.\n\nNUMBNESS: Numbness or tingling of the lower lip, chin, cheek, or upper teeth is expected after this surgery. It usually improves over weeks to months but can take longer, and in some cases may be permanent.\n\nNASAL CONGESTION: After upper jaw (LeFort or SARPE) surgery your nose will feel stuffy and you may have a little bloody discharge for several days. Use saline nasal spray as directed. Do NOT blow your nose for 2 weeks. If you must sneeze, sneeze with your mouth open.\n\nMEDICATIONS: Take all medications as directed. Complete the full course of antibiotics. Take pain medicine with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nACTIVITY: Rest and keep your head elevated. No contact sports, heavy lifting, or strenuous exercise for 6 weeks. Resume light activity as you feel able.\n\nSMOKING: No smoking, vaping, or tobacco while you are healing. It slows healing and raises your risk of infection and poor bone healing.\n\nFOLLOW-UP: Your next visit is on post-op-instructions-orthognathic:enumText:1. If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Difficulty breathing, choking, uncontrolled bleeding, fever greater than 101.5°F, vision changes, or rapidly expanding swelling - go to the nearest ED or call our clinic. Call us: post-op-instructions-orthognathic:blank:1 . After hours: post-op-instructions-orthognathic:blank:2 . For a life-threatening emergency, especially difficulty breathing, call 911 or go to the nearest emergency room.",
+    "fields": [
+      {
+        "id": "post-op-instructions-orthognathic:enumText:0",
+        "kind": "enumText",
+        "raw": "___ (wear your guiding elastics exactly as directed - usually at all times except for eating and oral hygiene / N/A)",
+        "label": "Select",
+        "context": "___.",
+        "options": [
+          "wear your guiding elastics exactly as directed - usually at all times except for eating and oral hygiene",
+          "N",
+          "A"
+        ],
+        "hint": "wear your guiding elastics exactly as directed - usually at all times except for eating and oral hygiene / N/A"
+      },
+      {
+        "id": "post-op-instructions-orthognathic:blank:0",
+        "kind": "blank",
+        "raw": "___ (full-liquid diet for the first 1-2 weeks, then soft no-chew diet)",
+        "label": "Field",
+        "context": "___.",
+        "hint": "full-liquid diet for the first 1-2 weeks, then soft no-chew diet"
+      },
+      {
+        "id": "post-op-instructions-orthognathic:enumText:1",
+        "kind": "enumText",
+        "raw": "______ (date/time)",
+        "label": "Select",
+        "context": "Your next visit is on ___.",
+        "options": [
+          "date",
+          "time"
+        ],
+        "hint": "date/time"
+      },
+      {
+        "id": "post-op-instructions-orthognathic:blank:1",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      },
+      {
+        "id": "post-op-instructions-orthognathic:blank:2",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      }
+    ],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [
+      "dot-phrase",
+      "component",
+      "post-op",
+      "instructions",
+      "orthognathic",
+      "jaw-surgery"
+    ],
+    "rawBody": "POST-OPERATIVE INSTRUCTIONS - JAW SURGERY (ORTHOGNATHIC)\n\nAIRWAY AND NAUSEA: This is the most important safety section. If you are in elastics or your jaws are wired together, keep wire cutters or small scissors with you at all times. If you cannot breathe or are choking, cut or remove the elastics right away. If you feel like vomiting, sit up and lean forward so fluid can drain out of your mouth, and remove or cut the elastics if needed. Never lie flat on your back if you feel sick. Call us if nausea or vomiting will not stop.\n\nELASTICS AND BANDING: ___ (wear your guiding elastics exactly as directed - usually at all times except for eating and oral hygiene / N/A). Replace them as instructed and bring spares with you. Do not change the pattern unless your surgeon tells you to.\n\nSWELLING: Significant swelling is expected and peaks at 48-72 hours. Apply ice packs 20 minutes on, 20 minutes off for the first 48 hours. After 48 hours, switch to warm moist compresses. Keep your head elevated, even while sleeping.\n\nDIET: ___ (full-liquid diet for the first 1-2 weeks, then soft no-chew diet). Use a syringe or cup rather than a straw. Aim for plenty of protein and calories (goal 2000+ kcal/day) and supplement with Ensure or Boost if needed. Stay well hydrated.\n\nORAL HYGIENE: Keep your mouth clean to prevent infection. Use Peridex (a prescription chlorhexidine mouth rinse) twice a day starting the day after surgery. Gently brush accessible teeth with a soft or baby-sized toothbrush. Use a curved-tip syringe with warm salt water (1/2 tsp salt in 8 oz water) to rinse food from the surgical areas after meals.\n\nNUMBNESS: Numbness or tingling of the lower lip, chin, cheek, or upper teeth is expected after this surgery. It usually improves over weeks to months but can take longer, and in some cases may be permanent.\n\nNASAL CONGESTION: After upper jaw (LeFort or SARPE) surgery your nose will feel stuffy and you may have a little bloody discharge for several days. Use saline nasal spray as directed. Do NOT blow your nose for 2 weeks. If you must sneeze, sneeze with your mouth open.\n\nMEDICATIONS: Take all medications as directed. Complete the full course of antibiotics. Take pain medicine with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nACTIVITY: Rest and keep your head elevated. No contact sports, heavy lifting, or strenuous exercise for 6 weeks. Resume light activity as you feel able.\n\nSMOKING: No smoking, vaping, or tobacco while you are healing. It slows healing and raises your risk of infection and poor bone healing.\n\nFOLLOW-UP: Your next visit is on ______ (date/time). If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Difficulty breathing, choking, uncontrolled bleeding, fever greater than 101.5°F, vision changes, or rapidly expanding swelling - go to the nearest ED or call our clinic. Call us: ____ . After hours: ____ . For a life-threatening emergency, especially difficulty breathing, call 911 or go to the nearest emergency room.",
+    "warnings": []
+  },
+  {
+    "id": "post-op-instructions-rhinoplasty",
+    "dotPhrase": ".sacxpirhino",
+    "title": "Post-Op Instructions - Rhinoplasty",
+    "description": "Post-operative instructions handout - rhinoplasty",
+    "category": "Post-Op Instructions",
+    "modes": [
+      "postop",
+      "clinical",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Components/Post-Op Instructions - Rhinoplasty.md",
+    "bodyTemplate": "POST-OPERATIVE INSTRUCTIONS - RHINOPLASTY (NASAL SURGERY)\n\nNASAL SPLINT AND CAST CARE: Keep the splint or cast on your nose dry and in place. Do not remove, lift, or adjust it. We will take it off at your follow-up visit. If it loosens or falls off on its own, call us. Keep it dry when you shower or bathe.\n\nNO NOSE-BLOWING: Do not blow your nose for 1 to 2 weeks. If you need to sneeze, sneeze with your mouth open to protect your nose. Blowing your nose can cause bleeding and disturb the healing.\n\nSALINE SPRAY AND GENTLE CARE: Use saline (saltwater) nasal spray as directed to keep the inside of your nose moist and to loosen dried blood. Gently clean around your nostrils with a cotton swab and the ointment we give you. Do not put anything deep into your nose.\n\nHEAD ELEVATION: Keep your head raised above your heart, even when sleeping. Use 2 to 3 pillows or sleep in a recliner for the first week. This lowers swelling and bleeding.\n\nEXPECTED CONGESTION AND DRIP: Your nose will feel stuffy and blocked for several weeks. A small amount of bloody drainage or drip is normal for the first few days. You may have a small gauze pad taped under your nose to catch this; change it as needed.\n\nGLASSES: Do not let glasses or sunglasses rest on the bridge of your nose for about 4 to 6 weeks, or until we clear you. The weight can change the healing shape. Use tape to suspend glasses from your forehead or wear contacts if you can.\n\nACTIVITY: No strenuous activity, exercise, heavy lifting, bending, or straining for at least 2 weeks. These can raise your blood pressure and cause bleeding or swelling. Rest and take it easy.\n\nMEDICATIONS: Take all medications exactly as directed. Take pain medication with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nBRUISING AND SWELLING: Bruising and swelling around the nose and eyes are normal and usually peak around 48 to 72 hours, then improve over 2 to 3 weeks. Subtle swelling of the nose tip can take many months to fully settle.\n\nFOLLOW-UP: Your next visit is on post-op-instructions-rhinoplasty:enumText:0. If you do not have an appointment, call us to schedule.\n\nEMERGENCY: A heavy nosebleed that will not stop with gentle pressure, trouble breathing, fever, or rapidly worsening swelling - seek care right away and contact our clinic. Call us: post-op-instructions-rhinoplasty:blank:0 . After hours: post-op-instructions-rhinoplasty:blank:1 . For a life-threatening emergency, such as bleeding you cannot control or trouble breathing, call 911 or go to the nearest emergency room.",
+    "fields": [
+      {
+        "id": "post-op-instructions-rhinoplasty:enumText:0",
+        "kind": "enumText",
+        "raw": "______ (date/time)",
+        "label": "Select",
+        "context": "Your next visit is on ___.",
+        "options": [
+          "date",
+          "time"
+        ],
+        "hint": "date/time"
+      },
+      {
+        "id": "post-op-instructions-rhinoplasty:blank:0",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      },
+      {
+        "id": "post-op-instructions-rhinoplasty:blank:1",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      }
+    ],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [
+      "dot-phrase",
+      "component",
+      "post-op",
+      "instructions",
+      "rhinoplasty"
+    ],
+    "rawBody": "POST-OPERATIVE INSTRUCTIONS - RHINOPLASTY (NASAL SURGERY)\n\nNASAL SPLINT AND CAST CARE: Keep the splint or cast on your nose dry and in place. Do not remove, lift, or adjust it. We will take it off at your follow-up visit. If it loosens or falls off on its own, call us. Keep it dry when you shower or bathe.\n\nNO NOSE-BLOWING: Do not blow your nose for 1 to 2 weeks. If you need to sneeze, sneeze with your mouth open to protect your nose. Blowing your nose can cause bleeding and disturb the healing.\n\nSALINE SPRAY AND GENTLE CARE: Use saline (saltwater) nasal spray as directed to keep the inside of your nose moist and to loosen dried blood. Gently clean around your nostrils with a cotton swab and the ointment we give you. Do not put anything deep into your nose.\n\nHEAD ELEVATION: Keep your head raised above your heart, even when sleeping. Use 2 to 3 pillows or sleep in a recliner for the first week. This lowers swelling and bleeding.\n\nEXPECTED CONGESTION AND DRIP: Your nose will feel stuffy and blocked for several weeks. A small amount of bloody drainage or drip is normal for the first few days. You may have a small gauze pad taped under your nose to catch this; change it as needed.\n\nGLASSES: Do not let glasses or sunglasses rest on the bridge of your nose for about 4 to 6 weeks, or until we clear you. The weight can change the healing shape. Use tape to suspend glasses from your forehead or wear contacts if you can.\n\nACTIVITY: No strenuous activity, exercise, heavy lifting, bending, or straining for at least 2 weeks. These can raise your blood pressure and cause bleeding or swelling. Rest and take it easy.\n\nMEDICATIONS: Take all medications exactly as directed. Take pain medication with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nBRUISING AND SWELLING: Bruising and swelling around the nose and eyes are normal and usually peak around 48 to 72 hours, then improve over 2 to 3 weeks. Subtle swelling of the nose tip can take many months to fully settle.\n\nFOLLOW-UP: Your next visit is on ______ (date/time). If you do not have an appointment, call us to schedule.\n\nEMERGENCY: A heavy nosebleed that will not stop with gentle pressure, trouble breathing, fever, or rapidly worsening swelling - seek care right away and contact our clinic. Call us: ____ . After hours: ____ . For a life-threatening emergency, such as bleeding you cannot control or trouble breathing, call 911 or go to the nearest emergency room.",
+    "warnings": []
+  },
+  {
+    "id": "post-op-instructions-tjr",
+    "dotPhrase": ".sacxpitjr",
+    "title": "Post-Op Instructions - TJR",
+    "description": "Post-operative instructions handout - TMJ total joint replacement (prosthesis)",
+    "category": "Post-Op Instructions",
+    "modes": [
+      "postop",
+      "clinical",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Components/Post-Op Instructions - TJR.md",
+    "bodyTemplate": "POST-OPERATIVE INSTRUCTIONS - TMJ TOTAL JOINT REPLACEMENT\n\nYOUR ARTIFICIAL JOINT: You now have an artificial (prosthetic) jaw joint. Because it is an implanted device, watch closely for signs of infection: increasing pain, redness, warmth, drainage or pus, or fever. Report any of these to us right away, even weeks or months later.\n\nPROTECT THE JOINT: Do NOT force your mouth open wide. Let your jaw move only as far as is comfortable and advance slowly. Avoid sudden or forceful jaw movements that could stress the new joint.\n\nDIET: Soft, no-chew diet (yogurt, smoothies, mashed potatoes, scrambled eggs, soup, pasta). Do not chew gum or eat hard, chewy, or tough foods. Advance your diet only as directed. Stay well hydrated and aim for plenty of protein and calories.\n\nJAW PHYSIOTHERAPY: Begin gentle, gradual jaw exercises only as directed by your surgeon or therapist. Do not push past mild discomfort. Steady, controlled progress protects your new joint and helps you regain motion over time.\n\nICE AND SWELLING: Apply ice packs to the area 20 minutes on, 20 minutes off for the first 48 hours. Some swelling and bruising near the ear and jaw is normal. Keep your head elevated.\n\nORAL HYGIENE: Keep your mouth clean. Brush your teeth normally and rinse gently with warm salt water (1/2 tsp salt in 8 oz water) after meals. Keep your incisions clean and dry as directed.\n\nMEDICATIONS: Take all medications as directed. Complete the full course of antibiotics. Take pain medicine with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nPROSTHESIS CARD: Carry your prosthesis or implant identification card with you. Show it to other doctors and dentists so they know you have an artificial joint, and present it if you ever need imaging or surgery.\n\nDENTAL VISITS: Routine antibiotics before future dental work are NOT routinely required just because you have this joint. Always follow your surgeon's specific guidance, and tell your dentist about your implant before treatment.\n\nACTIVITY: Rest the day of surgery. No vigorous exercise or heavy lifting for the period your surgeon recommends. Resume light activity as you feel able.\n\nFOLLOW-UP: Your next visit is on post-op-instructions-tjr:enumText:0. If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Uncontrolled bleeding, difficulty breathing or swallowing, fever greater than 101.5°F, rapidly worsening swelling, drainage or pus from the incision, or facial weakness - go to the nearest ED or call our clinic. Call us: post-op-instructions-tjr:blank:0 . After hours: post-op-instructions-tjr:blank:1 . For a life-threatening emergency (trouble breathing, severe bleeding you cannot control), call 911 or go to the nearest emergency room.",
+    "fields": [
+      {
+        "id": "post-op-instructions-tjr:enumText:0",
+        "kind": "enumText",
+        "raw": "______ (date/time)",
+        "label": "Select",
+        "context": "Your next visit is on ___.",
+        "options": [
+          "date",
+          "time"
+        ],
+        "hint": "date/time"
+      },
+      {
+        "id": "post-op-instructions-tjr:blank:0",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      },
+      {
+        "id": "post-op-instructions-tjr:blank:1",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      }
+    ],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [
+      "dot-phrase",
+      "component",
+      "post-op",
+      "instructions",
+      "TMJ",
+      "total-joint-replacement",
+      "prosthesis"
+    ],
+    "rawBody": "POST-OPERATIVE INSTRUCTIONS - TMJ TOTAL JOINT REPLACEMENT\n\nYOUR ARTIFICIAL JOINT: You now have an artificial (prosthetic) jaw joint. Because it is an implanted device, watch closely for signs of infection: increasing pain, redness, warmth, drainage or pus, or fever. Report any of these to us right away, even weeks or months later.\n\nPROTECT THE JOINT: Do NOT force your mouth open wide. Let your jaw move only as far as is comfortable and advance slowly. Avoid sudden or forceful jaw movements that could stress the new joint.\n\nDIET: Soft, no-chew diet (yogurt, smoothies, mashed potatoes, scrambled eggs, soup, pasta). Do not chew gum or eat hard, chewy, or tough foods. Advance your diet only as directed. Stay well hydrated and aim for plenty of protein and calories.\n\nJAW PHYSIOTHERAPY: Begin gentle, gradual jaw exercises only as directed by your surgeon or therapist. Do not push past mild discomfort. Steady, controlled progress protects your new joint and helps you regain motion over time.\n\nICE AND SWELLING: Apply ice packs to the area 20 minutes on, 20 minutes off for the first 48 hours. Some swelling and bruising near the ear and jaw is normal. Keep your head elevated.\n\nORAL HYGIENE: Keep your mouth clean. Brush your teeth normally and rinse gently with warm salt water (1/2 tsp salt in 8 oz water) after meals. Keep your incisions clean and dry as directed.\n\nMEDICATIONS: Take all medications as directed. Complete the full course of antibiotics. Take pain medicine with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nPROSTHESIS CARD: Carry your prosthesis or implant identification card with you. Show it to other doctors and dentists so they know you have an artificial joint, and present it if you ever need imaging or surgery.\n\nDENTAL VISITS: Routine antibiotics before future dental work are NOT routinely required just because you have this joint. Always follow your surgeon's specific guidance, and tell your dentist about your implant before treatment.\n\nACTIVITY: Rest the day of surgery. No vigorous exercise or heavy lifting for the period your surgeon recommends. Resume light activity as you feel able.\n\nFOLLOW-UP: Your next visit is on ______ (date/time). If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Uncontrolled bleeding, difficulty breathing or swallowing, fever greater than 101.5°F, rapidly worsening swelling, drainage or pus from the incision, or facial weakness - go to the nearest ED or call our clinic. Call us: ____ . After hours: ____ . For a life-threatening emergency (trouble breathing, severe bleeding you cannot control), call 911 or go to the nearest emergency room.",
+    "warnings": []
+  },
+  {
+    "id": "post-op-instructions-tmj",
+    "dotPhrase": ".sacxpitmj",
+    "title": "Post-Op Instructions - TMJ",
+    "description": "Post-operative instructions handout - TMJ surgery (arthrocentesis / arthroscopy / discopexy / eminectomy / discectomy)",
+    "category": "Post-Op Instructions",
+    "modes": [
+      "postop",
+      "clinical",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Components/Post-Op Instructions - TMJ.md",
+    "bodyTemplate": "POST-OPERATIVE INSTRUCTIONS - TMJ SURGERY\n\nJAW REST AND DIET: Rest your jaw. Eat a soft, no-chew diet (yogurt, smoothies, mashed potatoes, scrambled eggs, soup, pasta). Do NOT chew gum and avoid chewy, hard, or tough foods. Take small bites and avoid opening wide for the first few days. Stay well hydrated.\n\nPHYSICAL THERAPY / JAW EXERCISES: post-op-instructions-tmj:blank:0:\n  After arthrocentesis or arthroscopy: gentle jaw movement and range-of-motion exercises are encouraged. Begin slow, comfortable opening and side-to-side movements as directed to keep the joint mobile.\n  After disc repositioning (discopexy) or an anchor procedure: AVOID aggressive opening or stretching. Keep your mouth movements small and gentle to protect the repair, and only advance your exercises when your surgeon tells you to.\n\nICE: Apply ice packs to the joint area 20 minutes on, 20 minutes off for the first 48 hours to reduce swelling and soreness.\n\nSWELLING: Some swelling and bruising near the ear or jaw joint is normal and improves over several days. Keep your head elevated.\n\nORAL HYGIENE: Keep your mouth clean. Brush your teeth normally and rinse gently with warm salt water (1/2 tsp salt in 8 oz water) after meals. Keep any incision near the ear clean and dry as directed.\n\nMEDICATIONS: Take all medications as directed. Take pain medicine with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nACTIVITY: Rest the day of surgery. No vigorous exercise or heavy lifting for 48-72 hours. Resume light activity as you feel able.\n\nFOLLOW-UP: Your next visit is on post-op-instructions-tmj:enumText:0. If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Uncontrolled bleeding, difficulty breathing or swallowing, fever greater than 101.5°F, rapidly worsening swelling, or facial weakness - go to the nearest ED or call our clinic. Call us: post-op-instructions-tmj:blank:1 . After hours: post-op-instructions-tmj:blank:2 . For a life-threatening emergency (trouble breathing, severe bleeding you cannot control), call 911 or go to the nearest emergency room.",
+    "fields": [
+      {
+        "id": "post-op-instructions-tmj:blank:0",
+        "kind": "blank",
+        "raw": "___ (choose one based on your procedure)",
+        "label": "Field",
+        "context": "___:",
+        "hint": "choose one based on your procedure"
+      },
+      {
+        "id": "post-op-instructions-tmj:enumText:0",
+        "kind": "enumText",
+        "raw": "______ (date/time)",
+        "label": "Select",
+        "context": "Your next visit is on ___.",
+        "options": [
+          "date",
+          "time"
+        ],
+        "hint": "date/time"
+      },
+      {
+        "id": "post-op-instructions-tmj:blank:1",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      },
+      {
+        "id": "post-op-instructions-tmj:blank:2",
+        "kind": "blank",
+        "raw": "____",
+        "label": "Field",
+        "context": "___ ."
+      }
+    ],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [
+      "dot-phrase",
+      "component",
+      "post-op",
+      "instructions",
+      "TMJ"
+    ],
+    "rawBody": "POST-OPERATIVE INSTRUCTIONS - TMJ SURGERY\n\nJAW REST AND DIET: Rest your jaw. Eat a soft, no-chew diet (yogurt, smoothies, mashed potatoes, scrambled eggs, soup, pasta). Do NOT chew gum and avoid chewy, hard, or tough foods. Take small bites and avoid opening wide for the first few days. Stay well hydrated.\n\nPHYSICAL THERAPY / JAW EXERCISES: ___ (choose one based on your procedure):\n  After arthrocentesis or arthroscopy: gentle jaw movement and range-of-motion exercises are encouraged. Begin slow, comfortable opening and side-to-side movements as directed to keep the joint mobile.\n  After disc repositioning (discopexy) or an anchor procedure: AVOID aggressive opening or stretching. Keep your mouth movements small and gentle to protect the repair, and only advance your exercises when your surgeon tells you to.\n\nICE: Apply ice packs to the joint area 20 minutes on, 20 minutes off for the first 48 hours to reduce swelling and soreness.\n\nSWELLING: Some swelling and bruising near the ear or jaw joint is normal and improves over several days. Keep your head elevated.\n\nORAL HYGIENE: Keep your mouth clean. Brush your teeth normally and rinse gently with warm salt water (1/2 tsp salt in 8 oz water) after meals. Keep any incision near the ear clean and dry as directed.\n\nMEDICATIONS: Take all medications as directed. Take pain medicine with food. Do not take more than 3000 mg of acetaminophen (Tylenol) in 24 hours from all sources, including combination pain pills such as Norco or Percocet.\n\nACTIVITY: Rest the day of surgery. No vigorous exercise or heavy lifting for 48-72 hours. Resume light activity as you feel able.\n\nFOLLOW-UP: Your next visit is on ______ (date/time). If you do not have an appointment, call us to schedule.\n\nEMERGENCY: Uncontrolled bleeding, difficulty breathing or swallowing, fever greater than 101.5°F, rapidly worsening swelling, or facial weakness - go to the nearest ED or call our clinic. Call us: ____ . After hours: ____ . For a life-threatening emergency (trouble breathing, severe bleeding you cannot control), call 911 or go to the nearest emergency room.",
     "warnings": []
   },
   {

@@ -37,6 +37,14 @@ describe('content referential integrity', () => {
     }
   })
 
+  it('every clinical procedure links a valid post-op handout (no blank discharge page)', () => {
+    for (const p of PROCEDURES) {
+      if (/closing|accounting/.test(p.id)) continue // adjunct atoms carry no handout
+      expect(p.postopIds.length, `${p.id} has no post-op handout`).toBeGreaterThan(0)
+      for (const id of p.postopIds) expect(compIds.has(id), `${p.id} -> ${id} dangling handout`).toBe(true)
+    }
+  })
+
   it('content ids are unique WITHIN each collection and dot phrases are globally unique', () => {
     for (const coll of [ATOMS, COMPONENTS, PULL_SHEETS, OP_TEMPLATES, SKELETONS]) {
       const ids = coll.map((c) => c.id)
