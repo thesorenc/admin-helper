@@ -14,74 +14,86 @@
         "id": "aicbg-left-to-maxilla:toothNumber:0",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "anterior maxillary buccal defect from sites"
+        "label": "Tooth #",
+        "context": "anterior maxillary buccal defect from sites ___ with significant scaring of buccal mucosa"
       },
       {
         "id": "aicbg-left-to-maxilla:text:0",
         "kind": "text",
         "raw": "[left]",
-        "label": "[left] anterior iliac crest was"
+        "label": "Value",
+        "context": "___ anterior iliac crest was accessed through medical approach careful not dissecting off the tensor fascia latae"
       },
       {
         "id": "aicbg-left-to-maxilla:hardwareCount:0",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "anterior sextant with titanium mesh and"
+        "label": "Count",
+        "context": "tricortical block was fixated to anterior sextant with titanium mesh and ___x monocortical screws"
       },
       {
         "id": "aicbg-left-to-maxilla:toothNumber:1",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "with a 15 blade from tooth"
+        "label": "Tooth #",
+        "context": "Attention was directed to the anterior maxilla, where a vestibular incision was made with a 15 blade from tooth ___ to [#__], extending over the edentulous maxi"
       },
       {
         "id": "aicbg-left-to-maxilla:toothNumber:2",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "blade from tooth [ __] to"
+        "label": "Tooth #",
+        "context": "Attention was directed to the anterior maxilla, where a vestibular incision was made with a 15 blade from tooth [#__] to ___, extending over the edentulous maxi"
       },
       {
         "id": "aicbg-left-to-maxilla:text:1",
         "kind": "text",
         "raw": "[left]",
-        "label": "Attention directed to the"
+        "label": "Value",
+        "context": "Attention directed to the ___ anterior hip."
       },
       {
         "id": "aicbg-left-to-maxilla:text:2",
         "kind": "text",
         "raw": "[left]",
-        "label": "with a 15 blade along the"
+        "label": "Value",
+        "context": "A cutaneous and subcutaneous incision was made with a 15 blade along the ___ anterior iliac crest, 2."
       },
       {
         "id": "aicbg-left-to-maxilla:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "standard protocol. The incision measured approxi",
+        "label": "Measurement",
+        "context": "The incision measured approximately ___ cm in length.",
         "unit": null
       },
       {
         "id": "aicbg-left-to-maxilla:hardwareCount:1",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "with sterile saline. Block fixated with"
+        "label": "Count",
+        "context": "Block fixated with ___x monocortical screws ([#] within the block and medial to [#__]) with a trimmed Synthes [profile] titanium mesh."
       },
       {
         "id": "aicbg-left-to-maxilla:hardwareCount:2",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "with [ ]x monocortical screws ("
+        "label": "Count",
+        "context": "Block fixated with [#]x monocortical screws (___ within the block and medial to [#__]) with a trimmed Synthes [profile] titanium mesh."
       },
       {
         "id": "aicbg-left-to-maxilla:toothNumber:3",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "within the block and medial to"
+        "label": "Tooth #",
+        "context": "Block fixated with [#]x monocortical screws ([#] within the block and medial to ___) with a trimmed Synthes [profile] titanium mesh."
       },
       {
         "id": "aicbg-left-to-maxilla:text:3",
         "kind": "text",
         "raw": "[profile]",
-        "label": "[ __]) with a trimmed Synthes"
+        "label": "Value",
+        "context": "Block fixated with [#]x monocortical screws ([#] within the block and medial to [#__]) with a trimmed Synthes ___ titanium mesh."
       }
     ],
     "flags": [
@@ -111,7 +123,8 @@
         "id": "all-on-6-maxilla:side:0",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "of all remaining maxillary teeth completed.",
+        "label": "Side",
+        "context": "___ maxillary sinus exposure after extraction of tooth [#__], no perforation noted.",
         "options": [
           "R",
           "L"
@@ -122,33 +135,38 @@
         "id": "all-on-6-maxilla:toothNumber:0",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "sinus exposure after extraction of tooth"
+        "label": "Tooth #",
+        "context": "[R/L] maxillary sinus exposure after extraction of tooth ___, no perforation noted."
       },
       {
         "id": "all-on-6-maxilla:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "saline. Alveoloplasty was completed with approxi (mm)",
+        "label": "Measurement (mm)",
+        "context": "Alveoloplasty was completed with approximately ___ mm of alveolar reduction anterior and [X] mm of alveolar reduction posterior.",
         "unit": "mm"
       },
       {
         "id": "all-on-6-maxilla:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "mm of alveolar reduction anterior and (mm)",
+        "label": "Measurement (mm)",
+        "context": "Alveoloplasty was completed with approximately [X] mm of alveolar reduction anterior and ___ mm of alveolar reduction posterior.",
         "unit": "mm"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:1",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: RP [diameter]x[length] mm, [X]"
+        "label": "Tooth #",
+        "context": "___: RP [diameter]x[length] mm, [X] Ncm (MUA: [X] degrees, H: [X])"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:0",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]: RP",
+        "label": "Implant size (d x l)",
+        "context": "RP ___ mm, [X] Ncm (MUA: [X] degrees, H: [X])",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:0:d",
@@ -168,34 +186,39 @@
         "id": "all-on-6-maxilla:measurement:2",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: RP [diameter]x[length] mm, (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:measurement:3",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RP [diameter]x[length] mm, [X] Ncm (MUA: (degrees)",
+        "label": "Measurement (degrees)",
+        "context": "___ degrees, H: [X])",
         "unit": "degrees"
       },
       {
         "id": "all-on-6-maxilla:measurement:4",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] Ncm (MUA: [X] degrees, H:",
+        "label": "Measurement",
+        "context": "___)",
         "unit": null
       },
       {
         "id": "all-on-6-maxilla:toothNumber:2",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: RP [diameter]x[length] mm, [X]"
+        "label": "Tooth #",
+        "context": "___: RP [diameter]x[length] mm, [X] Ncm (MUA: [X] degrees, H: [X])"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:1",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]: RP",
+        "label": "Implant size (d x l)",
+        "context": "RP ___ mm, [X] Ncm (MUA: [X] degrees, H: [X])",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:1:d",
@@ -215,34 +238,39 @@
         "id": "all-on-6-maxilla:measurement:5",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: RP [diameter]x[length] mm, (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:measurement:6",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RP [diameter]x[length] mm, [X] Ncm (MUA: (degrees)",
+        "label": "Measurement (degrees)",
+        "context": "___ degrees, H: [X])",
         "unit": "degrees"
       },
       {
         "id": "all-on-6-maxilla:measurement:7",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] Ncm (MUA: [X] degrees, H:",
+        "label": "Measurement",
+        "context": "___)",
         "unit": null
       },
       {
         "id": "all-on-6-maxilla:toothNumber:3",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: RP [diameter]x[length] mm, [X]"
+        "label": "Tooth #",
+        "context": "___: RP [diameter]x[length] mm, [X] Ncm, (MUA: [X] degrees, H: [X])"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:2",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]: RP",
+        "label": "Implant size (d x l)",
+        "context": "RP ___ mm, [X] Ncm, (MUA: [X] degrees, H: [X])",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:2:d",
@@ -262,34 +290,39 @@
         "id": "all-on-6-maxilla:measurement:8",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: RP [diameter]x[length] mm, (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "RP [diameter]x[length] mm, ___ Ncm, (MUA: [X] degrees, H: [X])",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:measurement:9",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RP [diameter]x[length] mm, [X] Ncm, (MUA: (degrees)",
+        "label": "Measurement (degrees)",
+        "context": "___ degrees, H: [X])",
         "unit": "degrees"
       },
       {
         "id": "all-on-6-maxilla:measurement:10",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] Ncm, (MUA: [X] degrees, H:",
+        "label": "Measurement",
+        "context": "___)",
         "unit": null
       },
       {
         "id": "all-on-6-maxilla:toothNumber:4",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: RP [diameter]x[length] mm, [X]"
+        "label": "Tooth #",
+        "context": "___: RP [diameter]x[length] mm, [X] Ncm (MUA: [X] degrees, H: [X])"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:3",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]: RP",
+        "label": "Implant size (d x l)",
+        "context": "RP ___ mm, [X] Ncm (MUA: [X] degrees, H: [X])",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:3:d",
@@ -309,34 +342,39 @@
         "id": "all-on-6-maxilla:measurement:11",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: RP [diameter]x[length] mm, (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:measurement:12",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RP [diameter]x[length] mm, [X] Ncm (MUA: (degrees)",
+        "label": "Measurement (degrees)",
+        "context": "___ degrees, H: [X])",
         "unit": "degrees"
       },
       {
         "id": "all-on-6-maxilla:measurement:13",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] Ncm (MUA: [X] degrees, H:",
+        "label": "Measurement",
+        "context": "___)",
         "unit": null
       },
       {
         "id": "all-on-6-maxilla:toothNumber:5",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: RP [diameter]x[length] mm, [X]"
+        "label": "Tooth #",
+        "context": "___: RP [diameter]x[length] mm, [X] Ncm (MUA: [X] degrees, H: [X])"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:4",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]: RP",
+        "label": "Implant size (d x l)",
+        "context": "RP ___ mm, [X] Ncm (MUA: [X] degrees, H: [X])",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:4:d",
@@ -356,34 +394,39 @@
         "id": "all-on-6-maxilla:measurement:14",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: RP [diameter]x[length] mm, (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:measurement:15",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RP [diameter]x[length] mm, [X] Ncm (MUA: (degrees)",
+        "label": "Measurement (degrees)",
+        "context": "___ degrees, H: [X])",
         "unit": "degrees"
       },
       {
         "id": "all-on-6-maxilla:measurement:16",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] Ncm (MUA: [X] degrees, H:",
+        "label": "Measurement",
+        "context": "___)",
         "unit": null
       },
       {
         "id": "all-on-6-maxilla:toothNumber:6",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: RP [diameter]x[length] mm, [X]"
+        "label": "Tooth #",
+        "context": "___: RP [diameter]x[length] mm, [X] Ncm (MUA: [X] degrees, H: [X])"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:5",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]: RP",
+        "label": "Implant size (d x l)",
+        "context": "RP ___ mm, [X] Ncm (MUA: [X] degrees, H: [X])",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:5:d",
@@ -403,28 +446,32 @@
         "id": "all-on-6-maxilla:measurement:17",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: RP [diameter]x[length] mm, (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:measurement:18",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RP [diameter]x[length] mm, [X] Ncm (MUA: (degrees)",
+        "label": "Measurement (degrees)",
+        "context": "___ degrees, H: [X])",
         "unit": "degrees"
       },
       {
         "id": "all-on-6-maxilla:measurement:19",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] Ncm (MUA: [X] degrees, H:",
+        "label": "Measurement",
+        "context": "___)",
         "unit": null
       },
       {
         "id": "all-on-6-maxilla:side:1",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "[R/L] sinus floor exposure during",
+        "label": "Side",
+        "context": "___ sinus floor exposure during placement of implant [#__], which was then covered with collagen membrane at the end of the case.",
         "options": [
           "R",
           "L"
@@ -435,13 +482,15 @@
         "id": "all-on-6-maxilla:toothNumber:7",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "floor exposure during placement of implant"
+        "label": "Tooth #",
+        "context": "[R/L] sinus floor exposure during placement of implant ___, which was then covered with collagen membrane at the end of the case."
       },
       {
         "id": "all-on-6-maxilla:side:2",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "[R/L] maxillary sinus covered with",
+        "label": "Side",
+        "context": "___ maxillary sinus covered with gel foam, incision closed primarily by 3-0 Vicryl in single interrupted fashion.",
         "options": [
           "R",
           "L"
@@ -452,50 +501,58 @@
         "id": "all-on-6-maxilla:toothNumber:8",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "exposed but intact at extraction socket"
+        "label": "Tooth #",
+        "context": "Sinus membrane was noted to be exposed but intact at extraction socket ___."
       },
       {
         "id": "all-on-6-maxilla:toothNumber:9",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "socket [ __]. The maxillary implants"
+        "label": "Tooth #",
+        "context": "The maxillary implants ___ were removed with dental forceps and a rongeurs."
       },
       {
         "id": "all-on-6-maxilla:measurement:20",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "maxillary alveoloplasty in x2 quadrants ( (mm)",
+        "label": "Measurement (mm)",
+        "context": "A pineapple bur under copious irrigation was then used to complete maxillary alveoloplasty in x2 quadrants (___ mm reduction).",
         "unit": "mm"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:10",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "osteotomy sites were planned at positions"
+        "label": "Tooth #",
+        "context": "The implant osteotomy sites were planned at positions ___ to optimize prosthetic support and biomechanical distribution for an All-on-X maxillary fixed prosthes"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:11",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "prosthesis. The anterior implants at sites"
+        "label": "Tooth #",
+        "context": "The anterior implants at sites ___ were planned with angulation toward the piriform rim to maximize anterior-posterior spread."
       },
       {
         "id": "all-on-6-maxilla:toothNumber:12",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "spread. The posterior implants at sites"
+        "label": "Tooth #",
+        "context": "The posterior implants at sites ___ were planned with angulation to maximize anterior-posterior spread and avoid the maxillary sinus."
       },
       {
         "id": "all-on-6-maxilla:toothNumber:13",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "Attention directed to implant sites"
+        "label": "Tooth #",
+        "context": "Attention directed to implant sites ___."
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:6",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "was followed to develop an underprepped",
+        "label": "Implant size (d x l)",
+        "context": "The Nobel implant system was followed to develop an underprepped ___mm dimension osteotomy at site [#__].",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:6:d",
@@ -515,19 +572,22 @@
         "id": "all-on-6-maxilla:toothNumber:14",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "underprepped [diameter]x[length]mm dimension ost"
+        "label": "Tooth #",
+        "context": "The Nobel implant system was followed to develop an underprepped [diameter]x[length]mm dimension osteotomy at site ___."
       },
       {
         "id": "all-on-6-maxilla:toothNumber:15",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "osteotomy at site [ __]. Site"
+        "label": "Tooth #",
+        "context": "Site ___ was angled toward the piriform and verified tactually through the piriform nasal floor dissection."
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:7",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "nasal floor dissection. A Nobel Active",
+        "label": "Implant size (d x l)",
+        "context": "A Nobel Active ___mm implant was then placed and torqued to [X] Ncm.",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:7:d",
@@ -547,14 +607,16 @@
         "id": "all-on-6-maxilla:measurement:21",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "was then placed and torqued to (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "A Nobel Active [diameter]x[length]mm implant was then placed and torqued to ___ Ncm.",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:8",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "was followed to develop an underprepped",
+        "label": "Implant size (d x l)",
+        "context": "The Nobel implant system was followed to develop an underprepped ___mm dimension osteotomy at site [#__].",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:8:d",
@@ -574,13 +636,15 @@
         "id": "all-on-6-maxilla:toothNumber:16",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "underprepped [diameter]x[length]mm dimension ost"
+        "label": "Tooth #",
+        "context": "The Nobel implant system was followed to develop an underprepped [diameter]x[length]mm dimension osteotomy at site ___."
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:9",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "osteotomy at site [ __]. Biomet",
+        "label": "Implant size (d x l)",
+        "context": "Biomet ___mm implant was then placed and torqued to [X] Ncm.",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:9:d",
@@ -600,20 +664,23 @@
         "id": "all-on-6-maxilla:measurement:22",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "was then placed and torqued to (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "Biomet [diameter]x[length]mm implant was then placed and torqued to ___ Ncm.",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:17",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "Attention directed to implant site"
+        "label": "Tooth #",
+        "context": "Attention directed to implant site ___."
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:10",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "was followed to develop an underprepped",
+        "label": "Implant size (d x l)",
+        "context": "The Nobel implant system was followed to develop an underprepped ___mm dimension osteotomy.",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:10:d",
@@ -633,7 +700,8 @@
         "id": "all-on-6-maxilla:hardwareDim:11",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "within the osteotomy and the final",
+        "label": "Implant size (d x l)",
+        "context": "Prior to implant placement a Helitape membrane was tucked within the osteotomy and the final ___mm implant was placed within the osteotomy and torqued to [X] Nc",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:11:d",
@@ -653,20 +721,23 @@
         "id": "all-on-6-maxilla:measurement:23",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "within the osteotomy and torqued to (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "Prior to implant placement a Helitape membrane was tucked within the osteotomy and the final [diameter]x[length]mm implant was placed within the osteotomy and t",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:18",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "Attention directed to implant sites"
+        "label": "Tooth #",
+        "context": "Attention directed to implant sites ___."
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:12",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "was followed to develop an underprepped",
+        "label": "Implant size (d x l)",
+        "context": "The Nobel implant system was followed to develop an underprepped ___mm dimension osteotomy at site [#__].",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:12:d",
@@ -686,13 +757,15 @@
         "id": "all-on-6-maxilla:toothNumber:19",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "underprepped [diameter]x[length]mm dimension ost"
+        "label": "Tooth #",
+        "context": "The Nobel implant system was followed to develop an underprepped [diameter]x[length]mm dimension osteotomy at site ___."
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:13",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "site [ __]. A Nobel Active",
+        "label": "Implant size (d x l)",
+        "context": "A Nobel Active ___mm implant was then placed and torqued to [X] Ncm.",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:13:d",
@@ -712,14 +785,16 @@
         "id": "all-on-6-maxilla:measurement:24",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "was then placed and torqued to (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "A Nobel Active [diameter]x[length]mm implant was then placed and torqued to ___ Ncm.",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:14",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "was followed to develop an underprepped",
+        "label": "Implant size (d x l)",
+        "context": "The Nobel implant system was followed to develop an underprepped ___mm dimension osteotomy at site [#__].",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:14:d",
@@ -739,13 +814,15 @@
         "id": "all-on-6-maxilla:toothNumber:20",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "underprepped [diameter]x[length]mm dimension ost"
+        "label": "Tooth #",
+        "context": "The Nobel implant system was followed to develop an underprepped [diameter]x[length]mm dimension osteotomy at site ___."
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:15",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "osteotomy at site [ __]. Biomet",
+        "label": "Implant size (d x l)",
+        "context": "Biomet ___mm implant was then placed and torqued to [X] Ncm at site [#__].",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:15:d",
@@ -765,26 +842,30 @@
         "id": "all-on-6-maxilla:measurement:25",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "was then placed and torqued to (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "Biomet [diameter]x[length]mm implant was then placed and torqued to ___ Ncm at site [#__].",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:21",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "torqued to [X] Ncm at site"
+        "label": "Tooth #",
+        "context": "Biomet [diameter]x[length]mm implant was then placed and torqued to [X] Ncm at site ___."
       },
       {
         "id": "all-on-6-maxilla:toothNumber:22",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "Attention directed to implant site"
+        "label": "Tooth #",
+        "context": "Attention directed to implant site ___."
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:16",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "was followed to develop an underprepped",
+        "label": "Implant size (d x l)",
+        "context": "The Nobel implant system was followed to develop an underprepped ___mm dimension osteotomy at site [#__].",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:16:d",
@@ -804,13 +885,15 @@
         "id": "all-on-6-maxilla:toothNumber:23",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "underprepped [diameter]x[length]mm dimension ost"
+        "label": "Tooth #",
+        "context": "The Nobel implant system was followed to develop an underprepped [diameter]x[length]mm dimension osteotomy at site ___."
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:17",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "posteriorly toward the piriform and underprepped",
+        "label": "Implant size (d x l)",
+        "context": "The osteotomy was then moved anteriorly and redirected posteriorly toward the piriform and underprepped ___mm dimension osteotomy at site [#__].",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:17:d",
@@ -830,13 +913,15 @@
         "id": "all-on-6-maxilla:toothNumber:24",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "underprepped [diameter]x[length]mm dimension ost"
+        "label": "Tooth #",
+        "context": "The osteotomy was then moved anteriorly and redirected posteriorly toward the piriform and underprepped [diameter]x[length]mm dimension osteotomy at site ___."
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:18",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "site [ __]. A Nobel Active",
+        "label": "Implant size (d x l)",
+        "context": "A Nobel Active ___mm implant was then placed and torqued to [X] Ncm.",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:18:d",
@@ -856,32 +941,37 @@
         "id": "all-on-6-maxilla:measurement:26",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "was then placed and torqued to (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "A Nobel Active [diameter]x[length]mm implant was then placed and torqued to ___ Ncm.",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:25",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "screws were then placed over implants"
+        "label": "Tooth #",
+        "context": "Cover screws were then placed over implants ___."
       },
       {
         "id": "all-on-6-maxilla:toothNumber:26",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "were removed and placed on implants"
+        "label": "Tooth #",
+        "context": "The cover screws were removed and placed on implants ___."
       },
       {
         "id": "all-on-6-maxilla:toothNumber:27",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "Gel foam was placed within site"
+        "label": "Tooth #",
+        "context": "Gel foam was placed within site ___ and a collagen membrane placed on the [R/L] nasal floor."
       },
       {
         "id": "all-on-6-maxilla:side:3",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "a collagen membrane placed on the",
+        "label": "Side",
+        "context": "Gel foam was placed within site [#__] and a collagen membrane placed on the ___ nasal floor.",
         "options": [
           "R",
           "L"
@@ -892,13 +982,15 @@
         "id": "all-on-6-maxilla:toothNumber:28",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: RP [diameter]x[length] mm, [X]"
+        "label": "Tooth #",
+        "context": "___: RP [diameter]x[length] mm, [X] Ncm (MUA: [X] degrees, H: [X])"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:19",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]: RP",
+        "label": "Implant size (d x l)",
+        "context": "RP ___ mm, [X] Ncm (MUA: [X] degrees, H: [X])",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:19:d",
@@ -918,34 +1010,39 @@
         "id": "all-on-6-maxilla:measurement:27",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: RP [diameter]x[length] mm, (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:measurement:28",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RP [diameter]x[length] mm, [X] Ncm (MUA: (degrees)",
+        "label": "Measurement (degrees)",
+        "context": "___ degrees, H: [X])",
         "unit": "degrees"
       },
       {
         "id": "all-on-6-maxilla:measurement:29",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] Ncm (MUA: [X] degrees, H:",
+        "label": "Measurement",
+        "context": "___)",
         "unit": null
       },
       {
         "id": "all-on-6-maxilla:toothNumber:29",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: RP [diameter]x[length] mm, [X]"
+        "label": "Tooth #",
+        "context": "___: RP [diameter]x[length] mm, [X] Ncm (MUA: [X] degrees, H: [X])"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:20",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]: RP",
+        "label": "Implant size (d x l)",
+        "context": "RP ___ mm, [X] Ncm (MUA: [X] degrees, H: [X])",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:20:d",
@@ -965,34 +1062,39 @@
         "id": "all-on-6-maxilla:measurement:30",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: RP [diameter]x[length] mm, (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:measurement:31",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RP [diameter]x[length] mm, [X] Ncm (MUA: (degrees)",
+        "label": "Measurement (degrees)",
+        "context": "___ degrees, H: [X])",
         "unit": "degrees"
       },
       {
         "id": "all-on-6-maxilla:measurement:32",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] Ncm (MUA: [X] degrees, H:",
+        "label": "Measurement",
+        "context": "___)",
         "unit": null
       },
       {
         "id": "all-on-6-maxilla:toothNumber:30",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: RP [diameter]x[length] mm, [X]"
+        "label": "Tooth #",
+        "context": "___: RP [diameter]x[length] mm, [X] Ncm, (MUA: [X] degrees, H: [X])"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:21",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]: RP",
+        "label": "Implant size (d x l)",
+        "context": "RP ___ mm, [X] Ncm, (MUA: [X] degrees, H: [X])",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:21:d",
@@ -1012,34 +1114,39 @@
         "id": "all-on-6-maxilla:measurement:33",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: RP [diameter]x[length] mm, (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "RP [diameter]x[length] mm, ___ Ncm, (MUA: [X] degrees, H: [X])",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:measurement:34",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RP [diameter]x[length] mm, [X] Ncm, (MUA: (degrees)",
+        "label": "Measurement (degrees)",
+        "context": "___ degrees, H: [X])",
         "unit": "degrees"
       },
       {
         "id": "all-on-6-maxilla:measurement:35",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] Ncm, (MUA: [X] degrees, H:",
+        "label": "Measurement",
+        "context": "___)",
         "unit": null
       },
       {
         "id": "all-on-6-maxilla:toothNumber:31",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: RP [diameter]x[length] mm, [X]"
+        "label": "Tooth #",
+        "context": "___: RP [diameter]x[length] mm, [X] Ncm (MUA: [X] degrees, H: [X])"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:22",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]: RP",
+        "label": "Implant size (d x l)",
+        "context": "RP ___ mm, [X] Ncm (MUA: [X] degrees, H: [X])",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:22:d",
@@ -1059,34 +1166,39 @@
         "id": "all-on-6-maxilla:measurement:36",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: RP [diameter]x[length] mm, (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:measurement:37",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RP [diameter]x[length] mm, [X] Ncm (MUA: (degrees)",
+        "label": "Measurement (degrees)",
+        "context": "___ degrees, H: [X])",
         "unit": "degrees"
       },
       {
         "id": "all-on-6-maxilla:measurement:38",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] Ncm (MUA: [X] degrees, H:",
+        "label": "Measurement",
+        "context": "___)",
         "unit": null
       },
       {
         "id": "all-on-6-maxilla:toothNumber:32",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: RP [diameter]x[length] mm, [X]"
+        "label": "Tooth #",
+        "context": "___: RP [diameter]x[length] mm, [X] Ncm (MUA: [X] degrees, H: [X])"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:23",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]: RP",
+        "label": "Implant size (d x l)",
+        "context": "RP ___ mm, [X] Ncm (MUA: [X] degrees, H: [X])",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:23:d",
@@ -1106,34 +1218,39 @@
         "id": "all-on-6-maxilla:measurement:39",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: RP [diameter]x[length] mm, (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:measurement:40",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RP [diameter]x[length] mm, [X] Ncm (MUA: (degrees)",
+        "label": "Measurement (degrees)",
+        "context": "___ degrees, H: [X])",
         "unit": "degrees"
       },
       {
         "id": "all-on-6-maxilla:measurement:41",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] Ncm (MUA: [X] degrees, H:",
+        "label": "Measurement",
+        "context": "___)",
         "unit": null
       },
       {
         "id": "all-on-6-maxilla:toothNumber:33",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: RP [diameter]x[length] mm, [X]"
+        "label": "Tooth #",
+        "context": "___: RP [diameter]x[length] mm, [X] Ncm (MUA: [X] degrees, H: [X])"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:24",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]: RP",
+        "label": "Implant size (d x l)",
+        "context": "RP ___ mm, [X] Ncm (MUA: [X] degrees, H: [X])",
         "subFields": [
           {
             "id": "all-on-6-maxilla:hardwareDim:24:d",
@@ -1153,28 +1270,32 @@
         "id": "all-on-6-maxilla:measurement:42",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: RP [diameter]x[length] mm, (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
         "unit": "Ncm"
       },
       {
         "id": "all-on-6-maxilla:measurement:43",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RP [diameter]x[length] mm, [X] Ncm (MUA: (degrees)",
+        "label": "Measurement (degrees)",
+        "context": "___ degrees, H: [X])",
         "unit": "degrees"
       },
       {
         "id": "all-on-6-maxilla:measurement:44",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] Ncm (MUA: [X] degrees, H:",
+        "label": "Measurement",
+        "context": "___)",
         "unit": null
       },
       {
         "id": "all-on-6-maxilla:side:4",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "collagen membrane was placed at the",
+        "label": "Side",
+        "context": "A collagen membrane was placed at the ___ nasal floor.",
         "options": [
           "R",
           "L"
@@ -1185,19 +1306,22 @@
         "id": "all-on-6-maxilla:toothNumber:34",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "foam was packed within extraction socket"
+        "label": "Tooth #",
+        "context": "Gel foam was packed within extraction socket ___ and mucosa reapproximated with 3-0 Vicryl sutures in a horizontal mattress and figure of eight style fashion."
       },
       {
         "id": "all-on-6-maxilla:toothNumber:35",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "vicryl tacking interrupted sutures. At site"
+        "label": "Tooth #",
+        "context": "At site ___ the palatal tissue notably covered the entirety of the implant and implant uncovered using a 4."
       },
       {
         "id": "all-on-6-maxilla:text:0",
         "kind": "text",
         "raw": "[Attending]",
-        "label": "[Attending] was present throughout the"
+        "label": "Value",
+        "context": "___ was present throughout the duration of the procedure."
       }
     ],
     "flags": [
@@ -1227,41 +1351,47 @@
         "id": "arthroscopy-bilateral-with-prf-injection:blank:0",
         "kind": "blank",
         "raw": "[__]",
-        "label": "FINDINGS: Bilateral evidence of chondromalacia ("
+        "label": "Field",
+        "context": "Bilateral evidence of chondromalacia (Grade ___), marked hyperemic synovitis, and multiple intra-articular adhesions."
       },
       {
         "id": "arthroscopy-bilateral-with-prf-injection:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "superior joint space was insufflated with (cc)",
+        "label": "Measurement (cc)",
+        "context": "The superior joint space was insufflated with ___ cc of Lactated Ringer's.",
         "unit": "cc"
       },
       {
         "id": "arthroscopy-bilateral-with-prf-injection:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "The joint was heavily lavaged with (cc)",
+        "label": "Measurement (cc)",
+        "context": "The joint was heavily lavaged with ___ cc of Lactated Ringer's solution.",
         "unit": "cc"
       },
       {
         "id": "arthroscopy-bilateral-with-prf-injection:measurement:2",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Upon completion of lysis and lavage, (cc)",
+        "label": "Measurement (cc)",
+        "context": "Upon completion of lysis and lavage, ___ cc of the prepared i-PRF was injected directly into the retrodiscal tissues and superior joint space under visualizatio",
         "unit": "cc"
       },
       {
         "id": "arthroscopy-bilateral-with-prf-injection:measurement:3",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "of adhesions, and copious lavage with (cc)",
+        "label": "Measurement (cc)",
+        "context": "Attention was then directed to the left TMJ, where an identical procedure was performed utilizing insufflation, introduction of the arthroscope, establishment o",
         "unit": "cc"
       },
       {
         "id": "arthroscopy-bilateral-with-prf-injection:measurement:4",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "consistent with the right. The remaining (cc)",
+        "label": "Measurement (cc)",
+        "context": "The remaining ___ cc of i-PRF was injected into the left superior joint space.",
         "unit": "cc"
       }
     ],
@@ -1287,13 +1417,15 @@
         "id": "arthroscopy-unilateral-with-prf-injection:blank:0",
         "kind": "blank",
         "raw": "[__]",
-        "label": "FINDINGS: Grade"
+        "label": "Field",
+        "context": "Grade ___ chondromalacia of the articular eminence and condylar head."
       },
       {
         "id": "arthroscopy-unilateral-with-prf-injection:side:0",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "nasal endotracheal tube without incident. The",
+        "label": "Side",
+        "context": "The ___ face and ear were prepped and draped per standard sterile protocol.",
         "options": [
           "R",
           "L"
@@ -1304,7 +1436,8 @@
         "id": "arthroscopy-unilateral-with-prf-injection:side:1",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "cotton pledget was placed in the",
+        "label": "Side",
+        "context": "A cotton pledget was placed in the ___ external auditory meatus.",
         "options": [
           "R",
           "L"
@@ -1315,7 +1448,8 @@
         "id": "arthroscopy-unilateral-with-prf-injection:side:2",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "landmarks were identified and marked. The",
+        "label": "Side",
+        "context": "The ___ TMJ superior joint space was insufflated with [X] cc of Lactated Ringer's solution using a 27-gauge needle, which returned freely, confirming intracapsu",
         "options": [
           "R",
           "L"
@@ -1326,21 +1460,24 @@
         "id": "arthroscopy-unilateral-with-prf-injection:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "superior joint space was insufflated with (cc)",
+        "label": "Measurement (cc)",
+        "context": "The [R/L] TMJ superior joint space was insufflated with ___ cc of Lactated Ringer's solution using a 27-gauge needle, which returned freely, confirming intracap",
         "unit": "cc"
       },
       {
         "id": "arthroscopy-unilateral-with-prf-injection:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "joint was copiously lavaged with approximately (cc)",
+        "label": "Measurement (cc)",
+        "context": "The joint was copiously lavaged with approximately ___ cc of Lactated Ringer’s solution.",
         "unit": "cc"
       },
       {
         "id": "arthroscopy-unilateral-with-prf-injection:measurement:2",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "previously prepared liquid i PRF (approx. (cc)",
+        "label": "Measurement (cc)",
+        "context": "___ cc) was injected directly into the superior joint space and retrodiscal tissues under direct visualization.",
         "unit": "cc"
       }
     ],
@@ -1389,101 +1526,110 @@
         "id": "bone-graft-maxilla-anterior:toothNumber:0",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "defect accessed via sulcular incision ("
+        "label": "Tooth #",
+        "context": "Anterior maxillary cystic/dehiscence defect accessed via sulcular incision (___ to [#__]) with full-thickness mucoperiosteal flap to the piriform rim."
       },
       {
         "id": "bone-graft-maxilla-anterior:toothNumber:1",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "via sulcular incision ([ __] to"
+        "label": "Tooth #",
+        "context": "Anterior maxillary cystic/dehiscence defect accessed via sulcular incision ([#__] to ___) with full-thickness mucoperiosteal flap to the piriform rim."
       },
       {
         "id": "bone-graft-maxilla-anterior:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "mucoperiosteal flap to the piriform rim. (cc)",
+        "label": "Measurement (cc)",
+        "context": "___ cc serous fluid aspirated through a pinpoint dehiscence and sent for pathology.",
         "unit": "cc"
       },
       {
         "id": "bone-graft-maxilla-anterior:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "confirmed (no fluid return per nares). (cc)",
+        "label": "Measurement (cc)",
+        "context": "___ cc DBX putty placed in the defect, covered with a [X] cm x [X] cm Duragen collagen membrane.",
         "unit": "cc"
       },
       {
         "id": "bone-graft-maxilla-anterior:measurement:2",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "in the defect, covered with a",
+        "label": "Measurement",
+        "context": "[X] cc DBX putty placed in the defect, covered with a ___ cm x [X] cm Duragen collagen membrane.",
         "unit": null
       },
       {
         "id": "bone-graft-maxilla-anterior:measurement:3",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "covered with a [X] cm x",
+        "label": "Measurement",
+        "context": "[X] cc DBX putty placed in the defect, covered with a [X] cm x ___ cm Duragen collagen membrane.",
         "unit": null
       },
       {
         "id": "bone-graft-maxilla-anterior:measurement:4",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "through existing pinpoint dehiscence to withdraw (cc)",
+        "label": "Measurement (cc)",
+        "context": "18g sharp on 10cc syringe was used to aspirate through existing pinpoint dehiscence to withdraw ___ cc of serous fluid for sample to be sent to pathology.",
         "unit": "cc"
       },
       {
         "id": "bone-graft-maxilla-anterior:toothNumber:2",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "for sulcular incision from distal of"
+        "label": "Tooth #",
+        "context": "15 was used for sulcular incision from distal of ___ to distal of [#__]."
       },
       {
         "id": "bone-graft-maxilla-anterior:toothNumber:3",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "of [ __] to distal of"
+        "label": "Tooth #",
+        "context": "15 was used for sulcular incision from distal of [#__] to distal of ___."
       },
       {
         "id": "bone-graft-maxilla-anterior:measurement:5",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "no fluid return out of nares. (cc)",
+        "label": "Measurement (cc)",
+        "context": "___ cc of DBX putty ([REF], [exp]) placed in cyst.",
         "unit": "cc"
       },
       {
         "id": "bone-graft-maxilla-anterior:text:0",
         "kind": "text",
         "raw": "[REF]",
-        "label": "[X] cc of DBX putty ("
+        "label": "Value",
+        "context": "[X] cc of DBX putty (___, [exp]) placed in cyst."
       },
       {
         "id": "bone-graft-maxilla-anterior:text:1",
         "kind": "text",
         "raw": "[exp]",
-        "label": "[X] cc of DBX putty ([REF],"
+        "label": "Value",
+        "context": "[X] cc of DBX putty ([REF], ___) placed in cyst."
       },
       {
         "id": "bone-graft-maxilla-anterior:measurement:6",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "putty ([REF], [exp]) placed in cyst.",
+        "label": "Measurement",
+        "context": "___ cm x [X] cm Duragen collagen membrane placed over cyst.",
         "unit": null
       },
       {
         "id": "bone-graft-maxilla-anterior:measurement:7",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "placed in cyst. [X] cm x",
+        "label": "Measurement",
+        "context": "[X] cm x ___ cm Duragen collagen membrane placed over cyst.",
         "unit": null
       }
     ],
-    "flags": [
-      {
-        "type": "TEMPLATE NOTE",
-        "text": "TEMPLATE NOTE — 2026-06-14: The original FINDINGS here were a mis-paste from the TJR with Stock Biomet note (condylar components, abdominal fat, \"R condyle disc\" specimen). Replaced above to summarize this note's actual technique (anterior-maxilla cyst enucleation + DBX graft). Original mis-pasted text preserved in _archive/OP Notes - original extracted.txt. Consider retitling this template \"Cyst Enucleation + Bone Graft, Anterior Maxilla.\""
-      }
-    ],
+    "flags": [],
     "includes": [],
     "smartlinks": [],
     "tags": [],
@@ -1505,76 +1651,88 @@
         "id": "bsso:hardwareCount:0",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "fixated with bilateral"
+        "label": "Count",
+        "context": "fixated with bilateral ___-hole [profile] dog bone plate with [#]x monocortical screws"
       },
       {
         "id": "bsso:text:0",
         "kind": "text",
         "raw": "[profile]",
-        "label": "fixated with bilateral [ ] hole"
+        "label": "Value",
+        "context": "fixated with bilateral [#]-hole ___ dog bone plate with [#]x monocortical screws"
       },
       {
         "id": "bsso:hardwareCount:1",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "hole [profile] dog bone plate with"
+        "label": "Count",
+        "context": "fixated with bilateral [#]-hole [profile] dog bone plate with ___x monocortical screws"
       },
       {
         "id": "bsso:hardwareCount:2",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "to the left mandible. A KLS"
+        "label": "Count",
+        "context": "A KLS ___-hole, [profile] thick, dog bone was then fixated using [#] [length]-mm and [#] [length]-mm monocortical screws to the proximal segment."
       },
       {
         "id": "bsso:text:1",
         "kind": "text",
         "raw": "[profile]",
-        "label": "mandible. A KLS [ ] hole,"
+        "label": "Value",
+        "context": "A KLS [#]-hole, ___ thick, dog bone was then fixated using [#] [length]-mm and [#] [length]-mm monocortical screws to the proximal segment."
       },
       {
         "id": "bsso:hardwareCount:3",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "dog bone was then fixated using"
+        "label": "Count",
+        "context": "A KLS [#]-hole, [profile] thick, dog bone was then fixated using ___ [length]-mm and [#] [length]-mm monocortical screws to the proximal segment."
       },
       {
         "id": "bsso:measurement:0",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "was then fixated using [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "A KLS [#]-hole, [profile] thick, dog bone was then fixated using [#] ___-mm and [#] [length]-mm monocortical screws to the proximal segment.",
         "unit": "mm"
       },
       {
         "id": "bsso:hardwareCount:4",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "using [ ] [length] mm and"
+        "label": "Count",
+        "context": "A KLS [#]-hole, [profile] thick, dog bone was then fixated using [#] [length]-mm and ___ [length]-mm monocortical screws to the proximal segment."
       },
       {
         "id": "bsso:measurement:1",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "] [length] mm and [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "A KLS [#]-hole, [profile] thick, dog bone was then fixated using [#] [length]-mm and [#] ___-mm monocortical screws to the proximal segment.",
         "unit": "mm"
       },
       {
         "id": "bsso:hardwareCount:5",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "using a notched instrument, where additional"
+        "label": "Count",
+        "context": "Care was then taken to position the proximal segment superiorly into the glenoid fossa and to align the inferior border of the proximal segment with the distal "
       },
       {
         "id": "bsso:measurement:2",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "notched instrument, where additional [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "Care was then taken to position the proximal segment superiorly into the glenoid fossa and to align the inferior border of the proximal segment with the distal ",
         "unit": "mm"
       },
       {
         "id": "bsso:text:2",
         "kind": "text",
         "raw": "[Attending]",
-        "label": "Attending:"
+        "label": "Value",
+        "context": "___ was scrubbed for the entirety of the case."
       }
     ],
     "flags": [],
@@ -1617,91 +1775,104 @@
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "skin resurfacing completed with Deep (",
+        "label": "Measurement",
+        "context": "CO2 ablative laser skin resurfacing completed with Deep (___ mJ, [X]s Repeat delay, [X] Hz) and Active ([X] mJ, [X] Hz, [X]s Repeat delay) Fx handpieces",
         "unit": null
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "resurfacing completed with Deep ([X] mJ,",
+        "label": "Measurement",
+        "context": "CO2 ablative laser skin resurfacing completed with Deep ([X] mJ, ___s Repeat delay, [X] Hz) and Active ([X] mJ, [X] Hz, [X]s Repeat delay) Fx handpieces",
         "unit": null
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:2",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Deep ([X] mJ, [X]s Repeat delay,",
+        "label": "Measurement",
+        "context": "CO2 ablative laser skin resurfacing completed with Deep ([X] mJ, [X]s Repeat delay, ___ Hz) and Active ([X] mJ, [X] Hz, [X]s Repeat delay) Fx handpieces",
         "unit": null
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:3",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "delay, [X] Hz) and Active (",
+        "label": "Measurement",
+        "context": "CO2 ablative laser skin resurfacing completed with Deep ([X] mJ, [X]s Repeat delay, [X] Hz) and Active (___ mJ, [X] Hz, [X]s Repeat delay) Fx handpieces",
         "unit": null
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:4",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] Hz) and Active ([X] mJ,",
+        "label": "Measurement",
+        "context": "CO2 ablative laser skin resurfacing completed with Deep ([X] mJ, [X]s Repeat delay, [X] Hz) and Active ([X] mJ, ___ Hz, [X]s Repeat delay) Fx handpieces",
         "unit": null
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:5",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "and Active ([X] mJ, [X] Hz,",
+        "label": "Measurement",
+        "context": "CO2 ablative laser skin resurfacing completed with Deep ([X] mJ, [X]s Repeat delay, [X] Hz) and Active ([X] mJ, [X] Hz, ___s Repeat delay) Fx handpieces",
         "unit": null
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:6",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Energy:",
+        "label": "Measurement",
+        "context": "___ mJ",
         "unit": null
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:7",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Rate:",
+        "label": "Measurement",
+        "context": "___ Hz",
         "unit": null
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:8",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Repeat delay:",
+        "label": "Measurement",
+        "context": "___ seconds",
         "unit": null
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:9",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Energy:",
+        "label": "Measurement",
+        "context": "___ mJ",
         "unit": null
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:10",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Rate:",
+        "label": "Measurement",
+        "context": "___ Hz",
         "unit": null
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:11",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Repeat delay:",
+        "label": "Measurement",
+        "context": "___ seconds",
         "unit": null
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:text:0",
         "kind": "text",
         "raw": "[Attending]",
-        "label": "[Attending] was scrubbed in for"
+        "label": "Value",
+        "context": "___ was scrubbed in for the entirety of the case."
       }
     ],
     "flags": [],
@@ -1726,7 +1897,8 @@
         "id": "excision-cyst-right-mandible:side:0",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Findings:",
+        "label": "Side",
+        "context": "___ [mandible/maxilla] cystic lesion at [site/tooth #] measuring approximately [X] cm, [well-corticated/expansile], associated with [impacted tooth #__ / no too",
         "options": [
           "R",
           "L"
@@ -1737,7 +1909,8 @@
         "id": "excision-cyst-right-mandible:enumText:0",
         "kind": "enumText",
         "raw": "[mandible/maxilla]",
-        "label": "Findings: [R/L]",
+        "label": "Select",
+        "context": "[R/L] ___ cystic lesion at [site/tooth #] measuring approximately [X] cm, [well-corticated/expansile], associated with [impacted tooth #__ / no tooth].",
         "options": [
           "mandible",
           "maxilla"
@@ -1748,7 +1921,8 @@
         "id": "excision-cyst-right-mandible:enumText:1",
         "kind": "enumText",
         "raw": "[site/tooth #]",
-        "label": "Findings: [R/L] [mandible/maxilla] cystic lesion",
+        "label": "Select",
+        "context": "[R/L] [mandible/maxilla] cystic lesion at ___ measuring approximately [X] cm, [well-corticated/expansile], associated with [impacted tooth #__ / no tooth].",
         "options": [
           "site",
           "tooth #"
@@ -1759,14 +1933,16 @@
         "id": "excision-cyst-right-mandible:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "lesion at [site/tooth ] measuring approximately",
+        "label": "Measurement",
+        "context": "[R/L] [mandible/maxilla] cystic lesion at [site/tooth #] measuring approximately ___ cm, [well-corticated/expansile], associated with [impacted tooth #__ / no t",
         "unit": null
       },
       {
         "id": "excision-cyst-right-mandible:enumText:2",
         "kind": "enumText",
         "raw": "[well-corticated/expansile]",
-        "label": "[site/tooth ] measuring approximately [X] cm,",
+        "label": "Select",
+        "context": "[R/L] [mandible/maxilla] cystic lesion at [site/tooth #] measuring approximately [X] cm, ___, associated with [impacted tooth #__ / no tooth].",
         "options": [
           "well-corticated",
           "expansile"
@@ -1777,7 +1953,8 @@
         "id": "excision-cyst-right-mandible:enumText:3",
         "kind": "enumText",
         "raw": "[Inferior alveolar / mental / lingual / infraorbital]",
-        "label": "[impacted tooth __ / no tooth].",
+        "label": "Select",
+        "context": "___ nerve [visualized and protected / not encountered].",
         "options": [
           "Inferior alveolar",
           "mental",
@@ -1790,7 +1967,8 @@
         "id": "excision-cyst-right-mandible:enumText:4",
         "kind": "enumText",
         "raw": "[visualized and protected / not encountered]",
-        "label": "mental / lingual / infraorbital] nerve",
+        "label": "Select",
+        "context": "[Inferior alveolar / mental / lingual / infraorbital] nerve ___.",
         "options": [
           "visualized and protected",
           "not encountered"
@@ -1801,7 +1979,8 @@
         "id": "excision-cyst-right-mandible:enumText:5",
         "kind": "enumText",
         "raw": "[toto / piecemeal]",
-        "label": "/ not encountered]. Lesion enucleated in",
+        "label": "Select",
+        "context": "Lesion enucleated in ___ and submitted for permanent pathology.",
         "options": [
           "toto",
           "piecemeal"
@@ -1812,7 +1991,8 @@
         "id": "excision-cyst-right-mandible:enumText:6",
         "kind": "enumText",
         "raw": "[IAN/mental/lingual]",
-        "label": "including bleeding, infection, nerve injury (",
+        "label": "Select",
+        "context": "Risks, benefits, alternatives, and complications of the surgery were reviewed, including bleeding, infection, nerve injury (___) with potential paresthesia, dam",
         "options": [
           "IAN",
           "mental",
@@ -1824,7 +2004,8 @@
         "id": "excision-cyst-right-mandible:enumText:7",
         "kind": "enumText",
         "raw": "[nasal/oral]",
-        "label": "general anesthesia and intubated via a",
+        "label": "Select",
+        "context": "The patient was placed under general anesthesia and intubated via a ___ endotracheal route without incident.",
         "options": [
           "nasal",
           "oral"
@@ -1835,7 +2016,8 @@
         "id": "excision-cyst-right-mandible:side:1",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Attention was directed to the",
+        "label": "Side",
+        "context": "Attention was directed to the ___ [mandibular/maxillary] [vestibule/alveolus] where the site was anesthetized with [X] cc of [1%/2%] lidocaine with 1:100,000 ep",
         "options": [
           "R",
           "L"
@@ -1846,7 +2028,8 @@
         "id": "excision-cyst-right-mandible:enumText:8",
         "kind": "enumText",
         "raw": "[mandibular/maxillary]",
-        "label": "Attention was directed to the [R/L]",
+        "label": "Select",
+        "context": "Attention was directed to the [R/L] ___ [vestibule/alveolus] where the site was anesthetized with [X] cc of [1%/2%] lidocaine with 1:100,000 epinephrine [and an",
         "options": [
           "mandibular",
           "maxillary"
@@ -1857,7 +2040,8 @@
         "id": "excision-cyst-right-mandible:enumText:9",
         "kind": "enumText",
         "raw": "[vestibule/alveolus]",
-        "label": "was directed to the [R/L] [mandibular/maxillary]",
+        "label": "Select",
+        "context": "Attention was directed to the [R/L] [mandibular/maxillary] ___ where the site was anesthetized with [X] cc of [1%/2%] lidocaine with 1:100,000 epinephrine [and ",
         "options": [
           "vestibule",
           "alveolus"
@@ -1868,14 +2052,16 @@
         "id": "excision-cyst-right-mandible:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "where the site was anesthetized with (cc)",
+        "label": "Measurement (cc)",
+        "context": "Attention was directed to the [R/L] [mandibular/maxillary] [vestibule/alveolus] where the site was anesthetized with ___ cc of [1%/2%] lidocaine with 1:100,000 ",
         "unit": "cc"
       },
       {
         "id": "excision-cyst-right-mandible:enumText:10",
         "kind": "enumText",
         "raw": "[1%/2%]",
-        "label": "was anesthetized with [X] cc of",
+        "label": "Select",
+        "context": "Attention was directed to the [R/L] [mandibular/maxillary] [vestibule/alveolus] where the site was anesthetized with [X] cc of ___ lidocaine with 1:100,000 epin",
         "options": [
           "1%",
           "2%"
@@ -1886,7 +2072,8 @@
         "id": "excision-cyst-right-mandible:enumText:11",
         "kind": "enumText",
         "raw": "[crestal/sulcular/vestibular]",
-        "label": "performed]. Using a 15 blade, a",
+        "label": "Select",
+        "context": "Using a #15 blade, a ___ incision was made from [tooth/region __ to __] with [distal release / hockey-stick extension] as needed.",
         "options": [
           "crestal",
           "sulcular",
@@ -1898,7 +2085,8 @@
         "id": "excision-cyst-right-mandible:enumText:12",
         "kind": "enumText",
         "raw": "[distal release / hockey-stick extension]",
-        "label": "from [tooth/region __ to __] with",
+        "label": "Select",
+        "context": "Using a #15 blade, a [crestal/sulcular/vestibular] incision was made from [tooth/region __ to __] with ___ as needed.",
         "options": [
           "distal release",
           "hockey-stick extension"
@@ -1909,7 +2097,8 @@
         "id": "excision-cyst-right-mandible:enumText:13",
         "kind": "enumText",
         "raw": "[IAN/mental/lingual/infraorbital]",
-        "label": "or dehiscence over the lesion. The",
+        "label": "Select",
+        "context": "The ___ nerve was [identified and protected / not encountered].",
         "options": [
           "IAN",
           "mental",
@@ -1922,7 +2111,8 @@
         "id": "excision-cyst-right-mandible:enumText:14",
         "kind": "enumText",
         "raw": "[identified and protected / not encountered]",
-        "label": "the lesion. The [IAN/mental/lingual/infraorbital",
+        "label": "Select",
+        "context": "The [IAN/mental/lingual/infraorbital] nerve was ___.",
         "options": [
           "identified and protected",
           "not encountered"
@@ -1933,7 +2123,8 @@
         "id": "excision-cyst-right-mandible:enumText:15",
         "kind": "enumText",
         "raw": "[701/702]",
-        "label": "developed over the lesion with a",
+        "label": "Select",
+        "context": "An 18-gauge needle was used to aspirate the lesion prior to entry, returning [straw-colored fluid / nothing / keratinaceous material].] A bony window was develo",
         "options": [
           "701",
           "702"
@@ -1944,7 +2135,8 @@
         "id": "excision-cyst-right-mandible:enumText:16",
         "kind": "enumText",
         "raw": "[toto / piecemeal]",
-        "label": "elevators and curettes and enucleated in",
+        "label": "Select",
+        "context": "The cystic lining was carefully separated from the bony walls with periosteal elevators and curettes and enucleated in ___.",
         "options": [
           "toto",
           "piecemeal"
@@ -1955,7 +2147,8 @@
         "id": "excision-cyst-right-mandible:enumText:17",
         "kind": "enumText",
         "raw": "[3-0/4-0]",
-        "label": "repositioned and the incision closed with",
+        "label": "Select",
+        "context": "The flap was repositioned and the incision closed with ___ [Vicryl/chromic gut] in a [running/interrupted] fashion, taking care to re-suspend the papillae.",
         "options": [
           "3-0",
           "4-0"
@@ -1966,7 +2159,8 @@
         "id": "excision-cyst-right-mandible:enumText:18",
         "kind": "enumText",
         "raw": "[Vicryl/chromic gut]",
-        "label": "incision closed with [3 0/4 0]",
+        "label": "Select",
+        "context": "The flap was repositioned and the incision closed with [3-0/4-0] ___ in a [running/interrupted] fashion, taking care to re-suspend the papillae.",
         "options": [
           "Vicryl",
           "chromic gut"
@@ -1977,7 +2171,8 @@
         "id": "excision-cyst-right-mandible:enumText:19",
         "kind": "enumText",
         "raw": "[running/interrupted]",
-        "label": "0/4 0] [Vicryl/chromic gut] in a",
+        "label": "Select",
+        "context": "The flap was repositioned and the incision closed with [3-0/4-0] [Vicryl/chromic gut] in a ___ fashion, taking care to re-suspend the papillae.",
         "options": [
           "running",
           "interrupted"
@@ -1985,12 +2180,7 @@
         "hint": "running/interrupted"
       }
     ],
-    "flags": [
-      {
-        "type": "TEMPLATE NOTE",
-        "text": "TEMPLATE NOTE — 2026-06-14: The original \"Excision Cyst Right Mandible\" body in OP Notes.docx was a mis-paste: it contained a right ZMC/zygomaticomaxillary buttress ORIF (Rowe disimpaction, Synthes L-plate), not any cyst procedure. That fracture text is preserved in _archive/OP Notes - original extracted.txt. The body below is a newly drafted generic enucleation/curettage skeleton in the surgeon's voice — verify every step against the actual case before signing, and add Carnoy's/peripheral ostectomy, marsupialization, or resection language as the lesion dictates."
-      }
-    ],
+    "flags": [],
     "includes": [],
     "smartlinks": [],
     "tags": [],
@@ -2023,7 +2213,8 @@
         "id": "extraction-impacted-tooth:side:0",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Findings: Impacted",
+        "label": "Side",
+        "context": "Impacted ___ mandibular third molar ([#__]) and associated soft tissue lesion (consistent with dental follicle) identified.",
         "options": [
           "R",
           "L"
@@ -2034,13 +2225,15 @@
         "id": "extraction-impacted-tooth:toothNumber:0",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "Impacted [R/L] mandibular third molar ("
+        "label": "Tooth #",
+        "context": "Impacted [R/L] mandibular third molar (___) and associated soft tissue lesion (consistent with dental follicle) identified."
       },
       {
         "id": "extraction-impacted-tooth:side:1",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "1:100,000 epi was infiltrated into the",
+        "label": "Side",
+        "context": "10 cc of 1% lidocaine with 1:100,000 epi was infiltrated into the ___ mandibular vestibule and an IAN block was performed.",
         "options": [
           "R",
           "L"
@@ -2051,7 +2244,8 @@
         "id": "extraction-impacted-tooth:side:2",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Attention was then drawn to the",
+        "label": "Side",
+        "context": "Attention was then drawn to the ___ mandibular vestibule.",
         "options": [
           "R",
           "L"
@@ -2062,19 +2256,22 @@
         "id": "extraction-impacted-tooth:toothNumber:1",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "the standard fashion to remove impacted"
+        "label": "Tooth #",
+        "context": "Using a #15 blade, a distal hockey stick incision was made in the standard fashion to remove impacted ___."
       },
       {
         "id": "extraction-impacted-tooth:toothNumber:2",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "forward in a sulcular fashion to"
+        "label": "Tooth #",
+        "context": "This incision was carried forward in a sulcular fashion to ___."
       },
       {
         "id": "extraction-impacted-tooth:side:3",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "the lateral portion of the posterior",
+        "label": "Side",
+        "context": "Next, a 702 bur was used to develop a bony window in the lateral portion of the posterior ___ mandible, and an 18-gauge needle was used to aspirate the lesion, ",
         "options": [
           "R",
           "L"
@@ -2085,19 +2282,22 @@
         "id": "extraction-impacted-tooth:toothNumber:3",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "a buccal trough lateral to impacted"
+        "label": "Tooth #",
+        "context": "Next, the 702 bur was used to develop a buccal trough lateral to impacted ___ and any overlying bone was also removed in the standard fashion."
       },
       {
         "id": "extraction-impacted-tooth:toothNumber:4",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "702 bur was used to section"
+        "label": "Tooth #",
+        "context": "Next, the 702 bur was used to section ___ and both segments were elevated atraumatically."
       },
       {
         "id": "extraction-impacted-tooth:toothNumber:5",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "an associated soft tissue lesion with"
+        "label": "Tooth #",
+        "context": "There was an associated soft tissue lesion with ___."
       }
     ],
     "flags": [],
@@ -2122,105 +2322,120 @@
         "id": "facelift-and-lsr-and-lip-filler:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "of the face and neck (~ (cc)",
+        "label": "Measurement (cc)",
+        "context": "This preparation was injected into the subcutaneous plane of the face and neck (~___ cc).",
         "unit": "cc"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "midline of the submental area at",
+        "label": "Measurement",
+        "context": "The Vaser system was then applied using the 2.5mm 3 ring ultrasonic trocar to liposculpt the left, right and midline of the submental area at ___% on the Vaser ",
         "unit": null
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:2",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "the Vaser was measured to be",
+        "label": "Measurement",
+        "context": "The time spent with the Vaser was measured to be ___ seconds bilaterally on right and left of midline, and then [X] seconds subcutaneously in midline and [X] se",
         "unit": null
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:3",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "and left of midline, and then",
+        "label": "Measurement",
+        "context": "The time spent with the Vaser was measured to be [X] seconds bilaterally on right and left of midline, and then ___ seconds subcutaneously in midline and [X] se",
         "unit": null
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:4",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] seconds subcutaneously in midline and",
+        "label": "Measurement",
+        "context": "The time spent with the Vaser was measured to be [X] seconds bilaterally on right and left of midline, and then [X] seconds subcutaneously in midline and ___ se",
         "unit": null
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:5",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Energy:",
+        "label": "Measurement",
+        "context": "___ mJ",
         "unit": null
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:6",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Rate:",
+        "label": "Measurement",
+        "context": "___ Hz",
         "unit": null
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:7",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Density:",
+        "label": "Measurement",
+        "context": "___%",
         "unit": null
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:8",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Energy:",
+        "label": "Measurement",
+        "context": "___ mJ",
         "unit": null
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:9",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Rate:",
+        "label": "Measurement",
+        "context": "___ Hz",
         "unit": null
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:10",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Size:",
+        "label": "Measurement",
+        "context": "___ for periorbital area, [X] for remainder of the face",
         "unit": null
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:11",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Size: [X] for periorbital area,",
+        "label": "Measurement",
+        "context": "[X] for periorbital area, ___ for remainder of the face",
         "unit": null
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:12",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Density:",
+        "label": "Measurement",
+        "context": "___%",
         "unit": null
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:13",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "in even distribution. A total of (cc)",
+        "label": "Measurement (cc)",
+        "context": "A total of ___ cc was injected.",
         "unit": "cc"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:text:0",
         "kind": "text",
         "raw": "[Attending]",
-        "label": "[Attending] was present for the"
+        "label": "Value",
+        "context": "___ was present for the entirety of the case."
       }
     ],
     "flags": [],
@@ -2245,7 +2460,8 @@
         "id": "hardware-removal-le-fort:text:0",
         "kind": "text",
         "raw": "[Attending]",
-        "label": "[Attending] was present and scrubbed"
+        "label": "Value",
+        "context": "___ was present and scrubbed for the duration of the surgery"
       }
     ],
     "flags": [],
@@ -2270,7 +2486,8 @@
         "id": "incision-and-drainage-of-submandibular-abscess:side:0",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Findings:",
+        "label": "Side",
+        "context": "___ submandibular abscess fluid collection identified on the medial surface of the posterior mandible.",
         "options": [
           "R",
           "L"
@@ -2281,25 +2498,29 @@
         "id": "incision-and-drainage-of-submandibular-abscess:toothNumber:0",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "surface of the posterior mandible. Tooth"
+        "label": "Tooth #",
+        "context": "Tooth ___ extracted atraumatically."
       },
       {
         "id": "incision-and-drainage-of-submandibular-abscess:toothNumber:1",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "infiltrated into the mandibular vestibules appro"
+        "label": "Tooth #",
+        "context": "5 cc of 1% lidocaine with 1:100,000 epi was infiltrated into the mandibular vestibules approximating ___ in addition to performing an inferior alveolar nerve bl"
       },
       {
         "id": "incision-and-drainage-of-submandibular-abscess:toothNumber:2",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "block on that side. Next tooth"
+        "label": "Tooth #",
+        "context": "Next tooth ___ was extracted atraumatically with a dental elevator and forceps."
       },
       {
         "id": "incision-and-drainage-of-submandibular-abscess:side:1",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "attention was then drawn to the",
+        "label": "Side",
+        "context": "Next attention was then drawn to the ___ submandibular region.",
         "options": [
           "R",
           "L"
@@ -2310,14 +2531,16 @@
         "id": "incision-and-drainage-of-submandibular-abscess:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "An incision was planned greater than",
+        "label": "Measurement",
+        "context": "An incision was planned greater than ___ cm from the inferior border of the mandible and 4cc of 1% lidocaine with 1:100,000 epinephrine was injected in a subder",
         "unit": null
       },
       {
         "id": "incision-and-drainage-of-submandibular-abscess:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "in a subdermal plane. Next a",
+        "label": "Measurement",
+        "context": "Next a ___ cm incision was made using a #15 blade at the planned position.",
         "unit": null
       }
     ],
@@ -2343,14 +2566,16 @@
         "id": "mandibular-tori-removal-bilateral:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "a 701 bur under copious irrigation, (mm)",
+        "label": "Measurement (mm)",
+        "context": "A lingual trough osteotomy was initiated with a 701 bur under copious irrigation, ___ mm from the adjacent teeth, establishing a cleavage plane for torus remova",
         "unit": "mm"
       },
       {
         "id": "mandibular-tori-removal-bilateral:text:0",
         "kind": "text",
         "raw": "[Attending]",
-        "label": "[Attending] was present for the"
+        "label": "Value",
+        "context": "___ was present for the entirety of the case."
       }
     ],
     "flags": [],
@@ -2375,78 +2600,83 @@
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "of the face and neck (~ (cc)",
+        "label": "Measurement (cc)",
+        "context": "This preparation was injected into the subcutaneous plane of the face and neck (~___ cc).",
         "unit": "cc"
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "midline of the submental area at",
+        "label": "Measurement",
+        "context": "The Vaser system was then applied using the 2.5mm 3 ring ultrasonic trocar to liposculpt the left, right and midline of the submental area at ___% on the Vaser ",
         "unit": null
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:2",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Energy:",
+        "label": "Measurement",
+        "context": "___ mJ for full-face",
         "unit": null
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:3",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Density",
+        "label": "Measurement",
+        "context": "Density ___%",
         "unit": null
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:4",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Rate:",
+        "label": "Measurement",
+        "context": "___ Hz",
         "unit": null
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:5",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Energy:",
+        "label": "Measurement",
+        "context": "___ mJ for peri-orbital area, [X] mJ at the remainder of the face",
         "unit": null
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:6",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] mJ for peri orbital area,",
+        "label": "Measurement",
+        "context": "[X] mJ for peri-orbital area, ___ mJ at the remainder of the face",
         "unit": null
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:7",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Density",
+        "label": "Measurement",
+        "context": "Density ___%",
         "unit": null
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:8",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Rate:",
+        "label": "Measurement",
+        "context": "___ Hz",
         "unit": null
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:text:0",
         "kind": "text",
         "raw": "[Attending]",
-        "label": "[Attending] was present for the"
+        "label": "Value",
+        "context": "___ was present for the entirety of the case."
       }
     ],
-    "flags": [
-      {
-        "type": "TEMPLATE NOTE",
-        "text": "TEMPLATE NOTE — 2026-06-14: The original Findings here were a mis-paste from the \"Endobrow, Blepharoplasty Lowers, Canthopexy, LSR\" note (endoscopic brow lift, canthopexy, melolabial lesion excision) — none of which are performed in this Minituck technique. Replaced below to summarize what this note actually does. Original text preserved in _archive/OP Notes - original extracted.txt."
-      }
-    ],
+    "flags": [],
     "includes": [],
     "smartlinks": [],
     "tags": [],
@@ -2468,7 +2698,8 @@
         "id": "nasal-bone-reduction:side:0",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Doyle splints placed and secured bilaterally.",
+        "label": "Side",
+        "context": "___ nare packed with iodoform gauze for support.",
         "options": [
           "R",
           "L"
@@ -2479,7 +2710,8 @@
         "id": "nasal-bone-reduction:side:1",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "iodoform packing was placed in the",
+        "label": "Side",
+        "context": "1/4 inch iodoform packing was placed in the ___ nare under the fractured nasal bones to provide support and then sutured to the nostril with 2-0 silk.",
         "options": [
           "R",
           "L"
@@ -2509,7 +2741,8 @@
         "id": "orif-mandible-with-recon-bar:side:0",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Findings:",
+        "label": "Side",
+        "context": "___ mandibular alveolar/body, [R/L] mandibular, and posterior [R/L] mandibular fractures identified.",
         "options": [
           "R",
           "L"
@@ -2520,7 +2753,8 @@
         "id": "orif-mandible-with-recon-bar:side:1",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Findings: [R/L] mandibular alveolar/body,",
+        "label": "Side",
+        "context": "[R/L] mandibular alveolar/body, ___ mandibular, and posterior [R/L] mandibular fractures identified.",
         "options": [
           "R",
           "L"
@@ -2531,7 +2765,8 @@
         "id": "orif-mandible-with-recon-bar:side:2",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "mandibular alveolar/body, [R/L] mandibular, and",
+        "label": "Side",
+        "context": "[R/L] mandibular alveolar/body, [R/L] mandibular, and posterior ___ mandibular fractures identified.",
         "options": [
           "R",
           "L"
@@ -2542,7 +2777,8 @@
         "id": "orif-mandible-with-recon-bar:side:3",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "and posterior [R/L] mandibular fractures identif",
+        "label": "Side",
+        "context": "___ body fracture accessed via vestibular incision; mental nerve visualized and intact.",
         "options": [
           "R",
           "L"
@@ -2553,7 +2789,8 @@
         "id": "orif-mandible-with-recon-bar:side:4",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Fractures placed in maxillomandibular fixation (",
+        "label": "Side",
+        "context": "___ mandibular fracture reduced and fixated with a [#]-hole straight plate and bicortical screws.",
         "options": [
           "R",
           "L"
@@ -2564,13 +2801,15 @@
         "id": "orif-mandible-with-recon-bar:hardwareCount:0",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "fracture reduced and fixated with a"
+        "label": "Count",
+        "context": "[R/L] mandibular fracture reduced and fixated with a ___-hole straight plate and bicortical screws."
       },
       {
         "id": "orif-mandible-with-recon-bar:side:5",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "straight plate and bicortical screws. Posterior",
+        "label": "Side",
+        "context": "Posterior ___ mandibular fracture reduced and fixated with a [#]-hole straight plate and bicortical screws.",
         "options": [
           "R",
           "L"
@@ -2581,13 +2820,15 @@
         "id": "orif-mandible-with-recon-bar:hardwareCount:1",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "fracture reduced and fixated with a"
+        "label": "Count",
+        "context": "Posterior [R/L] mandibular fracture reduced and fixated with a ___-hole straight plate and bicortical screws."
       },
       {
         "id": "orif-mandible-with-recon-bar:side:6",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "hole straight plate and bicortical screws.",
+        "label": "Side",
+        "context": "___ alveolar fracture reduced with a bridle wire.",
         "options": [
           "R",
           "L"
@@ -2598,32 +2839,37 @@
         "id": "orif-mandible-with-recon-bar:hardwareCount:2",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "Next a total of"
+        "label": "Count",
+        "context": "Next a total of ___ [length]-mm intermaxillary fixation (IMF) screws were placed into the mandible and maxilla with even distribution ([#] in the maxilla, [#] i"
       },
       {
         "id": "orif-mandible-with-recon-bar:measurement:0",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "Next a total of [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "Next a total of [#] ___-mm intermaxillary fixation (IMF) screws were placed into the mandible and maxilla with even distribution ([#] in the maxilla, [#] in the",
         "unit": "mm"
       },
       {
         "id": "orif-mandible-with-recon-bar:hardwareCount:3",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "and maxilla with even distribution ("
+        "label": "Count",
+        "context": "Next a total of [#] [length]-mm intermaxillary fixation (IMF) screws were placed into the mandible and maxilla with even distribution (___ in the maxilla, [#] i"
       },
       {
         "id": "orif-mandible-with-recon-bar:hardwareCount:4",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "distribution ([ ] in the maxilla,"
+        "label": "Count",
+        "context": "Next a total of [#] [length]-mm intermaxillary fixation (IMF) screws were placed into the mandible and maxilla with even distribution ([#] in the maxilla, ___ i"
       },
       {
         "id": "orif-mandible-with-recon-bar:side:7",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "mandible). Attention was directed towards the",
+        "label": "Side",
+        "context": "Attention was directed towards the ___ mandibular alveolar and body fractures.",
         "options": [
           "R",
           "L"
@@ -2634,13 +2880,15 @@
         "id": "orif-mandible-with-recon-bar:toothNumber:0",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "mucogingival junction, was made from tooth"
+        "label": "Tooth #",
+        "context": "A vestibular incision, 5 mm below the mucogingival junction, was made from tooth ___ and carried down to bone with electrocautery, staying superior the mental f"
       },
       {
         "id": "orif-mandible-with-recon-bar:side:8",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Next attention was turned to the",
+        "label": "Side",
+        "context": "Next attention was turned to the ___ mandibular fracture.",
         "options": [
           "R",
           "L"
@@ -2651,25 +2899,29 @@
         "id": "orif-mandible-with-recon-bar:text:0",
         "kind": "text",
         "raw": "[profile]",
-        "label": "noted to be satisfactory. Next a"
+        "label": "Value",
+        "context": "Next a ___ profile, [#]-hole straight plate was adapted equally across the fracture site on the inferior border."
       },
       {
         "id": "orif-mandible-with-recon-bar:hardwareCount:5",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "be satisfactory. Next a [profile] profile,"
+        "label": "Count",
+        "context": "Next a [profile] profile, ___-hole straight plate was adapted equally across the fracture site on the inferior border."
       },
       {
         "id": "orif-mandible-with-recon-bar:hardwareCount:6",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "inferior border. It was secured with"
+        "label": "Count",
+        "context": "It was secured with ___ bicortical screws."
       },
       {
         "id": "orif-mandible-with-recon-bar:side:9",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "attention was turned to the posterior",
+        "label": "Side",
+        "context": "Next attention was turned to the posterior ___ mandible fracture.",
         "options": [
           "R",
           "L"
@@ -2680,31 +2932,36 @@
         "id": "orif-mandible-with-recon-bar:text:1",
         "kind": "text",
         "raw": "[profile]",
-        "label": "noted to be satisfactory. Next, a"
+        "label": "Value",
+        "context": "Next, a ___ profile, [#]-hole straight plate was adapted equally across the fracture site on the inferior border of the mandible and well secured with [#] [prof"
       },
       {
         "id": "orif-mandible-with-recon-bar:hardwareCount:7",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "be satisfactory. Next, a [profile] profile,"
+        "label": "Count",
+        "context": "Next, a [profile] profile, ___-hole straight plate was adapted equally across the fracture site on the inferior border of the mandible and well secured with [#]"
       },
       {
         "id": "orif-mandible-with-recon-bar:hardwareCount:8",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "the mandible and well secured with"
+        "label": "Count",
+        "context": "Next, a [profile] profile, [#]-hole straight plate was adapted equally across the fracture site on the inferior border of the mandible and well secured with ___"
       },
       {
         "id": "orif-mandible-with-recon-bar:text:2",
         "kind": "text",
         "raw": "[profile]",
-        "label": "and well secured with [ ]"
+        "label": "Value",
+        "context": "Next, a [profile] profile, [#]-hole straight plate was adapted equally across the fracture site on the inferior border of the mandible and well secured with [#]"
       },
       {
         "id": "orif-mandible-with-recon-bar:toothNumber:1",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "bridle wire was placed between teeth"
+        "label": "Tooth #",
+        "context": "A bridle wire was placed between teeth ___ to appropriately reduce the alveolar fracture."
       }
     ],
     "flags": [
@@ -2734,7 +2991,8 @@
         "id": "orif-noe-le-fort-zmc-orbit:side:0",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Findings:",
+        "label": "Side",
+        "context": "___ ZMC fracture mobile and displaced.",
         "options": [
           "R",
           "L"
@@ -2745,19 +3003,22 @@
         "id": "orif-noe-le-fort-zmc-orbit:text:0",
         "kind": "text",
         "raw": "[profile]",
-        "label": "lateral brow approach, fixated with KLS"
+        "label": "Value",
+        "context": "ZF accessed via lateral brow approach, fixated with KLS ___ plate and [#] monocortical screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:0",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "fixated with KLS [profile] plate and"
+        "label": "Count",
+        "context": "ZF accessed via lateral brow approach, fixated with KLS [profile] plate and ___ monocortical screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:side:1",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "plate and [ ] monocortical screws.",
+        "label": "Side",
+        "context": "___ infraorbital rim exposed via transconjunctival approach, fixated with KLS [profile] plate and [#] monocortical screws.",
         "options": [
           "R",
           "L"
@@ -2768,25 +3029,29 @@
         "id": "orif-noe-le-fort-zmc-orbit:text:1",
         "kind": "text",
         "raw": "[profile]",
-        "label": "via transconjunctival approach, fixated with KLS"
+        "label": "Value",
+        "context": "[R/L] infraorbital rim exposed via transconjunctival approach, fixated with KLS ___ plate and [#] monocortical screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:1",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "fixated with KLS [profile] plate and"
+        "label": "Count",
+        "context": "[R/L] infraorbital rim exposed via transconjunctival approach, fixated with KLS [profile] plate and ___ monocortical screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:text:2",
         "kind": "text",
         "raw": "[profile]",
-        "label": "ZM and piriform rims fixated with"
+        "label": "Value",
+        "context": "ZM and piriform rims fixated with ___ KLS L-plates and monocortical screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:side:2",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "screws. Bilateral NOE fractures accessed via",
+        "label": "Side",
+        "context": "Bilateral NOE fractures accessed via ___ transconjunctival approach and two connecting Lynch incisions (H-incision), noted to be severely comminuted and depress",
         "options": [
           "R",
           "L"
@@ -2797,13 +3062,15 @@
         "id": "orif-noe-le-fort-zmc-orbit:text:3",
         "kind": "text",
         "raw": "[profile]",
-        "label": "NOE fractures fixated with multiple KLS"
+        "label": "Value",
+        "context": "NOE fractures fixated with multiple KLS ___ plates and monocortical screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:side:3",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "KLS [profile] plates and monocortical screws.",
+        "label": "Side",
+        "context": "___ orbital floor reconstruction completed with KLS Resorb-X plate.",
         "options": [
           "R",
           "L"
@@ -2814,7 +3081,8 @@
         "id": "orif-noe-le-fort-zmc-orbit:side:4",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "which was subsequently secured to the",
+        "label": "Side",
+        "context": "General anesthesia was induced via oral endotracheal tube which was subsequently secured to the ___ commissure by anesthesia.",
         "options": [
           "R",
           "L"
@@ -2825,7 +3093,8 @@
         "id": "orif-noe-le-fort-zmc-orbit:side:5",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "1:200,000 epi was infiltrated into the",
+        "label": "Side",
+        "context": "10 cc of 1% lidocaine with 1:200,000 epi was infiltrated into the ___ lateral brow, skin overlying the NOE complexes, bilateral inferior conjunctiva, and maxill",
         "options": [
           "R",
           "L"
@@ -2836,7 +3105,8 @@
         "id": "orif-noe-le-fort-zmc-orbit:side:6",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Attention was then directed to the",
+        "label": "Side",
+        "context": "Attention was then directed to the ___ lateral brow, where a 2-cm curvilinear incision was made through skin with a 15 blade.",
         "options": [
           "R",
           "L"
@@ -2847,7 +3117,8 @@
         "id": "orif-noe-le-fort-zmc-orbit:side:7",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Attention was then directed to the",
+        "label": "Side",
+        "context": "Attention was then directed to the ___ lower lid, which was everted with desmarres retractors.",
         "options": [
           "R",
           "L"
@@ -2858,7 +3129,8 @@
         "id": "orif-noe-le-fort-zmc-orbit:side:8",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Attention was then directed to the",
+        "label": "Side",
+        "context": "Attention was then directed to the ___ lower lid, which was exposed using a transconjunctival approach in identical fashion.",
         "options": [
           "R",
           "L"
@@ -2869,7 +3141,8 @@
         "id": "orif-noe-le-fort-zmc-orbit:side:9",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Attention was then directed to the",
+        "label": "Side",
+        "context": "Attention was then directed to the ___ ZF suture.",
         "options": [
           "R",
           "L"
@@ -2880,57 +3153,66 @@
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:2",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "fracture was properly reduced. A KLS"
+        "label": "Count",
+        "context": "A KLS ___-hole [profile] plate was fixated using [#] [length]-mm screws at the superior lateral orbital rim under copious irrigation."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:text:4",
         "kind": "text",
         "raw": "[profile]",
-        "label": "reduced. A KLS [ ] hole"
+        "label": "Value",
+        "context": "A KLS [#]-hole ___ plate was fixated using [#] [length]-mm screws at the superior lateral orbital rim under copious irrigation."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:3",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "hole [profile] plate was fixated using"
+        "label": "Count",
+        "context": "A KLS [#]-hole [profile] plate was fixated using ___ [length]-mm screws at the superior lateral orbital rim under copious irrigation."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:measurement:0",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "plate was fixated using [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "A KLS [#]-hole [profile] plate was fixated using [#] ___-mm screws at the superior lateral orbital rim under copious irrigation.",
         "unit": "mm"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:text:5",
         "kind": "text",
         "raw": "[profile]",
-        "label": "exposed with inferior retraction. A KLS"
+        "label": "Value",
+        "context": "A KLS ___ [#]-hole straight plate was secured to the rim with [#] [length]-mm screws under copious irrigation."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:4",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "with inferior retraction. A KLS [profile]"
+        "label": "Count",
+        "context": "A KLS [profile] ___-hole straight plate was secured to the rim with [#] [length]-mm screws under copious irrigation."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:5",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "was secured to the rim with"
+        "label": "Count",
+        "context": "A KLS [profile] [#]-hole straight plate was secured to the rim with ___ [length]-mm screws under copious irrigation."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:measurement:1",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "to the rim with [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "A KLS [profile] [#]-hole straight plate was secured to the rim with [#] ___-mm screws under copious irrigation.",
         "unit": "mm"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:side:10",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "directed to the intraoral incision. The",
+        "label": "Side",
+        "context": "The ___ zygomaxillary fracture was again confirmed to be properly reduced and noted to be stable.",
         "options": [
           "R",
           "L"
@@ -2941,32 +3223,37 @@
         "id": "orif-noe-le-fort-zmc-orbit:text:6",
         "kind": "text",
         "raw": "[profile]",
-        "label": "noted to be stable. A KLS"
+        "label": "Value",
+        "context": "A KLS ___ [#]-hole L-plate was fixated using [#] [length]-mm screws at the zygomaxillary suture fracture."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:6",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "to be stable. A KLS [profile]"
+        "label": "Count",
+        "context": "A KLS [profile] ___-hole L-plate was fixated using [#] [length]-mm screws at the zygomaxillary suture fracture."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:7",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "hole L plate was fixated using"
+        "label": "Count",
+        "context": "A KLS [profile] [#]-hole L-plate was fixated using ___ [length]-mm screws at the zygomaxillary suture fracture."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:measurement:2",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "plate was fixated using [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "A KLS [profile] [#]-hole L-plate was fixated using [#] ___-mm screws at the zygomaxillary suture fracture.",
         "unit": "mm"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:side:11",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "fracture. Proper reduction was confirmed. The",
+        "label": "Side",
+        "context": "The ___ zygomaticomaxillary fracture was fixated in identical fashion.",
         "options": [
           "R",
           "L"
@@ -2977,7 +3264,8 @@
         "id": "orif-noe-le-fort-zmc-orbit:side:12",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "was fixated in identical fashion. The",
+        "label": "Side",
+        "context": "The ___ piriform rim was reduced and fixated with KLS [profile] [#]-hole L-plate and [#] [length]-mm screws.",
         "options": [
           "R",
           "L"
@@ -2988,32 +3276,37 @@
         "id": "orif-noe-le-fort-zmc-orbit:text:7",
         "kind": "text",
         "raw": "[profile]",
-        "label": "was reduced and fixated with KLS"
+        "label": "Value",
+        "context": "The [R/L] piriform rim was reduced and fixated with KLS ___ [#]-hole L-plate and [#] [length]-mm screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:8",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "reduced and fixated with KLS [profile]"
+        "label": "Count",
+        "context": "The [R/L] piriform rim was reduced and fixated with KLS [profile] ___-hole L-plate and [#] [length]-mm screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:9",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "[ ] hole L plate and"
+        "label": "Count",
+        "context": "The [R/L] piriform rim was reduced and fixated with KLS [profile] [#]-hole L-plate and ___ [length]-mm screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:measurement:3",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "hole L plate and [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "The [R/L] piriform rim was reduced and fixated with KLS [profile] [#]-hole L-plate and [#] ___-mm screws.",
         "unit": "mm"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:side:13",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "[ ] [length] mm screws. The",
+        "label": "Side",
+        "context": "The ___ piriform rim was reduced and fixated with KLS [profile] [#]-hole plate and [#] [length]-mm screws.",
         "options": [
           "R",
           "L"
@@ -3024,57 +3317,66 @@
         "id": "orif-noe-le-fort-zmc-orbit:text:8",
         "kind": "text",
         "raw": "[profile]",
-        "label": "was reduced and fixated with KLS"
+        "label": "Value",
+        "context": "The [R/L] piriform rim was reduced and fixated with KLS ___ [#]-hole plate and [#] [length]-mm screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:10",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "reduced and fixated with KLS [profile]"
+        "label": "Count",
+        "context": "The [R/L] piriform rim was reduced and fixated with KLS [profile] ___-hole plate and [#] [length]-mm screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:11",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "[profile] [ ] hole plate and"
+        "label": "Count",
+        "context": "The [R/L] piriform rim was reduced and fixated with KLS [profile] [#]-hole plate and ___ [length]-mm screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:measurement:4",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "] hole plate and [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "The [R/L] piriform rim was reduced and fixated with KLS [profile] [#]-hole plate and [#] ___-mm screws.",
         "unit": "mm"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:text:9",
         "kind": "text",
         "raw": "[profile]",
-        "label": "fracture was fixated with a KLS"
+        "label": "Value",
+        "context": "The nasofrontal junction fracture was fixated with a KLS ___ [#]-hole Y-plate and [#] [length]-mm screws under copious irrigation."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:12",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "was fixated with a KLS [profile]"
+        "label": "Count",
+        "context": "The nasofrontal junction fracture was fixated with a KLS [profile] ___-hole Y-plate and [#] [length]-mm screws under copious irrigation."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:13",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "[ ] hole Y plate and"
+        "label": "Count",
+        "context": "The nasofrontal junction fracture was fixated with a KLS [profile] [#]-hole Y-plate and ___ [length]-mm screws under copious irrigation."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:measurement:5",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "hole Y plate and [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "The nasofrontal junction fracture was fixated with a KLS [profile] [#]-hole Y-plate and [#] ___-mm screws under copious irrigation.",
         "unit": "mm"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:side:14",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "mm screws under copious irrigation. The",
+        "label": "Side",
+        "context": "The ___ comminuted NOE fracture was reduced with a Boies elevator in the [R/L] nare and fixated with a KLS [profile] [#]-hole curvilinear plate and [#] monocort",
         "options": [
           "R",
           "L"
@@ -3085,7 +3387,8 @@
         "id": "orif-noe-le-fort-zmc-orbit:side:15",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "with a Boies elevator in the",
+        "label": "Side",
+        "context": "The [R/L] comminuted NOE fracture was reduced with a Boies elevator in the ___ nare and fixated with a KLS [profile] [#]-hole curvilinear plate and [#] monocort",
         "options": [
           "R",
           "L"
@@ -3096,43 +3399,50 @@
         "id": "orif-noe-le-fort-zmc-orbit:text:10",
         "kind": "text",
         "raw": "[profile]",
-        "label": "nare and fixated with a KLS"
+        "label": "Value",
+        "context": "The [R/L] comminuted NOE fracture was reduced with a Boies elevator in the [R/L] nare and fixated with a KLS ___ [#]-hole curvilinear plate and [#] monocortical"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:14",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "and fixated with a KLS [profile]"
+        "label": "Count",
+        "context": "The [R/L] comminuted NOE fracture was reduced with a Boies elevator in the [R/L] nare and fixated with a KLS [profile] ___-hole curvilinear plate and [#] monoco"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:15",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "[ ] hole curvilinear plate and"
+        "label": "Count",
+        "context": "The [R/L] comminuted NOE fracture was reduced with a Boies elevator in the [R/L] nare and fixated with a KLS [profile] [#]-hole curvilinear plate and ___ monoco"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:text:11",
         "kind": "text",
         "raw": "[profile]",
-        "label": "reduced and fixated with a KLS"
+        "label": "Value",
+        "context": "At this time, telescoping of the nasal bones was noted, which was reduced and fixated with a KLS ___ [#]-hole straight plate and [#] monocortical screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:16",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "and fixated with a KLS [profile]"
+        "label": "Count",
+        "context": "At this time, telescoping of the nasal bones was noted, which was reduced and fixated with a KLS [profile] ___-hole straight plate and [#] monocortical screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:hardwareCount:17",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "[ ] hole straight plate and"
+        "label": "Count",
+        "context": "At this time, telescoping of the nasal bones was noted, which was reduced and fixated with a KLS [profile] [#]-hole straight plate and ___ monocortical screws."
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:side:16",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Attention then directed to the",
+        "label": "Side",
+        "context": "Attention then directed to the ___ orbital floor which had a defect measuring [X] x [X] mm.",
         "options": [
           "R",
           "L"
@@ -3143,21 +3453,24 @@
         "id": "orif-noe-le-fort-zmc-orbit:measurement:6",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "floor which had a defect measuring",
+        "label": "Measurement",
+        "context": "Attention then directed to the [R/L] orbital floor which had a defect measuring ___ x [X] mm.",
         "unit": null
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:measurement:7",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "had a defect measuring [X] x (mm)",
+        "label": "Measurement (mm)",
+        "context": "Attention then directed to the [R/L] orbital floor which had a defect measuring [X] x ___ mm.",
         "unit": "mm"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:side:17",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "5 0 plain gut superficially. The",
+        "label": "Side",
+        "context": "The ___ transconjunctival incision was closed loosely with 5-0 plain gut with two interrupted sutures.",
         "options": [
           "R",
           "L"
@@ -3168,7 +3481,8 @@
         "id": "orif-noe-le-fort-zmc-orbit:side:18",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "gut with two interrupted sutures. The",
+        "label": "Side",
+        "context": "The ___ transconjunctival incision was well-approximated without sutures placed.",
         "options": [
           "R",
           "L"
@@ -3198,7 +3512,8 @@
         "id": "orif-orbital-floor:side:0",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Findings:",
+        "label": "Side",
+        "context": "___ orbital floor fracture with orbital contents herniating into the maxillary sinus.",
         "options": [
           "R",
           "L"
@@ -3209,27 +3524,31 @@
         "id": "orif-orbital-floor:hardwareCount:0",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "to the inferior orbital rim with"
+        "label": "Count",
+        "context": "Pre-formed Synthes orbital floor reconstruction plate placed across the defect and secured to the inferior orbital rim with ___ [length] mm self-drilling screws"
       },
       {
         "id": "orif-orbital-floor:measurement:0",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "inferior orbital rim with [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "Pre-formed Synthes orbital floor reconstruction plate placed across the defect and secured to the inferior orbital rim with [#] ___ mm self-drilling screws.",
         "unit": "mm"
       },
       {
         "id": "orif-orbital-floor:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "drilling screws. Posterior stop identified at (mm)",
+        "label": "Measurement (mm)",
+        "context": "Posterior stop identified at ___ mm from orbital rim.",
         "unit": "mm"
       },
       {
         "id": "orif-orbital-floor:side:1",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Attention was then drawn to the",
+        "label": "Side",
+        "context": "Attention was then drawn to the ___ orbit which was marked and grossly edematous.",
         "options": [
           "R",
           "L"
@@ -3240,7 +3559,8 @@
         "id": "orif-orbital-floor:side:2",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "lubricant were then placed into the",
+        "label": "Side",
+        "context": "Corneal shields with ophthalmic lubricant were then placed into the ___ eye.",
         "options": [
           "R",
           "L"
@@ -3251,20 +3571,23 @@
         "id": "orif-orbital-floor:measurement:2",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "The posterior stop measured to be (mm)",
+        "label": "Measurement (mm)",
+        "context": "The posterior stop measured to be ___ mm from the orbital rim.",
         "unit": "mm"
       },
       {
         "id": "orif-orbital-floor:hardwareCount:1",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "to the inferior orbital rim utilizing"
+        "label": "Count",
+        "context": "Once the plate was well-adapted across the orbital floor defect, perched on solid bone, and all orbital contents were elevated superiorly, the reconstructive pl"
       },
       {
         "id": "orif-orbital-floor:measurement:3",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "rim utilizing [ ] self drilling (mm)",
+        "label": "Measurement (mm)",
+        "context": "Once the plate was well-adapted across the orbital floor defect, perched on solid bone, and all orbital contents were elevated superiorly, the reconstructive pl",
         "unit": "mm"
       }
     ],
@@ -3290,27 +3613,31 @@
         "id": "orif-orbital-floor-custom:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Findings:",
+        "label": "Measurement",
+        "context": "___ % orbital floor fracture with inferiorly displaced orbital content noted.",
         "unit": null
       },
       {
         "id": "orif-orbital-floor-custom:hardwareCount:0",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "orbital implant placed as planned with"
+        "label": "Count",
+        "context": "Custom orbital implant placed as planned with ___x [length]mm screw fixation."
       },
       {
         "id": "orif-orbital-floor-custom:measurement:1",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "placed as planned with [ ]x (mm)",
+        "label": "Measurement (mm)",
+        "context": "Custom orbital implant placed as planned with [#]x ___mm screw fixation.",
         "unit": "mm"
       },
       {
         "id": "orif-orbital-floor-custom:side:0",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Attention was then drawn to the",
+        "label": "Side",
+        "context": "Attention was then drawn to the ___ orbit which was marked and grossly edematous.",
         "options": [
           "R",
           "L"
@@ -3321,7 +3648,8 @@
         "id": "orif-orbital-floor-custom:side:1",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "lubricant were then placed into the",
+        "label": "Side",
+        "context": "Corneal shields with ophthalmic lubricant were then placed into the ___ eye.",
         "options": [
           "R",
           "L"
@@ -3332,20 +3660,23 @@
         "id": "orif-orbital-floor-custom:hardwareCount:1",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "anterior, medial and lateral bony walls,"
+        "label": "Count",
+        "context": "After verifying that the plate was completely seated in the anterior, medial and lateral bony walls, ___x [length]mm screw was used to secure the plate onto the"
       },
       {
         "id": "orif-orbital-floor-custom:measurement:2",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "and lateral bony walls, [ ]x (mm)",
+        "label": "Measurement (mm)",
+        "context": "After verifying that the plate was completely seated in the anterior, medial and lateral bony walls, [#]x ___mm screw was used to secure the plate onto the orbi",
         "unit": "mm"
       },
       {
         "id": "orif-orbital-floor-custom:side:2",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "buried knots. Corneal shield of the",
+        "label": "Side",
+        "context": "Corneal shield of the ___ eye was removed, and forced duction test performed and showed intact extra-ocular movements.",
         "options": [
           "R",
           "L"
@@ -3380,61 +3711,71 @@
         "id": "orif-symphysis:hardwareCount:0",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "Fracture reduced and fixated with a"
+        "label": "Count",
+        "context": "Fracture reduced and fixated with a ___-hole [profile] Biomet plate at the inferior border and a [profile] Biomet tension plate superiorly."
       },
       {
         "id": "orif-symphysis:text:0",
         "kind": "text",
         "raw": "[profile]",
-        "label": "fixated with a [ ] hole"
+        "label": "Value",
+        "context": "Fracture reduced and fixated with a [#]-hole ___ Biomet plate at the inferior border and a [profile] Biomet tension plate superiorly."
       },
       {
         "id": "orif-symphysis:text:1",
         "kind": "text",
         "raw": "[profile]",
-        "label": "at the inferior border and a"
+        "label": "Value",
+        "context": "Fracture reduced and fixated with a [#]-hole [profile] Biomet plate at the inferior border and a ___ Biomet tension plate superiorly."
       },
       {
         "id": "orif-symphysis:toothNumber:0",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "bridle wire was placed from tooth"
+        "label": "Tooth #",
+        "context": "Using a 24 G wire, a bridle wire was placed from tooth ___ to level the mandibular occlusion."
       },
       {
         "id": "orif-symphysis:toothNumber:1",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "mm anterior to the MGJ from"
+        "label": "Tooth #",
+        "context": "Using a #15 blade, an incision was made 15 mm anterior to the MGJ from ___."
       },
       {
         "id": "orif-symphysis:hardwareCount:1",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "proper reduction of the fracture. A"
+        "label": "Count",
+        "context": "A ___-hole, [profile] Biomet plate was placed at the inferior border with [#] screws."
       },
       {
         "id": "orif-symphysis:text:2",
         "kind": "text",
         "raw": "[profile]",
-        "label": "the fracture. A [ ] hole,"
+        "label": "Value",
+        "context": "A [#]-hole, ___ Biomet plate was placed at the inferior border with [#] screws."
       },
       {
         "id": "orif-symphysis:hardwareCount:2",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "placed at the inferior border with"
+        "label": "Count",
+        "context": "A [#]-hole, [profile] Biomet plate was placed at the inferior border with ___ screws."
       },
       {
         "id": "orif-symphysis:text:3",
         "kind": "text",
         "raw": "[profile]",
-        "label": "[ ] screws. In addition, a"
+        "label": "Value",
+        "context": "In addition, a ___ Biomet plate was placed as a tension plate superior to the previous plate with [#] screws."
       },
       {
         "id": "orif-symphysis:hardwareCount:3",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "superior to the previous plate with"
+        "label": "Count",
+        "context": "In addition, a [profile] Biomet plate was placed as a tension plate superior to the previous plate with ___ screws."
       }
     ],
     "flags": [],
@@ -3459,7 +3800,8 @@
         "id": "orif-zmc:side:0",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Findings:",
+        "label": "Side",
+        "context": "___ zygomaticofrontal, zygomaticomaxillary, and zygomatic arch fractures identified and manually reduced.",
         "options": [
           "R",
           "L"
@@ -3470,7 +3812,8 @@
         "id": "orif-zmc:side:1",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "arch fractures identified and manually reduced.",
+        "label": "Side",
+        "context": "___ ZF suture exposed via lateral brow incision and fixated with a Synthes [#]-hole plate and [length] mm screws.",
         "options": [
           "R",
           "L"
@@ -3481,20 +3824,23 @@
         "id": "orif-zmc:hardwareCount:0",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "incision and fixated with a Synthes"
+        "label": "Count",
+        "context": "[R/L] ZF suture exposed via lateral brow incision and fixated with a Synthes ___-hole plate and [length] mm screws."
       },
       {
         "id": "orif-zmc:measurement:0",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "Synthes [ ] hole plate and (mm)",
+        "label": "Measurement (mm)",
+        "context": "[R/L] ZF suture exposed via lateral brow incision and fixated with a Synthes [#]-hole plate and ___ mm screws.",
         "unit": "mm"
       },
       {
         "id": "orif-zmc:side:2",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "hole plate and [length] mm screws.",
+        "label": "Side",
+        "context": "___ ZM suture and anterior maxillary sinus fracture exposed via maxillary vestibular incision and fixated with a Synthes [profile] profile L-plate and [length] ",
         "options": [
           "R",
           "L"
@@ -3505,20 +3851,23 @@
         "id": "orif-zmc:text:0",
         "kind": "text",
         "raw": "[profile]",
-        "label": "incision and fixated with a Synthes"
+        "label": "Value",
+        "context": "[R/L] ZM suture and anterior maxillary sinus fracture exposed via maxillary vestibular incision and fixated with a Synthes ___ profile L-plate and [length] mm s"
       },
       {
         "id": "orif-zmc:measurement:1",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "Synthes [profile] profile L plate and (mm)",
+        "label": "Measurement (mm)",
+        "context": "[R/L] ZM suture and anterior maxillary sinus fracture exposed via maxillary vestibular incision and fixated with a Synthes [profile] profile L-plate and ___ mm ",
         "unit": "mm"
       },
       {
         "id": "orif-zmc:side:3",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Attention was directed to the",
+        "label": "Side",
+        "context": "Attention was directed to the ___ lateral brow where the patient was anesthetized with 2 cc of 1% lidocaine with 1:100,000 epi.",
         "options": [
           "R",
           "L"
@@ -3529,7 +3878,8 @@
         "id": "orif-zmc:side:4",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Attention was directed to the",
+        "label": "Side",
+        "context": "Attention was directed to the ___ maxillary vestibule where the patient was anesthetized with 3 cc 1% lidocaine with 1:100,000 epi.",
         "options": [
           "R",
           "L"
@@ -3540,7 +3890,8 @@
         "id": "orif-zmc:side:5",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "the first molar region of the",
+        "label": "Side",
+        "context": "Using a 15 blade, an incision was made 5 mm above the mucogingival junction from midline to the first molar region of the ___ maxilla.",
         "options": [
           "R",
           "L"
@@ -3551,38 +3902,44 @@
         "id": "orif-zmc:text:1",
         "kind": "text",
         "raw": "[profile]",
-        "label": "was fixated using a synthes curvilinear"
+        "label": "Value",
+        "context": "The ZF suture was fixated using a synthes curvilinear ___ profile [#]-hole plate, secured with self-drilling [length] mm screws."
       },
       {
         "id": "orif-zmc:hardwareCount:1",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "using a synthes curvilinear [profile] profile"
+        "label": "Count",
+        "context": "The ZF suture was fixated using a synthes curvilinear [profile] profile ___-hole plate, secured with self-drilling [length] mm screws."
       },
       {
         "id": "orif-zmc:measurement:2",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "hole plate, secured with self drilling (mm)",
+        "label": "Measurement (mm)",
+        "context": "The ZF suture was fixated using a synthes curvilinear [profile] profile [#]-hole plate, secured with self-drilling ___ mm screws.",
         "unit": "mm"
       },
       {
         "id": "orif-zmc:text:2",
         "kind": "text",
         "raw": "[profile]",
-        "label": "ZM was fixated with a Synthes"
+        "label": "Value",
+        "context": "The ZM was fixated with a Synthes ___ profile L-plate, secured with [#] self drilling [length] mm screws."
       },
       {
         "id": "orif-zmc:hardwareCount:2",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "[profile] profile L plate, secured with"
+        "label": "Count",
+        "context": "The ZM was fixated with a Synthes [profile] profile L-plate, secured with ___ self drilling [length] mm screws."
       },
       {
         "id": "orif-zmc:measurement:3",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "secured with [ ] self drilling (mm)",
+        "label": "Measurement (mm)",
+        "context": "The ZM was fixated with a Synthes [profile] profile L-plate, secured with [#] self drilling ___ mm screws.",
         "unit": "mm"
       }
     ],
@@ -3608,112 +3965,128 @@
         "id": "otoplasty:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "helices accessed via postauricular incisions wit (mm)",
+        "label": "Measurement (mm)",
+        "context": "Left and right conchal bowls and helices accessed via postauricular incisions with ___ mm skin excisions.",
         "unit": "mm"
       },
       {
         "id": "otoplasty:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "shaped conchal cartilage excised bilaterally, pr (mm)",
+        "label": "Measurement (mm)",
+        "context": "Kidney bean-shaped conchal cartilage excised bilaterally, preserving ___ mm conchal depth.",
         "unit": "mm"
       },
       {
         "id": "otoplasty:measurement:2",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "pressure dressings applied. Final ear measuremen",
+        "label": "Measurement",
+        "context": "Final ear measurements ___-[X]-[X] bilaterally.",
         "unit": null
       },
       {
         "id": "otoplasty:measurement:3",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "dressings applied. Final ear measurements [X]",
+        "label": "Measurement",
+        "context": "Final ear measurements [X]-___-[X] bilaterally.",
         "unit": null
       },
       {
         "id": "otoplasty:measurement:4",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "applied. Final ear measurements [X] [X]",
+        "label": "Measurement",
+        "context": "Final ear measurements [X]-[X]-___ bilaterally.",
         "unit": null
       },
       {
         "id": "otoplasty:measurement:5",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "postauricular incision was designed with a (mm)",
+        "label": "Measurement (mm)",
+        "context": "Utilizing a surgical marking pen, the proposed postauricular incision was designed with a ___ mm width skin excision.",
         "unit": "mm"
       },
       {
         "id": "otoplasty:measurement:6",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "excision was marked as well, measuring (mm)",
+        "label": "Measurement (mm)",
+        "context": "The kidney bean shaped piece of cartilage planned for excision was marked as well, measuring ___ mm of conchal cartilage preserved.",
         "unit": "mm"
       },
       {
         "id": "otoplasty:measurement:7",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "shaped piece of conchal bowl cartilage, (mm)",
+        "label": "Measurement (mm)",
+        "context": "A kidney bean shaped piece of conchal bowl cartilage, ___ mm in width, was excised ensuring [X] mm of conchal depth was remaining.",
         "unit": "mm"
       },
       {
         "id": "otoplasty:measurement:8",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "mm in width, was excised ensuring (mm)",
+        "label": "Measurement (mm)",
+        "context": "A kidney bean shaped piece of conchal bowl cartilage, [X] mm in width, was excised ensuring ___ mm of conchal depth was remaining.",
         "unit": "mm"
       },
       {
         "id": "otoplasty:measurement:9",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "5 0 plain gut suture, leaving (mm)",
+        "label": "Measurement (mm)",
+        "context": "The skin was closed with running 5-0 plain gut suture, leaving ___ mm at the apex for drainage.",
         "unit": "mm"
       },
       {
         "id": "otoplasty:measurement:10",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "LEFT:",
+        "label": "Measurement",
+        "context": "___-[X]-[X]",
         "unit": null
       },
       {
         "id": "otoplasty:measurement:11",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "LEFT: [X]",
+        "label": "Measurement",
+        "context": "[X]-___-[X]",
         "unit": null
       },
       {
         "id": "otoplasty:measurement:12",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "LEFT: [X] [X]",
+        "label": "Measurement",
+        "context": "[X]-[X]-___",
         "unit": null
       },
       {
         "id": "otoplasty:measurement:13",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RIGHT:",
+        "label": "Measurement",
+        "context": "___-[X]-[X]",
         "unit": null
       },
       {
         "id": "otoplasty:measurement:14",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RIGHT: [X]",
+        "label": "Measurement",
+        "context": "[X]-___-[X]",
         "unit": null
       },
       {
         "id": "otoplasty:measurement:15",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "RIGHT: [X] [X]",
+        "label": "Measurement",
+        "context": "[X]-[X]-___",
         "unit": null
       }
     ],
@@ -3739,106 +4112,122 @@
         "id": "sarpe:toothNumber:0",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "rim. Interdental osteotomy performed between tee"
+        "label": "Tooth #",
+        "context": "Interdental osteotomy performed between teeth ___ and [#__]."
       },
       {
         "id": "sarpe:toothNumber:1",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "performed between teeth [ __] and"
+        "label": "Tooth #",
+        "context": "Interdental osteotomy performed between teeth [#__] and ___."
       },
       {
         "id": "sarpe:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "walls separated. Hyrax appliance activated with",
+        "label": "Measurement",
+        "context": "Hyrax appliance activated with ___ turns ([X] mm expansion) to confirm symmetric expansion and then reduced back to [X] turns ([X] mm).",
         "unit": null
       },
       {
         "id": "sarpe:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "appliance activated with [X] turns ( (mm)",
+        "label": "Measurement (mm)",
+        "context": "Hyrax appliance activated with [X] turns (___ mm expansion) to confirm symmetric expansion and then reduced back to [X] turns ([X] mm).",
         "unit": "mm"
       },
       {
         "id": "sarpe:measurement:2",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "expansion and then reduced back to",
+        "label": "Measurement",
+        "context": "Hyrax appliance activated with [X] turns ([X] mm expansion) to confirm symmetric expansion and then reduced back to ___ turns ([X] mm).",
         "unit": null
       },
       {
         "id": "sarpe:measurement:3",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "reduced back to [X] turns ( (mm)",
+        "label": "Measurement (mm)",
+        "context": "Hyrax appliance activated with [X] turns ([X] mm expansion) to confirm symmetric expansion and then reduced back to [X] turns (___ mm).",
         "unit": "mm"
       },
       {
         "id": "sarpe:toothNumber:2",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "interdental osteotomy was initiated between teet"
+        "label": "Tooth #",
+        "context": "An interdental osteotomy was initiated between teeth ___/[#__] with an oscillating saw under copious irrigation."
       },
       {
         "id": "sarpe:toothNumber:3",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "was initiated between teeth [ __]/"
+        "label": "Tooth #",
+        "context": "An interdental osteotomy was initiated between teeth [#__]/___ with an oscillating saw under copious irrigation."
       },
       {
         "id": "sarpe:toothNumber:4",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "used to complete the osteotomy between"
+        "label": "Tooth #",
+        "context": "A straight osteotome was used to complete the osteotomy between ___ and [#__] which was also extended posteriorly to the posterior extent of the hard palate."
       },
       {
         "id": "sarpe:toothNumber:5",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "the osteotomy between [ __] and"
+        "label": "Tooth #",
+        "context": "A straight osteotome was used to complete the osteotomy between [#__] and ___ which was also extended posteriorly to the posterior extent of the hard palate."
       },
       {
         "id": "sarpe:measurement:4",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Hyrax appliance was then activated with",
+        "label": "Measurement",
+        "context": "The Hyrax appliance was then activated with ___ turns ([X] mm of expansion).",
         "unit": null
       },
       {
         "id": "sarpe:measurement:5",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "then activated with [X] turns ( (mm)",
+        "label": "Measurement (mm)",
+        "context": "The Hyrax appliance was then activated with [X] turns (___ mm of expansion).",
         "unit": "mm"
       },
       {
         "id": "sarpe:measurement:6",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "The appliance was then reduced back",
+        "label": "Measurement",
+        "context": "The appliance was then reduced back ___ turns (leaving a total of [X] mm expansion).",
         "unit": null
       },
       {
         "id": "sarpe:measurement:7",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] turns (leaving a total of (mm)",
+        "label": "Measurement (mm)",
+        "context": "The appliance was then reduced back [X] turns (leaving a total of ___ mm expansion).",
         "unit": "mm"
       },
       {
         "id": "sarpe:measurement:8",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "previously noted, leaving a total of",
+        "label": "Measurement",
+        "context": "The segments were confirmed to be moving equally and independently with the same turning algorithm previously noted, leaving a total of ___ turns activated at t",
         "unit": null
       },
       {
         "id": "sarpe:measurement:9",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "the end of the case ( (mm)",
+        "label": "Measurement (mm)",
+        "context": "The segments were confirmed to be moving equally and independently with the same turning algorithm previously noted, leaving a total of [X] turns activated at t",
         "unit": "mm"
       }
     ],
@@ -3864,7 +4253,8 @@
         "id": "septorhinoplasty-functional:enumText:0",
         "kind": "enumText",
         "raw": "[Doyle splint removal / follow-up]",
-        "label": "given nasal precautions and discharged with",
+        "label": "Select",
+        "context": "The patient was given nasal precautions and discharged with ___ instructions.",
         "options": [
           "Doyle splint removal",
           "follow-up"
@@ -3873,10 +4263,6 @@
       }
     ],
     "flags": [
-      {
-        "type": "TEMPLATE NOTE",
-        "text": "TEMPLATE NOTE — 2026-06-14: Original title was \"Septorhinoplasty (Functional),\" but this note contains no rhinoplasty (no nasal osteotomies, no dorsal/tip work) — only septoplasty + inferior turbinate reduction. Retitled to match content. The original was also truncated after the Doyle-splint sentence; a standard emergence/disposition paragraph has been added below and bracketed. Build a separate true Septorhinoplasty template if dorsum/tip work is needed."
-      },
       {
         "type": "ADDED",
         "text": "Added 2026-06-14 — standard closing/disposition paragraph; original note ended above. Verify against the actual case."
@@ -3903,7 +4289,8 @@
         "id": "sialodochoplasty-mandible-left:side:0",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Transoral approach to",
+        "label": "Side",
+        "context": "Transoral approach to ___ submandibular sialolith located at the Hilum.",
         "options": [
           "R",
           "L"
@@ -3914,14 +4301,16 @@
         "id": "sialodochoplasty-mandible-left:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "of the incision and protected. Sialolith",
+        "label": "Measurement",
+        "context": "Sialolith ___ cm delivered atraumatically along with additional smaller sialoliths.",
         "unit": null
       },
       {
         "id": "sialodochoplasty-mandible-left:side:1",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "infiltration. The palpable stone in the",
+        "label": "Side",
+        "context": "The palpable stone in the ___ proximal hilum of Wharton's duct was identified through bimanual palpation.",
         "options": [
           "R",
           "L"
@@ -3932,7 +4321,8 @@
         "id": "sialodochoplasty-mandible-left:text:0",
         "kind": "text",
         "raw": "[Attending]",
-        "label": "[Attending] was present and scrubbed"
+        "label": "Value",
+        "context": "___ was present and scrubbed for the entirety of the case"
       }
     ],
     "flags": [
@@ -3962,28 +4352,32 @@
         "id": "single-piece-lefort-i-and-bsso-and-genioplasty:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "mandibular hyperplasia, and microgenia. Maxilla (mm)",
+        "label": "Measurement (mm)",
+        "context": "Maxilla advanced ___ mm and impacted [X] mm.",
         "unit": "mm"
       },
       {
         "id": "single-piece-lefort-i-and-bsso-and-genioplasty:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Maxilla advanced [X] mm and impacted (mm)",
+        "label": "Measurement (mm)",
+        "context": "Maxilla advanced [X] mm and impacted ___ mm.",
         "unit": "mm"
       },
       {
         "id": "single-piece-lefort-i-and-bsso-and-genioplasty:measurement:2",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "impacted [X] mm. Mandible set back (mm)",
+        "label": "Measurement (mm)",
+        "context": "Mandible set back ___ mm.",
         "unit": "mm"
       },
       {
         "id": "single-piece-lefort-i-and-bsso-and-genioplasty:measurement:3",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "set back [X] mm. Chin advanced (mm)",
+        "label": "Measurement (mm)",
+        "context": "Chin advanced ___ mm.",
         "unit": "mm"
       }
     ],
@@ -4009,7 +4403,8 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:side:0",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "on X. Maxillary subperiosteal implant with",
+        "label": "Side",
+        "context": "Maxillary subperiosteal implant with ___ sinus lift/impaction.",
         "options": [
           "R",
           "L"
@@ -4020,13 +4415,15 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:toothNumber:0",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: [diameter]x[length] ([X] Ncm, [X]"
+        "label": "Tooth #",
+        "context": "___: [diameter]x[length] ([X] Ncm, [X] degree)"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:0",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]:",
+        "label": "Implant size (d x l)",
+        "context": "___ ([X] Ncm, [X] degree)",
         "subFields": [
           {
             "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:0:d",
@@ -4046,27 +4443,31 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: [diameter]x[length] ( (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "[diameter]x[length] (___ Ncm, [X] degree)",
         "unit": "Ncm"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: [diameter]x[length] ([X] Ncm,",
+        "label": "Measurement",
+        "context": "[diameter]x[length] ([X] Ncm, ___ degree)",
         "unit": null
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:toothNumber:1",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: [diameter]x[length] ([X] Ncm, [X]"
+        "label": "Tooth #",
+        "context": "___: [diameter]x[length] ([X] Ncm, [X] degree)"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:1",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]:",
+        "label": "Implant size (d x l)",
+        "context": "___ ([X] Ncm, [X] degree)",
         "subFields": [
           {
             "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:1:d",
@@ -4086,27 +4487,31 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:2",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: [diameter]x[length] ( (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "[diameter]x[length] (___ Ncm, [X] degree)",
         "unit": "Ncm"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:3",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: [diameter]x[length] ([X] Ncm,",
+        "label": "Measurement",
+        "context": "[diameter]x[length] ([X] Ncm, ___ degree)",
         "unit": null
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:toothNumber:2",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: [diameter]x[length] ([X] Ncm, [X]"
+        "label": "Tooth #",
+        "context": "___: [diameter]x[length] ([X] Ncm, [X] degree)"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:2",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]:",
+        "label": "Implant size (d x l)",
+        "context": "___ ([X] Ncm, [X] degree)",
         "subFields": [
           {
             "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:2:d",
@@ -4126,27 +4531,31 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:4",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: [diameter]x[length] ( (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "[diameter]x[length] (___ Ncm, [X] degree)",
         "unit": "Ncm"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:5",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: [diameter]x[length] ([X] Ncm,",
+        "label": "Measurement",
+        "context": "[diameter]x[length] ([X] Ncm, ___ degree)",
         "unit": null
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:toothNumber:3",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "[#__]: [diameter]x[length] ([X] Ncm, [X]"
+        "label": "Tooth #",
+        "context": "___: [diameter]x[length] ([X] Ncm, [X] degree) [CONFIRM — 2026-06-14: #29 is listed as 3."
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:3",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "[ __]:",
+        "label": "Implant size (d x l)",
+        "context": "___ ([X] Ncm, [X] degree) [CONFIRM — 2026-06-14: #29 is listed as 3.",
         "subFields": [
           {
             "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:3:d",
@@ -4166,21 +4575,24 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:6",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: [diameter]x[length] ( (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "[diameter]x[length] (___ Ncm, [X] degree) [CONFIRM — 2026-06-14: #29 is listed as 3.",
         "unit": "Ncm"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:7",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[ __]: [diameter]x[length] ([X] Ncm,",
+        "label": "Measurement",
+        "context": "[diameter]x[length] ([X] Ncm, ___ degree) [CONFIRM — 2026-06-14: #29 is listed as 3.",
         "unit": null
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:side:1",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "of the case. Of note, the",
+        "label": "Side",
+        "context": "Of note, the ___ lateral maxillary sinus wall was perforated during dissection due to thin bone covering the sinus near the maxillary buttress.",
         "options": [
           "R",
           "L"
@@ -4191,7 +4603,8 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:side:2",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "along bilateral maxillary buttresses and the",
+        "label": "Side",
+        "context": "Seating was noted to be passive along bilateral maxillary buttresses and the ___ piriform rim.",
         "options": [
           "R",
           "L"
@@ -4202,7 +4615,8 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:side:3",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "and the [R/L] piriform rim. The",
+        "label": "Side",
+        "context": "The ___ aspect of the cut guide was noted to seat passively along the alveolar bone but with space between guide and piriform rim on the [R/L] side.",
         "options": [
           "R",
           "L"
@@ -4213,7 +4627,8 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:side:4",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "guide and piriform rim on the",
+        "label": "Side",
+        "context": "The [R/L] aspect of the cut guide was noted to seat passively along the alveolar bone but with space between guide and piriform rim on the ___ side.",
         "options": [
           "R",
           "L"
@@ -4224,7 +4639,8 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:side:5",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "in the posterior aspect of the",
+        "label": "Side",
+        "context": "The maxillary sinus membrane was noted to be exposed in the posterior aspect of the ___ alveolar bone.",
         "options": [
           "R",
           "L"
@@ -4235,7 +4651,8 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:side:6",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "along the bilateral maxillary buttresses and",
+        "label": "Side",
+        "context": "Next the custom KLS titanium subperiosteal implant was seated on the maxilla and noted to have a passive and well adapted fit along the bilateral maxillary butt",
         "options": [
           "R",
           "L"
@@ -4246,7 +4663,8 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:side:7",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "aligning within the fixation holes. The",
+        "label": "Side",
+        "context": "The ___ aspect of the implant showed proper alignment of the predictive fixation holes, but was slightly elevated slightly off the bone.",
         "options": [
           "R",
           "L"
@@ -4257,7 +4675,8 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:side:8",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "any interferences along anterior nasal spine,",
+        "label": "Side",
+        "context": "This discrepancy persisted after removal of any interferences along anterior nasal spine, ___ alveolar bone, or [R/L] alveolar bone but with predictive holes pr",
         "options": [
           "R",
           "L"
@@ -4268,7 +4687,8 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:side:9",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "nasal spine, [R/L] alveolar bone, or",
+        "label": "Side",
+        "context": "This discrepancy persisted after removal of any interferences along anterior nasal spine, [R/L] alveolar bone, or ___ alveolar bone but with predictive holes pr",
         "options": [
           "R",
           "L"
@@ -4279,33 +4699,38 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:8",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "to the pre drilled maxilla with",
+        "label": "Measurement",
+        "context": "The subperiosteal implant was then secured to the pre-drilled maxilla with ___ and [length] monocortical screws alternating from left to right at various length",
         "unit": null
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:9",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "pre drilled maxilla with [length] and",
+        "label": "Measurement",
+        "context": "The subperiosteal implant was then secured to the pre-drilled maxilla with [length] and ___ monocortical screws alternating from left to right at various length",
         "unit": null
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:text:0",
         "kind": "text",
         "raw": "[diameter]",
-        "label": "to the surgical plan with a"
+        "label": "Value",
+        "context": "The subperiosteal implant was then secured to the pre-drilled maxilla with [length] and [length] monocortical screws alternating from left to right at various l"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:text:1",
         "kind": "text",
         "raw": "[diameter]",
-        "label": "a [diameter] at the buttresses and"
+        "label": "Value",
+        "context": "The subperiosteal implant was then secured to the pre-drilled maxilla with [length] and [length] monocortical screws alternating from left to right at various l"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:side:10",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "Attention was then turned to the",
+        "label": "Side",
+        "context": "Attention was then turned to the ___ posterior aspect of the alveolus where the sinus was lifted.",
         "options": [
           "R",
           "L"
@@ -4316,7 +4741,8 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:side:11",
         "kind": "side",
         "raw": "[R/L]",
-        "label": "maxillary sinus wall perforations on the",
+        "label": "Side",
+        "context": "Additional collagen membranes were placed over the lateral maxillary sinus wall perforations on the ___ side.",
         "options": [
           "R",
           "L"
@@ -4327,13 +4753,15 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:toothNumber:4",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "Attention was directed to implant site"
+        "label": "Tooth #",
+        "context": "Attention was directed to implant site ___, the Nobel active system was followed to develop a [diameter]x[length]mm dimension osteotomy."
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:4",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "system was followed to develop a",
+        "label": "Implant size (d x l)",
+        "context": "Attention was directed to implant site [#__], the Nobel active system was followed to develop a ___mm dimension osteotomy.",
         "subFields": [
           {
             "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:4:d",
@@ -4353,7 +4781,8 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:5",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "to develop a [diameter]x[length]mm dimension ost",
+        "label": "Implant size (d x l)",
+        "context": "___mm implant placed and torqued to [X] Ncm.",
         "subFields": [
           {
             "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:5:d",
@@ -4373,20 +4802,23 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:10",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[diameter]x[length]mm implant placed and torqued (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "[diameter]x[length]mm implant placed and torqued to ___ Ncm.",
         "unit": "Ncm"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:toothNumber:5",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "Attention was directed to implant site"
+        "label": "Tooth #",
+        "context": "Attention was directed to implant site ___, the Nobel active system was followed to develop a [diameter]x[length]mm dimension osteotomy."
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:6",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "system was followed to develop a",
+        "label": "Implant size (d x l)",
+        "context": "Attention was directed to implant site [#__], the Nobel active system was followed to develop a ___mm dimension osteotomy.",
         "subFields": [
           {
             "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:6:d",
@@ -4406,7 +4838,8 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:7",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "to develop a [diameter]x[length]mm dimension ost",
+        "label": "Implant size (d x l)",
+        "context": "___mm implant placed and torqued to [X] Ncm.",
         "subFields": [
           {
             "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:7:d",
@@ -4426,20 +4859,23 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:11",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[diameter]x[length]mm implant placed and torqued (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "[diameter]x[length]mm implant placed and torqued to ___ Ncm.",
         "unit": "Ncm"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:toothNumber:6",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "Attention was directed to implant site"
+        "label": "Tooth #",
+        "context": "Attention was directed to implant site ___, the Nobel active system was followed to develop a [diameter]x[length]mm dimension osteotomy."
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:8",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "system was followed to develop a",
+        "label": "Implant size (d x l)",
+        "context": "Attention was directed to implant site [#__], the Nobel active system was followed to develop a ___mm dimension osteotomy.",
         "subFields": [
           {
             "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:8:d",
@@ -4459,7 +4895,8 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:9",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "implant was placed at an angle.",
+        "label": "Implant size (d x l)",
+        "context": "___mm placed and torqued to great than [X] Ncm.",
         "subFields": [
           {
             "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:9:d",
@@ -4479,27 +4916,31 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:12",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "placed and torqued to great than (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "[diameter]x[length]mm placed and torqued to great than ___ Ncm.",
         "unit": "Ncm"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:13",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Ncm. Bone profiling was performed, a",
+        "label": "Measurement",
+        "context": "Bone profiling was performed, a ___ degree MUA was placed and check to ensure implant profile lined up to palatal cusps of upper posterior teeth.",
         "unit": null
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:toothNumber:7",
         "kind": "toothNumber",
         "raw": "[#__]",
-        "label": "Attention was directed to implant site"
+        "label": "Tooth #",
+        "context": "Attention was directed to implant site ___, the Nobel active system was followed to develop a [diameter]x[length]mm dimension osteotomy."
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:10",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "system was followed to develop a",
+        "label": "Implant size (d x l)",
+        "context": "Attention was directed to implant site [#__], the Nobel active system was followed to develop a ___mm dimension osteotomy.",
         "subFields": [
           {
             "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:10:d",
@@ -4519,7 +4960,8 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:11",
         "kind": "hardwareDim",
         "raw": "[diameter]x[length]",
-        "label": "was placed at an angle. A",
+        "label": "Implant size (d x l)",
+        "context": "A ___mm implant placed and torqued to greater than [X] Ncm.",
         "subFields": [
           {
             "id": "subperiosteal-maxilla-and-all-on-x-mandible:hardwareDim:11:d",
@@ -4539,21 +4981,24 @@
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:14",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "placed and torqued to greater than (Ncm)",
+        "label": "Measurement (Ncm)",
+        "context": "A [diameter]x[length]mm implant placed and torqued to greater than ___ Ncm.",
         "unit": "Ncm"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:15",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "to greater than [X] Ncm. A",
+        "label": "Measurement",
+        "context": "A ___ degree MUA was placed and checked to ensure implant profile lined up to palatal cusps of upper posterior teeth.",
         "unit": null
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:text:2",
         "kind": "text",
         "raw": "[Attending(s)]",
-        "label": "[Attending(s)] were present for the"
+        "label": "Value",
+        "context": "___ were present for the entirety of the procedure."
       }
     ],
     "flags": [
@@ -4583,89 +5028,103 @@
         "id": "tjr-with-custom-stryker-tmj-concepts:hardwareCount:0",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "custom fossa components placed, secured with"
+        "label": "Count",
+        "context": "Stryker custom fossa components placed, secured with ___ monocortical screws."
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:hardwareCount:1",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "custom condylar prostheses placed, secured with"
+        "label": "Count",
+        "context": "Stryker custom condylar prostheses placed, secured with ___ bicortical screws."
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:hardwareCount:2",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "and coincident with pre op plan."
+        "label": "Count",
+        "context": "___ IMF screws remain in place for guiding elastics."
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:hardwareCount:3",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "and mandible as local infiltrates and"
+        "label": "Count",
+        "context": "Local anesthesia in the form of 2% lidocaine with 1:100,000 epi was injected to the bilateral maxilla and mandible as local infiltrates and ___ total [length]-m"
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:measurement:0",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "local infiltrates and [ ] total (mm)",
+        "label": "Measurement (mm)",
+        "context": "Local anesthesia in the form of 2% lidocaine with 1:100,000 epi was injected to the bilateral maxilla and mandible as local infiltrates and [#] total ___-mm IMF",
         "unit": "mm"
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:hardwareCount:4",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "total [length] mm IMF screws ("
+        "label": "Count",
+        "context": "Local anesthesia in the form of 2% lidocaine with 1:100,000 epi was injected to the bilateral maxilla and mandible as local infiltrates and [#] total [length]-m"
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:hardwareCount:5",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "([ ] in the maxilla and"
+        "label": "Count",
+        "context": "Local anesthesia in the form of 2% lidocaine with 1:100,000 epi was injected to the bilateral maxilla and mandible as local infiltrates and [#] total [length]-m"
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:hardwareCount:6",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "secured to the lateral ramus with"
+        "label": "Count",
+        "context": "The custom cut guide was inserted inferiorly, ensuring complete freedom from soft tissue entrapment, and the guide was secured to the lateral ramus with ___ [le"
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:measurement:1",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "the lateral ramus with [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "The custom cut guide was inserted inferiorly, ensuring complete freedom from soft tissue entrapment, and the guide was secured to the lateral ramus with [#] ___",
         "unit": "mm"
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:hardwareCount:7",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "seating, the guide was fixated with"
+        "label": "Count",
+        "context": "After confirmation of complete seating, the guide was fixated with ___ [length]-mm screws in the predictive holes."
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:measurement:2",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "guide was fixated with [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "After confirmation of complete seating, the guide was fixated with [#] ___-mm screws in the predictive holes.",
         "unit": "mm"
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:hardwareCount:8",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "fossa component was then secured with"
+        "label": "Count",
+        "context": "The fossa component was then secured with ___ [length]-mm screws."
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:measurement:3",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "was then secured with [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "The fossa component was then secured with [#] ___-mm screws.",
         "unit": "mm"
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:hardwareCount:9",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "the condylar prosthesis was fixated with"
+        "label": "Count",
+        "context": "The fixation holes were then aligned with the pre-drilled predictive holes, and with the condyle completely seated within the fossa component, the condylar pros"
       }
     ],
     "flags": [],
@@ -4690,200 +5149,231 @@
         "id": "tjr-with-stock-biomet:text:0",
         "kind": "text",
         "raw": "[size]",
-        "label": "with IMF screws. Right TMJ: Biomet"
+        "label": "Value",
+        "context": "Biomet ___ fossa, Narrow [size] condylar component secured with [#] [length]-mm screws."
       },
       {
         "id": "tjr-with-stock-biomet:text:1",
         "kind": "text",
         "raw": "[size]",
-        "label": "Right TMJ: Biomet [size] fossa, Narrow"
+        "label": "Value",
+        "context": "Biomet [size] fossa, Narrow ___ condylar component secured with [#] [length]-mm screws."
       },
       {
         "id": "tjr-with-stock-biomet:hardwareCount:0",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "Narrow [size] condylar component secured with"
+        "label": "Count",
+        "context": "Biomet [size] fossa, Narrow [size] condylar component secured with ___ [length]-mm screws."
       },
       {
         "id": "tjr-with-stock-biomet:measurement:0",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "condylar component secured with [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "Biomet [size] fossa, Narrow [size] condylar component secured with [#] ___-mm screws.",
         "unit": "mm"
       },
       {
         "id": "tjr-with-stock-biomet:text:2",
         "kind": "text",
         "raw": "[size]",
-        "label": "[length] mm screws. Left TMJ: Biomet"
+        "label": "Value",
+        "context": "Biomet ___ fossa fixated with [#] [length]-mm monocortical screws; Narrow [size] condylar component secured with [#] [length]-mm screws."
       },
       {
         "id": "tjr-with-stock-biomet:hardwareCount:1",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "TMJ: Biomet [size] fossa fixated with"
+        "label": "Count",
+        "context": "Biomet [size] fossa fixated with ___ [length]-mm monocortical screws; Narrow [size] condylar component secured with [#] [length]-mm screws."
       },
       {
         "id": "tjr-with-stock-biomet:measurement:1",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "[size] fossa fixated with [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "Biomet [size] fossa fixated with [#] ___-mm monocortical screws; Narrow [size] condylar component secured with [#] [length]-mm screws.",
         "unit": "mm"
       },
       {
         "id": "tjr-with-stock-biomet:text:3",
         "kind": "text",
         "raw": "[size]",
-        "label": "] [length] mm monocortical screws; Narrow"
+        "label": "Value",
+        "context": "Biomet [size] fossa fixated with [#] [length]-mm monocortical screws; Narrow ___ condylar component secured with [#] [length]-mm screws."
       },
       {
         "id": "tjr-with-stock-biomet:hardwareCount:2",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "Narrow [size] condylar component secured with"
+        "label": "Count",
+        "context": "Biomet [size] fossa fixated with [#] [length]-mm monocortical screws; Narrow [size] condylar component secured with ___ [length]-mm screws."
       },
       {
         "id": "tjr-with-stock-biomet:measurement:2",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "condylar component secured with [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "Biomet [size] fossa fixated with [#] [length]-mm monocortical screws; Narrow [size] condylar component secured with [#] ___-mm screws.",
         "unit": "mm"
       },
       {
         "id": "tjr-with-stock-biomet:hardwareCount:3",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "with 0.12% chlorhexidine gluconate mouth rinse."
+        "label": "Count",
+        "context": "___ [length]-mm IMF screws were placed in the mandible, and [#] [length]-mm IMF screws were placed in the maxilla in an evenly distributed manner."
       },
       {
         "id": "tjr-with-stock-biomet:measurement:3",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "chlorhexidine gluconate mouth rinse. [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "[#] ___-mm IMF screws were placed in the mandible, and [#] [length]-mm IMF screws were placed in the maxilla in an evenly distributed manner.",
         "unit": "mm"
       },
       {
         "id": "tjr-with-stock-biomet:hardwareCount:4",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "were placed in the mandible, and"
+        "label": "Count",
+        "context": "[#] [length]-mm IMF screws were placed in the mandible, and ___ [length]-mm IMF screws were placed in the maxilla in an evenly distributed manner."
       },
       {
         "id": "tjr-with-stock-biomet:measurement:4",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "in the mandible, and [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "[#] [length]-mm IMF screws were placed in the mandible, and [#] ___-mm IMF screws were placed in the maxilla in an evenly distributed manner.",
         "unit": "mm"
       },
       {
         "id": "tjr-with-stock-biomet:measurement:5",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "condylar cutting guide was placed and (mm)",
+        "label": "Measurement (mm)",
+        "context": "The condylar cutting guide was placed and ___ mm of condylar height was removed using the Piezo as planned.",
         "unit": "mm"
       },
       {
         "id": "tjr-with-stock-biomet:text:4",
         "kind": "text",
         "raw": "[size]",
-        "label": "copious irrigation. Next, a Biomet stock"
+        "label": "Value",
+        "context": "Next, a Biomet stock ___ fossa component was placed at the left TMJ fossa and a stable fit was confirmed with matching of the pre-drilled holes."
       },
       {
         "id": "tjr-with-stock-biomet:hardwareCount:5",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "holes. It was then secured with"
+        "label": "Count",
+        "context": "It was then secured with ___ [length]-mm screws."
       },
       {
         "id": "tjr-with-stock-biomet:measurement:6",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "was then secured with [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "It was then secured with [#] ___-mm screws.",
         "unit": "mm"
       },
       {
         "id": "tjr-with-stock-biomet:measurement:7",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "condylar cutting guide was placed and (mm)",
+        "label": "Measurement (mm)",
+        "context": "The condylar cutting guide was placed and ___ mm of condylar height was removed using the Piezo as planned.",
         "unit": "mm"
       },
       {
         "id": "tjr-with-stock-biomet:text:5",
         "kind": "text",
         "raw": "[size]",
-        "label": "copious irrigation. Next, a Biomet stock"
+        "label": "Value",
+        "context": "Next, a Biomet stock ___ fossa component was placed at the right TMJ fossa and a stable fit was confirmed with matching of the pre-drilled holes."
       },
       {
         "id": "tjr-with-stock-biomet:hardwareCount:6",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "holes. It was then secured with"
+        "label": "Count",
+        "context": "It was then secured with ___ [length]-mm screws."
       },
       {
         "id": "tjr-with-stock-biomet:measurement:8",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "was then secured with [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "It was then secured with [#] ___-mm screws.",
         "unit": "mm"
       },
       {
         "id": "tjr-with-stock-biomet:text:6",
         "kind": "text",
         "raw": "[size]",
-        "label": "lateral ramus where a right Biomet"
+        "label": "Value",
+        "context": "Attention was then directed to the right lateral ramus where a right Biomet ___ narrow condylar component was then placed through the right neck incision and se"
       },
       {
         "id": "tjr-with-stock-biomet:hardwareCount:7",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "fossa component, which was secured with"
+        "label": "Count",
+        "context": "Attention was then directed to the right lateral ramus where a right Biomet [size] narrow condylar component was then placed through the right neck incision and"
       },
       {
         "id": "tjr-with-stock-biomet:measurement:9",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "which was secured with [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "Attention was then directed to the right lateral ramus where a right Biomet [size] narrow condylar component was then placed through the right neck incision and",
         "unit": "mm"
       },
       {
         "id": "tjr-with-stock-biomet:text:7",
         "kind": "text",
         "raw": "[size]",
-        "label": "left lateral ramus. A left Biomet"
+        "label": "Value",
+        "context": "A left Biomet ___ narrow condylar component was then placed through the left neck incision and seated into the fossa component, which was secured with [#] [leng"
       },
       {
         "id": "tjr-with-stock-biomet:hardwareCount:8",
         "kind": "hardwareCount",
         "raw": "[#]",
-        "label": "fossa component, which was secured with"
+        "label": "Count",
+        "context": "A left Biomet [size] narrow condylar component was then placed through the left neck incision and seated into the fossa component, which was secured with ___ [l"
       },
       {
         "id": "tjr-with-stock-biomet:measurement:10",
         "kind": "measurement",
         "raw": "[length]",
-        "label": "which was secured with [ ] (mm)",
+        "label": "Measurement (mm)",
+        "context": "A left Biomet [size] narrow condylar component was then placed through the left neck incision and seated into the fossa component, which was secured with [#] __",
         "unit": "mm"
       },
       {
         "id": "tjr-with-stock-biomet:measurement:11",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "fat. Hemostasis obtained with electrocautery. Ap",
+        "label": "Measurement",
+        "context": "Approximately ___ cm block of fat was harvested and placed in saline.",
         "unit": null
       },
       {
         "id": "tjr-with-stock-biomet:measurement:12",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] cc of abdominal fat (cc)",
+        "label": "Measurement (cc)",
+        "context": "___ cc of abdominal fat was then placed through the right endaural incision around the prosthesis.",
         "unit": "cc"
       },
       {
         "id": "tjr-with-stock-biomet:measurement:13",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "[X] cc of abdominal fat (cc)",
+        "label": "Measurement (cc)",
+        "context": "___ cc of abdominal fat was then placed through the left endaural incision around the prosthesis.",
         "unit": "cc"
       }
     ],

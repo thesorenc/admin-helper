@@ -1,4 +1,4 @@
-import { useRef, type ReactNode } from 'react'
+import { useRef, useState, type ReactNode } from 'react'
 import type { Field } from '@/lib/types'
 import { canonicalSide, valueKey } from '@/lib/assembler'
 
@@ -96,6 +96,135 @@ function ToothPicker({ value, onChange }: { value: string; onChange: (v: string)
         )}
       </div>
     </div>
+  )
+}
+
+/** Compact inline control for the prose-fill surface: the placeholder rendered as a
+ *  fill-in-the-blank embedded in the atom's actual sentence. The surrounding prose is
+ *  the context, so no label row is shown; the field's sentence context is the a11y name. */
+export function InlineField({
+  field,
+  values,
+  setValue,
+  scope,
+}: {
+  field: Field
+  values: Record<string, string>
+  setValue: (key: string, value: string) => void
+  scope?: string
+}) {
+  const [openTeeth, setOpenTeeth] = useState(false)
+  const k = (key: string) => (scope ? `${scope}::${key}` : key)
+  const aria = field.context ? `${field.label}: ${field.context}` : field.label
+  const filled = (v: string | undefined) => !!(v && v.trim())
+
+  if (field.kind === 'side' || field.kind === 'enumText') {
+    const isSide = field.kind === 'side'
+    const key = isSide ? k(valueKey(field)) : k(field.id)
+    const current = values[key] ?? ''
+    const opts = field.options ?? (isSide ? ['right', 'left'] : [])
+    const matchOn = (opt: string) => (isSide ? current === canonicalSide(opt) : current === opt)
+    const isOther = !isSide && current.trim() !== '' && !opts.includes(current)
+    return (
+      <span className="ifield" role="group" aria-label={aria}>
+        {opts.map((opt) => (
+          <button
+            key={opt}
+            type="button"
+            aria-pressed={matchOn(opt)}
+            className={'ichip' + (matchOn(opt) ? ' on' : '')}
+            onClick={() => setValue(key, isSide ? canonicalSide(opt) : opt)}
+          >
+            {opt}
+          </button>
+        ))}
+        {!isSide && (
+          <>
+            <button
+              type="button"
+              aria-pressed={isOther}
+              className={'ichip' + (isOther ? ' on' : '')}
+              onClick={() => setValue(key, isOther ? '' : ' ')}
+            >
+              Other…
+            </button>
+            {isOther && (
+              <input
+                className="iinput"
+                autoFocus
+                aria-label={`${aria} (custom)`}
+                value={current.trim()}
+                onChange={(e) => setValue(key, e.target.value)}
+              />
+            )}
+          </>
+        )}
+      </span>
+    )
+  }
+
+  if (field.kind === 'toothNumber') {
+    const key = k(field.id)
+    const v = values[key] ?? ''
+    return (
+      <span className="ifield">
+        <button
+          type="button"
+          className={'ipill' + (filled(v) ? ' on' : '')}
+          aria-expanded={openTeeth}
+          aria-label={aria}
+          onClick={() => setOpenTeeth((o) => !o)}
+        >
+          {filled(v) ? `#${v}` : '# ___'}
+        </button>
+        {openTeeth && (
+          <span className="ipopover">
+            <ToothPicker value={v} onChange={(nv) => setValue(key, nv)} />
+          </span>
+        )}
+      </span>
+    )
+  }
+
+  if (field.kind === 'hardwareDim') {
+    return (
+      <span className="ifield" role="group" aria-label={aria}>
+        <input
+          className="iinput mono"
+          style={{ width: 52 }}
+          placeholder="Ø"
+          aria-label={`${aria} diameter`}
+          inputMode="decimal"
+          value={values[k(`${field.id}:d`)] ?? ''}
+          onChange={(e) => setValue(k(`${field.id}:d`), e.target.value)}
+        />
+        <span className="idim">×</span>
+        <input
+          className="iinput mono"
+          style={{ width: 60 }}
+          placeholder="len"
+          aria-label={`${aria} length`}
+          inputMode="decimal"
+          value={values[k(`${field.id}:l`)] ?? ''}
+          onChange={(e) => setValue(k(`${field.id}:l`), e.target.value)}
+        />
+      </span>
+    )
+  }
+
+  // measurement / hardwareCount / text / blank -> a single inline blank.
+  const key = k(field.id)
+  const mono = field.kind === 'measurement' || field.kind === 'hardwareCount'
+  return (
+    <input
+      className={'iinput' + (mono ? ' mono' : '') + (filled(values[key]) ? ' on' : '')}
+      style={{ width: field.kind === 'hardwareCount' ? 46 : 72 }}
+      inputMode={mono ? (field.kind === 'measurement' ? 'decimal' : 'numeric') : 'text'}
+      aria-label={aria}
+      placeholder={field.kind === 'hardwareCount' ? '#' : '___'}
+      value={values[key] ?? ''}
+      onChange={(e) => setValue(key, e.target.value)}
+    />
   )
 }
 

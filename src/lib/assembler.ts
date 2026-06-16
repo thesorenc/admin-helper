@@ -127,7 +127,9 @@ export function assemble(
     if (!field) return ''
     const formatted = formatField(field, values)
     if (formatted === null) {
-      missing.push(field.label)
+      // Prefer the containing sentence ("Tooth ___ was tested for profound anesthesia.")
+      // over the bare kind label, so the checklist reads as actionable clinical prose.
+      missing.push(field.context ?? field.label)
       if (policy === 'blank') return ''
       if (policy === 'sentinel') return UNFILLED_SENTINEL
       return field.raw

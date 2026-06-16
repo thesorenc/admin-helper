@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { ATOMS } from '@/content'
-import { PROCEDURES, procedureById, contentById } from '@/lib/procedures'
+import { PROCEDURES, procedureById, atomById } from '@/lib/procedures'
 import { buildDocument, type DocKind } from '@/lib/caseAssembly'
+import { splitTemplate } from '@/lib/segments'
 import { makeSearch } from '@/lib/search'
 import { useCaseStore } from '@/state/useCaseStore'
-import { FieldRenderer } from '@/components/FieldRenderer'
+import { InlineField } from '@/components/FieldRenderer'
 import { OutputPanel } from '@/components/OutputPanel'
 import { RxPanel } from '@/components/RxPanel'
 import { EditableOutput } from '@/components/EditableOutput'
@@ -14,19 +15,6 @@ function abbrev(title: string): string {
   const words = title.replace(/[^A-Za-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean)
   if (words.length >= 2) return (words[0][0] + words[1][0]).toUpperCase()
   return (words[0] ?? title).slice(0, 3).toUpperCase()
-}
-
-function visibleFields(componentId: string) {
-  const c = contentById(componentId)
-  if (!c) return []
-  const seenLink = new Set<string>()
-  return c.fields.filter((f) => {
-    if (f.linkKey) {
-      if (seenLink.has(f.linkKey)) return false
-      seenLink.add(f.linkKey)
-    }
-    return true
-  })
 }
 
 const TABS: { kind: DocKind; label: string }[] = [
@@ -144,7 +132,12 @@ export function CaseBuilder() {
             items.map((item, idx) => {
               const proc = procedureById(item.procedureId)
               if (!proc) return null
-              const fields = visibleFields(proc.opTemplateId)
+              // Render the atom's own op-note snippet (atomById, matching assembly) as
+              // live prose: each placeholder becomes an inline fill-in-the-blank, so the
+              // surrounding sentence is the context. Filling the form == drafting the note.
+              const op = atomById(proc.opTemplateId)
+              const segments = op ? splitTemplate(op.bodyTemplate, op.fields) : []
+              const hasFields = segments.some((s) => s.type === 'field')
               return (
                 <div className="proc-block" key={item.instanceId}>
                   <div className="proc-block-head">
@@ -165,20 +158,35 @@ export function CaseBuilder() {
                     </button>
                   </div>
                   <div className="proc-block-body">
-                    {fields.length ? (
-                      <div className="field-grid">
-                        {fields.map((f) => (
-                          <FieldRenderer
-                            key={f.id}
-                            field={f}
+                    <div className="prose-fill">
+                      {segments.map((seg, i) => {
+                        if (seg.type === 'text') {
+                          return (
+                            <span className="prose-text" key={i}>
+                              {seg.text}
+                            </span>
+                          )
+                        }
+                        if (seg.type === 'include') {
+                          return (
+                            <span className="prose-include" key={i}>
+                              [{seg.dotPhrase}]
+                            </span>
+                          )
+                        }
+                        return (
+                          <InlineField
+                            key={seg.field.id}
+                            field={seg.field}
                             values={values}
                             setValue={setValue}
                             scope={item.instanceId}
                           />
-                        ))}
-                      </div>
-                    ) : (
-                      <p style={{ color: 'var(--muted)', fontSize: 13, margin: 0 }}>
+                        )
+                      })}
+                    </div>
+                    {!hasFields && (
+                      <p style={{ color: 'var(--muted)', fontSize: 13, margin: '8px 0 0' }}>
                         No fillable variables — ready as-is.
                       </p>
                     )}

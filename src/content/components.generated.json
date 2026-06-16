@@ -68,25 +68,29 @@
         "id": "closure-and-post-op:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Patient observed for"
+        "label": "Field",
+        "context": "Patient observed for ___ minutes post-procedure."
       },
       {
         "id": "closure-and-post-op:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "minutes post procedure. Modified Aldrete score:"
+        "label": "Field",
+        "context": "___/10."
       },
       {
         "id": "closure-and-post-op:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "Pain level at discharge:"
+        "label": "Field",
+        "context": "___/10."
       },
       {
         "id": "closure-and-post-op:enumText:0",
         "kind": "enumText",
         "raw": "___ (soft/liquid diet for ___ days; avoid ___)",
-        "label": "Diet:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "soft",
           "liquid diet for ___ days; avoid ___"
@@ -97,38 +101,44 @@
         "id": "closure-and-post-op:blank:3",
         "kind": "blank",
         "raw": "___",
-        "label": "Prescriptions: e prescribed to"
+        "label": "Field",
+        "context": "e-prescribed to ___ pharmacy / paper Rx provided"
       },
       {
         "id": "closure-and-post-op:blank:4",
         "kind": "blank",
         "raw": "___ (relationship: ___)",
-        "label": "discharged in stable condition. Escort/responsib",
+        "label": "Field",
+        "context": "___ / Patient self-discharged (local anesthesia only).",
         "hint": "relationship: ___"
       },
       {
         "id": "closure-and-post-op:blank:5",
         "kind": "blank",
         "raw": "___",
-        "label": "Emergency contact information provided: OMFS cli"
+        "label": "Field",
+        "context": "OMFS clinic ___, after-hours: ___."
       },
       {
         "id": "closure-and-post-op:blank:6",
         "kind": "blank",
         "raw": "___",
-        "label": "provided: OMFS clinic ___, after hours:"
+        "label": "Field",
+        "context": "___."
       },
       {
         "id": "closure-and-post-op:blank:7",
         "kind": "blank",
         "raw": "___",
-        "label": "Follow up: scheduled for"
+        "label": "Field",
+        "context": "scheduled for ___ / patient to call for appointment"
       },
       {
         "id": "closure-and-post-op:blank:8",
         "kind": "blank",
         "raw": "___",
-        "label": "Time of discharge:"
+        "label": "Field",
+        "context": "___"
       }
     ],
     "flags": [],
@@ -161,7 +171,8 @@
         "id": "consent-anesthesia:enumText:0",
         "kind": "enumText",
         "raw": "___ (IV moderate sedation / deep sedation / general anesthesia)",
-        "label": "Risks, benefits, and alternatives of",
+        "label": "Select",
+        "context": "Risks, benefits, and alternatives of ___ discussed with patient, including but not limited to: respiratory depression, airway obstruction, laryngospasm, broncho",
         "options": [
           "IV moderate sedation",
           "deep sedation",
@@ -200,7 +211,8 @@
         "id": "consent-extraction:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "and coronectomy where indicated. Patient elects"
+        "label": "Field",
+        "context": "Patient elects ___."
       }
     ],
     "flags": [],
@@ -261,64 +273,74 @@
         "id": "exam-airway:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Body habitus:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "exam-airway:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "Neck circumference:"
+        "label": "Field",
+        "context": "___ cm"
       },
       {
         "id": "exam-airway:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "Airway: Mallampati class:"
+        "label": "Field",
+        "context": "___, maximum incisal opening: ___ mm, thyromental distance: ___ mm"
       },
       {
         "id": "exam-airway:blank:3",
         "kind": "blank",
         "raw": "___",
-        "label": "Mallampati class: ___, maximum incisal opening:"
+        "label": "Field",
+        "context": "___ mm, thyromental distance: ___ mm"
       },
       {
         "id": "exam-airway:blank:4",
         "kind": "blank",
         "raw": "___",
-        "label": "incisal opening: ___ mm, thyromental distance:"
+        "label": "Field",
+        "context": "___ mm"
       },
       {
         "id": "exam-airway:blank:5",
         "kind": "blank",
         "raw": "___",
-        "label": "Tonsils: Brodsky grade"
+        "label": "Field",
+        "context": "Brodsky grade ___"
       },
       {
         "id": "exam-airway:blank:6",
         "kind": "blank",
         "raw": "___ (patency, septal deviation, obstruction)",
-        "label": "Nose:",
+        "label": "Field",
+        "context": "___",
         "hint": "patency, septal deviation, obstruction"
       },
       {
         "id": "exam-airway:blank:7",
         "kind": "blank",
         "raw": "___ (upper lip bite test class ___)",
-        "label": "Jaw protrusion:",
+        "label": "Field",
+        "context": "___",
         "hint": "upper lip bite test class ___"
       },
       {
         "id": "exam-airway:blank:8",
         "kind": "blank",
         "raw": "___ (loose, prominent, or fragile teeth: ___)",
-        "label": "Dentition:",
+        "label": "Field",
+        "context": "___",
         "hint": "loose, prominent, or fragile teeth: ___"
       },
       {
         "id": "exam-airway:blank:9",
         "kind": "blank",
         "raw": "___",
-        "label": "Vascular access:"
+        "label": "Field",
+        "context": "___"
       }
     ],
     "flags": [],
@@ -351,13 +373,15 @@
         "id": "exam-general:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Temporomandibular joint: Maximum incisal opening"
+        "label": "Field",
+        "context": "Maximum incisal opening ___ mm."
       },
       {
         "id": "exam-general:enumText:0",
         "kind": "enumText",
         "raw": "___ (full / partially edentulous / edentulous; caries: ___; restorations: ___)",
-        "label": "Dentition:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "full",
           "partially edentulous",
@@ -369,7 +393,8 @@
         "id": "exam-general:enumText:1",
         "kind": "enumText",
         "raw": "___ (Angle class ___; overjet/overbite: ___)",
-        "label": "Occlusion:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "Angle class ___; overjet",
           "overbite: ___"
@@ -407,7 +432,8 @@
         "id": "exam-post-op-clinic:enumText:0",
         "kind": "enumText",
         "raw": "___ (not palpable / palpable and asymptomatic / hardware exposure / symptomatic - ___)",
-        "label": "Hardware:",
+        "label": "Select",
+        "context": "___ / N/A",
         "options": [
           "not palpable",
           "palpable and asymptomatic",
@@ -420,19 +446,22 @@
         "id": "exam-post-op-clinic:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "No concerning pathology noted. Oral hygiene:"
+        "label": "Field",
+        "context": "___."
       },
       {
         "id": "exam-post-op-clinic:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "/ removed today / dissolved /"
+        "label": "Field",
+        "context": "present and intact / removed today / dissolved / ___"
       },
       {
         "id": "exam-post-op-clinic:enumText:1",
         "kind": "enumText",
         "raw": "___ (well epithelialized / granulating / fibrin present / ___)",
-        "label": "Healing:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "well epithelialized",
           "granulating",
@@ -445,20 +474,23 @@
         "id": "exam-post-op-clinic:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "induration, fluctuance, or purulent drainage /"
+        "label": "Field",
+        "context": "no erythema, warmth, induration, fluctuance, or purulent drainage / ___"
       },
       {
         "id": "exam-post-op-clinic:blank:3",
         "kind": "blank",
         "raw": "___ (location, severity, trend)",
-        "label": "Swelling:",
+        "label": "Field",
+        "context": "___",
         "hint": "location, severity, trend"
       },
       {
         "id": "exam-post-op-clinic:enumText:2",
         "kind": "enumText",
         "raw": "___ (well-healed / hypertrophic / widened / ___)",
-        "label": "Scar:",
+        "label": "Select",
+        "context": "___ / No extraoral incisions",
         "options": [
           "well-healed",
           "hypertrophic",
@@ -471,26 +503,30 @@
         "id": "exam-post-op-clinic:blank:4",
         "kind": "blank",
         "raw": "___",
-        "label": "Maxillomandibular fixation/splint status:"
+        "label": "Field",
+        "context": "___ / N/A"
       },
       {
         "id": "exam-post-op-clinic:blank:5",
         "kind": "blank",
         "raw": "___ (if applicable)",
-        "label": "Occlusion:",
+        "label": "Field",
+        "context": "___",
         "hint": "if applicable"
       },
       {
         "id": "exam-post-op-clinic:blank:6",
         "kind": "blank",
         "raw": "___",
-        "label": "deviation on opening, maximum incisal opening"
+        "label": "Field",
+        "context": "No pain, no crepitus, no deviation on opening, maximum incisal opening ___ mm"
       },
       {
         "id": "exam-post-op-clinic:enumText:3",
         "kind": "enumText",
         "raw": "___ (intact / decreased / absent; character: ___ numbness / tingling / burning / pain)",
-        "label": "V inferior alveolar nerve (V3): sensation",
+        "label": "Select",
+        "context": "sensation ___ to light touch of the lower lip and chin bilaterally.",
         "options": [
           "intact",
           "decreased",
@@ -505,7 +541,8 @@
         "id": "exam-post-op-clinic:enumText:4",
         "kind": "enumText",
         "raw": "___ (intact / decreased / absent; character: ___ numbness / tingling / burning / pain)",
-        "label": "and chin bilaterally. Lingual nerve: sensation",
+        "label": "Select",
+        "context": "sensation ___ to anterior two-thirds of tongue bilaterally.",
         "options": [
           "intact",
           "decreased",
@@ -520,7 +557,8 @@
         "id": "exam-post-op-clinic:enumText:5",
         "kind": "enumText",
         "raw": "___ (intact / decreased / absent; character: ___ numbness / tingling / burning / pain)",
-        "label": "of tongue bilaterally. Mental nerve: sensation",
+        "label": "Select",
+        "context": "sensation ___ to chin bilaterally.",
         "options": [
           "intact",
           "decreased",
@@ -535,7 +573,8 @@
         "id": "exam-post-op-clinic:enumText:6",
         "kind": "enumText",
         "raw": "___ (intact / decreased / absent; character: ___ numbness / tingling / burning / pain)",
-        "label": "chin bilaterally. Infraorbital nerve (V2): sensa",
+        "label": "Select",
+        "context": "sensation ___ to light touch of midface and upper lip bilaterally.",
         "options": [
           "intact",
           "decreased",
@@ -578,44 +617,51 @@
         "id": "exam-post-op-flap:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Head/Face: Residual swelling to"
+        "label": "Field",
+        "context": "Residual swelling to ___, inferior border of mandible palpable bilaterally"
       },
       {
         "id": "exam-post-op-flap:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "clear, uvula midline. Maximum incisal opening"
+        "label": "Field",
+        "context": "Maximum incisal opening ___ fingerbreadths, no pain with opening."
       },
       {
         "id": "exam-post-op-flap:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "pain with opening. Residual swelling of"
+        "label": "Field",
+        "context": "Residual swelling of ___."
       },
       {
         "id": "exam-post-op-flap:blank:3",
         "kind": "blank",
         "raw": "___",
-        "label": "purulence appreciated. Drain in place at"
+        "label": "Field",
+        "context": "Drain in place at ___."
       },
       {
         "id": "exam-post-op-flap:blank:4",
         "kind": "blank",
         "raw": "___ (describe wound, extraction sites if applicable, flap margins)",
-        "label": "in place at ___. Surgical site:",
+        "label": "Field",
+        "context": "___.",
         "hint": "describe wound, extraction sites if applicable, flap margins"
       },
       {
         "id": "exam-post-op-flap:blank:5",
         "kind": "blank",
         "raw": "___",
-        "label": "if applicable, flap margins). Incision at"
+        "label": "Field",
+        "context": "Incision at ___ with wound margins well approximated, non-erythematous."
       },
       {
         "id": "exam-post-op-flap:enumText:0",
         "kind": "enumText",
         "raw": "___ (size, cuffed/uncuffed, secretions, stoma site)",
-        "label": "Tracheostomy:",
+        "label": "Select",
+        "context": "___ / No tracheostomy",
         "options": [
           "size, cuffed",
           "uncuffed, secretions, stoma site"
@@ -626,7 +672,8 @@
         "id": "exam-post-op-flap:enumText:1",
         "kind": "enumText",
         "raw": "___ (tolerating trach collar / capping trial: ___ / voice quality: ___)",
-        "label": "Airway:",
+        "label": "Select",
+        "context": "___ / No tracheostomy - airway patent",
         "options": [
           "tolerating trach collar",
           "capping trial: ___",
@@ -638,7 +685,8 @@
         "id": "exam-post-op-flap:enumText:2",
         "kind": "enumText",
         "raw": "___ (intact / decreased / absent)",
-        "label": "V inferior alveolar nerve (V3): sensation",
+        "label": "Select",
+        "context": "sensation ___ to light touch of the lower lip and chin bilaterally.",
         "options": [
           "intact",
           "decreased",
@@ -650,7 +698,8 @@
         "id": "exam-post-op-flap:enumText:3",
         "kind": "enumText",
         "raw": "___ (intact / decreased / absent)",
-        "label": "and chin bilaterally. Lingual nerve: sensation",
+        "label": "Select",
+        "context": "sensation ___ to anterior two-thirds of tongue bilaterally.",
         "options": [
           "intact",
           "decreased",
@@ -662,7 +711,8 @@
         "id": "exam-post-op-flap:enumText:4",
         "kind": "enumText",
         "raw": "___ (intact / decreased / absent)",
-        "label": "of tongue bilaterally. Mental nerve: sensation",
+        "label": "Select",
+        "context": "sensation ___ to chin bilaterally.",
         "options": [
           "intact",
           "decreased",
@@ -674,7 +724,8 @@
         "id": "exam-post-op-flap:enumText:5",
         "kind": "enumText",
         "raw": "___ (intact / weak / absent)",
-        "label": "movement symmetric bilaterally; marginal mandibu",
+        "label": "Select",
+        "context": "___.",
         "options": [
           "intact",
           "weak",
@@ -686,7 +737,8 @@
         "id": "exam-post-op-flap:enumText:6",
         "kind": "enumText",
         "raw": "___ (soft, non-distended / hematoma / seroma / expanding swelling - ___)",
-        "label": "Neck:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "soft, non-distended",
           "hematoma",
@@ -699,7 +751,8 @@
         "id": "exam-post-op-flap:enumText:7",
         "kind": "enumText",
         "raw": "___ (nasogastric tube/percutaneous endoscopic gastrostomy in place, PO diet)",
-        "label": "Feeding:",
+        "label": "Select",
+        "context": "___ / NPO",
         "options": [
           "nasogastric tube",
           "percutaneous endoscopic gastrostomy in place, PO diet"
@@ -710,13 +763,15 @@
         "id": "exam-post-op-flap:blank:6",
         "kind": "blank",
         "raw": "___",
-        "label": "Salivary leak/fistula: none / present at"
+        "label": "Field",
+        "context": "none / present at ___"
       },
       {
         "id": "exam-post-op-flap:enumText:8",
         "kind": "enumText",
         "raw": "___ (heparin drip / aspirin / none)",
-        "label": "Anticoagulation:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "heparin drip",
           "aspirin",
@@ -728,13 +783,15 @@
         "id": "exam-post-op-flap:blank:7",
         "kind": "blank",
         "raw": "___",
-        "label": "Positioning: Head of bed"
+        "label": "Field",
+        "context": "Head of bed ___ degrees"
       },
       {
         "id": "exam-post-op-flap:enumText:9",
         "kind": "enumText",
         "raw": "___ (brisk bright red bleeding = adequate arterial inflow / slow dark bleeding = venous congestion / no bleeding = arterial insufficiency)",
-        "label": "Pin prick test:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "brisk bright red bleeding = adequate arterial inflow",
           "slow dark bleeding = venous congestion",
@@ -746,31 +803,36 @@
         "id": "exam-post-op-flap:blank:8",
         "kind": "blank",
         "raw": "___",
-        "label": "Flap Check performed at"
+        "label": "Field",
+        "context": "Flap Check performed at ___:"
       },
       {
         "id": "exam-post-op-flap:blank:9",
         "kind": "blank",
         "raw": "___",
-        "label": "Cook doppler: Arterial"
+        "label": "Field",
+        "context": "Arterial ___, venous ___"
       },
       {
         "id": "exam-post-op-flap:blank:10",
         "kind": "blank",
         "raw": "___",
-        "label": "Cook doppler: Arterial ___, venous"
+        "label": "Field",
+        "context": "Arterial ___, venous ___"
       },
       {
         "id": "exam-post-op-flap:blank:11",
         "kind": "blank",
         "raw": "___",
-        "label": "skin paddle marked with Prolene suture:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "exam-post-op-flap:enumText:10",
         "kind": "enumText",
         "raw": "___ (soft/tense, warm/cool, color, capillary refill)",
-        "label": "Skin paddle:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "soft",
           "tense, warm",
@@ -782,7 +844,8 @@
         "id": "exam-post-op-flap:enumText:11",
         "kind": "enumText",
         "raw": "___ (margins well-adapted to native tissue / dehiscence at ___ / fistula: Y/N)",
-        "label": "Flap inset:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "margins well-adapted to native tissue",
           "dehiscence at ___",
@@ -795,49 +858,57 @@
         "id": "exam-post-op-flap:blank:12",
         "kind": "blank",
         "raw": "___",
-        "label": "Neck drain:"
+        "label": "Field",
+        "context": "___ output (character, volume)"
       },
       {
         "id": "exam-post-op-flap:blank:13",
         "kind": "blank",
         "raw": "___",
-        "label": "Donor Site ("
+        "label": "Field",
+        "context": "Donor Site (___):"
       },
       {
         "id": "exam-post-op-flap:blank:14",
         "kind": "blank",
         "raw": "___",
-        "label": "Wound vac:"
+        "label": "Field",
+        "context": "___ cc output"
       },
       {
         "id": "exam-post-op-flap:blank:15",
         "kind": "blank",
         "raw": "___",
-        "label": "JP drain:"
+        "label": "Field",
+        "context": "___ cc output"
       },
       {
         "id": "exam-post-op-flap:blank:16",
         "kind": "blank",
         "raw": "___",
-        "label": "Tenderness:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "exam-post-op-flap:blank:17",
         "kind": "blank",
         "raw": "___",
-        "label": "Pulses:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "exam-post-op-flap:blank:18",
         "kind": "blank",
         "raw": "___",
-        "label": "Sensation:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "exam-post-op-flap:blank:19",
         "kind": "blank",
         "raw": "___",
-        "label": "Motor:"
+        "label": "Field",
+        "context": "___"
       }
     ],
     "flags": [],
@@ -871,7 +942,8 @@
         "id": "exam-post-op-inpatient:enumText:0",
         "kind": "enumText",
         "raw": "___ (natural / nasal trumpet / endotracheal tube / tracheostomy: ___)",
-        "label": "Airway:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "natural",
           "nasal trumpet",
@@ -884,13 +956,15 @@
         "id": "exam-post-op-inpatient:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "No concerning pathology noted. Oral hygiene:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "exam-post-op-inpatient:enumText:1",
         "kind": "enumText",
         "raw": "___ (maxillomandibular fixation with wires / guiding elastics / surgical splint in place / arch bars without elastics / N/A)",
-        "label": "Maxillomandibular fixation/splint status:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "maxillomandibular fixation with wires",
           "guiding elastics",
@@ -905,7 +979,8 @@
         "id": "exam-post-op-inpatient:enumText:2",
         "kind": "enumText",
         "raw": "___ (location, severity: mild/moderate/severe, trend: improving/stable/worsening)",
-        "label": "Swelling:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "location, severity: mild",
           "moderate",
@@ -919,7 +994,8 @@
         "id": "exam-post-op-inpatient:enumText:3",
         "kind": "enumText",
         "raw": "___ (location, severity, trend: resolving / stable / worsening)",
-        "label": "Ecchymosis:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "location, severity, trend: resolving",
           "stable",
@@ -931,14 +1007,16 @@
         "id": "exam-post-op-inpatient:blank:1",
         "kind": "blank",
         "raw": "___ (type, location, output character and volume over 24h)",
-        "label": "Drains:",
+        "label": "Field",
+        "context": "___ / No drains in place",
         "hint": "type, location, output character and volume over 24h"
       },
       {
         "id": "exam-post-op-inpatient:enumText:4",
         "kind": "enumText",
         "raw": "___ (NPO / clear liquids / full liquid / soft / regular)",
-        "label": "Diet:",
+        "label": "Select",
+        "context": "___; route: PO / nasogastric tube / percutaneous endoscopic gastrostomy",
         "options": [
           "NPO",
           "clear liquids",
@@ -952,38 +1030,44 @@
         "id": "exam-post-op-inpatient:blank:2",
         "kind": "blank",
         "raw": "___ (well approximated, no erythema, no drainage)",
-        "label": "Extraoral incisions:",
+        "label": "Field",
+        "context": "___ / No extraoral incisions",
         "hint": "well approximated, no erythema, no drainage"
       },
       {
         "id": "exam-post-op-inpatient:blank:3",
         "kind": "blank",
         "raw": "___",
-        "label": "deviation on opening, maximum incisal opening"
+        "label": "Field",
+        "context": "No pain, no crepitus, no deviation on opening, maximum incisal opening ___ mm"
       },
       {
         "id": "exam-post-op-inpatient:blank:4",
         "kind": "blank",
         "raw": "___",
-        "label": "V inferior alveolar nerve (V3): sensation"
+        "label": "Field",
+        "context": "sensation ___ to light touch of the lower lip and chin bilaterally."
       },
       {
         "id": "exam-post-op-inpatient:blank:5",
         "kind": "blank",
         "raw": "___",
-        "label": "and chin bilaterally. Lingual nerve: sensation"
+        "label": "Field",
+        "context": "sensation ___ to anterior two-thirds of tongue bilaterally."
       },
       {
         "id": "exam-post-op-inpatient:blank:6",
         "kind": "blank",
         "raw": "___",
-        "label": "of tongue bilaterally. Mental nerve: sensation"
+        "label": "Field",
+        "context": "sensation ___ to chin bilaterally."
       },
       {
         "id": "exam-post-op-inpatient:blank:7",
         "kind": "blank",
         "raw": "___",
-        "label": "chin bilaterally. Infraorbital nerve (V2): sensa"
+        "label": "Field",
+        "context": "sensation ___ to light touch of midface and upper lip bilaterally."
       }
     ],
     "flags": [],
@@ -1017,43 +1101,50 @@
         "id": "exam-tmj:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Maximum incisal opening (unassisted):"
+        "label": "Field",
+        "context": "___ mm"
       },
       {
         "id": "exam-tmj:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "Maximum incisal opening (assisted):"
+        "label": "Field",
+        "context": "___ mm"
       },
       {
         "id": "exam-tmj:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "Maximum incisal opening (pain free):"
+        "label": "Field",
+        "context": "___ mm"
       },
       {
         "id": "exam-tmj:blank:3",
         "kind": "blank",
         "raw": "___",
-        "label": "Right lateral excursion:"
+        "label": "Field",
+        "context": "___ mm"
       },
       {
         "id": "exam-tmj:blank:4",
         "kind": "blank",
         "raw": "___",
-        "label": "Left lateral excursion:"
+        "label": "Field",
+        "context": "___ mm"
       },
       {
         "id": "exam-tmj:blank:5",
         "kind": "blank",
         "raw": "___",
-        "label": "Protrusion:"
+        "label": "Field",
+        "context": "___ mm"
       },
       {
         "id": "exam-tmj:enumText:0",
         "kind": "enumText",
         "raw": "___ (straight / uncorrected deviation to ___ / corrected deviation to ___ / deflection to ___)",
-        "label": "Opening pattern:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "straight",
           "uncorrected deviation to ___",
@@ -1066,13 +1157,15 @@
         "id": "exam-tmj:blank:6",
         "kind": "blank",
         "raw": "___",
-        "label": "Pain with opening:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "exam-tmj:enumText:1",
         "kind": "enumText",
         "raw": "___ (soft / hard)",
-        "label": "End feel:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "soft",
           "hard"
@@ -1083,7 +1176,8 @@
         "id": "exam-tmj:enumText:2",
         "kind": "enumText",
         "raw": "___ (opening / closing / reciprocal / none)",
-        "label": "Click:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "opening",
           "closing",
@@ -1096,7 +1190,8 @@
         "id": "exam-tmj:enumText:3",
         "kind": "enumText",
         "raw": "___ (fine / coarse / none)",
-        "label": "Crepitus:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "fine",
           "coarse",
@@ -1108,7 +1203,8 @@
         "id": "exam-tmj:enumText:4",
         "kind": "enumText",
         "raw": "___ (tenderness: Y/N, familiar pain: Y/N)",
-        "label": "Lateral pole palpation:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "tenderness: Y",
           "N, familiar pain: Y",
@@ -1120,7 +1216,8 @@
         "id": "exam-tmj:enumText:5",
         "kind": "enumText",
         "raw": "___ (tenderness: Y/N, familiar pain: Y/N)",
-        "label": "Posterior attachment palpation:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "tenderness: Y",
           "N, familiar pain: Y",
@@ -1132,7 +1229,8 @@
         "id": "exam-tmj:enumText:6",
         "kind": "enumText",
         "raw": "___ (opening / closing / reciprocal / none)",
-        "label": "Click:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "opening",
           "closing",
@@ -1145,7 +1243,8 @@
         "id": "exam-tmj:enumText:7",
         "kind": "enumText",
         "raw": "___ (fine / coarse / none)",
-        "label": "Crepitus:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "fine",
           "coarse",
@@ -1157,7 +1256,8 @@
         "id": "exam-tmj:enumText:8",
         "kind": "enumText",
         "raw": "___ (tenderness: Y/N, familiar pain: Y/N)",
-        "label": "Lateral pole palpation:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "tenderness: Y",
           "N, familiar pain: Y",
@@ -1169,7 +1269,8 @@
         "id": "exam-tmj:enumText:9",
         "kind": "enumText",
         "raw": "___ (tenderness: Y/N, familiar pain: Y/N)",
-        "label": "Posterior attachment palpation:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "tenderness: Y",
           "N, familiar pain: Y",
@@ -1181,121 +1282,141 @@
         "id": "exam-tmj:blank:7",
         "kind": "blank",
         "raw": "___",
-        "label": "Temporalis (anterior/middle/posterior): R"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:8",
         "kind": "blank",
         "raw": "___",
-        "label": "Temporalis (anterior/middle/posterior): R ___ /"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:9",
         "kind": "blank",
         "raw": "___",
-        "label": "Masseter (superficial/deep): R"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:10",
         "kind": "blank",
         "raw": "___",
-        "label": "Masseter (superficial/deep): R ___ / L"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:11",
         "kind": "blank",
         "raw": "___",
-        "label": "Medial pterygoid: R"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:12",
         "kind": "blank",
         "raw": "___",
-        "label": "Medial pterygoid: R ___ / L"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:13",
         "kind": "blank",
         "raw": "___",
-        "label": "Lateral pterygoid area: R"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:14",
         "kind": "blank",
         "raw": "___",
-        "label": "pterygoid area: R ___ / L"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:15",
         "kind": "blank",
         "raw": "___",
-        "label": "Sternocleidomastoid: R"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:16",
         "kind": "blank",
         "raw": "___",
-        "label": "Sternocleidomastoid: R ___ / L"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:17",
         "kind": "blank",
         "raw": "___",
-        "label": "Trapezius: R"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:18",
         "kind": "blank",
         "raw": "___",
-        "label": "Trapezius: R ___ / L"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:19",
         "kind": "blank",
         "raw": "___",
-        "label": "Digastric (posterior belly): R"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:20",
         "kind": "blank",
         "raw": "___",
-        "label": "(posterior belly): R ___ / L"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:21",
         "kind": "blank",
         "raw": "___",
-        "label": "Familiar pain reproduced:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "exam-tmj:blank:22",
         "kind": "blank",
         "raw": "___",
-        "label": "Joint loading/compression: R"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:23",
         "kind": "blank",
         "raw": "___",
-        "label": "Joint loading/compression: R ___ / L"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:24",
         "kind": "blank",
         "raw": "___",
-        "label": "Mandibular distraction: R"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:blank:25",
         "kind": "blank",
         "raw": "___",
-        "label": "Mandibular distraction: R ___ / L"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "exam-tmj:enumText:10",
         "kind": "enumText",
         "raw": "___ (location, frequency, severity; reproduced by temporalis palpation: Y/N)",
-        "label": "Headache:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "location, frequency, severity; reproduced by temporalis palpation: Y",
           "N"
@@ -1306,7 +1427,8 @@
         "id": "exam-tmj:enumText:11",
         "kind": "enumText",
         "raw": "___ (tinnitus / aural fullness / otalgia / hearing changes / none)",
-        "label": "Ear symptoms:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "tinnitus",
           "aural fullness",
@@ -1320,7 +1442,8 @@
         "id": "exam-tmj:enumText:12",
         "kind": "enumText",
         "raw": "___ (linea alba / scalloped tongue / tori / wear facets / none)",
-        "label": "Parafunctional signs:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "linea alba",
           "scalloped tongue",
@@ -1334,25 +1457,29 @@
         "id": "exam-tmj:blank:26",
         "kind": "blank",
         "raw": "___",
-        "label": "Asymmetry:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "exam-tmj:blank:27",
         "kind": "blank",
         "raw": "___",
-        "label": "Skeletal malocclusion:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "exam-tmj:blank:28",
         "kind": "blank",
         "raw": "___",
-        "label": "Occlusion:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "exam-tmj:enumText:13",
         "kind": "enumText",
         "raw": "___ (working / non-working / protrusive; guidance: canine / group function)",
-        "label": "Interferences:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "working",
           "non-working",
@@ -1365,25 +1492,29 @@
         "id": "exam-tmj:blank:29",
         "kind": "blank",
         "raw": "___",
-        "label": "Attrition/wear facets:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "exam-tmj:blank:30",
         "kind": "blank",
         "raw": "___",
-        "label": "Tooth mobility:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "exam-tmj:blank:31",
         "kind": "blank",
         "raw": "___",
-        "label": "C spine range of motion:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "exam-tmj:blank:32",
         "kind": "blank",
         "raw": "___",
-        "label": "Trigger points:"
+        "label": "Field",
+        "context": "___"
       }
     ],
     "flags": [],
@@ -1416,97 +1547,113 @@
         "id": "facial-analysis:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Right Ear"
+        "label": "Field",
+        "context": "Right Ear -- ___ -- ___ -- ___ -- ___ -- Left Ear"
       },
       {
         "id": "facial-analysis:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "Right Ear ___"
+        "label": "Field",
+        "context": "Right Ear -- ___ -- ___ -- ___ -- ___ -- Left Ear"
       },
       {
         "id": "facial-analysis:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "Right Ear ___ ___"
+        "label": "Field",
+        "context": "Right Ear -- ___ -- ___ -- ___ -- ___ -- Left Ear"
       },
       {
         "id": "facial-analysis:blank:3",
         "kind": "blank",
         "raw": "___",
-        "label": "Right Ear ___ ___ ___"
+        "label": "Field",
+        "context": "Right Ear -- ___ -- ___ -- ___ -- ___ -- Left Ear"
       },
       {
         "id": "facial-analysis:blank:4",
         "kind": "blank",
         "raw": "___",
-        "label": "Forehead: height"
+        "label": "Field",
+        "context": "height ___, contour ___; Brow position: ___"
       },
       {
         "id": "facial-analysis:blank:5",
         "kind": "blank",
         "raw": "___",
-        "label": "Forehead: height ___, contour"
+        "label": "Field",
+        "context": "height ___, contour ___; Brow position: ___"
       },
       {
         "id": "facial-analysis:blank:6",
         "kind": "blank",
         "raw": "___",
-        "label": "height ___, contour ___; Brow position:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:7",
         "kind": "blank",
         "raw": "___",
-        "label": "1. Upper:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:8",
         "kind": "blank",
         "raw": "___",
-        "label": "2. Middle:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:9",
         "kind": "blank",
         "raw": "___",
-        "label": "3. Lower:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:10",
         "kind": "blank",
         "raw": "___",
-        "label": "Alar base:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:11",
         "kind": "blank",
         "raw": "___",
-        "label": "Philtrum: length"
+        "label": "Field",
+        "context": "length ___, width ___, depth ___"
       },
       {
         "id": "facial-analysis:blank:12",
         "kind": "blank",
         "raw": "___",
-        "label": "Philtrum: length ___, width"
+        "label": "Field",
+        "context": "length ___, width ___, depth ___"
       },
       {
         "id": "facial-analysis:blank:13",
         "kind": "blank",
         "raw": "___",
-        "label": "Philtrum: length ___, width ___, depth"
+        "label": "Field",
+        "context": "length ___, width ___, depth ___"
       },
       {
         "id": "facial-analysis:blank:14",
         "kind": "blank",
         "raw": "___",
-        "label": "Scleral show:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:enumText:0",
         "kind": "enumText",
         "raw": "___ (positive / negative / neutral)",
-        "label": "Canthal tilt:",
+        "label": "Select",
+        "context": "___; Palpebral fissure height: ___",
         "options": [
           "positive",
           "negative",
@@ -1518,127 +1665,148 @@
         "id": "facial-analysis:blank:15",
         "kind": "blank",
         "raw": "___",
-        "label": "negative / neutral); Palpebral fissure height:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:16",
         "kind": "blank",
         "raw": "___",
-        "label": "Nasal dorsum:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:17",
         "kind": "blank",
         "raw": "___",
-        "label": "Upper lip height (cutaneous):"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:18",
         "kind": "blank",
         "raw": "___",
-        "label": "Lower lip height (cutaneous):"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:19",
         "kind": "blank",
         "raw": "___",
-        "label": "Vermilion height: upper"
+        "label": "Field",
+        "context": "upper ___, lower ___"
       },
       {
         "id": "facial-analysis:blank:20",
         "kind": "blank",
         "raw": "___",
-        "label": "Vermilion height: upper ___, lower"
+        "label": "Field",
+        "context": "upper ___, lower ___"
       },
       {
         "id": "facial-analysis:blank:21",
         "kind": "blank",
         "raw": "___",
-        "label": "Interlabial distance:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:22",
         "kind": "blank",
         "raw": "___",
-        "label": "1. Maxillary:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:23",
         "kind": "blank",
         "raw": "___",
-        "label": "2. Mandibular:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:24",
         "kind": "blank",
         "raw": "___",
-        "label": "1. Maxillary:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:25",
         "kind": "blank",
         "raw": "___",
-        "label": "2. Mandibular:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:26",
         "kind": "blank",
         "raw": "___",
-        "label": "1. Maxillary:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:27",
         "kind": "blank",
         "raw": "___",
-        "label": "2. Mandibular:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:28",
         "kind": "blank",
         "raw": "___",
-        "label": "1. Maxillary:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:29",
         "kind": "blank",
         "raw": "___",
-        "label": "2. Mandibular:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:30",
         "kind": "blank",
         "raw": "___",
-        "label": "Smile arc:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:31",
         "kind": "blank",
         "raw": "___",
-        "label": "Buccal corridors:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:32",
         "kind": "blank",
         "raw": "___",
-        "label": "Smile symmetry:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:33",
         "kind": "blank",
         "raw": "___",
-        "label": "Commissure height: R"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "facial-analysis:blank:34",
         "kind": "blank",
         "raw": "___",
-        "label": "Commissure height: R ___ / L"
+        "label": "Field",
+        "context": "R ___ / L ___"
       },
       {
         "id": "facial-analysis:enumText:1",
         "kind": "enumText",
         "raw": "___ (convex / straight / concave)",
-        "label": "Facial convexity:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "convex",
           "straight",
@@ -1650,55 +1818,64 @@
         "id": "facial-analysis:blank:35",
         "kind": "blank",
         "raw": "___",
-        "label": "Malar projection:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:36",
         "kind": "blank",
         "raw": "___",
-        "label": "Nasal dorsum:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:37",
         "kind": "blank",
         "raw": "___",
-        "label": "Nasal tip:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:38",
         "kind": "blank",
         "raw": "___",
-        "label": "Nasolabial angle:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:39",
         "kind": "blank",
         "raw": "___",
-        "label": "competent / incompetent (strain on closure:"
+        "label": "Field",
+        "context": "___)"
       },
       {
         "id": "facial-analysis:blank:40",
         "kind": "blank",
         "raw": "___",
-        "label": "Columellar show:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:41",
         "kind": "blank",
         "raw": "___",
-        "label": "Chin A P projection:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:42",
         "kind": "blank",
         "raw": "___",
-        "label": "Mentolabial fold:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:enumText:2",
         "kind": "enumText",
         "raw": "___ (steep / average / flat)",
-        "label": "Mandibular plane angle:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "steep",
           "average",
@@ -1710,134 +1887,156 @@
         "id": "facial-analysis:blank:43",
         "kind": "blank",
         "raw": "___ (stomion to menton: ___; upper lip to stomion ratio: ___)",
-        "label": "Chin vertical height:",
+        "label": "Field",
+        "context": "___",
         "hint": "stomion to menton: ___; upper lip to stomion ratio: ___"
       },
       {
         "id": "facial-analysis:blank:44",
         "kind": "blank",
         "raw": "___",
-        "label": "Cervicomental angle:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:45",
         "kind": "blank",
         "raw": "___",
-        "label": "Submental fullness:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:46",
         "kind": "blank",
         "raw": "___",
-        "label": "MI CO discrepancy:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:47",
         "kind": "blank",
         "raw": "___",
-        "label": "TMJ:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:48",
         "kind": "blank",
         "raw": "___",
-        "label": "MIO:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:49",
         "kind": "blank",
         "raw": "___",
-        "label": "Deviation on opening:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:50",
         "kind": "blank",
         "raw": "___",
-        "label": "Occlusal cant:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:51",
         "kind": "blank",
         "raw": "___",
-        "label": "Maxillary:"
+        "label": "Field",
+        "context": "___ of MSP"
       },
       {
         "id": "facial-analysis:blank:52",
         "kind": "blank",
         "raw": "___",
-        "label": "Mandibular:"
+        "label": "Field",
+        "context": "___ of MSP"
       },
       {
         "id": "facial-analysis:blank:53",
         "kind": "blank",
         "raw": "___",
-        "label": "Menton:"
+        "label": "Field",
+        "context": "___ of MSP"
       },
       {
         "id": "facial-analysis:blank:54",
         "kind": "blank",
         "raw": "___",
-        "label": "Right molar:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:55",
         "kind": "blank",
         "raw": "___",
-        "label": "Right canine:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:56",
         "kind": "blank",
         "raw": "___",
-        "label": "Left molar:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:57",
         "kind": "blank",
         "raw": "___",
-        "label": "Left canine:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:58",
         "kind": "blank",
         "raw": "___",
-        "label": "Overjet:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:59",
         "kind": "blank",
         "raw": "___",
-        "label": "Overbite:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:60",
         "kind": "blank",
         "raw": "___",
-        "label": "Oral hygiene:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:61",
         "kind": "blank",
         "raw": "___",
-        "label": "Habits:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:62",
         "kind": "blank",
         "raw": "___",
-        "label": "Posterior crossbite:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:63",
         "kind": "blank",
         "raw": "___",
-        "label": "Maxillary width:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "facial-analysis:blank:64",
         "kind": "blank",
         "raw": "___",
-        "label": "Maxillary cant:"
+        "label": "Field",
+        "context": "___"
       }
     ],
     "flags": [],
@@ -1870,7 +2069,8 @@
         "id": "imaging-ct-face:enumText:0",
         "kind": "enumText",
         "raw": "___ (intact, sinus clear / fracture: anterior table / posterior table / both)",
-        "label": "Frontal bone/sinus:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact, sinus clear",
           "fracture: anterior table",
@@ -1883,7 +2083,8 @@
         "id": "imaging-ct-face:enumText:1",
         "kind": "enumText",
         "raw": "___ (bilateral walls intact, no herniation or entrapment / orbital floor fracture ___ side, defect ___ cm, herniation: ___, entrapment: ___ / medial wall fracture / ___)",
-        "label": "Orbits:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "bilateral walls intact, no herniation or entrapment",
           "orbital floor fracture ___ side, defect ___ cm, herniation: ___, entrapment: ___",
@@ -1896,7 +2097,8 @@
         "id": "imaging-ct-face:enumText:2",
         "kind": "enumText",
         "raw": "___ (intact bilaterally / ___ ZMC fracture - ZF suture: ___, infraorbital rim: ___, ZM buttress: ___, zygomatic arch: ___, displacement: ___)",
-        "label": "ZMC:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact bilaterally",
           "___ ZMC fracture - ZF suture: ___, infraorbital rim: ___, ZM buttress: ___, zygomatic arch: ___, displacement: ___"
@@ -1907,7 +2109,8 @@
         "id": "imaging-ct-face:enumText:3",
         "kind": "enumText",
         "raw": "___ (intact, septum midline / fractured, septum ___)",
-        "label": "Nasal bones:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact, septum midline",
           "fractured, septum ___"
@@ -1918,7 +2121,8 @@
         "id": "imaging-ct-face:enumText:4",
         "kind": "enumText",
         "raw": "___ (no Le Fort pattern, pterygoid plates intact / Le Fort ___ pattern - ___)",
-        "label": "Maxilla/Le Fort:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "no Le Fort pattern, pterygoid plates intact",
           "Le Fort ___ pattern - ___"
@@ -1929,7 +2133,8 @@
         "id": "imaging-ct-face:enumText:5",
         "kind": "enumText",
         "raw": "___ (clear bilaterally / hemosinus ___ side / opacified: ___)",
-        "label": "Maxillary sinuses:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "clear bilaterally",
           "hemosinus ___ side",
@@ -1941,7 +2146,8 @@
         "id": "imaging-ct-face:enumText:6",
         "kind": "enumText",
         "raw": "___ (intact throughout / fracture(s)",
-        "label": "Mandible:",
+        "label": "Select",
+        "context": "___: ___, displacement: ___, IAN canal relationship: ___, tooth in fracture line: ___)",
         "options": [
           "intact throughout",
           "fracture(s"
@@ -1952,31 +2158,36 @@
         "id": "imaging-ct-face:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Mandible: ___ (intact throughout / fracture(s):"
+        "label": "Field",
+        "context": "___, displacement: ___, IAN canal relationship: ___, tooth in fracture line: ___)"
       },
       {
         "id": "imaging-ct-face:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "(intact throughout / fracture(s): ___, displacem"
+        "label": "Field",
+        "context": "___, IAN canal relationship: ___, tooth in fracture line: ___)"
       },
       {
         "id": "imaging-ct-face:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "___, displacement: ___, IAN canal relationship:"
+        "label": "Field",
+        "context": "___, tooth in fracture line: ___)"
       },
       {
         "id": "imaging-ct-face:blank:3",
         "kind": "blank",
         "raw": "___",
-        "label": "relationship: ___, tooth in fracture line:"
+        "label": "Field",
+        "context": "___)"
       },
       {
         "id": "imaging-ct-face:enumText:7",
         "kind": "enumText",
         "raw": "___ (no significant abnormality / swelling/collection in ___ / subcutaneous emphysema in ___)",
-        "label": "___ (no significant abnormality /",
+        "label": "Select",
+        "context": "___",
         "options": [
           "no significant abnormality",
           "swelling",
@@ -1989,7 +2200,8 @@
         "id": "imaging-ct-face:blank:4",
         "kind": "blank",
         "raw": "___",
-        "label": "Overall impression:"
+        "label": "Field",
+        "context": "___"
       }
     ],
     "flags": [],
@@ -2023,7 +2235,8 @@
         "id": "imaging-ct-mandible:enumText:0",
         "kind": "enumText",
         "raw": "___ (intact / fracture: ___, displacement: ___, condylar head position: ___)",
-        "label": "Right condyle/subcondylar:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact",
           "fracture: ___, displacement: ___, condylar head position: ___"
@@ -2034,7 +2247,8 @@
         "id": "imaging-ct-mandible:enumText:1",
         "kind": "enumText",
         "raw": "___ (intact / fracture: ___, displacement: ___, condylar head position: ___)",
-        "label": "Left condyle/subcondylar:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact",
           "fracture: ___, displacement: ___, condylar head position: ___"
@@ -2045,7 +2259,8 @@
         "id": "imaging-ct-mandible:enumText:2",
         "kind": "enumText",
         "raw": "___ (intact / fracture: ___)",
-        "label": "Right ramus:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact",
           "fracture: ___"
@@ -2056,7 +2271,8 @@
         "id": "imaging-ct-mandible:enumText:3",
         "kind": "enumText",
         "raw": "___ (intact / fracture: ___)",
-        "label": "Left ramus:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact",
           "fracture: ___"
@@ -2067,7 +2283,8 @@
         "id": "imaging-ct-mandible:enumText:4",
         "kind": "enumText",
         "raw": "___ (intact / fracture: ___, displacement: ___, third molar relationship: ___)",
-        "label": "Right angle:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact",
           "fracture: ___, displacement: ___, third molar relationship: ___"
@@ -2078,7 +2295,8 @@
         "id": "imaging-ct-mandible:enumText:5",
         "kind": "enumText",
         "raw": "___ (intact / fracture: ___, displacement: ___, third molar relationship: ___)",
-        "label": "Left angle:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact",
           "fracture: ___, displacement: ___, third molar relationship: ___"
@@ -2089,7 +2307,8 @@
         "id": "imaging-ct-mandible:enumText:6",
         "kind": "enumText",
         "raw": "___ (intact / fracture: ___, IAN canal: ___)",
-        "label": "Right body:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact",
           "fracture: ___, IAN canal: ___"
@@ -2100,7 +2319,8 @@
         "id": "imaging-ct-mandible:enumText:7",
         "kind": "enumText",
         "raw": "___ (intact / fracture: ___, IAN canal: ___)",
-        "label": "Left body:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact",
           "fracture: ___, IAN canal: ___"
@@ -2111,7 +2331,8 @@
         "id": "imaging-ct-mandible:enumText:8",
         "kind": "enumText",
         "raw": "___ (intact / fracture: ___, mental foramen relationship: ___)",
-        "label": "Parasymphysis/Symphysis:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact",
           "fracture: ___, mental foramen relationship: ___"
@@ -2122,7 +2343,8 @@
         "id": "imaging-ct-mandible:enumText:9",
         "kind": "enumText",
         "raw": "___ (intact bilaterally / involved at ___: ___)",
-        "label": "IAN canals:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact bilaterally",
           "involved at ___: ___"
@@ -2133,7 +2355,8 @@
         "id": "imaging-ct-mandible:enumText:10",
         "kind": "enumText",
         "raw": "___ (intact / tooth #___ in line of fracture)",
-        "label": "Dentition:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact",
           "tooth #___ in line of fracture"
@@ -2144,7 +2367,8 @@
         "id": "imaging-ct-mandible:enumText:11",
         "kind": "enumText",
         "raw": "___ (intact / alveolar fracture: ___)",
-        "label": "Alveolar bone:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact",
           "alveolar fracture: ___"
@@ -2155,7 +2379,8 @@
         "id": "imaging-ct-mandible:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Overall impression:"
+        "label": "Field",
+        "context": "___"
       }
     ],
     "flags": [],
@@ -2188,7 +2413,8 @@
         "id": "imaging-panorex:enumText:0",
         "kind": "enumText",
         "raw": "___ (bilateral condylar heads intact with normal morphology / abnormality: ___)",
-        "label": "Condyles:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "bilateral condylar heads intact with normal morphology",
           "abnormality: ___"
@@ -2199,7 +2425,8 @@
         "id": "imaging-panorex:enumText:1",
         "kind": "enumText",
         "raw": "___ (intact bilaterally / fracture: ___)",
-        "label": "Rami:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact bilaterally",
           "fracture: ___"
@@ -2210,7 +2437,8 @@
         "id": "imaging-panorex:enumText:2",
         "kind": "enumText",
         "raw": "___ (intact bilaterally / fracture at ___ angle: ___)",
-        "label": "Angles:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact bilaterally",
           "fracture at ___ angle: ___"
@@ -2221,7 +2449,8 @@
         "id": "imaging-panorex:enumText:3",
         "kind": "enumText",
         "raw": "___ (intact bilaterally, no radiolucent or radiopaque lesions / finding: ___)",
-        "label": "Body:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact bilaterally, no radiolucent or radiopaque lesions",
           "finding: ___"
@@ -2232,7 +2461,8 @@
         "id": "imaging-panorex:enumText:4",
         "kind": "enumText",
         "raw": "___ (intact / fracture: ___)",
-        "label": "Parasymphysis/Symphysis:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact",
           "fracture: ___"
@@ -2243,7 +2473,8 @@
         "id": "imaging-panorex:enumText:5",
         "kind": "enumText",
         "raw": "___ (intact, maxillary sinuses clear bilaterally / finding: ___)",
-        "label": "Maxilla:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact, maxillary sinuses clear bilaterally",
           "finding: ___"
@@ -2254,7 +2485,8 @@
         "id": "imaging-panorex:enumText:6",
         "kind": "enumText",
         "raw": "___ (intact without caries, periapical pathology, or fracture / findings: ___)",
-        "label": "Dentition:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact without caries, periapical pathology, or fracture",
           "findings: ___"
@@ -2265,7 +2497,8 @@
         "id": "imaging-panorex:enumText:7",
         "kind": "enumText",
         "raw": "___ (no other significant findings / ___)",
-        "label": "Other:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "no other significant findings",
           "___"
@@ -2276,7 +2509,8 @@
         "id": "imaging-panorex:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Overall impression:"
+        "label": "Field",
+        "context": "___"
       }
     ],
     "flags": [],
@@ -2362,7 +2596,8 @@
         "id": "plan-full-arch:enumText:0",
         "kind": "enumText",
         "raw": "___ (edentulous / terminal dentition requiring extraction / partially edentulous)",
-        "label": "Current dental status:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "edentulous",
           "terminal dentition requiring extraction",
@@ -2374,7 +2609,8 @@
         "id": "plan-full-arch:enumText:1",
         "kind": "enumText",
         "raw": "___ (panorex / CBCT dated ___)",
-        "label": "Radiographic review:",
+        "label": "Select",
+        "context": "___.",
         "options": [
           "panorex",
           "CBCT dated ___"
@@ -2385,13 +2621,15 @@
         "id": "plan-full-arch:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "(panorex / CBCT dated ___). Findings:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "plan-full-arch:enumText:2",
         "kind": "enumText",
         "raw": "___ (adequate for implant placement / augmentation needed at ___; sinus lift: Y/N)",
-        "label": "Bone adequacy:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "adequate for implant placement",
           "augmentation needed at ___; sinus lift: Y",
@@ -2403,19 +2641,22 @@
         "id": "plan-full-arch:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "(2) single tooth implants at sites"
+        "label": "Field",
+        "context": "(1) no treatment; (2) single-tooth implants at sites ___; (3) full-arch extractions with placement of implants for implant-retained overdenture vs."
       },
       {
         "id": "plan-full-arch:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "Planned implants:"
+        "label": "Field",
+        "context": "___ implants in the ___ (maxilla / mandible) at approximate positions ___"
       },
       {
         "id": "plan-full-arch:enumText:3",
         "kind": "enumText",
         "raw": "___ (maxilla / mandible)",
-        "label": "Planned implants: ___ implants in the",
+        "label": "Select",
+        "context": "___ implants in the ___ at approximate positions ___",
         "options": [
           "maxilla",
           "mandible"
@@ -2426,13 +2667,15 @@
         "id": "plan-full-arch:blank:3",
         "kind": "blank",
         "raw": "___",
-        "label": "(maxilla / mandible) at approximate positions"
+        "label": "Field",
+        "context": "___ implants in the ___ (maxilla / mandible) at approximate positions ___"
       },
       {
         "id": "plan-full-arch:enumText:4",
         "kind": "enumText",
         "raw": "___ (immediate provisionalization / delayed loading after ___ months)",
-        "label": "Loading protocol:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "immediate provisionalization",
           "delayed loading after ___ months"
@@ -2443,7 +2686,8 @@
         "id": "plan-full-arch:enumText:5",
         "kind": "enumText",
         "raw": "___ (immediate denture / modified existing denture / fixed provisional / ___)",
-        "label": "Provisional prosthesis plan:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "immediate denture",
           "modified existing denture",
@@ -2456,7 +2700,8 @@
         "id": "plan-full-arch:enumText:6",
         "kind": "enumText",
         "raw": "___ (digital scan / alginate impressions obtained for guide fabrication; Lab: ___)",
-        "label": "Surgical guide:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "digital scan",
           "alginate impressions obtained for guide fabrication; Lab: ___"
@@ -2467,7 +2712,8 @@
         "id": "plan-full-arch:enumText:7",
         "kind": "enumText",
         "raw": "___ (tobacco cessation discussed / diabetes optimization / ___)",
-        "label": "Risk factor counseling:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "tobacco cessation discussed",
           "diabetes optimization",
@@ -2479,25 +2725,29 @@
         "id": "plan-full-arch:blank:4",
         "kind": "blank",
         "raw": "___",
-        "label": "clearance: not required / required from"
+        "label": "Field",
+        "context": "not required / required from ___ for ___"
       },
       {
         "id": "plan-full-arch:blank:5",
         "kind": "blank",
         "raw": "___",
-        "label": "required / required from ___ for"
+        "label": "Field",
+        "context": "not required / required from ___ for ___"
       },
       {
         "id": "plan-full-arch:blank:6",
         "kind": "blank",
         "raw": "___",
-        "label": "Estimated timeline:"
+        "label": "Field",
+        "context": "___ months from start to final prosthesis; Stages: ___"
       },
       {
         "id": "plan-full-arch:blank:7",
         "kind": "blank",
         "raw": "___",
-        "label": "from start to final prosthesis; Stages:"
+        "label": "Field",
+        "context": "___"
       }
     ],
     "flags": [],
@@ -2532,7 +2782,8 @@
         "id": "post-op-instructions-extraction:enumText:0",
         "kind": "enumText",
         "raw": "______ (date/time)",
-        "label": "UP: Your next visit is on",
+        "label": "Select",
+        "context": "Your next visit is on ___.",
         "options": [
           "date",
           "time"
@@ -2543,13 +2794,15 @@
         "id": "post-op-instructions-extraction:blank:0",
         "kind": "blank",
         "raw": "____",
-        "label": "or call our clinic. Call us:"
+        "label": "Field",
+        "context": "___ ."
       },
       {
         "id": "post-op-instructions-extraction:blank:1",
         "kind": "blank",
         "raw": "____",
-        "label": "Call us: ____ . After hours:"
+        "label": "Field",
+        "context": "___ ."
       }
     ],
     "flags": [],
@@ -2583,7 +2836,8 @@
         "id": "post-op-instructions-hip-donor-site:enumText:0",
         "kind": "enumText",
         "raw": "___ (4 to 6 weeks / per your surgeon)",
-        "label": "15 lbs), bending, and twisting for",
+        "label": "Select",
+        "context": "Get up and move to prevent blood clots, but avoid strenuous activity, heavy lifting (greater than 15 lbs), bending, and twisting for ___.",
         "options": [
           "4 to 6 weeks",
           "per your surgeon"
@@ -2594,7 +2848,8 @@
         "id": "post-op-instructions-hip-donor-site:enumText:1",
         "kind": "enumText",
         "raw": "___ (POD 2-3 / your surgeon tells you to remove it)",
-        "label": "dry. Leave it in place until",
+        "label": "Select",
+        "context": "Leave it in place until ___.",
         "options": [
           "POD 2-3",
           "your surgeon tells you to remove it"
@@ -2605,13 +2860,15 @@
         "id": "post-op-instructions-hip-donor-site:blank:0",
         "kind": "blank",
         "raw": "____",
-        "label": "weight on the leg. Call us:"
+        "label": "Field",
+        "context": "___ ."
       },
       {
         "id": "post-op-instructions-hip-donor-site:blank:1",
         "kind": "blank",
         "raw": "____",
-        "label": "Call us: ____ . After hours:"
+        "label": "Field",
+        "context": "___ ."
       }
     ],
     "flags": [],
@@ -2647,7 +2904,8 @@
         "id": "post-op-instructions-id:enumText:0",
         "kind": "enumText",
         "raw": "___ (Penrose drain in place - keep site clean, drain will be removed at follow-up in 2-3 days. Some oozing is normal - place gauze over drain site and change as needed / Iodoform packing in place - will be removed at follow-up. Do not pull on packing / No drain placed - incision left open for drainage)",
-        "label": "DRAIN CARE:",
+        "label": "Select",
+        "context": "___.",
         "options": [
           "Penrose drain in place - keep site clean, drain will be removed at follow-up in 2-3 days. Some oozing is normal - place gauze over drain site and change as needed",
           "Iodoform packing in place - will be removed at follow-up. Do not pull on packing",
@@ -2659,7 +2917,8 @@
         "id": "post-op-instructions-id:enumText:1",
         "kind": "enumText",
         "raw": "___ (extraction planned once infection controlled / extraction completed at time of I&D / root canal referral / ___)",
-        "label": "SOURCE TOOTH:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "extraction planned once infection controlled",
           "extraction completed at time of I&D",
@@ -2672,7 +2931,8 @@
         "id": "post-op-instructions-id:enumText:2",
         "kind": "enumText",
         "raw": "______ (date/time)",
-        "label": "UP: Your next visit is on",
+        "label": "Select",
+        "context": "Your next visit is on ___: ___ (24-48 hours for drain check / 48-72 hours for reassessment / 1 week).",
         "options": [
           "date",
           "time"
@@ -2683,7 +2943,8 @@
         "id": "post-op-instructions-id:enumText:3",
         "kind": "enumText",
         "raw": "___ (24-48 hours for drain check / 48-72 hours for reassessment / 1 week)",
-        "label": "next visit is on ______ (date/time):",
+        "label": "Select",
+        "context": "___.",
         "options": [
           "24-48 hours for drain check",
           "48-72 hours for reassessment",
@@ -2695,13 +2956,15 @@
         "id": "post-op-instructions-id:blank:0",
         "kind": "blank",
         "raw": "____",
-        "label": "to the ED immediately. Call us:"
+        "label": "Field",
+        "context": "___ ."
       },
       {
         "id": "post-op-instructions-id:blank:1",
         "kind": "blank",
         "raw": "____",
-        "label": "Call us: ____ . After hours:"
+        "label": "Field",
+        "context": "___ ."
       }
     ],
     "flags": [],
@@ -2736,7 +2999,8 @@
         "id": "post-op-instructions-mmf:enumText:0",
         "kind": "enumText",
         "raw": "___ (4 / 6 / 8 weeks)",
-        "label": "then every 2 weeks. Anticipated duration:",
+        "label": "Select",
+        "context": "___.",
         "options": [
           "4",
           "6",
@@ -2748,13 +3012,15 @@
         "id": "post-op-instructions-mmf:blank:0",
         "kind": "blank",
         "raw": "____",
-        "label": "worsening swelling, foul drainage. Call us:"
+        "label": "Field",
+        "context": "___ ."
       },
       {
         "id": "post-op-instructions-mmf:blank:1",
         "kind": "blank",
         "raw": "____",
-        "label": "Call us: ____ . After hours:"
+        "label": "Field",
+        "context": "___ ."
       }
     ],
     "flags": [],
@@ -2789,7 +3055,8 @@
         "id": "post-op-instructions-orif:enumText:0",
         "kind": "enumText",
         "raw": "___ (soft no-chew diet x 6 weeks / liquid/puree diet x 2 weeks then soft x 4 weeks / strict liquid diet while in MMF)",
-        "label": "DIET:",
+        "label": "Select",
+        "context": "___.",
         "options": [
           "soft no-chew diet x 6 weeks",
           "liquid",
@@ -2802,7 +3069,8 @@
         "id": "post-op-instructions-orif:enumText:1",
         "kind": "enumText",
         "raw": "___ (wear guiding elastics at all times except eating and oral hygiene / N/A)",
-        "label": "ELASTICS:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "wear guiding elastics at all times except eating and oral hygiene",
           "N",
@@ -2814,13 +3082,15 @@
         "id": "post-op-instructions-orif:blank:0",
         "kind": "blank",
         "raw": "____",
-        "label": "go to the ED. Call us:"
+        "label": "Field",
+        "context": "___ ."
       },
       {
         "id": "post-op-instructions-orif:blank:1",
         "kind": "blank",
         "raw": "____",
-        "label": "Call us: ____ . After hours:"
+        "label": "Field",
+        "context": "___ ."
       }
     ],
     "flags": [],
@@ -2855,28 +3125,32 @@
         "id": "post-op-rx:measurement:0",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Dexamethasone 4 mg PO taper",
+        "label": "Measurement",
+        "context": "Dexamethasone 4 mg PO taper - ___ mg on POD0, [X] mg on POD1, [X] mg on POD2 - #[X] tabs, 0 refills (taper per surgeon preference)",
         "unit": null
       },
       {
         "id": "post-op-rx:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "PO taper [X] mg on POD0,",
+        "label": "Measurement",
+        "context": "Dexamethasone 4 mg PO taper - [X] mg on POD0, ___ mg on POD1, [X] mg on POD2 - #[X] tabs, 0 refills (taper per surgeon preference)",
         "unit": null
       },
       {
         "id": "post-op-rx:measurement:2",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "on POD0, [X] mg on POD1,",
+        "label": "Measurement",
+        "context": "Dexamethasone 4 mg PO taper - [X] mg on POD0, [X] mg on POD1, ___ mg on POD2 - #[X] tabs, 0 refills (taper per surgeon preference)",
         "unit": null
       },
       {
         "id": "post-op-rx:measurement:3",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "on POD1, [X] mg on POD2",
+        "label": "Measurement",
+        "context": "Dexamethasone 4 mg PO taper - [X] mg on POD0, [X] mg on POD1, [X] mg on POD2 - #___ tabs, 0 refills (taper per surgeon preference)",
         "unit": null
       }
     ],
@@ -2912,21 +3186,24 @@
         "id": "proc-arch-bars:blank:0",
         "kind": "blank",
         "raw": "___ (maxilla)",
-        "label": "stainless steel circumdental wires on teeth",
+        "label": "Field",
+        "context": "The arch bars were secured to the dentition using 24-gauge stainless steel circumdental wires on teeth #___ and #___ (mandible).",
         "hint": "maxilla"
       },
       {
         "id": "proc-arch-bars:blank:1",
         "kind": "blank",
         "raw": "___ (mandible)",
-        "label": "wires on teeth ___ (maxilla) and",
+        "label": "Field",
+        "context": "The arch bars were secured to the dentition using 24-gauge stainless steel circumdental wires on teeth #___ (maxilla) and #___.",
         "hint": "mandible"
       },
       {
         "id": "proc-arch-bars:enumText:0",
         "kind": "enumText",
         "raw": "___ (The patient was placed into maxillomandibular fixation using 26-gauge stainless steel wires in a Class I occlusion with reproducible intercuspation. MMF verified to be secure / Arch bars placed in preparation for operative fixation. MMF not applied at this time / The patient was placed into guiding elastic fixation)",
-        "label": "and secured to prevent mucosal irritation.",
+        "label": "Select",
+        "context": "___.",
         "options": [
           "The patient was placed into maxillomandibular fixation using 26-gauge stainless steel wires in a Class I occlusion with reproducible intercuspation. MMF verified to be secure",
           "Arch bars placed in preparation for operative fixation. MMF not applied at this time",
@@ -2966,69 +3243,80 @@
         "id": "proc-biopsy:blank:0",
         "kind": "blank",
         "raw": "___ (size, color, borders, texture, induration, fixation to underlying structures, location)",
-        "label": "Lesion description:",
+        "label": "Field",
+        "context": "___",
         "hint": "size, color, borders, texture, induration, fixation to underlying structures, location"
       },
       {
         "id": "proc-biopsy:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "Clinical differential:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "proc-biopsy:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "Attention was turned to"
+        "label": "Field",
+        "context": "Attention was turned to ___."
       },
       {
         "id": "proc-biopsy:blank:3",
         "kind": "blank",
         "raw": "___",
-        "label": "Attention was turned to ___. A"
+        "label": "Field",
+        "context": "A ___ biopsy was performed: tissue was grasped with ___ and excised with ___."
       },
       {
         "id": "proc-biopsy:blank:4",
         "kind": "blank",
         "raw": "___",
-        "label": "was performed: tissue was grasped with"
+        "label": "Field",
+        "context": "tissue was grasped with ___ and excised with ___."
       },
       {
         "id": "proc-biopsy:blank:5",
         "kind": "blank",
         "raw": "___",
-        "label": "grasped with ___ and excised with"
+        "label": "Field",
+        "context": "tissue was grasped with ___ and excised with ___."
       },
       {
         "id": "proc-biopsy:blank:6",
         "kind": "blank",
         "raw": "___",
-        "label": "excised with ___. Specimen oriented with"
+        "label": "Field",
+        "context": "Specimen oriented with ___ suture at ___ margin for pathologic orientation."
       },
       {
         "id": "proc-biopsy:blank:7",
         "kind": "blank",
         "raw": "___",
-        "label": "Specimen oriented with ___ suture at"
+        "label": "Field",
+        "context": "Specimen oriented with ___ suture at ___ margin for pathologic orientation."
       },
       {
         "id": "proc-biopsy:blank:8",
         "kind": "blank",
         "raw": "___",
-        "label": "in formalin and submitted to pathology."
+        "label": "Field",
+        "context": "___ chromic gut suture(s) placed."
       },
       {
         "id": "proc-biopsy:blank:9",
         "kind": "blank",
         "raw": "___ (description, size, location)",
-        "label": "Specimen:",
+        "label": "Field",
+        "context": "___",
         "hint": "description, size, location"
       },
       {
         "id": "proc-biopsy:blank:10",
         "kind": "blank",
         "raw": "___",
-        "label": "Pathology requisition submitted:"
+        "label": "Field",
+        "context": "___"
       }
     ],
     "flags": [],
@@ -3061,13 +3349,15 @@
         "id": "proc-closed-reduction:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "The"
+        "label": "Field",
+        "context": "The ___ fracture was reduced in a closed fashion."
       },
       {
         "id": "proc-closed-reduction:enumText:0",
         "kind": "enumText",
         "raw": "___ (Erich arch bars placed and patient placed into MMF with 26-gauge wires / IMF screws placed bilaterally, patient placed into MMF with 26-gauge wires / Arch bars placed, patient placed into guiding elastic fixation)",
-        "label": "Class I relationship with reproducible intercusp",
+        "label": "Select",
+        "context": "___.",
         "options": [
           "Erich arch bars placed and patient placed into MMF with 26-gauge wires",
           "IMF screws placed bilaterally, patient placed into MMF with 26-gauge wires",
@@ -3079,7 +3369,8 @@
         "id": "proc-closed-reduction:enumText:1",
         "kind": "enumText",
         "raw": "___ (confirmed adequate alignment / ___)",
-        "label": "Post reduction imaging:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "confirmed adequate alignment",
           "___"
@@ -3090,7 +3381,8 @@
         "id": "proc-closed-reduction:enumText:2",
         "kind": "enumText",
         "raw": "___ (2 weeks / 4 weeks / 6 weeks)",
-        "label": "Duration of MMF planned:",
+        "label": "Select",
+        "context": "___.",
         "options": [
           "2 weeks",
           "4 weeks",
@@ -3130,7 +3422,8 @@
         "id": "proc-coronectomy:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Attention was turned to site"
+        "label": "Field",
+        "context": "Attention was turned to site #___."
       }
     ],
     "flags": [],
@@ -3164,25 +3457,29 @@
         "id": "proc-extraction-with-gbr:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Attention was turned to site"
+        "label": "Field",
+        "context": "Attention was turned to site #___."
       },
       {
         "id": "proc-extraction-with-gbr:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "with straight and Cryer elevators and"
+        "label": "Field",
+        "context": "The tooth was extracted with straight and Cryer elevators and ___ forceps (150 / 151 / ___) / and a surgical handpiece with copious sterile saline irrigation as"
       },
       {
         "id": "proc-extraction-with-gbr:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "___ forceps (150 / 151 /"
+        "label": "Field",
+        "context": "The tooth was extracted with straight and Cryer elevators and ___ forceps (150 / 151 / ___) / and a surgical handpiece with copious sterile saline irrigation as"
       },
       {
         "id": "proc-extraction-with-gbr:enumText:0",
         "kind": "enumText",
         "raw": "___ (all walls intact / ___ wall deficient)",
-        "label": "all roots accounted for. Socket morphology:",
+        "label": "Select",
+        "context": "___.",
         "options": [
           "all walls intact",
           "___ wall deficient"
@@ -3193,20 +3490,23 @@
         "id": "proc-extraction-with-gbr:blank:3",
         "kind": "blank",
         "raw": "___",
-        "label": "/ Primary closure was not achieved"
+        "label": "Field",
+        "context": "Primary closure was achieved / Primary closure was not achieved - ___."
       },
       {
         "id": "proc-extraction-with-gbr:blank:4",
         "kind": "blank",
         "raw": "___ (Manufacturer, Type, LOT, REF, EXP)",
-        "label": "Bone graft:",
+        "label": "Field",
+        "context": "___",
         "hint": "Manufacturer, Type, LOT, REF, EXP"
       },
       {
         "id": "proc-extraction-with-gbr:blank:5",
         "kind": "blank",
         "raw": "___ (Manufacturer, Type, LOT, REF, EXP)",
-        "label": "Membrane:",
+        "label": "Field",
+        "context": "___",
         "hint": "Manufacturer, Type, LOT, REF, EXP"
       }
     ],
@@ -3241,7 +3541,8 @@
         "id": "proc-id-extraoral:enumText:0",
         "kind": "enumText",
         "raw": "___ (submandibular / submental / buccal / lateral pharyngeal / masseteric)",
-        "label": "The skin overlying the",
+        "label": "Select",
+        "context": "The skin overlying the ___ space was prepped with ___ (chlorhexidine / betadine) and draped.",
         "options": [
           "submandibular",
           "submental",
@@ -3255,7 +3556,8 @@
         "id": "proc-id-extraoral:enumText:1",
         "kind": "enumText",
         "raw": "___ (chlorhexidine / betadine)",
-        "label": "/ masseteric) space was prepped with",
+        "label": "Select",
+        "context": "The skin overlying the ___ (submandibular / submental / buccal / lateral pharyngeal / masseteric) space was prepped with ___ and draped.",
         "options": [
           "chlorhexidine",
           "betadine"
@@ -3266,13 +3568,15 @@
         "id": "proc-id-extraoral:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "/ betadine) and draped. An approximately"
+        "label": "Field",
+        "context": "An approximately ___ cm incision was made ___ (2 cm below the inferior border of the mandible to protect the marginal mandibular branch of CN VII / in the subme"
       },
       {
         "id": "proc-id-extraoral:enumText:2",
         "kind": "enumText",
         "raw": "___ (2 cm below the inferior border of the mandible to protect the marginal mandibular branch of CN VII / in the submental midline / over the area of maximal fluctuance)",
-        "label": "approximately ___ cm incision was made",
+        "label": "Select",
+        "context": "An approximately ___ cm incision was made ___ using a #15 blade scalpel.",
         "options": [
           "2 cm below the inferior border of the mandible to protect the marginal mandibular branch of CN VII",
           "in the submental midline",
@@ -3284,19 +3588,22 @@
         "id": "proc-id-extraoral:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "of sharp and blunt technique. The"
+        "label": "Field",
+        "context": "The ___ space was entered and approximately ___ mL of ___ (frank purulence / seropurulent fluid / sanguineous fluid) was expressed."
       },
       {
         "id": "proc-id-extraoral:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "___ space was entered and approximately"
+        "label": "Field",
+        "context": "The ___ space was entered and approximately ___ mL of ___ (frank purulence / seropurulent fluid / sanguineous fluid) was expressed."
       },
       {
         "id": "proc-id-extraoral:enumText:3",
         "kind": "enumText",
         "raw": "___ (frank purulence / seropurulent fluid / sanguineous fluid)",
-        "label": "entered and approximately ___ mL of",
+        "label": "Select",
+        "context": "The ___ space was entered and approximately ___ mL of ___ was expressed.",
         "options": [
           "frank purulence",
           "seropurulent fluid",
@@ -3308,7 +3615,8 @@
         "id": "proc-id-extraoral:enumText:4",
         "kind": "enumText",
         "raw": "___ (sent for aerobic and anaerobic culture and sensitivity / not sent)",
-        "label": "/ sanguineous fluid) was expressed. Specimen",
+        "label": "Select",
+        "context": "Specimen ___.",
         "options": [
           "sent for aerobic and anaerobic culture and sensitivity",
           "not sent"
@@ -3348,7 +3656,8 @@
         "id": "proc-id-intraoral:enumText:0",
         "kind": "enumText",
         "raw": "___ (buccal vestibule / sublingual space / palate / ___)",
-        "label": "area of maximal fluctuance in the",
+        "label": "Select",
+        "context": "An incision was made through the mucosa overlying the area of maximal fluctuance in the ___ using a #15 blade scalpel.",
         "options": [
           "buccal vestibule",
           "sublingual space",
@@ -3361,13 +3670,15 @@
         "id": "proc-id-intraoral:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "using a 15 blade scalpel. Approximately"
+        "label": "Field",
+        "context": "Approximately ___ mL of ___ (frank purulence / seropurulent fluid / serosanguineous material) was expressed and collected."
       },
       {
         "id": "proc-id-intraoral:enumText:1",
         "kind": "enumText",
         "raw": "___ (frank purulence / seropurulent fluid / serosanguineous material)",
-        "label": "blade scalpel. Approximately ___ mL of",
+        "label": "Select",
+        "context": "Approximately ___ mL of ___ was expressed and collected.",
         "options": [
           "frank purulence",
           "seropurulent fluid",
@@ -3379,7 +3690,8 @@
         "id": "proc-id-intraoral:enumText:2",
         "kind": "enumText",
         "raw": "___ (sent for aerobic and anaerobic culture and sensitivity / not sent)",
-        "label": "material) was expressed and collected. Specimen",
+        "label": "Select",
+        "context": "Specimen ___.",
         "options": [
           "sent for aerobic and anaerobic culture and sensitivity",
           "not sent"
@@ -3390,7 +3702,8 @@
         "id": "proc-id-intraoral:enumText:3",
         "kind": "enumText",
         "raw": "___ (A 1/4-inch Penrose drain was placed and secured with a 3-0 silk suture / An iodoform gauze wick was placed / The incision was left open for continued drainage)",
-        "label": "irrigated with sterile saline solution (0.9%).",
+        "label": "Select",
+        "context": "___.",
         "options": [
           "A 1",
           "4-inch Penrose drain was placed and secured with a 3-0 silk suture",
@@ -3431,87 +3744,101 @@
         "id": "proc-implant-stage-ii:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Interval since implant placement:"
+        "label": "Field",
+        "context": "___ months"
       },
       {
         "id": "proc-implant-stage-ii:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "Pre operative PA reviewed:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "proc-implant-stage-ii:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "directed to the implant at site"
+        "label": "Field",
+        "context": "Attention was directed to the implant at site #___."
       },
       {
         "id": "proc-implant-stage-ii:blank:3",
         "kind": "blank",
         "raw": "___",
-        "label": "The implant was forward torqued to"
+        "label": "Field",
+        "context": "The implant was forward-torqued to ___ Ncm and reverse-torqued to ___ Ncm."
       },
       {
         "id": "proc-implant-stage-ii:blank:4",
         "kind": "blank",
         "raw": "___",
-        "label": "___ Ncm and reverse torqued to"
+        "label": "Field",
+        "context": "The implant was forward-torqued to ___ Ncm and reverse-torqued to ___ Ncm."
       },
       {
         "id": "proc-implant-stage-ii:blank:5",
         "kind": "blank",
         "raw": "___ (Size, REF, EXP)",
-        "label": "Healing abutment:",
+        "label": "Field",
+        "context": "___",
         "hint": "Size, REF, EXP"
       },
       {
         "id": "proc-implant-stage-ii:blank:6",
         "kind": "blank",
         "raw": "___",
-        "label": "Interval since implant placement:"
+        "label": "Field",
+        "context": "___ months"
       },
       {
         "id": "proc-implant-stage-ii:blank:7",
         "kind": "blank",
         "raw": "___",
-        "label": "Pre operative PA reviewed:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "proc-implant-stage-ii:blank:8",
         "kind": "blank",
         "raw": "___",
-        "label": "directed to the implant at site"
+        "label": "Field",
+        "context": "Attention was directed to the implant at site #___."
       },
       {
         "id": "proc-implant-stage-ii:blank:9",
         "kind": "blank",
         "raw": "___ (describe findings: bone loss, mobility, etc.)",
-        "label": "reflect tissue and expose the implant.",
+        "label": "Field",
+        "context": "___.",
         "hint": "describe findings: bone loss, mobility, etc."
       },
       {
         "id": "proc-implant-stage-ii:blank:10",
         "kind": "blank",
         "raw": "___",
-        "label": "The implant was forward torqued to"
+        "label": "Field",
+        "context": "The implant was forward-torqued to ___ Ncm and reverse-torqued to ___ Ncm."
       },
       {
         "id": "proc-implant-stage-ii:blank:11",
         "kind": "blank",
         "raw": "___",
-        "label": "___ Ncm and reverse torqued to"
+        "label": "Field",
+        "context": "The implant was forward-torqued to ___ Ncm and reverse-torqued to ___ Ncm."
       },
       {
         "id": "proc-implant-stage-ii:blank:12",
         "kind": "blank",
         "raw": "___",
-        "label": "explant site was bone grafted with"
+        "label": "Field",
+        "context": "The explant site was bone grafted with ___."
       },
       {
         "id": "proc-implant-stage-ii:enumText:0",
         "kind": "enumText",
         "raw": "___ (Manufacturer, Type, LOT/ID, EXP)",
-        "label": "Bone graft:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "Manufacturer, Type, LOT",
           "ID, EXP"
@@ -3549,39 +3876,45 @@
         "id": "proc-implant-with-gbr:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Attention was turned to site"
+        "label": "Field",
+        "context": "Attention was turned to site #___."
       },
       {
         "id": "proc-implant-with-gbr:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "Surgical guide: freehand / guided ("
+        "label": "Field",
+        "context": "freehand / guided (___)."
       },
       {
         "id": "proc-implant-with-gbr:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "a torque value of greater than"
+        "label": "Field",
+        "context": "The implant was placed into the osteotomy with a torque value of greater than ___ Ncm."
       },
       {
         "id": "proc-implant-with-gbr:blank:3",
         "kind": "blank",
         "raw": "___ (System, Dimensions, LOT, REF, EXP)",
-        "label": "Implant:",
+        "label": "Field",
+        "context": "___",
         "hint": "System, Dimensions, LOT, REF, EXP"
       },
       {
         "id": "proc-implant-with-gbr:blank:4",
         "kind": "blank",
         "raw": "___ (Size, REF, EXP)",
-        "label": "Healing abutment:",
+        "label": "Field",
+        "context": "___",
         "hint": "Size, REF, EXP"
       },
       {
         "id": "proc-implant-with-gbr:enumText:0",
         "kind": "enumText",
         "raw": "___ (Manufacturer, Type, LOT/ID, EXP)",
-        "label": "Bone graft:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "Manufacturer, Type, LOT",
           "ID, EXP"
@@ -3592,7 +3925,8 @@
         "id": "proc-implant-with-gbr:blank:5",
         "kind": "blank",
         "raw": "___ (Manufacturer, Type, LOT, REF, EXP)",
-        "label": "Membrane:",
+        "label": "Field",
+        "context": "___",
         "hint": "Manufacturer, Type, LOT, REF, EXP"
       }
     ],
@@ -3627,45 +3961,52 @@
         "id": "proc-implant-with-sinus-lift:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Pre operative residual bone height:"
+        "label": "Field",
+        "context": "___ mm"
       },
       {
         "id": "proc-implant-with-sinus-lift:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "Attention was turned to edentulous site"
+        "label": "Field",
+        "context": "Attention was turned to edentulous site #___."
       },
       {
         "id": "proc-implant-with-sinus-lift:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "perforation: none noted / perforation noted"
+        "label": "Field",
+        "context": "none noted / perforation noted - ___."
       },
       {
         "id": "proc-implant-with-sinus-lift:blank:3",
         "kind": "blank",
         "raw": "___",
-        "label": "implant was placed and torqued to"
+        "label": "Field",
+        "context": "The dental implant was placed and torqued to > ___ Ncm."
       },
       {
         "id": "proc-implant-with-sinus-lift:blank:4",
         "kind": "blank",
         "raw": "___ (System, Dimensions, LOT, REF, EXP)",
-        "label": "Implant:",
+        "label": "Field",
+        "context": "___",
         "hint": "System, Dimensions, LOT, REF, EXP"
       },
       {
         "id": "proc-implant-with-sinus-lift:blank:5",
         "kind": "blank",
         "raw": "___ (if placed)",
-        "label": "Healing abutment:",
+        "label": "Field",
+        "context": "___",
         "hint": "if placed"
       },
       {
         "id": "proc-implant-with-sinus-lift:enumText:0",
         "kind": "enumText",
         "raw": "___ (Manufacturer, Type, LOT/ID, EXP)",
-        "label": "Bone graft:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "Manufacturer, Type, LOT",
           "ID, EXP"
@@ -3676,7 +4017,8 @@
         "id": "proc-implant-with-sinus-lift:blank:6",
         "kind": "blank",
         "raw": "___ (Manufacturer, LOT, REF, EXP)",
-        "label": "Collagen plug:",
+        "label": "Field",
+        "context": "___",
         "hint": "Manufacturer, LOT, REF, EXP"
       }
     ],
@@ -3710,19 +4052,22 @@
         "id": "proc-laceration-repair:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Location:"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "proc-laceration-repair:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "Length:"
+        "label": "Field",
+        "context": "___ cm."
       },
       {
         "id": "proc-laceration-repair:enumText:0",
         "kind": "enumText",
         "raw": "___ (superficial - skin only / partial thickness - into ___ muscle / full thickness - through and through / to periosteum)",
-        "label": "Length: ___ cm. Depth:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "superficial - skin only",
           "partial thickness - into ___ muscle",
@@ -3735,7 +4080,8 @@
         "id": "proc-laceration-repair:enumText:1",
         "kind": "enumText",
         "raw": "___ (none / minimal / significant: ___)",
-        "label": "Tissue loss:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "none",
           "minimal",
@@ -3747,7 +4093,8 @@
         "id": "proc-laceration-repair:enumText:2",
         "kind": "enumText",
         "raw": "___ (clean / mildly contaminated / grossly contaminated - thorough debridement)",
-        "label": "Contamination:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "clean",
           "mildly contaminated",
@@ -3759,7 +4106,8 @@
         "id": "proc-laceration-repair:enumText:3",
         "kind": "enumText",
         "raw": "___ (skin and subcutaneous only / orbicularis oris / vermilion border / oral commissure / parotid/Stensen duct - assessed: ___ / facial nerve branch - assessed: ___ / nasal cartilage / auricular cartilage / eyelid)",
-        "label": "Structures involved:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "skin and subcutaneous only",
           "orbicularis oris",
@@ -3778,7 +4126,8 @@
         "id": "proc-laceration-repair:enumText:4",
         "kind": "enumText",
         "raw": "___ (none identified / removed: ___)",
-        "label": "Foreign body:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "none identified",
           "removed: ___"
@@ -3789,7 +4138,8 @@
         "id": "proc-laceration-repair:enumText:5",
         "kind": "enumText",
         "raw": "___ (intact / deficit: ___)",
-        "label": "CN VII (distal to laceration):",
+        "label": "Select",
+        "context": "___",
         "options": [
           "intact",
           "deficit: ___"
@@ -3800,7 +4150,8 @@
         "id": "proc-laceration-repair:enumText:6",
         "kind": "enumText",
         "raw": "___ (Special structures: vermilion border aligned precisely with first key suture placed at the white roll / intraoral mucosal layer closed first with ___ / cartilage repaired with 5-0 Monocryl / ___)",
-        "label": "minimally to achieve fresh tissue margins.",
+        "label": "Select",
+        "context": "___.",
         "options": [
           "Special structures: vermilion border aligned precisely with first key suture placed at the white roll",
           "intraoral mucosal layer closed first with ___",
@@ -3813,7 +4164,8 @@
         "id": "proc-laceration-repair:enumText:7",
         "kind": "enumText",
         "raw": "___ (4-0 or 5-0 Vicryl/Monocryl buried interrupted dermal sutures / not required)",
-        "label": "Deep closure:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "4-0 or 5-0 Vicryl",
           "Monocryl buried interrupted dermal sutures",
@@ -3825,7 +4177,8 @@
         "id": "proc-laceration-repair:enumText:8",
         "kind": "enumText",
         "raw": "___ (6-0 nylon / 5-0 nylon / 5-0 fast gut / 4-0 nylon / 3-0 chromic gut intraoral)",
-        "label": "Skin closure:",
+        "label": "Select",
+        "context": "___ in ___ (simple interrupted / running / vertical mattress / horizontal mattress) fashion.",
         "options": [
           "6-0 nylon",
           "5-0 nylon",
@@ -3839,7 +4192,8 @@
         "id": "proc-laceration-repair:enumText:9",
         "kind": "enumText",
         "raw": "___ (simple interrupted / running / vertical mattress / horizontal mattress)",
-        "label": "3 0 chromic gut intraoral) in",
+        "label": "Select",
+        "context": "___ (6-0 nylon / 5-0 nylon / 5-0 fast gut / 4-0 nylon / 3-0 chromic gut intraoral) in ___ fashion.",
         "options": [
           "simple interrupted",
           "running",
@@ -3852,7 +4206,8 @@
         "id": "proc-laceration-repair:enumText:10",
         "kind": "enumText",
         "raw": "___ (bacitracin ointment / Xeroform / Steri-Strips / ___)",
-        "label": "Dressing:",
+        "label": "Select",
+        "context": "___ applied.",
         "options": [
           "bacitracin ointment",
           "Xeroform",
@@ -3894,7 +4249,8 @@
         "id": "proc-mand-third-erupted:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Attention was turned to site"
+        "label": "Field",
+        "context": "Attention was turned to site #___."
       }
     ],
     "flags": [],
@@ -3928,7 +4284,8 @@
         "id": "proc-mand-third-impacted:enumText:0",
         "kind": "enumText",
         "raw": "___ (soft tissue / partial bony / full bony)",
-        "label": "Impaction:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "soft tissue",
           "partial bony",
@@ -3940,7 +4297,8 @@
         "id": "proc-mand-third-impacted:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Attention was turned to site"
+        "label": "Field",
+        "context": "Attention was turned to site #___."
       }
     ],
     "flags": [],
@@ -3974,7 +4332,8 @@
         "id": "proc-max-third-erupted:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Attention was turned to site"
+        "label": "Field",
+        "context": "Attention was turned to site #___."
       }
     ],
     "flags": [],
@@ -4008,7 +4367,8 @@
         "id": "proc-max-third-impacted:enumText:0",
         "kind": "enumText",
         "raw": "___ (soft tissue / partial bony / full bony)",
-        "label": "Impaction:",
+        "label": "Select",
+        "context": "___",
         "options": [
           "soft tissue",
           "partial bony",
@@ -4020,13 +4380,15 @@
         "id": "proc-max-third-impacted:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Attention was turned to site"
+        "label": "Field",
+        "context": "Attention was turned to site #___."
       },
       {
         "id": "proc-max-third-impacted:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "intact with all roots accounted for."
+        "label": "Field",
+        "context": "___ sutures placed / No sutures were placed."
       }
     ],
     "flags": [],
@@ -4060,31 +4422,36 @@
         "id": "proc-simple-extraction:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Attention was turned to site"
+        "label": "Field",
+        "context": "Attention was turned to site #___."
       },
       {
         "id": "proc-simple-extraction:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "___. Luxation was achieved with a"
+        "label": "Field",
+        "context": "Luxation was achieved with a ___ elevator (straight / Cryer / 301)."
       },
       {
         "id": "proc-simple-extraction:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "301). The tooth was delivered with"
+        "label": "Field",
+        "context": "The tooth was delivered with ___ forceps (150 / 151 / 23 cowhorn / ___)."
       },
       {
         "id": "proc-simple-extraction:blank:3",
         "kind": "blank",
         "raw": "___",
-        "label": "/ 151 / 23 cowhorn /"
+        "label": "Field",
+        "context": "The tooth was delivered with ___ forceps (150 / 151 / 23 cowhorn / ___)."
       },
       {
         "id": "proc-simple-extraction:blank:4",
         "kind": "blank",
         "raw": "___",
-        "label": "intact with all roots accounted for."
+        "label": "Field",
+        "context": "___ suture(s) placed / No sutures were placed."
       }
     ],
     "flags": [],
@@ -4117,7 +4484,8 @@
         "id": "signature:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "Staff:"
+        "label": "Field",
+        "context": "___"
       }
     ],
     "flags": [],
@@ -4149,31 +4517,36 @@
         "id": "sinus-precautions:blank:0",
         "kind": "blank",
         "raw": "___",
-        "label": "nose blowing or forceful sniffing for"
+        "label": "Field",
+        "context": "No nose blowing or forceful sniffing for ___ weeks."
       },
       {
         "id": "sinus-precautions:blank:1",
         "kind": "blank",
         "raw": "___",
-        "label": "No flying for"
+        "label": "Field",
+        "context": "No flying for ___ days."
       },
       {
         "id": "sinus-precautions:blank:2",
         "kind": "blank",
         "raw": "___",
-        "label": "pillow while sleeping for the first"
+        "label": "Field",
+        "context": "Elevate head with an extra pillow while sleeping for the first ___ days."
       },
       {
         "id": "sinus-precautions:blank:3",
         "kind": "blank",
         "raw": "___",
-        "label": "If OTC decongestant is recommended: pseudoephedr"
+        "label": "Field",
+        "context": "pseudoephedrine ___ mg PO q___ h or oxymetazoline nasal spray BID x 3 days (do not exceed 3 days to avoid rebound congestion)."
       },
       {
         "id": "sinus-precautions:blank:4",
         "kind": "blank",
         "raw": "___",
-        "label": "recommended: pseudoephedrine ___ mg PO q"
+        "label": "Field",
+        "context": "pseudoephedrine ___ mg PO q___ h or oxymetazoline nasal spray BID x 3 days (do not exceed 3 days to avoid rebound congestion)."
       }
     ],
     "flags": [],

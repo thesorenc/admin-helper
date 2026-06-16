@@ -149,6 +149,35 @@ button{font-family:inherit;cursor:pointer}
 .field-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
 .field-grid .field:has(.tooth-picker),.field-grid .field:has(.chips){grid-column:1/-1}
 
+/* Prose-fill surface: the atom rendered as its real sentences with inline blanks.
+   Filling the form is literally drafting the operative note. */
+.prose-fill{font-size:14px;line-height:2.15;color:var(--ink);white-space:pre-wrap;word-break:break-word}
+.prose-fill .prose-text{white-space:pre-wrap}
+.prose-include{font-family:var(--mono);font-size:12px;color:var(--accent-ink);background:var(--accent-softer);border:1px dashed var(--accent-2);border-radius:6px;padding:0 5px}
+
+/* Inline controls flow with the prose at the text baseline. Unfilled blanks read as
+   a dotted underline; filled ones get the accent treatment so the note scans at a glance. */
+.ifield{display:inline-flex;align-items:center;gap:4px;vertical-align:baseline}
+.iinput{font-family:inherit;font-size:13.5px;font-weight:600;color:var(--accent-ink);background:var(--accent-softer);
+  border:none;border-bottom:1.5px dashed var(--accent-2);border-radius:4px 4px 0 0;padding:1px 6px;outline:none;
+  text-align:center;vertical-align:baseline;min-width:40px}
+.iinput::placeholder{color:var(--faint);font-weight:500}
+.iinput:focus{border-bottom-style:solid;box-shadow:0 1px 0 0 var(--accent)}
+.iinput.mono{font-family:var(--mono)}
+.iinput.on{border-bottom-style:solid;background:var(--accent-soft)}
+.idim{color:var(--muted);font-size:12px;padding:0 1px}
+
+.ichip{border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;
+  padding:2px 11px;font-size:12.5px;font-weight:600;font-family:inherit;transition:.12s;vertical-align:baseline}
+.ichip:hover{border-color:var(--accent-2)}
+.ichip.on{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:var(--shadow-sm)}
+
+.ipill{font-family:var(--mono);font-size:12.5px;font-weight:700;color:var(--accent-ink);background:var(--accent-softer);
+  border:1.5px dashed var(--accent-2);border-radius:7px;padding:1px 9px;vertical-align:baseline}
+.ipill:hover{border-color:var(--accent)}
+.ipill.on{background:var(--accent);color:#fff;border-style:solid;border-color:var(--accent)}
+.ipopover{display:block;margin:8px 0;padding:12px;background:var(--surface-2);border:1px solid var(--line);border-radius:12px}
+
 .chips{display:flex;flex-wrap:wrap;gap:7px}
 .chip{border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:6px 13px;font-size:12.5px;font-weight:600;font-family:inherit;transition:.12s;display:inline-flex;align-items:center;gap:6px}
 .chip:hover{border-color:var(--accent-2)}

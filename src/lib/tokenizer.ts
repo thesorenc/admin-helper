@@ -115,7 +115,10 @@ function looseKeyword(trimmed: string): string | null {
 
 function flagTypeOf(trimmed: string): string | null {
   // Strong reviewer keywords essentially never start clinical prose -> prefix match.
-  const strong = trimmed.match(/^(CONFIRM|TEMPLATE NOTE|TITLE CHECK)\b/i)
+  // TEMPLATE (with or without "NOTE") is the editorial marker "[TEMPLATE: ...]" the
+  // build prepends to vault snippets; it must be stripped from EVERY assembled doc,
+  // not just the op note (it was previously only removed by a caseAssembly regex).
+  const strong = trimmed.match(/^(CONFIRM|TEMPLATE NOTE|TEMPLATE|TITLE CHECK)\b/i)
   if (strong) return strong[1].toUpperCase()
   // Weak keywords (ADDED/NOTE/HEADER) DO start ordinary prose ("[Note the patient ...]",
   // "[Added per attending ...]"). Only treat as a strip-flag when the keyword stands alone
@@ -172,8 +175,12 @@ function classifyBrackets(brackets: BracketSpan[], full: string, warnings: strin
 
     const flagType = flagTypeOf(trimmed)
     if (flagType) {
-      // Recognized reviewer flag (keyword + delimiter): surface it AND strip it from the body.
-      tokens.push({ start: b.start, end: b.end, kind: 'flag', raw, flagType, strip: true, surface: true })
+      // Recognized reviewer flag: strip it from the body. CONFIRM / TITLE CHECK are
+      // clinical safety annotations and are SURFACED (banner + missing block). TEMPLATE
+      // is pure authoring cruft ("snippet adapted from prior notes; review before use")
+      // that should vanish from clinical output without nagging on every single note.
+      const surface = flagType !== 'TEMPLATE' && flagType !== 'TEMPLATE NOTE'
+      tokens.push({ start: b.start, end: b.end, kind: 'flag', raw, flagType, strip: true, surface })
       continue
     }
     const annotationLike = looksLikeAnnotation(trimmed)
@@ -262,18 +269,45 @@ function overlapsClaimed(start: number, end: number, claimed: Array<[number, num
   return claimed.some(([s, e]) => start < e && end > s)
 }
 
-/** Derive a short label from the ~6 words preceding the token on its line. */
-function deriveLabel(full: string, start: number, kind: Field['kind'], unit?: MeasurementUnit): string {
-  const lineStart = full.lastIndexOf('\n', start - 1) + 1
-  const preceding = full.slice(lineStart, start).replace(/[#*>-]+/g, ' ').trim()
-  let words = preceding.split(/\s+/).filter(Boolean).slice(-6).join(' ')
-  if (!words) {
-    const after = full.slice(start).replace(/^\{\{[^}]+\}\}/, '')
-    words = after.split(/\s+/).filter(Boolean).slice(0, 5).join(' ')
-  }
-  words = words.slice(0, 48).trim()
-  const base = words || defaultLabel(kind)
+/**
+ * Short, kind-based label (e.g. "Side", "Tooth #", "Measurement (mm)").
+ * The old heuristic derived the label from the ~6 words of prose PRECEDING the token;
+ * because these atoms are flowing op-note sentences (not "Label: ___" rows), that
+ * produced mid-sentence garbage for ~77% of fields. The real fill context now comes
+ * from `deriveContext` (the containing sentence) + the inline prose-fill surface.
+ */
+function deriveLabel(kind: Field['kind'], unit?: MeasurementUnit): string {
+  const base = defaultLabel(kind)
   return unit ? `${base} (${unit})` : base
+}
+
+/**
+ * The sentence containing the placeholder, with the placeholder rendered as a blank
+ * ("___"). Sibling placeholders in the same sentence stay in their raw form so the
+ * blank being asked about is unambiguous. Used by the Missing/to-confirm block and
+ * as the accessible context for the inline fill control.
+ */
+function deriveContext(full: string, start: number, end: number): string {
+  const before = full.slice(0, start)
+  // Sentence start: just after the nearest preceding sentence terminator or newline.
+  const bStart = Math.max(
+    before.lastIndexOf('. '),
+    before.lastIndexOf('! '),
+    before.lastIndexOf('? '),
+    before.lastIndexOf('\n'),
+    before.lastIndexOf(': '),
+  )
+  const s = bStart < 0 ? 0 : bStart + 1
+  // Sentence end: through the next terminator after the token (or end of text).
+  const after = full.slice(end)
+  const mEnd = after.search(/[.!?\n]/)
+  const e = mEnd < 0 ? full.length : end + mEnd + 1
+  const sentence = `${full.slice(s, start)}___${full.slice(end, e)}`
+  return sentence
+    .replace(/\s+/g, ' ')
+    .replace(/^[#*>\s-]+/, '')
+    .trim()
+    .slice(0, 160)
 }
 
 function defaultLabel(kind: Field['kind']): string {
@@ -385,7 +419,8 @@ export function tokenize(rawBodyInput: string, componentId: string): TokenizeRes
       id,
       kind: t.kind,
       raw: t.raw,
-      label: deriveLabel(rawBody, t.start, t.kind, t.unit),
+      label: deriveLabel(t.kind, t.unit),
+      context: deriveContext(rawBody, t.start, t.end),
       unit: t.unit,
       options: t.options,
       hint: t.hint,

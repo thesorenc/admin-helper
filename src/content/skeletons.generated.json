@@ -14,25 +14,29 @@
         "id": "omfs-template-consult:blank:0",
         "kind": "blank",
         "raw": "_",
-        "label": "Chief Complaint: \""
+        "label": "Field",
+        "context": "\"___\""
       },
       {
         "id": "omfs-template-consult:blank:1",
         "kind": "blank",
         "raw": "_",
-        "label": "[Age] year old ASA"
+        "label": "Field",
+        "context": "[Age] year-old ASA ___ [Patient Gender (Male/Female)]"
       },
       {
         "id": "omfs-template-consult:blank:2",
         "kind": "blank",
         "raw": "_",
-        "label": "[Age] year old ASA"
+        "label": "Field",
+        "context": "[Age] year-old ASA ___ [Patient Gender (Male/Female)]"
       },
       {
         "id": "omfs-template-consult:blank:3",
         "kind": "blank",
         "raw": "_",
-        "label": "Next visit:"
+        "label": "Field",
+        "context": "___"
       }
     ],
     "flags": [],
@@ -73,37 +77,43 @@
         "id": "omfs-template-follow-up:blank:0",
         "kind": "blank",
         "raw": "_",
-        "label": "[Patient Gender (Male/Female)] w/ history of"
+        "label": "Field",
+        "context": "[Age] old [Patient Gender (Male/Female)] w/ history of ___ presents to WR OMFS for follow up s/p _, DOS _."
       },
       {
         "id": "omfs-template-follow-up:blank:1",
         "kind": "blank",
         "raw": "_",
-        "label": "WR OMFS for follow up s/p"
+        "label": "Field",
+        "context": "[Age] old [Patient Gender (Male/Female)] w/ history of _ presents to WR OMFS for follow up s/p ___, DOS _."
       },
       {
         "id": "omfs-template-follow-up:blank:2",
         "kind": "blank",
         "raw": "_",
-        "label": "for follow up s/p _, DOS"
+        "label": "Field",
+        "context": "[Age] old [Patient Gender (Male/Female)] w/ history of _ presents to WR OMFS for follow up s/p _, DOS ___."
       },
       {
         "id": "omfs-template-follow-up:blank:3",
         "kind": "blank",
         "raw": "_",
-        "label": "[Age] old [Patient Gender (Male/Female)] s/p"
+        "label": "Field",
+        "context": "[Age] old [Patient Gender (Male/Female)] s/p ___, DOS _."
       },
       {
         "id": "omfs-template-follow-up:blank:4",
         "kind": "blank",
         "raw": "_",
-        "label": "[Patient Gender (Male/Female)] s/p _, DOS"
+        "label": "Field",
+        "context": "[Age] old [Patient Gender (Male/Female)] s/p _, DOS ___."
       },
       {
         "id": "omfs-template-follow-up:blank:5",
         "kind": "blank",
         "raw": "_",
-        "label": "Follow up in"
+        "label": "Field",
+        "context": "Follow up in ___"
       }
     ],
     "flags": [],
@@ -137,37 +147,43 @@
         "id": "omfs-template-h-p:blank:0",
         "kind": "blank",
         "raw": "_",
-        "label": "Chief Complaint: \""
+        "label": "Field",
+        "context": "\"___\""
       },
       {
         "id": "omfs-template-h-p:blank:1",
         "kind": "blank",
         "raw": "_",
-        "label": "[Age] year old ASA"
+        "label": "Field",
+        "context": "[Age] year-old ASA ___ [Patient Gender (Male/Female)] presenting with"
       },
       {
         "id": "omfs-template-h-p:blank:2",
         "kind": "blank",
         "raw": "_",
-        "label": "[Age] year old ASA"
+        "label": "Field",
+        "context": "[Age] year-old ASA ___ [Patient Gender (Male/Female)] with _"
       },
       {
         "id": "omfs-template-h-p:blank:3",
         "kind": "blank",
         "raw": "_",
-        "label": "ASA _ [Patient Gender (Male/Female)] with"
+        "label": "Field",
+        "context": "[Age] year-old ASA _ [Patient Gender (Male/Female)] with ___"
       },
       {
         "id": "omfs-template-h-p:blank:4",
         "kind": "blank",
         "raw": "_",
-        "label": "_ Next visit: _ .sacsign"
+        "label": "Field",
+        "context": "___"
       },
       {
         "id": "omfs-template-h-p:blank:5",
         "kind": "blank",
         "raw": "_",
-        "label": "Next visit:"
+        "label": "Field",
+        "context": "___"
       }
     ],
     "flags": [],

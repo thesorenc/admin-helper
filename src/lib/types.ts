@@ -26,8 +26,11 @@ export interface Field {
   kind: FieldKind
   /** Exact source text matched, e.g. "[length]-mm". */
   raw: string
-  /** Human label derived from surrounding context. */
+  /** Short, kind-based label (e.g. "Side", "Tooth #", "Measurement (mm)"). */
   label: string
+  /** The containing sentence with this placeholder shown as a blank — the real
+   *  fill context (used for the inline prose-fill surface and the Missing block). */
+  context?: string
   unit?: MeasurementUnit
   /** For side / enumText. */
   options?: string[]
