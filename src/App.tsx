@@ -3,7 +3,6 @@ import { useCaseStore } from '@/state/useCaseStore'
 
 const tabs = [
   { to: '/', label: 'Case builder', end: true },
-  { to: '/clinical', label: 'Clinical notes' },
   { to: '/library', label: 'Library' },
 ]
 

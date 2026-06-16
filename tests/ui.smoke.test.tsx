@@ -2,7 +2,6 @@ import { describe, it, expect } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { CaseBuilder } from '../src/routes/CaseBuilder'
-import { ClinicalNoteBuilder } from '../src/routes/ClinicalNoteBuilder'
 import { Library } from '../src/routes/Library'
 import { useCaseStore } from '../src/state/useCaseStore'
 
@@ -30,15 +29,6 @@ describe('UI smoke', () => {
     expect(screen.getByRole('tab', { name: 'Pre-op' })).toBeInTheDocument()
     expect(screen.getByRole('tab', { name: 'Post-op' })).toBeInTheDocument()
     expect(screen.getByRole('tab', { name: 'Rx' })).toBeInTheDocument()
-  })
-
-  it('Clinical notes render with a template', () => {
-    render(
-      <MemoryRouter>
-        <ClinicalNoteBuilder />
-      </MemoryRouter>,
-    )
-    expect(screen.getByText('Clinical note')).toBeInTheDocument()
   })
 
   it('Library renders items and a count', () => {

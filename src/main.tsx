@@ -24,7 +24,6 @@ if (window.self !== window.top) {
     document.documentElement.style.display = 'none'
   }
 }
-import { ClinicalNoteBuilder } from './routes/ClinicalNoteBuilder.tsx'
 import { Library } from './routes/Library.tsx'
 
 const router = createHashRouter([
@@ -33,7 +32,6 @@ const router = createHashRouter([
     element: <App />,
     children: [
       { index: true, element: <CaseBuilder /> },
-      { path: 'clinical', element: <ClinicalNoteBuilder /> },
       { path: 'library', element: <Library /> },
     ],
   },
