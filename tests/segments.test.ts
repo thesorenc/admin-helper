@@ -102,6 +102,25 @@ describe('optionalClause — include / omit / undecided', () => {
   })
 })
 
+describe('enumText — long multi-word slash choices', () => {
+  it('captures a multi-word slash choice as enumText with full options', () => {
+    const note = 'Closure: [discarded per protocol / returned to the patient per request].'
+    const f = parse(note).fields.find((x) => x.kind === 'enumText')
+    expect(f).toBeTruthy()
+    expect(f!.options).toEqual(['discarded per protocol', 'returned to the patient per request'])
+  })
+
+  it('rejects a slash choice that contains a nested placeholder (keeps it inline)', () => {
+    const note = 'Margins: [Carnoys applied for [X] minutes / electrocautery] were used.'
+    expect(parse(note).fields.some((f) => f.kind === 'enumText')).toBe(false)
+  })
+
+  it('undecided long choice keeps the raw bracket (no output change)', () => {
+    const note = 'Closure: [discarded per protocol / returned to the patient per request].'
+    expect(asm(note)).toContain('[discarded per protocol / returned to the patient per request]')
+  })
+})
+
 describe('tokenizer — [TEMPLATE:…] editorial notes are stripped everywhere', () => {
   it('removes a [TEMPLATE: …] marker from the body and does not surface it', () => {
     const { bodyTemplate, flags, fields } = parse(

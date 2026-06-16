@@ -125,6 +125,34 @@ export function InlineField({
     const opts = field.options ?? (isSide ? ['right', 'left'] : [])
     const matchOn = (opt: string) => (isSide ? current === canonicalSide(opt) : current === opt)
     const isOther = !isSide && current.trim() !== '' && !opts.includes(current)
+
+    // Long multi-word choices (e.g. surgical-approach options) render as a compact
+    // dropdown rather than chips, which would wrap awkwardly across the prose line.
+    const isLong = !isSide && opts.some((o) => o.length > 16)
+    if (isLong) {
+      return (
+        <span className="isel" role="group" aria-label={aria}>
+          <select value={isOther ? '__other__' : current} onChange={(e) => setValue(key, e.target.value === '__other__' ? ' ' : e.target.value)}>
+            <option value="">— choose —</option>
+            {opts.map((o) => (
+              <option key={o} value={o}>
+                {o}
+              </option>
+            ))}
+            <option value="__other__">Other…</option>
+          </select>
+          {isOther && (
+            <input
+              className="iinput"
+              autoFocus
+              aria-label={`${aria} (custom)`}
+              value={current.trim()}
+              onChange={(e) => setValue(key, e.target.value)}
+            />
+          )}
+        </span>
+      )
+    }
     return (
       <span className="ifield" role="group" aria-label={aria}>
         {opts.map((opt) => (

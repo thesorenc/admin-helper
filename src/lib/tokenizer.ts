@@ -231,8 +231,9 @@ function classifyBrackets(brackets: BracketSpan[], full: string, warnings: strin
       })
       continue
     }
-    // Slash-choice enum: [soft / puree / liquid], [nasal/oral], [1%/2%].
-    // Only when options are short, single-line, and free of nesting/blanks.
+    // Slash-choice enum: [soft / puree / liquid], [nasal/oral], [1%/2%], and longer
+    // multi-word clinical choices ([a transoral vestibular incision / a transcervical
+    // approach]). The UI renders short option sets as chips and long ones as a dropdown.
     if (trimmed.includes('/')) {
       const opts = trimmed.split('/').map((o) => o.trim())
       // Reject things that look like a slash but are NOT a choice list: dates
@@ -247,7 +248,9 @@ function classifyBrackets(brackets: BracketSpan[], full: string, warnings: strin
         !dateLike &&
         !unitish &&
         !connective &&
-        opts.every((o) => /^[^:[\]]{1,25}$/.test(o) && !o.includes('__'))
+        // Options may be multi-word clinical phrases (up to ~70 chars) but never contain
+        // a nested placeholder ([ ] / __) — those carry their own fillable content.
+        opts.every((o) => /^[^:[\]]{1,70}$/.test(o) && o.length > 0 && !o.includes('__'))
       if (ok) {
         tokens.push({ start: b.start, end: b.end, kind: 'enumText', raw, options: opts, hint: trimmed })
         continue
