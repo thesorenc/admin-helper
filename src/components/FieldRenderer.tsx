@@ -1,6 +1,7 @@
-import { useRef, useState, type ReactNode } from 'react'
+import { useRef, type ReactNode } from 'react'
 import type { Field } from '@/lib/types'
 import { canonicalSide, valueKey } from '@/lib/assembler'
+import { deriveLabel } from '@/lib/fieldLabel'
 
 const UPPER = Array.from({ length: 16 }, (_, i) => i + 1) // 1..16
 const LOWER = Array.from({ length: 16 }, (_, i) => 32 - i) // 32..17
@@ -99,195 +100,8 @@ export function ToothPicker({ value, onChange }: { value: string; onChange: (v: 
   )
 }
 
-/** Compact inline control for the prose-fill surface: the placeholder rendered as a
- *  fill-in-the-blank embedded in the atom's actual sentence. The surrounding prose is
- *  the context, so no label row is shown; the field's sentence context is the a11y name. */
-export function InlineField({
-  field,
-  values,
-  setValue,
-  scope,
-}: {
-  field: Field
-  values: Record<string, string>
-  setValue: (key: string, value: string) => void
-  scope?: string
-}) {
-  const [openTeeth, setOpenTeeth] = useState(false)
-  const k = (key: string) => (scope ? `${scope}::${key}` : key)
-  const aria = field.context ? `${field.label}: ${field.context}` : field.label
-  const filled = (v: string | undefined) => !!(v && v.trim())
-
-  if (field.kind === 'side' || field.kind === 'enumText') {
-    const isSide = field.kind === 'side'
-    const key = isSide ? k(valueKey(field)) : k(field.id)
-    const current = values[key] ?? ''
-    const opts = field.options ?? (isSide ? ['right', 'left'] : [])
-    const matchOn = (opt: string) => (isSide ? current === canonicalSide(opt) : current === opt)
-    // Match the non-inline renderer: the "Other…" sentinel is a single space, so test
-    // against '' (not trimmed) or the custom input would never appear when chosen.
-    const isOther = !isSide && current !== '' && !opts.includes(current)
-
-    // Long multi-word choices (e.g. surgical-approach options) render as a compact
-    // dropdown rather than chips, which would wrap awkwardly across the prose line.
-    const isLong = !isSide && opts.some((o) => o.length > 16)
-    if (isLong) {
-      return (
-        <span className="isel" role="group" aria-label={aria}>
-          <select value={isOther ? '__other__' : current} onChange={(e) => setValue(key, e.target.value === '__other__' ? ' ' : e.target.value)}>
-            <option value="">— choose —</option>
-            {opts.map((o) => (
-              <option key={o} value={o}>
-                {o}
-              </option>
-            ))}
-            <option value="__other__">Other…</option>
-          </select>
-          {isOther && (
-            <input
-              className="iinput"
-              autoFocus
-              aria-label={`${aria} (custom)`}
-              value={current.trim()}
-              onChange={(e) => setValue(key, e.target.value)}
-            />
-          )}
-        </span>
-      )
-    }
-    return (
-      <span className="ifield" role="group" aria-label={aria}>
-        {opts.map((opt) => (
-          <button
-            key={opt}
-            type="button"
-            aria-pressed={matchOn(opt)}
-            className={'ichip' + (matchOn(opt) ? ' on' : '')}
-            onClick={() => setValue(key, isSide ? canonicalSide(opt) : opt)}
-          >
-            {opt}
-          </button>
-        ))}
-        {!isSide && (
-          <>
-            <button
-              type="button"
-              aria-pressed={isOther}
-              className={'ichip' + (isOther ? ' on' : '')}
-              onClick={() => setValue(key, isOther ? '' : ' ')}
-            >
-              Other…
-            </button>
-            {isOther && (
-              <input
-                className="iinput"
-                autoFocus
-                aria-label={`${aria} (custom)`}
-                value={current.trim()}
-                onChange={(e) => setValue(key, e.target.value)}
-              />
-            )}
-          </>
-        )}
-      </span>
-    )
-  }
-
-  if (field.kind === 'toothNumber') {
-    const key = k(field.id)
-    const v = values[key] ?? ''
-    return (
-      <span className="ifield">
-        <button
-          type="button"
-          className={'ipill' + (filled(v) ? ' on' : '')}
-          aria-expanded={openTeeth}
-          aria-label={aria}
-          onClick={() => setOpenTeeth((o) => !o)}
-        >
-          {filled(v) ? `#${v}` : '# ___'}
-        </button>
-        {openTeeth && (
-          <span className="ipopover">
-            <ToothPicker value={v} onChange={(nv) => setValue(key, nv)} />
-          </span>
-        )}
-      </span>
-    )
-  }
-
-  if (field.kind === 'optionalClause') {
-    const key = k(field.id)
-    const v = values[key] ?? '' // '' undecided | 'on' include | 'omit' exclude
-    const text = field.raw.replace(/^\[|\]$/g, '').trim()
-    return (
-      <span className={'iclause ' + (v || 'undecided')} role="group" aria-label={`Optional: ${text}`}>
-        <span className="iclause-text">{text}</span>
-        <span className="iclause-tog">
-          <button
-            type="button"
-            aria-pressed={v === 'on'}
-            title="Include this clause"
-            onClick={() => setValue(key, v === 'on' ? '' : 'on')}
-          >
-            ✓
-          </button>
-          <button
-            type="button"
-            aria-pressed={v === 'omit'}
-            title="Omit this clause"
-            onClick={() => setValue(key, v === 'omit' ? '' : 'omit')}
-          >
-            ✕
-          </button>
-        </span>
-      </span>
-    )
-  }
-
-  if (field.kind === 'hardwareDim') {
-    return (
-      <span className="ifield" role="group" aria-label={aria}>
-        <input
-          className="iinput mono"
-          style={{ width: 52 }}
-          placeholder="Ø"
-          aria-label={`${aria} diameter`}
-          inputMode="decimal"
-          value={values[k(`${field.id}:d`)] ?? ''}
-          onChange={(e) => setValue(k(`${field.id}:d`), e.target.value)}
-        />
-        <span className="idim">×</span>
-        <input
-          className="iinput mono"
-          style={{ width: 60 }}
-          placeholder="len"
-          aria-label={`${aria} length`}
-          inputMode="decimal"
-          value={values[k(`${field.id}:l`)] ?? ''}
-          onChange={(e) => setValue(k(`${field.id}:l`), e.target.value)}
-        />
-      </span>
-    )
-  }
-
-  // measurement / hardwareCount / text / blank -> a single inline blank.
-  const key = k(field.id)
-  const mono = field.kind === 'measurement' || field.kind === 'hardwareCount'
-  return (
-    <input
-      className={'iinput' + (mono ? ' mono' : '') + (filled(values[key]) ? ' on' : '')}
-      style={{ width: field.kind === 'hardwareCount' ? 46 : 72 }}
-      inputMode={mono ? (field.kind === 'measurement' ? 'decimal' : 'numeric') : 'text'}
-      aria-label={aria}
-      placeholder={field.kind === 'hardwareCount' ? '#' : '___'}
-      value={values[key] ?? ''}
-      onChange={(e) => setValue(key, e.target.value)}
-    />
-  )
-}
-
-/** Store-agnostic field control. `scope` namespaces keys per case instance. */
+/** Store-agnostic field control, rendered as a labeled row (fields-at-top layout).
+ *  `scope` namespaces keys per case instance (or per site for repeat:site atoms). */
 export function FieldRenderer({
   field,
   values,
@@ -334,6 +148,31 @@ export function FieldRenderer({
   } else if (field.kind === 'toothNumber') {
     isGroup = true
     control = <ToothPicker value={values[k(field.id)] ?? ''} onChange={(v) => setValue(k(field.id), v)} />
+  } else if (field.kind === 'optionalClause') {
+    isGroup = true
+    const key = k(field.id)
+    const v = values[key] ?? '' // '' undecided | 'on' include | 'omit' exclude
+    control = (
+      <div className="chips">
+        <button
+          type="button"
+          aria-pressed={v === 'on'}
+          className={'chip' + (v === 'on' ? ' on' : '')}
+          onClick={() => setValue(key, v === 'on' ? '' : 'on')}
+        >
+          <span className="ck">✓</span>
+          Include
+        </button>
+        <button
+          type="button"
+          aria-pressed={v === 'omit'}
+          className={'chip' + (v === 'omit' ? ' on' : '')}
+          onClick={() => setValue(key, v === 'omit' ? '' : 'omit')}
+        >
+          Omit
+        </button>
+      </div>
+    )
   } else if (field.kind === 'enumText') {
     isGroup = true
     const opts = field.options ?? []
@@ -368,7 +207,7 @@ export function FieldRenderer({
           <input
             className="f-input"
             autoFocus
-            aria-label={`${field.label} (custom)`}
+            aria-label={`${deriveLabel(field)} (custom)`}
             placeholder="custom value"
             value={v.trim()}
             onChange={(e) => setValue(key, e.target.value)}
@@ -384,7 +223,7 @@ export function FieldRenderer({
           className="f-input mono"
           style={{ width: 90 }}
           placeholder="Ø"
-          aria-label={`${field.label} diameter`}
+          aria-label={`${deriveLabel(field)} diameter`}
           inputMode="decimal"
           value={values[k(`${field.id}:d`)] ?? ''}
           onChange={(e) => setValue(k(`${field.id}:d`), e.target.value)}
@@ -394,7 +233,7 @@ export function FieldRenderer({
           className="f-input mono"
           style={{ width: 90 }}
           placeholder="length"
-          aria-label={`${field.label} length`}
+          aria-label={`${deriveLabel(field)} length`}
           inputMode="decimal"
           value={values[k(`${field.id}:l`)] ?? ''}
           onChange={(e) => setValue(k(`${field.id}:l`), e.target.value)}
@@ -411,7 +250,7 @@ export function FieldRenderer({
         <button type="button" aria-label="decrease" onClick={() => set((isNaN(v) ? 0 : v) - 1)}>–</button>
         <input
           inputMode="numeric"
-          aria-label={field.label}
+          aria-label={deriveLabel(field)}
           value={values[key] ?? ''}
           onChange={(e) => setValue(key, e.target.value)}
         />
@@ -436,10 +275,11 @@ export function FieldRenderer({
   return (
     <div className="field" role={isGroup ? 'group' : undefined} aria-labelledby={isGroup ? labelId : undefined}>
       <label className="f-label" id={labelId} htmlFor={isGroup ? undefined : inputId}>
-        {field.label}
+        {deriveLabel(field)}
         {field.unit ? <span className="f-hint">{field.unit}</span> : null}
       </label>
       {control}
+      {field.context && <div className="f-context">{field.context}</div>}
     </div>
   )
 }

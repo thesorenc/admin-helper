@@ -31,22 +31,34 @@ Day of surgery:
 
 [TEMPLATE: generic pre-op instructions. Confirm against your protocol and the specific procedure.]`
 
+/** Per-site (independent) values for one tooth: the `site:<tooth>::` keys, prefix stripped. */
+function siteValues(scoped: Record<string, string>, tooth: string): Record<string, string> {
+  const prefix = `site:${tooth}::`
+  const out: Record<string, string> = {}
+  for (const [k, v] of Object.entries(scoped)) {
+    if (k.startsWith(prefix)) out[k.slice(prefix.length)] = v
+  }
+  return out
+}
+
 /**
- * Assemble one atom's op-note snippet. For a `repeat: tooth` atom, the preamble (anesthesia,
- * etc., before the PER-TOOTH delimiter) is stated once, then the per-tooth body is emitted
- * once per selected tooth (each tooth substituted into that block's tooth fields). Non-repeat
- * atoms assemble unchanged.
+ * Assemble one atom's op-note snippet. For a `repeat: tooth | site` atom, the preamble
+ * (before `=== PER TOOTH ===`) and closure (after `=== END PER TOOTH ===`) are stated once,
+ * and the per-item body is emitted once per selected tooth. 'tooth' shares field values
+ * across teeth (identical technique); 'site' reads independent per-tooth values (each
+ * fixture differs). Non-repeat atoms assemble unchanged.
  */
-function assembleAtomBody(
+export function assembleAtomBody(
   op: ParsedComponent,
   scoped: Record<string, string>,
 ): { text: string; flags: FlagAnnotation[]; smartlinks: string[] } {
-  if (op.repeat !== 'tooth') {
+  if (op.repeat !== 'tooth' && op.repeat !== 'site') {
     const r = assemble(op, scoped, { surfaceFlags: true })
     return { text: r.text, flags: r.flags, smartlinks: r.smartlinks }
   }
+  const independent = op.repeat === 'site'
   const teeth = parseTeethList(scoped[TEETH_KEY])
-  const [preTemplate, toothTemplate] = splitRepeatTemplate(op.bodyTemplate)
+  const [preTemplate, itemTemplate, closeTemplate] = splitRepeatTemplate(op.bodyTemplate)
   const hasPreamble = preTemplate.trim().length > 0
   const flags: FlagAnnotation[] = []
   const smartlinks = new Set<string>()
@@ -64,22 +76,38 @@ function assembleAtomBody(
   // No teeth chosen yet → emit one block with the raw [#__] placeholder as a reminder.
   const list = teeth.length ? teeth : ['']
   list.forEach((tooth, i) => {
-    // When there's no preamble, the first tooth block carries the reviewer-flag banner.
+    // When there's no preamble, the first item block carries the reviewer-flag banner.
     const keepFlags = !hasPreamble && i === 0
-    const toothComp = subComponent(op, toothTemplate, { keepFlags })
-    const tv = { ...scoped }
-    for (const f of toothComp.fields) if (f.kind === 'toothNumber') tv[f.id] = tooth
-    const tr = assemble(toothComp, tv, { surfaceFlags: keepFlags })
+    const itemComp = subComponent(op, itemTemplate, { keepFlags })
+    const tv = independent ? siteValues(scoped, tooth) : { ...scoped }
+    for (const f of itemComp.fields) if (f.kind === 'toothNumber') tv[f.id] = tooth
+    const tr = assemble(itemComp, tv, { surfaceFlags: keepFlags })
     if (keepFlags) flags.push(...tr.flags)
     tr.smartlinks.forEach((s) => smartlinks.add(s))
     if (tr.text.trim()) parts.push(tr.text.trim())
   })
 
-  return { text: parts.join('\n\n'), flags, smartlinks: [...smartlinks] }
+  if (closeTemplate.trim()) {
+    const cr = assemble(subComponent(op, closeTemplate, { keepFlags: false }), scoped, {
+      surfaceFlags: false,
+    })
+    cr.smartlinks.forEach((s) => smartlinks.add(s))
+    if (cr.text.trim()) parts.push(cr.text.trim())
+  }
+
+  // Strip the snippet's own "PROCEDURE:" line and authoring [TEMPLATE: ...] markers so the
+  // preview and the op note read identically (the document names the block by heading).
+  const text = parts
+    .join('\n\n')
+    .trim()
+    .replace(/^PROCEDURE:.*\n+/i, '')
+    .replace(/\[TEMPLATE:[^\]]*\]\s*/gi, '')
+    .trim()
+  return { text, flags, smartlinks: [...smartlinks] }
 }
 
 /** Field values for one instance, with the `${instanceId}::` prefix stripped. */
-function scopedValues(values: Record<string, string>, instanceId: string): Record<string, string> {
+export function scopedValues(values: Record<string, string>, instanceId: string): Record<string, string> {
   const prefix = `${instanceId}::`
   const out: Record<string, string> = {}
   for (const [key, val] of Object.entries(values)) {
@@ -144,14 +172,8 @@ export function buildDocument(
       const r = assembleAtomBody(op, scopedValues(values, item.instanceId))
       flags.push(...r.flags)
       r.smartlinks.forEach((s) => smartlinks.add(s))
-      // Strip the snippet's own "PROCEDURE:" line and the authoring [TEMPLATE: ...] markers;
-      // the "Name - #n" heading names it and the markers shouldn't paste into the EMR.
-      const snippet = r.text
-        .trim()
-        .replace(/^PROCEDURE:.*\n+/i, '')
-        .replace(/\[TEMPLATE:[^\]]*\]\s*/gi, '')
-        .trim()
-      blocks.push(`${proc.name} - #${idx + 1}\n${'-'.repeat(40)}\n${snippet}`)
+      // The "Name - #n" heading names the block; the snippet is already PROCEDURE-/marker-stripped.
+      blocks.push(`${proc.name} - #${idx + 1}\n${'-'.repeat(40)}\n${r.text.trim()}`)
     })
   } else {
     // Post-op / Rx: dedupe linked component ids across the case.

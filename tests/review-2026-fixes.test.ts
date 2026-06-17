@@ -1,9 +1,10 @@
 import { describe, it, expect } from 'vitest'
-import { PROCEDURES } from '../src/lib/procedures'
+import { PROCEDURES, atomById } from '../src/lib/procedures'
 import { buildDocument } from '../src/lib/caseAssembly'
 import { defaultEncounter, localISODate, ANESTHESIA, AIRWAY } from '../src/lib/encounter'
 import { consolidateRx, isSuppressedToken, stripSuppressedLines } from '../src/lib/rx'
-import { TEETH_KEY } from '../src/lib/repeat'
+import { deriveLabel } from '../src/lib/fieldLabel'
+import { TEETH_KEY, siteKey } from '../src/lib/repeat'
 import type { CaseItem } from '../src/state/useCaseStore'
 
 const enc = defaultEncounter()
@@ -119,6 +120,46 @@ describe('arthroscopy consolidation', () => {
     expect(ids.has('tmj-arthroscopic-discopexy')).toBe(false)
     expect(ids.has('tmj-arthroscopy-lysis-lavage-prf')).toBe(false)
     expect(ids.has('tmj-arthrocentesis')).toBe(true) // kept separate
+  })
+})
+
+describe('per-site repeat (implants) — independent values + closure once', () => {
+  const impl = PROCEDURES.find((p) => p.id === 'dental-implant')!
+  const op = atomById('dental-implant')!
+  const systemField = op.fields.find((f) => f.kind === 'text' && /\[system\]/.test(f.raw))!
+  const platformField = op.fields.find((f) => f.kind === 'enumText' && /Platform/i.test(f.raw))!
+
+  it('each site keeps its OWN values (not shared)', () => {
+    const values: Record<string, string> = {
+      [`a::${TEETH_KEY}`]: '8, 9',
+      [`a::${siteKey('8', systemField.id)}`]: 'Straumann',
+      [`a::${siteKey('9', systemField.id)}`]: 'Nobel',
+    }
+    const { text } = buildDocument([{ instanceId: 'a', procedureId: impl.id }], values, enc, 'opnote')
+    expect(text).toContain('At site #8, the Straumann implant system')
+    expect(text).toContain('At site #9, the Nobel implant system')
+  })
+
+  it('anesthesia/incision and closure are stated once across sites', () => {
+    const { text } = buildDocument(
+      [{ instanceId: 'a', procedureId: impl.id }],
+      { [`a::${TEETH_KEY}`]: '8, 9, 13' },
+      enc,
+      'opnote',
+    )
+    expect((text.match(/Crestal incisions were made/g) ?? []).length).toBe(1)
+    expect((text.match(/were reapproximated and closed/g) ?? []).length).toBe(1)
+  })
+
+  it('named enum: the "Platform:" label never leaks into the note; the option does', () => {
+    const values: Record<string, string> = {
+      [`a::${TEETH_KEY}`]: '8',
+      [`a::${siteKey('8', platformField.id)}`]: 'RP',
+    }
+    const { text } = buildDocument([{ instanceId: 'a', procedureId: impl.id }], values, enc, 'opnote')
+    expect(text).toContain('A RP ') // chosen option rendered
+    expect(text).not.toContain('Platform:') // the label is metadata, not prose
+    expect(deriveLabel(platformField)).toBe('Platform')
   })
 })
 

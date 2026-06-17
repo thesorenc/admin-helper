@@ -80,10 +80,12 @@ export interface ParsedComponent {
   rawBody: string
   /** For atomic procedures: links to the documents this procedure contributes to. */
   links?: { pullSheet?: string; postop?: string[]; rx?: string[]; est?: string }
-  /** When set, the body is rendered/assembled once per selected item: 'tooth' drives a
-   *  dental-chart selection and emits one block per tooth (anesthesia/preamble stated
-   *  once, before the PER-TOOTH delimiter). From frontmatter `repeat: tooth`. */
-  repeat?: 'tooth'
+  /** When set, the body is rendered/assembled once per selected tooth (dental chart).
+   *  Preamble (before `=== PER TOOTH ===`) and closure (after `=== END PER TOOTH ===`)
+   *  are stated once. From frontmatter `repeat: tooth | site`:
+   *   - 'tooth': fields are SHARED across teeth (same technique each tooth — extractions).
+   *   - 'site': fields are INDEPENDENT per tooth/site (each fixture differs — implants). */
+  repeat?: 'tooth' | 'site'
   /** Non-fatal parse warnings (unrecognized tokens, etc.). */
   warnings: string[]
 }

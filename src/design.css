@@ -158,7 +158,18 @@ button{font-family:inherit;cursor:pointer}
 /* Per-tooth atom: the chart is the primary control, shown above the prose. */
 .tooth-chart-field{margin:0 0 14px}
 .tooth-chart-field>.f-label{display:block;margin:0 0 7px}
-.per-tooth-divider{margin:14px 0 10px;padding-top:11px;border-top:1px dashed var(--line);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--faint)}
+
+/* Fields-at-top editor: labeled inputs stacked above a live note preview. */
+.atom-editor{display:flex;flex-direction:column;gap:15px}
+.fields-form{display:flex;flex-direction:column;gap:14px}
+.f-context{font-size:11.5px;line-height:1.5;color:var(--faint);font-style:italic}
+.repeat-sec{display:flex;flex-direction:column;gap:12px}
+.repeat-sec>h5{margin:0;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--faint)}
+.repeat-sec.site-card{background:var(--surface-2);border:1px solid var(--line);border-radius:11px;padding:12px 13px}
+.repeat-empty{font-size:12.5px;color:var(--muted);margin:0}
+.note-preview{border-top:1px dashed var(--line);padding-top:13px}
+.np-label{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--faint);margin-bottom:8px}
+.np-doc{font-size:13px;line-height:1.65;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:13px 14px;color:var(--ink-2)}
 
 /* Inline controls flow with the prose at the text baseline. Unfilled blanks read as
    a dotted underline; filled ones get the accent treatment so the note scans at a glance. */

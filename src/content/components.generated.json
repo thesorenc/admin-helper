@@ -3647,7 +3647,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Dexamethasone 4 mg PO taper - ___ mg on POD0, [X] mg on POD1, [X] mg on POD2 - #[X] tabs, 0 refills (taper per surgeon preference)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "post-op-rx:measurement:1",
@@ -3655,7 +3656,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Dexamethasone 4 mg PO taper - [X] mg on POD0, ___ mg on POD1, [X] mg on POD2 - #[X] tabs, 0 refills (taper per surgeon preference)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "post-op-rx:measurement:2",
@@ -3663,7 +3665,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Dexamethasone 4 mg PO taper - [X] mg on POD0, [X] mg on POD1, ___ mg on POD2 - #[X] tabs, 0 refills (taper per surgeon preference)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "post-op-rx:measurement:3",
@@ -3671,7 +3674,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Dexamethasone 4 mg PO taper - [X] mg on POD0, [X] mg on POD1, [X] mg on POD2 - #___ tabs, 0 refills (taper per surgeon preference)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       }
     ],
     "flags": [],

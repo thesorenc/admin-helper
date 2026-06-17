@@ -2,11 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { ATOMS } from '@/content'
 import { PROCEDURES, procedureById, atomById } from '@/lib/procedures'
 import { buildDocument, type DocKind } from '@/lib/caseAssembly'
-import { splitTemplate, type TemplateSegment } from '@/lib/segments'
-import { parseTeethList, splitRepeatTemplate, TEETH_KEY } from '@/lib/repeat'
 import { makeSearch } from '@/lib/search'
-import { InlineField, ToothPicker } from '@/components/FieldRenderer'
-import type { ParsedComponent } from '@/lib/types'
+import { AtomEditor } from '@/components/AtomEditor'
 import { useCaseStore } from '@/state/useCaseStore'
 import { OutputPanel } from '@/components/OutputPanel'
 import { RxPanel } from '@/components/RxPanel'
@@ -17,107 +14,6 @@ function abbrev(title: string): string {
   const words = title.replace(/[^A-Za-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean)
   if (words.length >= 2) return (words[0][0] + words[1][0]).toUpperCase()
   return (words[0] ?? title).slice(0, 3).toUpperCase()
-}
-
-/** Render an atom's prose segments as inline fill-in-the-blank controls. In the per-tooth
- *  body, tooth placeholders are shown as a static chip (the chart above drives them). */
-function Segments({
-  segs,
-  scope,
-  values,
-  setValue,
-  staticTooth,
-}: {
-  segs: TemplateSegment[]
-  scope: string
-  values: Record<string, string>
-  setValue: (key: string, value: string) => void
-  staticTooth?: string
-}) {
-  return (
-    <>
-      {segs.map((seg, i) => {
-        if (seg.type === 'text') {
-          return (
-            <span className="prose-text" key={i}>
-              {seg.text}
-            </span>
-          )
-        }
-        if (seg.type === 'include') {
-          return (
-            <span className="prose-include" key={i}>
-              [{seg.dotPhrase}]
-            </span>
-          )
-        }
-        if (staticTooth !== undefined && seg.field.kind === 'toothNumber') {
-          return (
-            <span className="ipill on" key={seg.field.id} aria-hidden="true">
-              #{staticTooth}
-            </span>
-          )
-        }
-        return (
-          <InlineField
-            key={seg.field.id}
-            field={seg.field}
-            values={values}
-            setValue={setValue}
-            scope={scope}
-          />
-        )
-      })}
-    </>
-  )
-}
-
-/** A `repeat: tooth` atom: a prominent dental chart drives the selection, the preamble
- *  (anesthesia) is filled once, and the per-tooth body previews one block per tooth. */
-function PerToothBlock({
-  op,
-  instanceId,
-  values,
-  setValue,
-}: {
-  op: ParsedComponent
-  instanceId: string
-  values: Record<string, string>
-  setValue: (key: string, value: string) => void
-}) {
-  const teethKey = `${instanceId}::${TEETH_KEY}`
-  const teeth = parseTeethList(values[teethKey])
-  const [preT, toothT] = splitRepeatTemplate(op.bodyTemplate)
-  const preSegs = splitTemplate(preT, op.fields)
-  const toothSegs = splitTemplate(toothT, op.fields)
-  const staticTooth = teeth.length === 1 ? teeth[0] : teeth.length ? 'each' : '___'
-  return (
-    <>
-      <div className="tooth-chart-field">
-        <label className="f-label">Teeth</label>
-        <ToothPicker value={values[teethKey] ?? ''} onChange={(v) => setValue(teethKey, v)} />
-      </div>
-      {preT.trim() && (
-        <div className="prose-fill">
-          <Segments segs={preSegs} scope={instanceId} values={values} setValue={setValue} />
-        </div>
-      )}
-      <div className="per-tooth-divider">
-        {teeth.length
-          ? `Repeated per tooth — ${teeth.length} block${teeth.length > 1 ? 's' : ''}: #${teeth.join(', #')}`
-          : 'Select teeth above to generate one block per tooth.'}
-      </div>
-      <div className="prose-fill">
-        <Segments
-          segs={toothSegs}
-          scope={instanceId}
-          values={values}
-          setValue={setValue}
-          staticTooth={staticTooth}
-        />
-      </div>
-    </>
-  )
 }
 
 const TABS: { kind: DocKind; label: string }[] = [
@@ -235,12 +131,9 @@ export function CaseBuilder() {
             items.map((item, idx) => {
               const proc = procedureById(item.procedureId)
               if (!proc) return null
-              // Render the atom's own op-note snippet (atomById, matching assembly) as
-              // live prose: each placeholder becomes an inline fill-in-the-blank, so the
-              // surrounding sentence is the context. Filling the form == drafting the note.
+              // The atom is edited as a fields-at-top form with a live note preview below
+              // (AtomEditor); repeat atoms surface the dental chart as the primary control.
               const op = atomById(proc.opTemplateId)
-              const segments = op ? splitTemplate(op.bodyTemplate, op.fields) : []
-              const hasFields = segments.some((s) => s.type === 'field')
               return (
                 <div className="proc-block" key={item.instanceId}>
                   <div className="proc-block-head">
@@ -261,29 +154,15 @@ export function CaseBuilder() {
                     </button>
                   </div>
                   <div className="proc-block-body">
-                    {op?.repeat === 'tooth' ? (
-                      <PerToothBlock
+                    {op ? (
+                      <AtomEditor
                         op={op}
                         instanceId={item.instanceId}
                         values={values}
                         setValue={setValue}
                       />
                     ) : (
-                      <>
-                        <div className="prose-fill">
-                          <Segments
-                            segs={segments}
-                            scope={item.instanceId}
-                            values={values}
-                            setValue={setValue}
-                          />
-                        </div>
-                        {!hasFields && (
-                          <p style={{ color: 'var(--muted)', fontSize: 13, margin: '8px 0 0' }}>
-                            No fillable variables — ready as-is.
-                          </p>
-                        )}
-                      </>
+                      <p style={{ color: 'var(--muted)', fontSize: 13 }}>Template unavailable.</p>
                     )}
                   </div>
                 </div>

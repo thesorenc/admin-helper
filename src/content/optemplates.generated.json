@@ -65,7 +65,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "The incision measured approximately ___ cm in length.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "aicbg-left-to-maxilla:hardwareCount:1",
@@ -144,7 +145,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "Alveoloplasty was completed with approximately ___ mm of alveolar reduction anterior and [X] mm of alveolar reduction posterior.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:1",
@@ -152,7 +154,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "Alveoloplasty was completed with approximately [X] mm of alveolar reduction anterior and ___ mm of alveolar reduction posterior.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:1",
@@ -188,7 +191,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:3",
@@ -196,7 +200,8 @@
         "raw": "[X]",
         "label": "Measurement (degrees)",
         "context": "___ degrees, H: [X])",
-        "unit": "degrees"
+        "unit": "degrees",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:4",
@@ -204,7 +209,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:2",
@@ -240,7 +246,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:6",
@@ -248,7 +255,8 @@
         "raw": "[X]",
         "label": "Measurement (degrees)",
         "context": "___ degrees, H: [X])",
-        "unit": "degrees"
+        "unit": "degrees",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:7",
@@ -256,7 +264,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:3",
@@ -292,7 +301,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "RP [diameter]x[length] mm, ___ Ncm, (MUA: [X] degrees, H: [X])",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:9",
@@ -300,7 +310,8 @@
         "raw": "[X]",
         "label": "Measurement (degrees)",
         "context": "___ degrees, H: [X])",
-        "unit": "degrees"
+        "unit": "degrees",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:10",
@@ -308,7 +319,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:4",
@@ -344,7 +356,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:12",
@@ -352,7 +365,8 @@
         "raw": "[X]",
         "label": "Measurement (degrees)",
         "context": "___ degrees, H: [X])",
-        "unit": "degrees"
+        "unit": "degrees",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:13",
@@ -360,7 +374,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:5",
@@ -396,7 +411,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:15",
@@ -404,7 +420,8 @@
         "raw": "[X]",
         "label": "Measurement (degrees)",
         "context": "___ degrees, H: [X])",
-        "unit": "degrees"
+        "unit": "degrees",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:16",
@@ -412,7 +429,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:6",
@@ -448,7 +466,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:18",
@@ -456,7 +475,8 @@
         "raw": "[X]",
         "label": "Measurement (degrees)",
         "context": "___ degrees, H: [X])",
-        "unit": "degrees"
+        "unit": "degrees",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:19",
@@ -464,7 +484,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:side:1",
@@ -517,7 +538,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "A pineapple bur under copious irrigation was then used to complete maxillary alveoloplasty in x2 quadrants (___ mm reduction).",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:10",
@@ -609,7 +631,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "A Nobel Active [diameter]x[length]mm implant was then placed and torqued to ___ Ncm.",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:8",
@@ -666,7 +689,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "Biomet [diameter]x[length]mm implant was then placed and torqued to ___ Ncm.",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:17",
@@ -723,7 +747,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "Prior to implant placement a Helitape membrane was tucked within the osteotomy and the final [diameter]x[length]mm implant was placed within the osteotomy and t",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:18",
@@ -787,7 +812,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "A Nobel Active [diameter]x[length]mm implant was then placed and torqued to ___ Ncm.",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:hardwareDim:14",
@@ -844,7 +870,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "Biomet [diameter]x[length]mm implant was then placed and torqued to ___ Ncm at site [#__].",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:21",
@@ -943,7 +970,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "A Nobel Active [diameter]x[length]mm implant was then placed and torqued to ___ Ncm.",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:25",
@@ -1012,7 +1040,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:28",
@@ -1020,7 +1049,8 @@
         "raw": "[X]",
         "label": "Measurement (degrees)",
         "context": "___ degrees, H: [X])",
-        "unit": "degrees"
+        "unit": "degrees",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:29",
@@ -1028,7 +1058,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:29",
@@ -1064,7 +1095,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:31",
@@ -1072,7 +1104,8 @@
         "raw": "[X]",
         "label": "Measurement (degrees)",
         "context": "___ degrees, H: [X])",
-        "unit": "degrees"
+        "unit": "degrees",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:32",
@@ -1080,7 +1113,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:30",
@@ -1116,7 +1150,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "RP [diameter]x[length] mm, ___ Ncm, (MUA: [X] degrees, H: [X])",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:34",
@@ -1124,7 +1159,8 @@
         "raw": "[X]",
         "label": "Measurement (degrees)",
         "context": "___ degrees, H: [X])",
-        "unit": "degrees"
+        "unit": "degrees",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:35",
@@ -1132,7 +1168,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:31",
@@ -1168,7 +1205,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:37",
@@ -1176,7 +1214,8 @@
         "raw": "[X]",
         "label": "Measurement (degrees)",
         "context": "___ degrees, H: [X])",
-        "unit": "degrees"
+        "unit": "degrees",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:38",
@@ -1184,7 +1223,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:32",
@@ -1220,7 +1260,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:40",
@@ -1228,7 +1269,8 @@
         "raw": "[X]",
         "label": "Measurement (degrees)",
         "context": "___ degrees, H: [X])",
-        "unit": "degrees"
+        "unit": "degrees",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:41",
@@ -1236,7 +1278,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:toothNumber:33",
@@ -1272,7 +1315,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "RP [diameter]x[length] mm, ___ Ncm (MUA: [X] degrees, H: [X])",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:43",
@@ -1280,7 +1324,8 @@
         "raw": "[X]",
         "label": "Measurement (degrees)",
         "context": "___ degrees, H: [X])",
-        "unit": "degrees"
+        "unit": "degrees",
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:measurement:44",
@@ -1288,7 +1333,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "all-on-6-maxilla:side:4",
@@ -1360,7 +1406,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "The superior joint space was insufflated with ___ cc of Lactated Ringer's.",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "arthroscopy-bilateral-with-prf-injection:measurement:1",
@@ -1368,7 +1415,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "The joint was heavily lavaged with ___ cc of Lactated Ringer's solution.",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "arthroscopy-bilateral-with-prf-injection:measurement:2",
@@ -1376,7 +1424,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "Upon completion of lysis and lavage, ___ cc of the prepared i-PRF was injected directly into the retrodiscal tissues and superior joint space under visualizatio",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "arthroscopy-bilateral-with-prf-injection:measurement:3",
@@ -1384,7 +1433,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "Attention was then directed to the left TMJ, where an identical procedure was performed utilizing insufflation, introduction of the arthroscope, establishment o",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "arthroscopy-bilateral-with-prf-injection:measurement:4",
@@ -1392,7 +1442,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "The remaining ___ cc of i-PRF was injected into the left superior joint space.",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       }
     ],
     "flags": [],
@@ -1462,7 +1513,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "The [R/L] TMJ superior joint space was insufflated with ___ cc of Lactated Ringer's solution using a 27-gauge needle, which returned freely, confirming intracap",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "arthroscopy-unilateral-with-prf-injection:measurement:1",
@@ -1470,7 +1522,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "The joint was copiously lavaged with approximately ___ cc of Lactated Ringer’s solution.",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "arthroscopy-unilateral-with-prf-injection:measurement:2",
@@ -1478,7 +1531,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "___ cc) was injected directly into the superior joint space and retrodiscal tissues under direct visualization.",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       }
     ],
     "flags": [],
@@ -1542,7 +1596,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "___ cc serous fluid aspirated through a pinpoint dehiscence and sent for pathology.",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "bone-graft-maxilla-anterior:measurement:1",
@@ -1550,7 +1605,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "___ cc DBX putty placed in the defect, covered with a [X] cm x [X] cm Duragen collagen membrane.",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "bone-graft-maxilla-anterior:measurement:2",
@@ -1558,7 +1614,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "[X] cc DBX putty placed in the defect, covered with a ___ cm x [X] cm Duragen collagen membrane.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "bone-graft-maxilla-anterior:measurement:3",
@@ -1566,7 +1623,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "[X] cc DBX putty placed in the defect, covered with a [X] cm x ___ cm Duragen collagen membrane.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "bone-graft-maxilla-anterior:measurement:4",
@@ -1574,7 +1632,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "18g sharp on 10cc syringe was used to aspirate through existing pinpoint dehiscence to withdraw ___ cc of serous fluid for sample to be sent to pathology.",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "bone-graft-maxilla-anterior:toothNumber:2",
@@ -1596,7 +1655,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "___ cc of DBX putty ([REF], [exp]) placed in cyst.",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "bone-graft-maxilla-anterior:text:0",
@@ -1618,7 +1678,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ cm x [X] cm Duragen collagen membrane placed over cyst.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "bone-graft-maxilla-anterior:measurement:7",
@@ -1626,7 +1687,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "[X] cm x ___ cm Duragen collagen membrane placed over cyst.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       }
     ],
     "flags": [],
@@ -1695,7 +1757,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "A KLS [#]-hole, [profile] thick, dog bone was then fixated using [#] ___-mm and [#] [length]-mm monocortical screws to the proximal segment.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "bsso:hardwareCount:4",
@@ -1710,7 +1773,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "A KLS [#]-hole, [profile] thick, dog bone was then fixated using [#] [length]-mm and [#] ___-mm monocortical screws to the proximal segment.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "bsso:hardwareCount:5",
@@ -1725,7 +1789,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "Care was then taken to position the proximal segment superiorly into the glenoid fossa and to align the inferior border of the proximal segment with the distal ",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "bsso:text:2",
@@ -1777,7 +1842,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "CO2 ablative laser skin resurfacing completed with Deep (___ mJ, [X]s Repeat delay, [X] Hz) and Active ([X] mJ, [X] Hz, [X]s Repeat delay) Fx handpieces",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:1",
@@ -1785,7 +1851,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "CO2 ablative laser skin resurfacing completed with Deep ([X] mJ, ___s Repeat delay, [X] Hz) and Active ([X] mJ, [X] Hz, [X]s Repeat delay) Fx handpieces",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:2",
@@ -1793,7 +1860,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "CO2 ablative laser skin resurfacing completed with Deep ([X] mJ, [X]s Repeat delay, ___ Hz) and Active ([X] mJ, [X] Hz, [X]s Repeat delay) Fx handpieces",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:3",
@@ -1801,7 +1869,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "CO2 ablative laser skin resurfacing completed with Deep ([X] mJ, [X]s Repeat delay, [X] Hz) and Active (___ mJ, [X] Hz, [X]s Repeat delay) Fx handpieces",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:4",
@@ -1809,7 +1878,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "CO2 ablative laser skin resurfacing completed with Deep ([X] mJ, [X]s Repeat delay, [X] Hz) and Active ([X] mJ, ___ Hz, [X]s Repeat delay) Fx handpieces",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:5",
@@ -1817,7 +1887,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "CO2 ablative laser skin resurfacing completed with Deep ([X] mJ, [X]s Repeat delay, [X] Hz) and Active ([X] mJ, [X] Hz, ___s Repeat delay) Fx handpieces",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:6",
@@ -1825,7 +1896,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ mJ",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:7",
@@ -1833,7 +1905,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ Hz",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:8",
@@ -1841,7 +1914,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ seconds",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:9",
@@ -1849,7 +1923,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ mJ",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:10",
@@ -1857,7 +1932,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ Hz",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:measurement:11",
@@ -1865,7 +1941,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ seconds",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "endobrow-blepharoplasty-lowers-canthopexy-lsr:text:0",
@@ -1923,7 +2000,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "[R/L] [mandible/maxilla] cystic lesion at [site/tooth #] measuring approximately ___ cm, [well-corticated/expansile], associated with [impacted tooth #__ / no t",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "excision-cyst-right-mandible:enumText:1",
@@ -2055,7 +2133,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "Attention was directed to the [R/L] [mandibular/maxillary] [vestibule/alveolus] where the site was anesthetized with ___ cc of [1%/2%] lidocaine with 1:100,000 ",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "excision-cyst-right-mandible:enumText:10",
@@ -2314,7 +2393,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "This preparation was injected into the subcutaneous plane of the face and neck (~___ cc).",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:1",
@@ -2322,7 +2402,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "The Vaser system was then applied using the 2.5mm 3 ring ultrasonic trocar to liposculpt the left, right and midline of the submental area at ___% on the Vaser ",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:2",
@@ -2330,7 +2411,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "The time spent with the Vaser was measured to be ___ seconds bilaterally on right and left of midline, and then [X] seconds subcutaneously in midline and [X] se",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:3",
@@ -2338,7 +2420,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "The time spent with the Vaser was measured to be [X] seconds bilaterally on right and left of midline, and then ___ seconds subcutaneously in midline and [X] se",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:4",
@@ -2346,7 +2429,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "The time spent with the Vaser was measured to be [X] seconds bilaterally on right and left of midline, and then [X] seconds subcutaneously in midline and ___ se",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:5",
@@ -2354,7 +2438,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ mJ",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:6",
@@ -2362,7 +2447,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ Hz",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:7",
@@ -2370,7 +2456,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___%",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:8",
@@ -2378,7 +2465,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ mJ",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:9",
@@ -2386,7 +2474,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ Hz",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:10",
@@ -2394,7 +2483,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ for periorbital area, [X] for remainder of the face",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:11",
@@ -2402,7 +2492,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "[X] for periorbital area, ___ for remainder of the face",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:12",
@@ -2410,7 +2501,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___%",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:measurement:13",
@@ -2418,7 +2510,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "A total of ___ cc was injected.",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "facelift-and-lsr-and-lip-filler:text:0",
@@ -2523,7 +2616,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "An incision was planned greater than ___ cm from the inferior border of the mandible and 4cc of 1% lidocaine with 1:100,000 epinephrine was injected in a subder",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "incision-and-drainage-of-submandibular-abscess:measurement:1",
@@ -2531,7 +2625,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Next a ___ cm incision was made using a #15 blade at the planned position.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       }
     ],
     "flags": [],
@@ -2558,7 +2653,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "A lingual trough osteotomy was initiated with a 701 bur under copious irrigation, ___ mm from the adjacent teeth, establishing a cleavage plane for torus remova",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "mandibular-tori-removal-bilateral:text:0",
@@ -2592,7 +2688,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "This preparation was injected into the subcutaneous plane of the face and neck (~___ cc).",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:1",
@@ -2600,7 +2697,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "The Vaser system was then applied using the 2.5mm 3 ring ultrasonic trocar to liposculpt the left, right and midline of the submental area at ___% on the Vaser ",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:2",
@@ -2608,7 +2706,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ mJ for full-face",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:3",
@@ -2616,7 +2715,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Density ___%",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:4",
@@ -2624,7 +2724,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ Hz",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:5",
@@ -2632,7 +2733,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ mJ for peri-orbital area, [X] mJ at the remainder of the face",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:6",
@@ -2640,7 +2742,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "[X] mJ for peri-orbital area, ___ mJ at the remainder of the face",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:7",
@@ -2648,7 +2751,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Density ___%",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:measurement:8",
@@ -2656,7 +2760,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ Hz",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "minituck-blepharoplasty-lowers-lsr:text:0",
@@ -2838,7 +2943,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "Next a total of [#] ___-mm intermaxillary fixation (IMF) screws were placed into the mandible and maxilla with even distribution ([#] in the maxilla, [#] in the",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "orif-mandible-with-recon-bar:hardwareCount:3",
@@ -3166,7 +3272,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "A KLS [#]-hole [profile] plate was fixated using [#] ___-mm screws at the superior lateral orbital rim under copious irrigation.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:text:5",
@@ -3195,7 +3302,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "A KLS [profile] [#]-hole straight plate was secured to the rim with [#] ___-mm screws under copious irrigation.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:side:10",
@@ -3236,7 +3344,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "A KLS [profile] [#]-hole L-plate was fixated using [#] ___-mm screws at the zygomaxillary suture fracture.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:side:11",
@@ -3289,7 +3398,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "The [R/L] piriform rim was reduced and fixated with KLS [profile] [#]-hole L-plate and [#] ___-mm screws.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:side:13",
@@ -3330,7 +3440,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "The [R/L] piriform rim was reduced and fixated with KLS [profile] [#]-hole plate and [#] ___-mm screws.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:text:9",
@@ -3359,7 +3470,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "The nasofrontal junction fracture was fixated with a KLS [profile] [#]-hole Y-plate and [#] ___-mm screws under copious irrigation.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:side:14",
@@ -3445,7 +3557,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Attention then directed to the [R/L] orbital floor which had a defect measuring ___ x [X] mm.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:measurement:7",
@@ -3453,7 +3566,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "Attention then directed to the [R/L] orbital floor which had a defect measuring [X] x ___ mm.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "orif-noe-le-fort-zmc-orbit:side:17",
@@ -3523,7 +3637,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "Pre-formed Synthes orbital floor reconstruction plate placed across the defect and secured to the inferior orbital rim with [#] ___ mm self-drilling screws.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "orif-orbital-floor:measurement:1",
@@ -3531,7 +3646,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "Posterior stop identified at ___ mm from orbital rim.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "orif-orbital-floor:side:1",
@@ -3563,7 +3679,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "The posterior stop measured to be ___ mm from the orbital rim.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "orif-orbital-floor:hardwareCount:1",
@@ -3578,7 +3695,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "Once the plate was well-adapted across the orbital floor defect, perched on solid bone, and all orbital contents were elevated superiorly, the reconstructive pl",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       }
     ],
     "flags": [],
@@ -3605,7 +3723,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___ % orbital floor fracture with inferiorly displaced orbital content noted.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "orif-orbital-floor-custom:hardwareCount:0",
@@ -3620,7 +3739,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "Custom orbital implant placed as planned with [#]x ___mm screw fixation.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "orif-orbital-floor-custom:side:0",
@@ -3659,7 +3779,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "After verifying that the plate was completely seated in the anterior, medial and lateral bony walls, [#]x ___mm screw was used to secure the plate onto the orbi",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "orif-orbital-floor-custom:side:2",
@@ -3823,7 +3944,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "[R/L] ZF suture exposed via lateral brow incision and fixated with a Synthes [#]-hole plate and ___ mm screws.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "orif-zmc:side:2",
@@ -3850,7 +3972,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "[R/L] ZM suture and anterior maxillary sinus fracture exposed via maxillary vestibular incision and fixated with a Synthes [profile] profile L-plate and ___ mm ",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "orif-zmc:side:3",
@@ -3908,7 +4031,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "The ZF suture was fixated using a synthes curvilinear [profile] profile [#]-hole plate, secured with self-drilling ___ mm screws.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "orif-zmc:text:2",
@@ -3930,7 +4054,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "The ZM was fixated with a Synthes [profile] profile L-plate, secured with [#] self drilling ___ mm screws.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       }
     ],
     "flags": [],
@@ -3957,7 +4082,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "Left and right conchal bowls and helices accessed via postauricular incisions with ___ mm skin excisions.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:1",
@@ -3965,7 +4091,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "Kidney bean-shaped conchal cartilage excised bilaterally, preserving ___ mm conchal depth.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:2",
@@ -3973,7 +4100,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Final ear measurements ___-[X]-[X] bilaterally.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:3",
@@ -3981,7 +4109,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Final ear measurements [X]-___-[X] bilaterally.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:4",
@@ -3989,7 +4118,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Final ear measurements [X]-[X]-___ bilaterally.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:5",
@@ -3997,7 +4127,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "Utilizing a surgical marking pen, the proposed postauricular incision was designed with a ___ mm width skin excision.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:6",
@@ -4005,7 +4136,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "The kidney bean shaped piece of cartilage planned for excision was marked as well, measuring ___ mm of conchal cartilage preserved.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:7",
@@ -4013,7 +4145,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "A kidney bean shaped piece of conchal bowl cartilage, ___ mm in width, was excised ensuring [X] mm of conchal depth was remaining.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:8",
@@ -4021,7 +4154,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "A kidney bean shaped piece of conchal bowl cartilage, [X] mm in width, was excised ensuring ___ mm of conchal depth was remaining.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:9",
@@ -4029,7 +4163,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "The skin was closed with running 5-0 plain gut suture, leaving ___ mm at the apex for drainage.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:10",
@@ -4037,7 +4172,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___-[X]-[X]",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:11",
@@ -4045,7 +4181,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "[X]-___-[X]",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:12",
@@ -4053,7 +4190,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "[X]-[X]-___",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:13",
@@ -4061,7 +4199,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "___-[X]-[X]",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:14",
@@ -4069,7 +4208,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "[X]-___-[X]",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "otoplasty:measurement:15",
@@ -4077,7 +4217,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "[X]-[X]-___",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       }
     ],
     "flags": [],
@@ -4118,7 +4259,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Hyrax appliance activated with ___ turns ([X] mm expansion) to confirm symmetric expansion and then reduced back to [X] turns ([X] mm).",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "sarpe:measurement:1",
@@ -4126,7 +4268,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "Hyrax appliance activated with [X] turns (___ mm expansion) to confirm symmetric expansion and then reduced back to [X] turns ([X] mm).",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "sarpe:measurement:2",
@@ -4134,7 +4277,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Hyrax appliance activated with [X] turns ([X] mm expansion) to confirm symmetric expansion and then reduced back to ___ turns ([X] mm).",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "sarpe:measurement:3",
@@ -4142,7 +4286,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "Hyrax appliance activated with [X] turns ([X] mm expansion) to confirm symmetric expansion and then reduced back to [X] turns (___ mm).",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "sarpe:toothNumber:2",
@@ -4178,7 +4323,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "The Hyrax appliance was then activated with ___ turns ([X] mm of expansion).",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "sarpe:measurement:5",
@@ -4186,7 +4332,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "The Hyrax appliance was then activated with [X] turns (___ mm of expansion).",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "sarpe:measurement:6",
@@ -4194,7 +4341,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "The appliance was then reduced back ___ turns (leaving a total of [X] mm expansion).",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "sarpe:measurement:7",
@@ -4202,7 +4350,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "The appliance was then reduced back [X] turns (leaving a total of ___ mm expansion).",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "sarpe:measurement:8",
@@ -4210,7 +4359,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "The segments were confirmed to be moving equally and independently with the same turning algorithm previously noted, leaving a total of ___ turns activated at t",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "sarpe:measurement:9",
@@ -4218,7 +4368,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "The segments were confirmed to be moving equally and independently with the same turning algorithm previously noted, leaving a total of [X] turns activated at t",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       }
     ],
     "flags": [],
@@ -4281,7 +4432,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "Maxilla advanced ___ mm and impacted [X] mm.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "single-piece-lefort-i-and-bsso-and-genioplasty:measurement:1",
@@ -4289,7 +4441,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "Maxilla advanced [X] mm and impacted ___ mm.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "single-piece-lefort-i-and-bsso-and-genioplasty:measurement:2",
@@ -4297,7 +4450,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "Mandible set back ___ mm.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "single-piece-lefort-i-and-bsso-and-genioplasty:measurement:3",
@@ -4305,7 +4459,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "Chin advanced ___ mm.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       }
     ],
     "flags": [],
@@ -4372,7 +4527,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "[diameter]x[length] (___ Ncm, [X] degree)",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:1",
@@ -4380,7 +4536,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "[diameter]x[length] ([X] Ncm, ___ degree)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:toothNumber:1",
@@ -4416,7 +4573,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "[diameter]x[length] (___ Ncm, [X] degree)",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:3",
@@ -4424,7 +4582,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "[diameter]x[length] ([X] Ncm, ___ degree)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:toothNumber:2",
@@ -4460,7 +4619,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "[diameter]x[length] (___ Ncm, [X] degree)",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:5",
@@ -4468,7 +4628,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "[diameter]x[length] ([X] Ncm, ___ degree)",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:toothNumber:3",
@@ -4504,7 +4665,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "[diameter]x[length] (___ Ncm, [X] degree) [CONFIRM — 2026-06-14: #29 is listed as 3.",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:7",
@@ -4512,7 +4674,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "[diameter]x[length] ([X] Ncm, ___ degree) [CONFIRM — 2026-06-14: #29 is listed as 3.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:side:1",
@@ -4628,7 +4791,8 @@
         "raw": "[length]",
         "label": "Measurement",
         "context": "The subperiosteal implant was then secured to the pre-drilled maxilla with ___ and [length] monocortical screws alternating from left to right at various length",
-        "unit": null
+        "unit": null,
+        "hint": "length"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:9",
@@ -4636,7 +4800,8 @@
         "raw": "[length]",
         "label": "Measurement",
         "context": "The subperiosteal implant was then secured to the pre-drilled maxilla with [length] and ___ monocortical screws alternating from left to right at various length",
-        "unit": null
+        "unit": null,
+        "hint": "length"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:text:0",
@@ -4731,7 +4896,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "[diameter]x[length]mm implant placed and torqued to ___ Ncm.",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:toothNumber:5",
@@ -4788,7 +4954,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "[diameter]x[length]mm implant placed and torqued to ___ Ncm.",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:toothNumber:6",
@@ -4845,7 +5012,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "[diameter]x[length]mm placed and torqued to great than ___ Ncm.",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:13",
@@ -4853,7 +5021,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Bone profiling was performed, a ___ degree MUA was placed and check to ensure implant profile lined up to palatal cusps of upper posterior teeth.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:toothNumber:7",
@@ -4910,7 +5079,8 @@
         "raw": "[X]",
         "label": "Measurement (Ncm)",
         "context": "A [diameter]x[length]mm implant placed and torqued to greater than ___ Ncm.",
-        "unit": "Ncm"
+        "unit": "Ncm",
+        "hint": "X"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:measurement:15",
@@ -4918,7 +5088,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "A ___ degree MUA was placed and checked to ensure implant profile lined up to palatal cusps of upper posterior teeth.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "subperiosteal-maxilla-and-all-on-x-mandible:text:2",
@@ -4985,7 +5156,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "Local anesthesia in the form of 2% lidocaine with 1:100,000 epi was injected to the bilateral maxilla and mandible as local infiltrates and [#] total ___-mm IMF",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:hardwareCount:4",
@@ -5014,7 +5186,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "The custom cut guide was inserted inferiorly, ensuring complete freedom from soft tissue entrapment, and the guide was secured to the lateral ramus with [#] ___",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:hardwareCount:7",
@@ -5029,7 +5202,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "After confirmation of complete seating, the guide was fixated with [#] ___-mm screws in the predictive holes.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:hardwareCount:8",
@@ -5044,7 +5218,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "The fossa component was then secured with [#] ___-mm screws.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "tjr-with-custom-stryker-tmj-concepts:hardwareCount:9",
@@ -5099,7 +5274,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "Biomet [size] fossa, Narrow [size] condylar component secured with [#] ___-mm screws.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "tjr-with-stock-biomet:text:2",
@@ -5121,7 +5297,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "Biomet [size] fossa fixated with [#] ___-mm monocortical screws; Narrow [size] condylar component secured with [#] [length]-mm screws.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "tjr-with-stock-biomet:text:3",
@@ -5143,7 +5320,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "Biomet [size] fossa fixated with [#] [length]-mm monocortical screws; Narrow [size] condylar component secured with [#] ___-mm screws.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "tjr-with-stock-biomet:hardwareCount:3",
@@ -5158,7 +5336,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "[#] ___-mm IMF screws were placed in the mandible, and [#] [length]-mm IMF screws were placed in the maxilla in an evenly distributed manner.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "tjr-with-stock-biomet:hardwareCount:4",
@@ -5173,7 +5352,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "[#] [length]-mm IMF screws were placed in the mandible, and [#] ___-mm IMF screws were placed in the maxilla in an evenly distributed manner.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "tjr-with-stock-biomet:measurement:5",
@@ -5181,7 +5361,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "The condylar cutting guide was placed and ___ mm of condylar height was removed using the Piezo as planned.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "tjr-with-stock-biomet:text:4",
@@ -5203,7 +5384,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "It was then secured with [#] ___-mm screws.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "tjr-with-stock-biomet:measurement:7",
@@ -5211,7 +5393,8 @@
         "raw": "[X]",
         "label": "Measurement (mm)",
         "context": "The condylar cutting guide was placed and ___ mm of condylar height was removed using the Piezo as planned.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "X"
       },
       {
         "id": "tjr-with-stock-biomet:text:5",
@@ -5233,7 +5416,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "It was then secured with [#] ___-mm screws.",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "tjr-with-stock-biomet:text:6",
@@ -5255,7 +5439,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "Attention was then directed to the right lateral ramus where a right Biomet [size] narrow condylar component was then placed through the right neck incision and",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "tjr-with-stock-biomet:text:7",
@@ -5277,7 +5462,8 @@
         "raw": "[length]",
         "label": "Measurement (mm)",
         "context": "A left Biomet [size] narrow condylar component was then placed through the left neck incision and seated into the fossa component, which was secured with [#] __",
-        "unit": "mm"
+        "unit": "mm",
+        "hint": "length"
       },
       {
         "id": "tjr-with-stock-biomet:measurement:11",
@@ -5285,7 +5471,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Approximately ___ cm block of fat was harvested and placed in saline.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "tjr-with-stock-biomet:measurement:12",
@@ -5293,7 +5480,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "___ cc of abdominal fat was then placed through the right endaural incision around the prosthesis.",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       },
       {
         "id": "tjr-with-stock-biomet:measurement:13",
@@ -5301,7 +5489,8 @@
         "raw": "[X]",
         "label": "Measurement (cc)",
         "context": "___ cc of abdominal fat was then placed through the left endaural incision around the prosthesis.",
-        "unit": "cc"
+        "unit": "cc",
+        "hint": "X"
       }
     ],
     "flags": [],
@@ -5340,7 +5529,8 @@
         "raw": "[X]",
         "label": "Measurement",
         "context": "Sialolith ___ cm delivered atraumatically along with additional smaller sialoliths.",
-        "unit": null
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "transoral-sialolithotomy-left-whartons-duct:side:1",

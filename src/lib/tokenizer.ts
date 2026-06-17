@@ -219,23 +219,41 @@ function classifyBrackets(brackets: BracketSpan[], full: string, warnings: strin
       tokens.push({ start: b.start, end: b.end, kind: 'hardwareCount', raw })
       continue
     }
-    if (/^(X|length)$/i.test(trimmed)) {
+    // Named count: "[# holes]", "[# screws]" — the name is the field label; only the
+    // number reaches the note ("[# holes]-hole plate" -> "4-hole plate").
+    if (/^#\s+[A-Za-z][A-Za-z ]*$/.test(trimmed)) {
+      tokens.push({ start: b.start, end: b.end, kind: 'hardwareCount', raw, hint: trimmed.replace(/^#\s+/, '') })
+      continue
+    }
+    // Measurement: bare [X]/[length], OR any single-word placeholder immediately followed
+    // by a unit (e.g. "[torque] Ncm", "[volume] cc"). The name gives a clean field label
+    // ("Torque (Ncm)") while keeping the numeric input + unit chip. A single word with NO
+    // trailing unit falls through to a plain named text field below.
+    if (/^[A-Za-z][A-Za-z]*$/.test(trimmed)) {
       const after = full.slice(b.end)
       const m = after.match(UNIT_LOOKAHEAD)
-      tokens.push({
-        start: b.start,
-        end: b.end,
-        kind: 'measurement',
-        raw,
-        unit: m ? normalizeUnit(m[1]) : null,
-      })
-      continue
+      if (m || /^(X|length)$/i.test(trimmed)) {
+        tokens.push({
+          start: b.start,
+          end: b.end,
+          kind: 'measurement',
+          raw,
+          unit: m ? normalizeUnit(m[1]) : null,
+          hint: trimmed,
+        })
+        continue
+      }
     }
     // Slash-choice enum: [soft / puree / liquid], [nasal/oral], [1%/2%], and longer
     // multi-word clinical choices ([a transoral vestibular incision / a transcervical
     // approach]). The UI renders short option sets as chips and long ones as a dropdown.
-    if (trimmed.includes('/')) {
-      const opts = trimmed.split('/').map((o) => o.trim())
+    // Optional "Name:" label prefix on a choice list ([Platform: RP / NP / WP]) gives the
+    // field a clean label in the fields-at-top UI. Only the option list after the colon is
+    // split into choices; the leading name never reaches the assembled note.
+    const enumNamed = trimmed.match(/^([A-Za-z][A-Za-z0-9 ]*?):\s*(.+)$/)
+    const enumBody = enumNamed ? enumNamed[2].trim() : trimmed
+    if (enumBody.includes('/')) {
+      const opts = enumBody.split('/').map((o) => o.trim())
       // Reject things that look like a slash but are NOT a choice list: dates
       // ([10/12/2024], [12/2024]), unit fractions ([mg/dL]), and connectives ([and/or]).
       // A 2-option numeric pair IS kept (e.g. bur sizes [701/702], suture [3-0/4-0]).
@@ -246,8 +264,8 @@ function classifyBrackets(brackets: BracketSpan[], full: string, warnings: strin
       // phrase like "inferior alveolar/mental nerve block" is not mis-split into bogus
       // choices. Short single-word options ([nasal/oral], [1%/2%]) keep bare slashes.
       const multiWord = opts.some((o) => /\s/.test(o))
-      const rawSlashes = (trimmed.match(/\//g) || []).length
-      const spacedSlashes = (trimmed.match(/\s\/\s/g) || []).length
+      const rawSlashes = (enumBody.match(/\//g) || []).length
+      const spacedSlashes = (enumBody.match(/\s\/\s/g) || []).length
       const slashSpacingOk = !multiWord || rawSlashes === spacedSlashes
       const ok =
         opts.length >= 2 &&
@@ -260,7 +278,7 @@ function classifyBrackets(brackets: BracketSpan[], full: string, warnings: strin
         // a nested placeholder ([ ] / __) — those carry their own fillable content.
         opts.every((o) => /^[^:[\]]{1,70}$/.test(o) && o.length > 0 && !o.includes('__'))
       if (ok) {
-        tokens.push({ start: b.start, end: b.end, kind: 'enumText', raw, options: opts, hint: trimmed })
+        tokens.push({ start: b.start, end: b.end, kind: 'enumText', raw, options: opts, hint: enumBody })
         continue
       }
     }
