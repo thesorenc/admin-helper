@@ -1,8 +1,10 @@
-import type { FlagAnnotation } from './types'
+import type { FlagAnnotation, ParsedComponent } from './types'
 import { assemble } from './assembler'
 import { normalizePlainText } from './normalize'
 import { procedureById, contentById, atomById } from './procedures'
 import { operativeHeader, type Encounter } from './encounter'
+import { consolidateRx, isSuppressedToken, stripSuppressedLines } from './rx'
+import { parseTeethList, splitRepeatTemplate, subComponent, TEETH_KEY } from './repeat'
 import type { CaseItem } from '@/state/useCaseStore'
 
 export type DocKind = 'opnote' | 'preop' | 'postop' | 'rx' | 'pullsheet'
@@ -28,6 +30,53 @@ Day of surgery:
 - Do not wear makeup, contact lenses, or nail polish.
 
 [TEMPLATE: generic pre-op instructions. Confirm against your protocol and the specific procedure.]`
+
+/**
+ * Assemble one atom's op-note snippet. For a `repeat: tooth` atom, the preamble (anesthesia,
+ * etc., before the PER-TOOTH delimiter) is stated once, then the per-tooth body is emitted
+ * once per selected tooth (each tooth substituted into that block's tooth fields). Non-repeat
+ * atoms assemble unchanged.
+ */
+function assembleAtomBody(
+  op: ParsedComponent,
+  scoped: Record<string, string>,
+): { text: string; flags: FlagAnnotation[]; smartlinks: string[] } {
+  if (op.repeat !== 'tooth') {
+    const r = assemble(op, scoped, { surfaceFlags: true })
+    return { text: r.text, flags: r.flags, smartlinks: r.smartlinks }
+  }
+  const teeth = parseTeethList(scoped[TEETH_KEY])
+  const [preTemplate, toothTemplate] = splitRepeatTemplate(op.bodyTemplate)
+  const hasPreamble = preTemplate.trim().length > 0
+  const flags: FlagAnnotation[] = []
+  const smartlinks = new Set<string>()
+  const parts: string[] = []
+
+  if (hasPreamble) {
+    const pr = assemble(subComponent(op, preTemplate, { keepFlags: true }), scoped, {
+      surfaceFlags: true,
+    })
+    flags.push(...pr.flags)
+    pr.smartlinks.forEach((s) => smartlinks.add(s))
+    if (pr.text.trim()) parts.push(pr.text.trim())
+  }
+
+  // No teeth chosen yet → emit one block with the raw [#__] placeholder as a reminder.
+  const list = teeth.length ? teeth : ['']
+  list.forEach((tooth, i) => {
+    // When there's no preamble, the first tooth block carries the reviewer-flag banner.
+    const keepFlags = !hasPreamble && i === 0
+    const toothComp = subComponent(op, toothTemplate, { keepFlags })
+    const tv = { ...scoped }
+    for (const f of toothComp.fields) if (f.kind === 'toothNumber') tv[f.id] = tooth
+    const tr = assemble(toothComp, tv, { surfaceFlags: keepFlags })
+    if (keepFlags) flags.push(...tr.flags)
+    tr.smartlinks.forEach((s) => smartlinks.add(s))
+    if (tr.text.trim()) parts.push(tr.text.trim())
+  })
+
+  return { text: parts.join('\n\n'), flags, smartlinks: [...smartlinks] }
+}
 
 /** Field values for one instance, with the `${instanceId}::` prefix stripped. */
 function scopedValues(values: Record<string, string>, instanceId: string): Record<string, string> {
@@ -89,10 +138,10 @@ export function buildDocument(
       // never substitute a full standalone note for the composable atom body.
       const op = proc && atomById(proc.opTemplateId)
       if (!proc || !op) return
-      const r = assemble(op, scopedValues(values, item.instanceId), {
-        includeMissingBlock: true,
-        surfaceFlags: true,
-      })
+      // No "Missing / to confirm" footer: unfilled fields already show in-place as their
+      // raw [#__]/[token] in the note body, which is the natural reminder. The UNRESOLVED
+      // reviewer-flag banner (surfaceFlags) stays for patient safety.
+      const r = assembleAtomBody(op, scopedValues(values, item.instanceId))
       flags.push(...r.flags)
       r.smartlinks.forEach((s) => smartlinks.add(s))
       // Strip the snippet's own "PROCEDURE:" line and the authoring [TEMPLATE: ...] markers;
@@ -117,6 +166,7 @@ export function buildDocument(
         if (!ids.includes(id)) ids.push(id)
       }
     }
+    const partTexts: string[] = []
     for (const id of ids) {
       const comp = contentById(id)
       if (!comp) continue
@@ -128,8 +178,24 @@ export function buildDocument(
         surfaceFlags: true,
       })
       flags.push(...r.flags)
-      r.smartlinks.forEach((s) => smartlinks.add(s))
-      blocks.push(r.text.trim())
+      // Drop EHR-autofill tokens from the "Left for the EHR to fill" list.
+      r.smartlinks.forEach((s) => {
+        if (!isSuppressedToken(s)) smartlinks.add(s)
+      })
+      partTexts.push(r.text.trim())
+    }
+    if (kind === 'rx') {
+      // One consolidated prescription across all procedures: a single "Rx:" header with
+      // unique orders, instead of "Rx: …list… Rx: …list…" repeated per procedure.
+      const merged = consolidateRx(partTexts)
+      if (merged) blocks.push(merged)
+    } else {
+      // Post-op handouts stay per-component (each is a distinct patient handout), just
+      // with the EHR-autofill tokens stripped.
+      for (const t of partTexts) {
+        const cleaned = stripSuppressedLines(t)
+        if (cleaned) blocks.push(cleaned)
+      }
     }
     // Patient-safety gate: a procedure with no linked post-op handout must NEVER
     // silently produce a blank page that could be printed and handed to a patient.

@@ -101,11 +101,6 @@ export function Library() {
               <div className="config-hero" style={{ marginBottom: 12 }}>
                 <h1 style={{ fontSize: 18 }}>{selected.title}</h1>
                 {selected.description && <p style={{ fontSize: 13 }}>{selected.description}</p>}
-                {selected.dotPhrase && (
-                  <p style={{ fontSize: 12, color: 'var(--faint)' }}>
-                    EHR Auto Text: <span style={{ fontFamily: 'var(--mono)' }}>{selected.dotPhrase}</span>
-                  </p>
-                )}
               </div>
               <pre className="emr">{selected.rawBody}</pre>
             </div>

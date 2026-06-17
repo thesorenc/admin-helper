@@ -18,7 +18,7 @@ function parseTeeth(v: string): Set<number> {
 // Teeth in DOM/tab order: upper arch (1..16) then lower arch (32..17).
 const TOOTH_ORDER = [...UPPER, ...LOWER]
 
-function ToothPicker({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+export function ToothPicker({ value, onChange }: { value: string; onChange: (v: string) => void }) {
   const sel = parseTeeth(value)
   const btnRefs = useRef<(HTMLButtonElement | null)[]>([])
   const emit = (s: Set<number>) => onChange([...s].sort((a, b) => a - b).join(', '))

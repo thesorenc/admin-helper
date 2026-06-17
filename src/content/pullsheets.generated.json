@@ -57,6 +57,25 @@
     "warnings": []
   },
   {
+    "id": "pull-sheet-anterior-maxilla-bone-graft",
+    "title": "Pull Sheet - Anterior Maxilla Bone Graft",
+    "description": "Anterior maxilla particulate graft (defect/cleft, piriform rim) intraoral setup",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Anterior Maxilla Bone Graft.md",
+    "bodyTemplate": "PULL SHEET: Anterior Maxilla Bone Graft\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation or GA per plan; oral or nasal RAE if GA\n- 1% lidocaine with 1:100,000 epi for infiltration\n- Peridex rinse pre-op\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex), throat pack if GA\n- Dental syringe / 27 G short and long needles\n- Particulate allograft (DBX putty / DBM), have on hand\n- Collagen or PTFE membrane; tacks/pins if GBR planned\n- Specimen cup + formalin if cystic lining anticipated for path\n- Hemostatics: Gelfoam, Surgicel\n\nSETS\n- Oral surgery / dentoalveolar set\n- Periosteal elevators (Molt 9, Prichard), curettes (Lucas), retractors\n- Implant handpiece + irrigation if recipient bed prep planned\n- In room, do not open: plating/tack module\n\nCONSUMABLES\n- #15 blade x1-2\n- Bovie / needle-tip cautery\n- Round burs; irrigation saline\n- Particulate allograft (DBX putty / DBM)\n- Collagen / PTFE membrane; resorbable tacks\n- Gelfoam / Surgicel\n\nCLOSURE\n- 3-0 Vicryl (SH) and/or 3-0 Monocryl; interrupted + horizontal mattress for watertight closure\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Anterior Maxilla Bone Graft\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation or GA per plan; oral or nasal RAE if GA\n- 1% lidocaine with 1:100,000 epi for infiltration\n- Peridex rinse pre-op\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex), throat pack if GA\n- Dental syringe / 27 G short and long needles\n- Particulate allograft (DBX putty / DBM), have on hand\n- Collagen or PTFE membrane; tacks/pins if GBR planned\n- Specimen cup + formalin if cystic lining anticipated for path\n- Hemostatics: Gelfoam, Surgicel\n\nSETS\n- Oral surgery / dentoalveolar set\n- Periosteal elevators (Molt 9, Prichard), curettes (Lucas), retractors\n- Implant handpiece + irrigation if recipient bed prep planned\n- In room, do not open: plating/tack module\n\nCONSUMABLES\n- #15 blade x1-2\n- Bovie / needle-tip cautery\n- Round burs; irrigation saline\n- Particulate allograft (DBX putty / DBM)\n- Collagen / PTFE membrane; resorbable tacks\n- Gelfoam / Surgicel\n\nCLOSURE\n- 3-0 Vicryl (SH) and/or 3-0 Monocryl; interrupted + horizontal mattress for watertight closure\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
     "id": "pull-sheet-arthroscopy",
     "title": "Pull Sheet - Arthroscopy",
     "description": "TMJ arthroscopy (lysis/lavage, PRF) OR setup",
@@ -73,6 +92,44 @@
     "smartlinks": [],
     "tags": [],
     "rawBody": "PULL SHEET: TMJ Arthroscopy\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Nasal RAE; secure tube to head wrap\n- 2 g Ancef upfront (1 g if small/pediatric)\n- 10 mg Decadron upfront\n- Supine, arms tucked, 90 degrees head to door\n- Conservative fluid resuscitation\n- 20 cc blood draw upfront for PRF\n\nNURSE / CIRCULATOR\n- Head wrap kit (blue towels, 1 inch and 3 inch silk tape, mastisol, Tegaderm x2)\n- Electrical shaver (shave in room)\n- PRF centrifuge (2000 RPM x 8 min)\n- Ophthalmic betadine x2 (prep head to clavicle, include tube)\n- No Foley; earwick x1 (cut in half)\n- 0.3 mg epinephrine in 1 L LR pressure irrigation (on field)\n- Sterile IV tubing, 3-way stopcock (Luer-lock); RECK solution (ordered)\n\nSETS\n- McCain 1.8 mm arthroscopy system\n- Coblator (Reflux Ultra)\n- Soft tissue set; #3/#5 myringotomy suction\n- Setup: LR irrigation + sterile IV tubing + 3-way stopcock\n- In room, do not open: 1.9 arthroscopy system x2; meniscus mender set; 2-0 PDS (discopexy); #69 angled Beaver blade (non-disposable handle)\n\nCONSUMABLES\n- 3 cc syringe x2, 60 cc syringe x4\n- 1.5 inch 22 G needle x6, sharp 18 G needle x2\n- 1016 irrigation pouch/crani-drape x2, 1010 drape x2\n- Suction x2 (one Frazier tip, one to 1016 drape)\n- Jaw bra, fluffs (4x4)\n\nCLOSURE\n- 5-0 plain gut, steri-strips, mastisol\n\n[TEMPLATE: team pull sheet transcribed from prior cases; verify items and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-coronectomy",
+    "title": "Pull Sheet - Coronectomy",
+    "description": "Coronectomy (deliberate crown removal, root retention) clinic setup under local +/- sedation",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Coronectomy.md",
+    "bodyTemplate": "PULL SHEET: Coronectomy\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation per plan\n- 1% lidocaine with 1:100,000 epi; IAN block for mandibular teeth\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Surgical handpiece + irrigation; bite block\n\nSETS\n- Oral surgery / dentoalveolar set (periosteal elevator, elevators, forceps, curettes, retractors, rongeur)\n\nCONSUMABLES\n- #15 blade\n- 702 fissure bur + round bur; irrigation saline\n- Gelfoam if needed\n\nCLOSURE\n- 3-0 Vicryl (primary closure over retained root)\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Coronectomy\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation per plan\n- 1% lidocaine with 1:100,000 epi; IAN block for mandibular teeth\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Surgical handpiece + irrigation; bite block\n\nSETS\n- Oral surgery / dentoalveolar set (periosteal elevator, elevators, forceps, curettes, retractors, rongeur)\n\nCONSUMABLES\n- #15 blade\n- 702 fissure bur + round bur; irrigation saline\n- Gelfoam if needed\n\nCLOSURE\n- 3-0 Vicryl (primary closure over retained root)\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-dental-implant",
+    "title": "Pull Sheet - Dental Implant",
+    "description": "Single/multi-site dental implant placement (+/- abutment) setup",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Dental Implant.md",
+    "bodyTemplate": "PULL SHEET: Dental Implant\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation or GA per plan\n- 1% lidocaine with 1:100,000 epi; IAN block for mandibular sites\n- Peridex rinse pre-op\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Confirm implant system, sizes, REF/LOT staged; surgical guide if planned\n- Torque wrench; cover screws / healing abutments; multi-unit abutments if screw-retained\n- Document implant REF/LOT and torque value on chart\n\nSETS\n- Oral surgery / dentoalveolar set (periosteal elevator, retractors, curettes)\n- Implant surgical kit (drills, depth gauges, drivers, ratchet/torque wrench)\n- Implant handpiece (reduction) + irrigation tubing\n\nCONSUMABLES\n- #15 blade\n- Sequential implant drills (per system); round/profiling diamond bur\n- Sterile saline irrigation\n- Implant fixture(s) + cover screw / healing abutment + abutment\n- Gelfoam / collagen plug if needed\n\nCLOSURE\n- 3-0 Vicryl or 3-0 chromic gut\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Dental Implant\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation or GA per plan\n- 1% lidocaine with 1:100,000 epi; IAN block for mandibular sites\n- Peridex rinse pre-op\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Confirm implant system, sizes, REF/LOT staged; surgical guide if planned\n- Torque wrench; cover screws / healing abutments; multi-unit abutments if screw-retained\n- Document implant REF/LOT and torque value on chart\n\nSETS\n- Oral surgery / dentoalveolar set (periosteal elevator, retractors, curettes)\n- Implant surgical kit (drills, depth gauges, drivers, ratchet/torque wrench)\n- Implant handpiece (reduction) + irrigation tubing\n\nCONSUMABLES\n- #15 blade\n- Sequential implant drills (per system); round/profiling diamond bur\n- Sterile saline irrigation\n- Implant fixture(s) + cover screw / healing abutment + abutment\n- Gelfoam / collagen plug if needed\n\nCLOSURE\n- 3-0 Vicryl or 3-0 chromic gut\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
     "warnings": []
   },
   {
@@ -133,6 +190,63 @@
     "warnings": []
   },
   {
+    "id": "pull-sheet-excisional-biopsy",
+    "title": "Pull Sheet - Excisional Biopsy",
+    "description": "Excisional biopsy / soft-tissue excision setup (clinic or OR; specimen to permanent path)",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Excisional Biopsy.md",
+    "bodyTemplate": "PULL SHEET: Excisional Biopsy / Soft-tissue Excision\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local infiltration (lidocaine with epi) for clinic; MAC / GA per case if OR\n- Confirm and mark lesion side/site with surgeon before prep\n\nNURSE / CIRCULATOR\n- 2% lidocaine with 1:100,000 epinephrine; dental syringe / 27 G if intraoral\n- Standard prep (chlorhexidine or betadine per site)\n- Specimen cup with 10% formalin; specimen requisition for permanent pathology\n- Suture/marking material available for orientation tag\n- Available if frozen section ordered: saline-moist gauze / fresh specimen container (no formalin)\n\nSETS\n- Minor soft-tissue / oral surgery set (needle holder, Adson forceps, fine scissors, skin hook, hemostats)\n\nCONSUMABLES\n- #15 blade\n- Bovie / handheld cautery (needle or Colorado tip) for hemostasis\n- Sterile saline for irrigation\n- 4x4 gauze\n- Surgical marking pen\n\nCLOSURE\n- 3-0 / 4-0 chromic gut or Vicryl (interrupted or running)\n- Orientation marking suture (e.g., short tag at one margin) per surgeon\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Excisional Biopsy / Soft-tissue Excision\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local infiltration (lidocaine with epi) for clinic; MAC / GA per case if OR\n- Confirm and mark lesion side/site with surgeon before prep\n\nNURSE / CIRCULATOR\n- 2% lidocaine with 1:100,000 epinephrine; dental syringe / 27 G if intraoral\n- Standard prep (chlorhexidine or betadine per site)\n- Specimen cup with 10% formalin; specimen requisition for permanent pathology\n- Suture/marking material available for orientation tag\n- Available if frozen section ordered: saline-moist gauze / fresh specimen container (no formalin)\n\nSETS\n- Minor soft-tissue / oral surgery set (needle holder, Adson forceps, fine scissors, skin hook, hemostats)\n\nCONSUMABLES\n- #15 blade\n- Bovie / handheld cautery (needle or Colorado tip) for hemostasis\n- Sterile saline for irrigation\n- 4x4 gauze\n- Surgical marking pen\n\nCLOSURE\n- 3-0 / 4-0 chromic gut or Vicryl (interrupted or running)\n- Orientation marking suture (e.g., short tag at one margin) per surgeon\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-exposure-and-bonding",
+    "title": "Pull Sheet - Exposure and Bonding",
+    "description": "Surgical exposure of impacted tooth + ortho bracket/gold chain bonding setup",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Exposure and Bonding.md",
+    "bodyTemplate": "PULL SHEET: Exposure and Bonding (impacted tooth)\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation or GA per plan\n- 1% lidocaine with 1:100,000 epi; IAN block for mandibular sites\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Ortho bracket + gold chain (confirm with ortho); bonding kit\n- Etch, bonding agent, composite; air/water syringe for clean-etch-rinse-dry\n- Surgical handpiece + irrigation\n\nSETS\n- Oral surgery / dentoalveolar set (periosteal elevator, retractors, curettes, rongeur)\n\nCONSUMABLES\n- #15 blade\n- Round bur for bone removal; irrigation saline\n- Etchant, bonding resin, composite, microbrushes\n- Bracket + gold chain; ligature/wire to secure chain\n- Gelfoam if needed\n\nCLOSURE\n- 3-0 Vicryl or 3-0 chromic gut, leaving chain accessible for traction\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Exposure and Bonding (impacted tooth)\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation or GA per plan\n- 1% lidocaine with 1:100,000 epi; IAN block for mandibular sites\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Ortho bracket + gold chain (confirm with ortho); bonding kit\n- Etch, bonding agent, composite; air/water syringe for clean-etch-rinse-dry\n- Surgical handpiece + irrigation\n\nSETS\n- Oral surgery / dentoalveolar set (periosteal elevator, retractors, curettes, rongeur)\n\nCONSUMABLES\n- #15 blade\n- Round bur for bone removal; irrigation saline\n- Etchant, bonding resin, composite, microbrushes\n- Bracket + gold chain; ligature/wire to secure chain\n- Gelfoam if needed\n\nCLOSURE\n- 3-0 Vicryl or 3-0 chromic gut, leaving chain accessible for traction\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-extraction-simple",
+    "title": "Pull Sheet - Extraction (simple)",
+    "description": "Simple (non-surgical) extraction clinic setup under local +/- sedation",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Extraction (simple).md",
+    "bodyTemplate": "PULL SHEET: Extraction (simple)\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation per plan\n- 1% lidocaine with 1:100,000 epi; IAN block for mandibular teeth\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Gauze for pressure/hemostasis; specimen cup if tooth returned to patient\n\nSETS\n- Extraction set (periosteal elevator, straight + angled elevators, upper/lower forceps, curette)\n\nCONSUMABLES\n- Sterile saline irrigation\n- Gelfoam if needed\n\nCLOSURE\n- 3-0 chromic gut if closure indicated\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Extraction (simple)\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation per plan\n- 1% lidocaine with 1:100,000 epi; IAN block for mandibular teeth\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Gauze for pressure/hemostasis; specimen cup if tooth returned to patient\n\nSETS\n- Extraction set (periosteal elevator, straight + angled elevators, upper/lower forceps, curette)\n\nCONSUMABLES\n- Sterile saline irrigation\n- Gelfoam if needed\n\nCLOSURE\n- 3-0 chromic gut if closure indicated\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
     "id": "pull-sheet-hardware-exchange",
     "title": "Pull Sheet - Hardware Exchange",
     "description": "Mandibular hardware removal / exchange OR setup",
@@ -152,6 +266,63 @@
     "warnings": []
   },
   {
+    "id": "pull-sheet-incision-and-drainage",
+    "title": "Pull Sheet - Incision and Drainage",
+    "description": "Incision and drainage of fascial space infection setup (clinic or OR; culture + Penrose drain)",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Incision and Drainage.md",
+    "bodyTemplate": "PULL SHEET: Incision and Drainage\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local infiltration for clinic; GA (consider nasal/oral RAE) if OR for deep-space drainage and source-control extraction\n- Empiric IV antibiotics per surgeon (e.g., Unasyn) before/at incision\n- Confirm involved side and space with surgeon before prep\n\nNURSE / CIRCULATOR\n- 1% lidocaine with 1:100,000 epinephrine for subdermal infiltration\n- Standard skin prep (chlorhexidine) over and below mandibular border\n- Culture swab(s) for Gram stain and aerobic AND anaerobic culture and sensitivity\n- Sterile container for fluid aspirate if applicable\n- Sterile saline / bulb or piston syringe for copious irrigation\n- 4x4 gauze and dressing supplies for drain site\n\nSETS\n- Minor soft-tissue / oral surgery set\n- Curved hemostats (for blunt space exploration)\n- Extraction / exodontia set if offending tooth removed for source control\n\nCONSUMABLES\n- #15 blade\n- Bovie / cautery for hemostasis\n- 0.25 inch Penrose drain\n- Sterile saline for irrigation\n- Sterile 4x4 dressing\n\nCLOSURE\n- 2-0 nylon to secure Penrose drain to skin\n- Wound left open / loosely approximated for continued drainage per surgeon\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Incision and Drainage\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local infiltration for clinic; GA (consider nasal/oral RAE) if OR for deep-space drainage and source-control extraction\n- Empiric IV antibiotics per surgeon (e.g., Unasyn) before/at incision\n- Confirm involved side and space with surgeon before prep\n\nNURSE / CIRCULATOR\n- 1% lidocaine with 1:100,000 epinephrine for subdermal infiltration\n- Standard skin prep (chlorhexidine) over and below mandibular border\n- Culture swab(s) for Gram stain and aerobic AND anaerobic culture and sensitivity\n- Sterile container for fluid aspirate if applicable\n- Sterile saline / bulb or piston syringe for copious irrigation\n- 4x4 gauze and dressing supplies for drain site\n\nSETS\n- Minor soft-tissue / oral surgery set\n- Curved hemostats (for blunt space exploration)\n- Extraction / exodontia set if offending tooth removed for source control\n\nCONSUMABLES\n- #15 blade\n- Bovie / cautery for hemostasis\n- 0.25 inch Penrose drain\n- Sterile saline for irrigation\n- Sterile 4x4 dressing\n\nCLOSURE\n- 2-0 nylon to secure Penrose drain to skin\n- Wound left open / loosely approximated for continued drainage per surgeon\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-inferior-turbinoplasty",
+    "title": "Pull Sheet - Inferior Turbinoplasty",
+    "description": "Submucosal inferior turbinate reduction (microdebrider) + out-fracture OR setup",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Inferior Turbinoplasty.md",
+    "bodyTemplate": "PULL SHEET: Inferior Turbinoplasty\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Oral RAE; secure tube; throat pack\n- 10 mg Decadron upfront\n- Supine, arms tucked, 180 degrees (head to anesthesia) or 90 degrees per surgeon\n- Antibiotics per surgeon preference\n\nNURSE / CIRCULATOR\n- Afrin / oxymetazoline pledgets for topical decongestion\n- 2% lidocaine with 1:100,000 epinephrine; dental syringe / 27 G or nasal Luer needle\n- Headlight and/or 0 and 30 degree nasal endoscope (light cord, camera, tower)\n- Nasal suction; saline for irrigation/lens defog\n\nSETS\n- Nasal / septoplasty instrument set\n- Microdebrider system with turbinate blade (confirm tip size with surgeon)\n- Nasal speculum, Cottle elevator, Boies / Sayer elevator (out-fracture), bayonet forceps\n- In room, do not open: nasal packing (Merocel / Rapid Rhino)\n\nCONSUMABLES\n- 15 blade\n- Microdebrider blade (single use)\n- Afrin / pledgets, 4x4 gauze, mustache dressing / drip pad\n- Suction tubing, Frazier suction tip\n\nCLOSURE\n- Hemostasis with pledgets / packing as needed; no formal incision closure typically required\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Inferior Turbinoplasty\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Oral RAE; secure tube; throat pack\n- 10 mg Decadron upfront\n- Supine, arms tucked, 180 degrees (head to anesthesia) or 90 degrees per surgeon\n- Antibiotics per surgeon preference\n\nNURSE / CIRCULATOR\n- Afrin / oxymetazoline pledgets for topical decongestion\n- 2% lidocaine with 1:100,000 epinephrine; dental syringe / 27 G or nasal Luer needle\n- Headlight and/or 0 and 30 degree nasal endoscope (light cord, camera, tower)\n- Nasal suction; saline for irrigation/lens defog\n\nSETS\n- Nasal / septoplasty instrument set\n- Microdebrider system with turbinate blade (confirm tip size with surgeon)\n- Nasal speculum, Cottle elevator, Boies / Sayer elevator (out-fracture), bayonet forceps\n- In room, do not open: nasal packing (Merocel / Rapid Rhino)\n\nCONSUMABLES\n- 15 blade\n- Microdebrider blade (single use)\n- Afrin / pledgets, 4x4 gauze, mustache dressing / drip pad\n- Suction tubing, Frazier suction tip\n\nCLOSURE\n- Hemostasis with pledgets / packing as needed; no formal incision closure typically required\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-lip-filler",
+    "title": "Pull Sheet - Lip Filler",
+    "description": "Office HA lip filler injection setup (product, cannula/needle, topical)",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Lip Filler.md",
+    "bodyTemplate": "PULL SHEET: Lip Filler\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nCONSUMABLES\n- HA lip filler product (confirm brand/lot with surgeon, e.g. Juvederm Volbella XC or Restylane Kysse); record lot # and expiration\n- Blunt-tip cannulas (25 G / 27 G) and/or 30 G needles\n- Topical anesthetic (e.g. lidocaine/tetracaine cream) and/or product with integrated lidocaine\n- Chlorhexidine or alcohol prep pads, non-alcohol cleanser to remove makeup\n- 4x4 gauze, cotton-tip applicators\n- Ice packs / cold compress\n- Surgical marking pen; mirror for patient\n- Photography setup (pre/post)\n\nRESCUE / SAFETY\n- Hyaluronidase available on site (vascular occlusion rescue)\n- Aspirin / nitro paste per office protocol; emergency contact info\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Lip Filler\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nCONSUMABLES\n- HA lip filler product (confirm brand/lot with surgeon, e.g. Juvederm Volbella XC or Restylane Kysse); record lot # and expiration\n- Blunt-tip cannulas (25 G / 27 G) and/or 30 G needles\n- Topical anesthetic (e.g. lidocaine/tetracaine cream) and/or product with integrated lidocaine\n- Chlorhexidine or alcohol prep pads, non-alcohol cleanser to remove makeup\n- 4x4 gauze, cotton-tip applicators\n- Ice packs / cold compress\n- Surgical marking pen; mirror for patient\n- Photography setup (pre/post)\n\nRESCUE / SAFETY\n- Hyaluronidase available on site (vascular occlusion rescue)\n- Aspirin / nitro paste per office protocol; emergency contact info\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
     "id": "pull-sheet-mandibular-resection",
     "title": "Pull Sheet - Mandibular Resection",
     "description": "Marginal / segmental mandibulectomy + reconstruction plate OR setup",
@@ -168,6 +339,44 @@
     "smartlinks": [],
     "tags": [],
     "rawBody": "PULL SHEET: Mandibular Resection (Marginal / Segmental) + Reconstruction Plate\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Confirm airway plan: nasal RAE vs planned tracheostomy; secure tube to head wrap\n- 3 g Unasyn upfront, re-dose q2h\n- 1 g TXA upfront; 10 mg Decadron upfront\n- Supine, arms tucked, shoulder roll; 90 degrees head to door\n- Foley with temp probe; A-line for long resections; type and screen\n- Conservative fluid resuscitation; OG tube at end\n- Guiding elastics vs MMF per reconstruction plan\n\nNURSE / CIRCULATOR\n- Peridex intraoral off field (dental syringe / 27 G); chlorhexidine/betadine extraoral neck prep\n- 2% lidocaine with epi; 0.5% Marcaine with epi\n- Exparel 20 cc; BSS at end of case\n- SPECIMEN: fresh specimen for frozen-section margins; formalin for permanent; orient with marking sutures/tags per surgeon\n- Surgiflo, bone wax, Surgicel available\n- JP drain(s); neck dressing\n- If patient-specific (custom) plate planned: confirm plate and guides delivered and sterile before incision\n\nSETS\n- Head and neck set; tissue set\n- Mandible resection set; reciprocating and sagittal saw\n- Mandible plating module + reconstruction plate set (2.0 / 2.4 locking recon plate)\n- Custom / patient-specific plate and cutting guides if pre-planned\n- IMF set; Piezo; TPX\n- In room, do not open: chisel sets\n\nCONSUMABLES\n- Bovie (Colorado or needle tip, set 20/20)\n- Reciprocating saw blades; round and fissure burs\n- Reconstruction plate + locking screws (confirm system and screw lengths)\n- 24 G wire; medium and large Liga clips available\n- Specimen cups + formalin; frozen-section supplies\n\nCLOSURE\n- 3-0 Vicryl (SH); 3-0 chromic gut (SH) intraoral\n- 4-0 Monocryl subcuticular; 3-0 nylon or staples for neck\n\n[TEMPLATE: team pull sheet transcribed from prior cases; verify plate system, custom-plate delivery, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-mandibular-tori-removal",
+    "title": "Pull Sheet - Mandibular Tori Removal",
+    "description": "Bilateral/unilateral mandibular tori removal (lingual trough osteotomy) setup",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Mandibular Tori Removal.md",
+    "bodyTemplate": "PULL SHEET: Mandibular Tori Removal\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation or GA per plan\n- 1% lidocaine with 1:100,000 epi for lingual hydrodissection; IAN block(s)\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Malleable retractor to protect floor of mouth\n- Surgical handpiece + irrigation; bite block\n\nSETS\n- Oral surgery / dentoalveolar set (periosteal elevators, retractors, curettes)\n- Osteotome set (T-handle / mallet), hand rasp/bone file, rongeur\n\nCONSUMABLES\n- #15 blade\n- 701 fissure bur; round bur; irrigation saline\n- Bone wax / Gelfoam for hemostasis\n\nCLOSURE\n- 3-0 chromic gut, interrupted (primary lingual flap closure)\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Mandibular Tori Removal\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation or GA per plan\n- 1% lidocaine with 1:100,000 epi for lingual hydrodissection; IAN block(s)\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Malleable retractor to protect floor of mouth\n- Surgical handpiece + irrigation; bite block\n\nSETS\n- Oral surgery / dentoalveolar set (periosteal elevators, retractors, curettes)\n- Osteotome set (T-handle / mallet), hand rasp/bone file, rongeur\n\nCONSUMABLES\n- #15 blade\n- 701 fissure bur; round bur; irrigation saline\n- Bone wax / Gelfoam for hemostasis\n\nCLOSURE\n- 3-0 chromic gut, interrupted (primary lingual flap closure)\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-nasal-bone-reduction",
+    "title": "Pull Sheet - Nasal Bone Reduction",
+    "description": "Closed nasal bone reduction setup (Boies/Walsham/Asch forceps, splints, packing)",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Nasal Bone Reduction.md",
+    "bodyTemplate": "PULL SHEET: Nasal Bone Reduction (closed)\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- GA via oral RAE / IV sedation / local per case\n- Bilateral infraorbital and supratrochlear blocks: 1% lidocaine with 1:100,000 epinephrine\n\nNURSE / CIRCULATOR\n- Afrin (oxymetazoline) and pledgets for topical decongestion\n- 1% lidocaine with 1:100,000 epinephrine for blocks and local infiltration\n- Headlight; nasal speculum\n- Doyle (internal) nasal splints x2\n- Quarter-inch iodoform packing\n- External nasal splint (Denver / aluminum) and Steri-Strips\n\nSETS\n- Closed nasal reduction set: Boies elevator, Walsham forceps, Asch forceps\n- Nasal speculum, bayonet forceps, fine scissors\n\nCONSUMABLES\n- Cotton pledgets for decongestant\n- 2-0 silk for splint/packing fixation\n- 4x4 gauze; nasal drip pad\n- Sterile saline\n\nCLOSURE\n- No skin incision; 2-0 silk to secure Doyle splints to septum and packing to nostril\n- External Denver splint over Steri-Strips\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Nasal Bone Reduction (closed)\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- GA via oral RAE / IV sedation / local per case\n- Bilateral infraorbital and supratrochlear blocks: 1% lidocaine with 1:100,000 epinephrine\n\nNURSE / CIRCULATOR\n- Afrin (oxymetazoline) and pledgets for topical decongestion\n- 1% lidocaine with 1:100,000 epinephrine for blocks and local infiltration\n- Headlight; nasal speculum\n- Doyle (internal) nasal splints x2\n- Quarter-inch iodoform packing\n- External nasal splint (Denver / aluminum) and Steri-Strips\n\nSETS\n- Closed nasal reduction set: Boies elevator, Walsham forceps, Asch forceps\n- Nasal speculum, bayonet forceps, fine scissors\n\nCONSUMABLES\n- Cotton pledgets for decongestant\n- 2-0 silk for splint/packing fixation\n- 4x4 gauze; nasal drip pad\n- Sterile saline\n\nCLOSURE\n- No skin incision; 2-0 silk to secure Doyle splints to septum and packing to nostril\n- External Denver splint over Steri-Strips\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
     "warnings": []
   },
   {
@@ -206,6 +415,212 @@
     "smartlinks": [],
     "tags": [],
     "rawBody": "PULL SHEET: Orthognathic (Le Fort, BSSO, genioplasty)\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Nasal RAE; secure tube to head wrap\n- 3 g Unasyn upfront, re-dose q2h x3, then Ancef\n- 1 g TXA upfront; 10 mg Decadron upfront\n- Supine, arms tucked, 90 degrees head to door\n- Control MAP ~60-70 during Le Fort down-fracture (1-1.5 h into case); 15 min notice given\n- Conservative fluid resuscitation\n- In guiding elastics at end of case, no MMF planned (heavy elastics available)\n\nNURSE / CIRCULATOR\n- Anesthetize and Peridex off field with dental syringe / 27 G\n- 2% lidocaine with epi x6; 0.5% Marcaine with epi x2\n- Ophthalmic betadine x2 (prep head to clavicle)\n- 2.5% hydrocortisone cream for lip swelling\n- Foley with temp probe\n- Exparel 20 cc; BSS at end of case\n- Afrin-soaked pledgets on field\n- 20 cc 2% lidocaine with epi on field\n- 1 g TXA in 500 cc NS for irrigation on field; Peridex on field for splints\n- Jaw bra; heavy guiding elastics\n- In room, do not open: Surgiflo x2; BMP; bone putty x2\n\nSETS\n- Orthognathic set (KLS or Synthes)\n- Maxilla and mandible plating module\n- Custom hardware\n- TPX: thick and thin recip blades x4 each\n- Piezo with straight attachment\n- Tissue set; chisel sets\n- In room, do not open: mandible trauma set\n\nCONSUMABLES\n- Bovie (Colorado or needle tip, set 20/20)\n- Round diamond #2 and #4; 703; pineapple bur; power rasp\n- IMF screws / arch bars per plan\n- 24 G wire; bone hook\n\nCLOSURE\n- 3-0 Vicryl (SH); 3-0 chromic gut (SH); 4-0 Vicryl\n\n[TEMPLATE: team pull sheet transcribed from prior cases; verify hardware system, items, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-otoplasty",
+    "title": "Pull Sheet - Otoplasty",
+    "description": "Bilateral otoplasty (Mustarde + conchal setback/excision) OR setup",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Otoplasty.md",
+    "bodyTemplate": "PULL SHEET: Otoplasty\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Oral RAE; secure tube to head wrap; both ears in field\n- 10 mg Decadron upfront; antibiotics per surgeon preference\n- Supine, arms tucked, 180 degrees (head to anesthesia)\n- Prep and drape both ears + postauricular regions\n\nNURSE / CIRCULATOR\n- Surgical marking pen; ruler / calipers\n- 2% lidocaine with 1:100,000 epinephrine; control syringe / 27 G\n- 30 G hypodermic needles (cartilage marking / suture passing)\n- Bilateral case: confirm both ears prepped\n\nSETS\n- Plastics / fine soft tissue set (fine scissors, skin hooks, Adson-Brown forceps, needle drivers)\n- Caliper / ruler\n- Bipolar cautery; needle/Colorado tip Bovie\n\nCONSUMABLES\n- 15 blade\n- Bovie (needle or Colorado tip); bipolar\n- 30 G needles\n- Xeroform gauze, Blu-mousse / impression material (conchal bowl bolster)\n- Barton headwrap / head dressing, fluffs, Kerlix\n- Copious normal saline irrigation\n\nCLOSURE\n- 4-0 Mersilene (Mustarde antihelical mattress sutures)\n- 3-0 Vicryl (subperichondrial to mastoid fascia; subcutaneous)\n- 5-0 plain gut (running skin; leave apex open for drainage)\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Otoplasty\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Oral RAE; secure tube to head wrap; both ears in field\n- 10 mg Decadron upfront; antibiotics per surgeon preference\n- Supine, arms tucked, 180 degrees (head to anesthesia)\n- Prep and drape both ears + postauricular regions\n\nNURSE / CIRCULATOR\n- Surgical marking pen; ruler / calipers\n- 2% lidocaine with 1:100,000 epinephrine; control syringe / 27 G\n- 30 G hypodermic needles (cartilage marking / suture passing)\n- Bilateral case: confirm both ears prepped\n\nSETS\n- Plastics / fine soft tissue set (fine scissors, skin hooks, Adson-Brown forceps, needle drivers)\n- Caliper / ruler\n- Bipolar cautery; needle/Colorado tip Bovie\n\nCONSUMABLES\n- 15 blade\n- Bovie (needle or Colorado tip); bipolar\n- 30 G needles\n- Xeroform gauze, Blu-mousse / impression material (conchal bowl bolster)\n- Barton headwrap / head dressing, fluffs, Kerlix\n- Copious normal saline irrigation\n\nCLOSURE\n- 4-0 Mersilene (Mustarde antihelical mattress sutures)\n- 3-0 Vicryl (subperichondrial to mastoid fascia; subcutaneous)\n- 5-0 plain gut (running skin; leave apex open for drainage)\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-platysmaplasty",
+    "title": "Pull Sheet - Platysmaplasty",
+    "description": "Submental approach corset platysmaplasty OR setup",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Platysmaplasty.md",
+    "bodyTemplate": "PULL SHEET: Platysmaplasty\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Oral RAE; secure tube; head/neck in field, neck extended\n- 10 mg Decadron upfront; antibiotics per surgeon preference\n- Supine, arms tucked, shoulder roll, 180 degrees (head to anesthesia)\n- Prep and drape submental + anterior neck to clavicles\n\nNURSE / CIRCULATOR\n- Surgical marking pen\n- 2% lidocaine with 1:100,000 epinephrine; consider tumescent solution for the neck\n- Lighted retractor / fiberoptic retractor + light source\n- Hemostatics in room: bovie, bipolar\n\nSETS\n- Facelift / neck soft tissue set (long fine scissors, lighted retractors, Brown-Adson forceps, needle drivers)\n- Liposuction cannulas (if concurrent submental lipectomy)\n- Bovie (needle/Colorado tip); bipolar cautery\n\nCONSUMABLES\n- 15 blade; 11 blade (stab) if liposuction adjunct\n- Bovie tip, bipolar\n- Closed-suction drain (small JP) if planned\n- Neck compression garment / chin strap, fluffs, tape\n- Copious normal saline irrigation\n\nCLOSURE\n- 3-0 / 2-0 pull-sheet-platysmaplasty:text:0 for midline platysmal plication / corset suture (mentum to thyroid cartilage)\n- 4-0 Vicryl deep dermal; 5-0 plain gut or 6-0 nylon skin (submental incision)\n\n",
+    "fields": [
+      {
+        "id": "pull-sheet-platysmaplasty:text:0",
+        "kind": "text",
+        "raw": "[suture]",
+        "label": "Value",
+        "context": "3-0 / 2-0 ___ for midline platysmal plication / corset suture (mentum to thyroid cartilage)"
+      }
+    ],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Platysmaplasty\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Oral RAE; secure tube; head/neck in field, neck extended\n- 10 mg Decadron upfront; antibiotics per surgeon preference\n- Supine, arms tucked, shoulder roll, 180 degrees (head to anesthesia)\n- Prep and drape submental + anterior neck to clavicles\n\nNURSE / CIRCULATOR\n- Surgical marking pen\n- 2% lidocaine with 1:100,000 epinephrine; consider tumescent solution for the neck\n- Lighted retractor / fiberoptic retractor + light source\n- Hemostatics in room: bovie, bipolar\n\nSETS\n- Facelift / neck soft tissue set (long fine scissors, lighted retractors, Brown-Adson forceps, needle drivers)\n- Liposuction cannulas (if concurrent submental lipectomy)\n- Bovie (needle/Colorado tip); bipolar cautery\n\nCONSUMABLES\n- 15 blade; 11 blade (stab) if liposuction adjunct\n- Bovie tip, bipolar\n- Closed-suction drain (small JP) if planned\n- Neck compression garment / chin strap, fluffs, tape\n- Copious normal saline irrigation\n\nCLOSURE\n- 3-0 / 2-0 [suture] for midline platysmal plication / corset suture (mentum to thyroid cartilage)\n- 4-0 Vicryl deep dermal; 5-0 plain gut or 6-0 nylon skin (submental incision)\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-septorhinoplasty",
+    "title": "Pull Sheet - Septorhinoplasty",
+    "description": "Septoplasty + rhinoplasty (osteotomies, tip work, septal cartilage graft) OR setup",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Septorhinoplasty.md",
+    "bodyTemplate": "PULL SHEET: Septorhinoplasty\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Oral RAE; secure tube midline to chin; throat pack\n- 10 mg Decadron upfront; 1 g TXA upfront per surgeon; antibiotics per surgeon preference\n- Supine, arms tucked, 180 degrees (head to anesthesia)\n- Reverse Trendelenburg; eye protection / corneal shields\n\nNURSE / CIRCULATOR\n- Afrin pledgets (three per nare) for topical decongestion\n- 2% lidocaine with 1:100,000 epinephrine; control syringe / 27 G\n- Surgical marking pen; ruler / calipers\n- Headlight; 0/30 degree nasal endoscope, tower, light cord (endoscopic septal work)\n- Bacitracin ointment (Doyle splints)\n\nSETS\n- Septorhinoplasty / rhinoplasty instrument set (Cottle elevators, septal scissors, Takahashi forceps, septal rongeur, nasal speculum, bayonet forceps)\n- Rasps; osteotome set (straight, curved, guarded; confirm sizes with surgeon) + mallet\n- Cartilage crusher / morselizer; graft board\n- Fine soft tissue / plastics set for open approach (skin hooks, fine scissors, needle drivers)\n- Bipolar cautery; needle/Colorado tip Bovie\n\nCONSUMABLES\n- 15 blade; 11 blade\n- Bovie tip; bipolar\n- Gelfoam (septoplasty site)\n- Doyle / silicone nasal splints; external nasal splint (Denver / thermoplastic / cast)\n- Afrin / pledgets, 4x4 gauze, mustache / drip dressing\n- Copious normal saline irrigation; suction tubing, Frazier tip\n\nCLOSURE\n- 4-0 chromic gut (Killian incision; interrupted + running)\n- 4-0 plain gut (septal quilting / through-and-through stitch)\n- 2-0 silk (secure Doyle splints to septum)\n- 5-0 / 6-0 pull-sheet-septorhinoplasty:text:0 suture for tip and transcolumellar incision (open approach)\n- [X]-0 suture for tip sutures (interdomal / transdomal), columellar strut as planned\n\n",
+    "fields": [
+      {
+        "id": "pull-sheet-septorhinoplasty:text:0",
+        "kind": "text",
+        "raw": "[profile]",
+        "label": "Value",
+        "context": "5-0 / 6-0 ___ suture for tip and transcolumellar incision (open approach)"
+      }
+    ],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Septorhinoplasty\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Oral RAE; secure tube midline to chin; throat pack\n- 10 mg Decadron upfront; 1 g TXA upfront per surgeon; antibiotics per surgeon preference\n- Supine, arms tucked, 180 degrees (head to anesthesia)\n- Reverse Trendelenburg; eye protection / corneal shields\n\nNURSE / CIRCULATOR\n- Afrin pledgets (three per nare) for topical decongestion\n- 2% lidocaine with 1:100,000 epinephrine; control syringe / 27 G\n- Surgical marking pen; ruler / calipers\n- Headlight; 0/30 degree nasal endoscope, tower, light cord (endoscopic septal work)\n- Bacitracin ointment (Doyle splints)\n\nSETS\n- Septorhinoplasty / rhinoplasty instrument set (Cottle elevators, septal scissors, Takahashi forceps, septal rongeur, nasal speculum, bayonet forceps)\n- Rasps; osteotome set (straight, curved, guarded; confirm sizes with surgeon) + mallet\n- Cartilage crusher / morselizer; graft board\n- Fine soft tissue / plastics set for open approach (skin hooks, fine scissors, needle drivers)\n- Bipolar cautery; needle/Colorado tip Bovie\n\nCONSUMABLES\n- 15 blade; 11 blade\n- Bovie tip; bipolar\n- Gelfoam (septoplasty site)\n- Doyle / silicone nasal splints; external nasal splint (Denver / thermoplastic / cast)\n- Afrin / pledgets, 4x4 gauze, mustache / drip dressing\n- Copious normal saline irrigation; suction tubing, Frazier tip\n\nCLOSURE\n- 4-0 chromic gut (Killian incision; interrupted + running)\n- 4-0 plain gut (septal quilting / through-and-through stitch)\n- 2-0 silk (secure Doyle splints to septum)\n- 5-0 / 6-0 [profile] suture for tip and transcolumellar incision (open approach)\n- [X]-0 suture for tip sutures (interdomal / transdomal), columellar strut as planned\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-sialolithotomy",
+    "title": "Pull Sheet - Sialolithotomy",
+    "description": "Transoral sialolithotomy (Wharton duct) setup; sialendoscopy if available, fine instruments",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Sialolithotomy.md",
+    "bodyTemplate": "PULL SHEET: Sialolithotomy (Wharton Duct)\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- GA via oral/nasal RAE preferred (sialendoscopy + transoral dissection); local infiltration as adjunct\n- Confirm involved side (R/L Wharton duct) with surgeon before prep\n\nNURSE / CIRCULATOR\n- 2% lidocaine with 1:100,000 epinephrine; dental syringe / 27 G\n- Peridex / intraoral prep (off field)\n- Bite block / mouth prop, cheek retractors, headlight\n- Lacrimal probes and salivary duct dilator set (graduated)\n- Sialendoscopy tower and scope set if available (scope, stone basket/grasper, irrigation)\n- Warm saline for ductal irrigation; sterile IV tubing for scope irrigation\n- Specimen cup with 10% formalin for stone(s); permanent pathology requisition\n\nSETS\n- Minor / fine intraoral soft-tissue set (fine needle holder, Adson forceps, fine scissors)\n- Molt elevators / curved hemostats for blunt ductal dissection\n- Lacrimal probe and duct dilator set\n- In room if available, do not open: sialendoscopy set\n\nCONSUMABLES\n- Bovie / needle-tip cautery for mucosal incision and hemostasis\n- Frazier suction tip\n- Sterile saline for copious irrigation\n- 4x4 gauze\n\nCLOSURE\n- 3-0 chromic gut, interrupted, loose reapproximation of floor-of-mouth mucosa to allow drainage\n- Duct marsupialized / left open per surgeon\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Sialolithotomy (Wharton Duct)\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- GA via oral/nasal RAE preferred (sialendoscopy + transoral dissection); local infiltration as adjunct\n- Confirm involved side (R/L Wharton duct) with surgeon before prep\n\nNURSE / CIRCULATOR\n- 2% lidocaine with 1:100,000 epinephrine; dental syringe / 27 G\n- Peridex / intraoral prep (off field)\n- Bite block / mouth prop, cheek retractors, headlight\n- Lacrimal probes and salivary duct dilator set (graduated)\n- Sialendoscopy tower and scope set if available (scope, stone basket/grasper, irrigation)\n- Warm saline for ductal irrigation; sterile IV tubing for scope irrigation\n- Specimen cup with 10% formalin for stone(s); permanent pathology requisition\n\nSETS\n- Minor / fine intraoral soft-tissue set (fine needle holder, Adson forceps, fine scissors)\n- Molt elevators / curved hemostats for blunt ductal dissection\n- Lacrimal probe and duct dilator set\n- In room if available, do not open: sialendoscopy set\n\nCONSUMABLES\n- Bovie / needle-tip cautery for mucosal incision and hemostasis\n- Frazier suction tip\n- Sterile saline for copious irrigation\n- 4x4 gauze\n\nCLOSURE\n- 3-0 chromic gut, interrupted, loose reapproximation of floor-of-mouth mucosa to allow drainage\n- Duct marsupialized / left open per surgeon\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-sinus-augmentation",
+    "title": "Pull Sheet - Sinus Augmentation",
+    "description": "Lateral window sinus lift / augmentation (Schneiderian elevation, particulate graft) setup",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Sinus Augmentation.md",
+    "bodyTemplate": "PULL SHEET: Sinus Augmentation\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation or GA per plan\n- 1% lidocaine with 1:100,000 epi via infiltration\n- Peridex rinse pre-op\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Confirm graft material + REF/LOT staged; document on chart\n- Have sinus repair membrane on hand in case of Schneiderian perforation\n- Reinforce sinus precautions handout for discharge\n\nSETS\n- Oral surgery / dentoalveolar set (periosteal elevators, retractors, curettes)\n- Sinus elevator set (curved/angled membrane elevators)\n- Implant handpiece + irrigation\n\nCONSUMABLES\n- #15 blade\n- Round bur (window osteotomy) and/or piezo tip; irrigation saline\n- Particulate graft material (allograft/xenograft), REF/LOT\n- Collagen membrane (over lateral window) + backup repair membrane\n- Gelfoam / Surgicel\n\nCLOSURE\n- 3-0 Vicryl or 3-0 chromic gut, primary closure\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Sinus Augmentation\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation or GA per plan\n- 1% lidocaine with 1:100,000 epi via infiltration\n- Peridex rinse pre-op\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Confirm graft material + REF/LOT staged; document on chart\n- Have sinus repair membrane on hand in case of Schneiderian perforation\n- Reinforce sinus precautions handout for discharge\n\nSETS\n- Oral surgery / dentoalveolar set (periosteal elevators, retractors, curettes)\n- Sinus elevator set (curved/angled membrane elevators)\n- Implant handpiece + irrigation\n\nCONSUMABLES\n- #15 blade\n- Round bur (window osteotomy) and/or piezo tip; irrigation saline\n- Particulate graft material (allograft/xenograft), REF/LOT\n- Collagen membrane (over lateral window) + backup repair membrane\n- Gelfoam / Surgicel\n\nCLOSURE\n- 3-0 Vicryl or 3-0 chromic gut, primary closure\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-socket-ridge-graft",
+    "title": "Pull Sheet - Socket Ridge Graft",
+    "description": "Socket preservation / ridge graft (particulate + membrane) setup",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Socket Ridge Graft.md",
+    "bodyTemplate": "PULL SHEET: Socket / Ridge Graft\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation per plan\n- 1% lidocaine with 1:100,000 epi; IAN block for mandibular sites\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Confirm graft material + REF/LOT staged; document on chart\n\nSETS\n- Oral surgery / dentoalveolar set (periosteal elevator, curettes, retractors)\n\nCONSUMABLES\n- Particulate graft material (allograft/xenograft), REF/LOT\n- Collagen membrane / collagen plug\n- Sterile saline irrigation\n- Gelfoam if needed\n\nCLOSURE\n- 3-0 Vicryl or 3-0 chromic gut, figure-of-eight over graft/membrane\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Socket / Ridge Graft\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation per plan\n- 1% lidocaine with 1:100,000 epi; IAN block for mandibular sites\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Confirm graft material + REF/LOT staged; document on chart\n\nSETS\n- Oral surgery / dentoalveolar set (periosteal elevator, curettes, retractors)\n\nCONSUMABLES\n- Particulate graft material (allograft/xenograft), REF/LOT\n- Collagen membrane / collagen plug\n- Sterile saline irrigation\n- Gelfoam if needed\n\nCLOSURE\n- 3-0 Vicryl or 3-0 chromic gut, figure-of-eight over graft/membrane\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-submandibular-gland-reduction",
+    "title": "Pull Sheet - Submandibular Gland Reduction",
+    "description": "Partial superficial submandibular gland resection (neck contour) OR setup",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Submandibular Gland Reduction.md",
+    "bodyTemplate": "PULL SHEET: Submandibular Gland Reduction\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Oral RAE; secure tube; neck in field, neck extended\n- 10 mg Decadron upfront; antibiotics per surgeon preference\n- Supine, arms tucked, shoulder roll, 180 degrees (head to anesthesia)\n- AVOID long-acting paralytics after intubation (nerve monitoring of marginal mandibular branch)\n- Prep and drape submental + bilateral submandibular regions to clavicles\n\nNURSE / CIRCULATOR\n- Surgical marking pen\n- 2% lidocaine with 1:100,000 epinephrine\n- Nerve stimulator / facial nerve monitor (marginal mandibular branch) per surgeon\n- Lighted retractor / fiberoptic retractor + light source\n- Specimen cups + formalin (gland tissue to pathology)\n\nSETS\n- Neck / facelift soft tissue set (lighted retractors, fine scissors, Brown-Adson forceps, needle drivers)\n- LigaSure / vessel-sealing device (confirm handpiece + generator)\n- Bipolar cautery; needle/Colorado tip Bovie\n\nCONSUMABLES\n- 15 blade\n- LigaSure handpiece; bovie tip; bipolar\n- Closed-suction drain (small JP) per surgeon\n- Neck compression garment / chin strap, fluffs, tape\n- Copious normal saline irrigation; suction tubing\n\nCLOSURE\n- 3-0 / 4-0 Vicryl (platysma / deep layers)\n- 4-0 Vicryl deep dermal; 5-0 plain gut or 6-0 nylon skin\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Submandibular Gland Reduction\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Oral RAE; secure tube; neck in field, neck extended\n- 10 mg Decadron upfront; antibiotics per surgeon preference\n- Supine, arms tucked, shoulder roll, 180 degrees (head to anesthesia)\n- AVOID long-acting paralytics after intubation (nerve monitoring of marginal mandibular branch)\n- Prep and drape submental + bilateral submandibular regions to clavicles\n\nNURSE / CIRCULATOR\n- Surgical marking pen\n- 2% lidocaine with 1:100,000 epinephrine\n- Nerve stimulator / facial nerve monitor (marginal mandibular branch) per surgeon\n- Lighted retractor / fiberoptic retractor + light source\n- Specimen cups + formalin (gland tissue to pathology)\n\nSETS\n- Neck / facelift soft tissue set (lighted retractors, fine scissors, Brown-Adson forceps, needle drivers)\n- LigaSure / vessel-sealing device (confirm handpiece + generator)\n- Bipolar cautery; needle/Colorado tip Bovie\n\nCONSUMABLES\n- 15 blade\n- LigaSure handpiece; bovie tip; bipolar\n- Closed-suction drain (small JP) per surgeon\n- Neck compression garment / chin strap, fluffs, tape\n- Copious normal saline irrigation; suction tubing\n\nCLOSURE\n- 3-0 / 4-0 Vicryl (platysma / deep layers)\n- 4-0 Vicryl deep dermal; 5-0 plain gut or 6-0 nylon skin\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-submental-liposuction",
+    "title": "Pull Sheet - Submental Liposuction",
+    "description": "Submental liposuction (tumescent +/- Vaser) office/clinic setup",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Submental Liposuction.md",
+    "bodyTemplate": "PULL SHEET: Submental Liposuction\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nNURSE / CIRCULATOR\n- Surgical marking pen (mark in upright position pre-op)\n- Tumescent solution (e.g. NS/LR with lidocaine + epinephrine; confirm recipe with surgeon)\n- Infiltration cannula + pump or syringe; control syringe / 27 G for entry points\n- Chlorhexidine prep; drape submental + anterior neck\n- Photography setup (pre/post)\n\nSETS / EQUIPMENT\n- Liposuction aspirator / suction source + tubing and canister\n- Liposuction cannulas (assorted, e.g. 2-3 mm; confirm sizes with surgeon)\n- Vaser / ultrasonic emulsification handpiece + probe (if used)\n- Tumescent infiltration cannula\n\nCONSUMABLES\n- 11 blade (stab incisions: submental + bilateral prelobular)\n- Tumescent solution, infiltration tubing\n- 4x4 gauze, fluffs\n- Neck compression garment / chin strap\n- Suction tubing, canister\n\nCLOSURE\n- 5-0 plain gut or 6-0 nylon (stab incisions), or leave open for drainage per surgeon\n- Compression garment applied immediately\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Submental Liposuction\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nNURSE / CIRCULATOR\n- Surgical marking pen (mark in upright position pre-op)\n- Tumescent solution (e.g. NS/LR with lidocaine + epinephrine; confirm recipe with surgeon)\n- Infiltration cannula + pump or syringe; control syringe / 27 G for entry points\n- Chlorhexidine prep; drape submental + anterior neck\n- Photography setup (pre/post)\n\nSETS / EQUIPMENT\n- Liposuction aspirator / suction source + tubing and canister\n- Liposuction cannulas (assorted, e.g. 2-3 mm; confirm sizes with surgeon)\n- Vaser / ultrasonic emulsification handpiece + probe (if used)\n- Tumescent infiltration cannula\n\nCONSUMABLES\n- 11 blade (stab incisions: submental + bilateral prelobular)\n- Tumescent solution, infiltration tubing\n- 4x4 gauze, fluffs\n- Neck compression garment / chin strap\n- Suction tubing, canister\n\nCLOSURE\n- 5-0 plain gut or 6-0 nylon (stab incisions), or leave open for drainage per surgeon\n- Compression garment applied immediately\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-surgical-extraction-impacted",
+    "title": "Pull Sheet - Surgical Extraction (impacted)",
+    "description": "Surgical extraction of impacted tooth (flap, bone removal, sectioning) clinic setup under local +/- sedation",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - Surgical Extraction (impacted).md",
+    "bodyTemplate": "PULL SHEET: Surgical Extraction (impacted)\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation per plan\n- 1% lidocaine with 1:100,000 epi; IAN block for mandibular teeth\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Surgical handpiece + irrigation; bite block\n- Specimen cup + formalin if follicle/lesion submitted for path\n\nSETS\n- Oral surgery / dentoalveolar set (periosteal elevator, straight + angled elevators, forceps, curettes, rongeur, retractors)\n\nCONSUMABLES\n- #15 blade\n- 702 fissure bur + round bur; irrigation saline\n- Gelfoam if needed\n\nCLOSURE\n- 3-0 Vicryl (re-suspend papilla)\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: Surgical Extraction (impacted)\n\nPatient / MRN / age-sex / allergies: complete on the printed sheet.\n\nANESTHESIA\n- Local +/- IV sedation per plan\n- 1% lidocaine with 1:100,000 epi; IAN block for mandibular teeth\n\nNURSE / CIRCULATOR\n- Intraoral prep (Peridex)\n- Dental syringe / 27 G short and long needles\n- Surgical handpiece + irrigation; bite block\n- Specimen cup + formalin if follicle/lesion submitted for path\n\nSETS\n- Oral surgery / dentoalveolar set (periosteal elevator, straight + angled elevators, forceps, curettes, rongeur, retractors)\n\nCONSUMABLES\n- #15 blade\n- 702 fissure bur + round bur; irrigation saline\n- Gelfoam if needed\n\nCLOSURE\n- 3-0 Vicryl (re-suspend papilla)\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
+    "warnings": []
+  },
+  {
+    "id": "pull-sheet-tmj-arthrocentesis",
+    "title": "Pull Sheet - TMJ Arthrocentesis",
+    "description": "TMJ arthrocentesis (needle lavage, no scope) setup",
+    "category": "Pull Sheet",
+    "modes": [
+      "pullsheet",
+      "library"
+    ],
+    "sourcePath": "Note Templates/Pull Sheets/Pull Sheet - TMJ Arthrocentesis.md",
+    "bodyTemplate": "PULL SHEET: TMJ Arthrocentesis\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- GA via nasal RAE / IV sedation / local per case\n- Supine; confirm involved side (R/L) with surgeon before prep\n\nNURSE / CIRCULATOR\n- Preauricular prep; mark canthal-tragal line and articular fossa landmarks\n- Local anesthetic for puncture sites (lidocaine with epi)\n- Two 1 L bags Lactated Ringer's for lavage\n- Intra-articular medication if ordered (e.g., corticosteroid / hyaluronate) drawn into syringe\n\nSETS\n- Minor / soft-tissue set (no arthroscopy system required)\n\nCONSUMABLES\n- Two large-bore needles (18-19 G) for inflow/outflow\n- 3 cc syringe x2; 10-20 cc syringes for lavage\n- Sterile saline / LR per above\n- 4x4 gauze for manual pressure\n\nCLOSURE\n- None (no incision, no sutures); adhesive bandage to puncture sites\n\n",
+    "fields": [],
+    "flags": [],
+    "includes": [],
+    "smartlinks": [],
+    "tags": [],
+    "rawBody": "PULL SHEET: TMJ Arthrocentesis\n\nPatient / MRN / age-sex / ASA / allergies: complete on the printed sheet.\n\nANESTHESIA\n- GA via nasal RAE / IV sedation / local per case\n- Supine; confirm involved side (R/L) with surgeon before prep\n\nNURSE / CIRCULATOR\n- Preauricular prep; mark canthal-tragal line and articular fossa landmarks\n- Local anesthetic for puncture sites (lidocaine with epi)\n- Two 1 L bags Lactated Ringer's for lavage\n- Intra-articular medication if ordered (e.g., corticosteroid / hyaluronate) drawn into syringe\n\nSETS\n- Minor / soft-tissue set (no arthroscopy system required)\n\nCONSUMABLES\n- Two large-bore needles (18-19 G) for inflow/outflow\n- 3 cc syringe x2; 10-20 cc syringes for lavage\n- Sterile saline / LR per above\n- 4x4 gauze for manual pressure\n\nCLOSURE\n- None (no incision, no sutures); adhesive bandage to puncture sites\n\n[TEMPLATE: team pull sheet drafted from the op-note template; verify items, sets, and quantities before use.]",
     "warnings": []
   },
   {

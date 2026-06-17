@@ -21,16 +21,26 @@ export const ATTENDINGS = [
   'Dr. Palau',
   'Dr. Park',
 ]
-export const ANESTHESIA = ['Local only', 'Local + nitrous', 'IV moderate sedation', 'General anesthesia']
-export const AIRWAY = ['N/A', 'Nasal ETT', 'Oral ETT', 'LMA', 'Awake fiberoptic', 'Tracheostomy']
+export const ANESTHESIA = ['Local only', 'Local + nitrous', 'IV deep sedation', 'General anesthesia']
+export const AIRWAY = ['N/A', 'Open', 'Nasal ETT', 'Oral ETT', 'LMA', 'Awake fiberoptic', 'Tracheostomy']
 export const SETTINGS = ['Clinic', 'OR']
 export const DISPOSITIONS = ['Home', 'PACU then home', 'Inpatient floor', 'ICU']
+
+/**
+ * Today's date as a local-time YYYY-MM-DD string. Built from the local calendar
+ * fields (NOT toISOString(), which is UTC and rolls over to "tomorrow" for any
+ * timezone west of UTC during the evening).
+ */
+export function localISODate(d: Date = new Date()): string {
+  const pad = (n: number) => String(n).padStart(2, '0')
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
+}
 
 export function defaultEncounter(): Encounter {
   return {
     attending: '',
     residents: [''],
-    date: new Date().toISOString().slice(0, 10),
+    date: localISODate(),
     // Setting/anesthesia/disposition default BLANK: an unset field is suppressed from
     // the header rather than asserting a (possibly wrong) "Clinic / Local only / Home"
     // above an OR/GA operative body. The surgeon chooses them per case.

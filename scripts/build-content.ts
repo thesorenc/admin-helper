@@ -96,6 +96,8 @@ function parseFile(
         }
       : undefined
 
+  const repeat = frontmatter.repeat === 'tooth' ? ('tooth' as const) : undefined
+
   const id = slug(file)
   const { bodyTemplate, fields, flags, includes, smartlinks, warnings } = tokenize(body, id)
 
@@ -124,6 +126,7 @@ function parseFile(
     includes,
     smartlinks,
     links,
+    repeat,
     tags,
     rawBody: body,
     warnings,

@@ -169,6 +169,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-anterior-maxilla-bone-graft",
       "postop": [
         "post-op-instructions-implant-graft"
       ],
@@ -300,44 +301,21 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Dentoalveolar & Implant/Coronectomy.md",
-    "bodyTemplate": "PROCEDURE: Coronectomy\n\nAttention was directed to the coronectomy:side:0 coronectomy:enumText:0 vestibule. 10 cc of 1% lidocaine with 1:100,000 epi was infiltrated locally and an IAN block was performed. Using a #15 blade, a distal hockey stick incision was made to access coronectomy:toothNumber:0 and carried forward in a sulcular fashion to the adjacent tooth. A full thickness mucoperiosteal flap was raised with a periosteal elevator to expose the crown and surrounding crestal bone. A 702 bur under copious irrigation was used to section the crown from the root complex at the level of the alveolar crest, taking care not to mobilize the roots so as to protect the adjacent inferior alveolar nerve. The crown was delivered and the residual root surface was reduced 2 to 3 mm below the crestal bone with a round bur. The root fragment was confirmed immobile and the enamel was fully removed. The site was irrigated with sterile saline and inspected for hemostasis. The flap was repositioned and closed primarily over the retained root with 3-0 Vicryl suture.\n\n",
+    "bodyTemplate": "PROCEDURE: Coronectomy\n\nLocal anesthesia was achieved with 1% lidocaine with 1:100,000 epinephrine by local infiltration, with inferior alveolar nerve block(s) for mandibular teeth.\n\n=== PER TOOTH ===\n\nUsing a #15 blade, a distal hockey-stick incision was made to access #coronectomy:toothNumber:0 and carried forward in a sulcular fashion to the adjacent tooth. A full-thickness mucoperiosteal flap was raised with a periosteal elevator to expose the crown and surrounding crestal bone. A 702 bur under copious irrigation was used to section the crown from the root complex at the level of the alveolar crest, taking care not to mobilize the roots so as to protect the adjacent inferior alveolar nerve. The crown was delivered and the residual root surface was reduced 2 to 3 mm below the crestal bone with a round bur. The root fragment was confirmed immobile and the enamel was fully removed. The site was irrigated with sterile saline and inspected for hemostasis. The flap was repositioned and closed primarily over the retained root with 3-0 Vicryl suture.",
     "fields": [
-      {
-        "id": "coronectomy:side:0",
-        "kind": "side",
-        "raw": "[R/L]",
-        "label": "Side",
-        "context": "Attention was directed to the ___ [maxillary/mandibular] vestibule.",
-        "options": [
-          "R",
-          "L"
-        ],
-        "linkKey": "side"
-      },
-      {
-        "id": "coronectomy:enumText:0",
-        "kind": "enumText",
-        "raw": "[maxillary/mandibular]",
-        "label": "Select",
-        "context": "Attention was directed to the [R/L] ___ vestibule.",
-        "options": [
-          "maxillary",
-          "mandibular"
-        ],
-        "hint": "maxillary/mandibular"
-      },
       {
         "id": "coronectomy:toothNumber:0",
         "kind": "toothNumber",
         "raw": "[#__]",
         "label": "Tooth #",
-        "context": "Using a #15 blade, a distal hockey stick incision was made to access ___ and carried forward in a sulcular fashion to the adjacent tooth."
+        "context": "Using a #15 blade, a distal hockey-stick incision was made to access #___ and carried forward in a sulcular fashion to the adjacent tooth."
       }
     ],
     "flags": [],
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-coronectomy",
       "postop": [
         "post-op-instructions-extraction"
       ],
@@ -346,8 +324,9 @@
       ],
       "est": "30 min"
     },
+    "repeat": "tooth",
     "tags": [],
-    "rawBody": "PROCEDURE: Coronectomy\n\nAttention was directed to the [R/L] [maxillary/mandibular] vestibule. 10 cc of 1% lidocaine with 1:100,000 epi was infiltrated locally and an IAN block was performed. Using a #15 blade, a distal hockey stick incision was made to access [#__] and carried forward in a sulcular fashion to the adjacent tooth. A full thickness mucoperiosteal flap was raised with a periosteal elevator to expose the crown and surrounding crestal bone. A 702 bur under copious irrigation was used to section the crown from the root complex at the level of the alveolar crest, taking care not to mobilize the roots so as to protect the adjacent inferior alveolar nerve. The crown was delivered and the residual root surface was reduced 2 to 3 mm below the crestal bone with a round bur. The root fragment was confirmed immobile and the enamel was fully removed. The site was irrigated with sterile saline and inspected for hemostasis. The flap was repositioned and closed primarily over the retained root with 3-0 Vicryl suture.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "rawBody": "PROCEDURE: Coronectomy\n\nLocal anesthesia was achieved with 1% lidocaine with 1:100,000 epinephrine by local infiltration, with inferior alveolar nerve block(s) for mandibular teeth.\n\n=== PER TOOTH ===\n\nUsing a #15 blade, a distal hockey-stick incision was made to access #[#__] and carried forward in a sulcular fashion to the adjacent tooth. A full-thickness mucoperiosteal flap was raised with a periosteal elevator to expose the crown and surrounding crestal bone. A 702 bur under copious irrigation was used to section the crown from the root complex at the level of the alveolar crest, taking care not to mobilize the roots so as to protect the adjacent inferior alveolar nerve. The crown was delivered and the residual root surface was reduced 2 to 3 mm below the crestal bone with a round bur. The root fragment was confirmed immobile and the enamel was fully removed. The site was irrigated with sterile saline and inspected for hemostasis. The flap was repositioned and closed primarily over the retained root with 3-0 Vicryl suture.",
     "warnings": []
   },
   {
@@ -502,6 +481,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-dental-implant",
       "postop": [
         "post-op-instructions-implant-graft"
       ],
@@ -830,6 +810,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-excisional-biopsy",
       "postop": [
         "post-op-instructions-oral-surgery"
       ],
@@ -936,6 +917,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-exposure-and-bonding",
       "postop": [
         "post-op-instructions-oral-surgery"
       ],
@@ -959,48 +941,25 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Dentoalveolar & Implant/Extraction (simple).md",
-    "bodyTemplate": "PROCEDURE: Extraction (simple)\n\nAttention was directed to the extraction-simple:side:0 extraction-simple:enumText:0 vestibule. 10 cc of 1% lidocaine with 1:100,000 epi was infiltrated locally [and an IAN block was performed for mandibular sites]. Tooth extraction-simple:toothNumber:0 was tested for profound anesthesia. A periosteal elevator was used to reflect the gingival attachment circumferentially. Tooth extraction-simple:toothNumber:1 was luxated with straight and angled elevators to expand the socket and disrupt the periodontal ligament, then delivered atraumatically with forceps. The socket was inspected and confirmed free of retained root tips. The socket was curetted of granulation tissue and irrigated with sterile saline. Sharp bony edges were smoothed and hemostasis was achieved with pressure. extraction-simple:optionalClause:0 The extracted tooth was extraction-simple:enumText:1.\n\n",
+    "bodyTemplate": "PROCEDURE: Extraction (simple)\n\nLocal anesthesia was achieved with 1% lidocaine with 1:100,000 epinephrine by local infiltration. extraction-simple:optionalClause:0\n\n=== PER TOOTH ===\n\nTooth #extraction-simple:toothNumber:0 was tested for profound anesthesia. The gingival attachment was reflected circumferentially with a periosteal elevator, and the tooth was luxated with straight and angled elevators to expand the socket and disrupt the periodontal ligament, then delivered atraumatically with forceps. The socket was inspected and confirmed free of retained root tips, curetted of granulation tissue, and irrigated with sterile saline. Sharp bony edges were smoothed and hemostasis was achieved with pressure. extraction-simple:optionalClause:1 The extracted tooth was extraction-simple:enumText:0.",
     "fields": [
       {
-        "id": "extraction-simple:side:0",
-        "kind": "side",
-        "raw": "[R/L]",
-        "label": "Side",
-        "context": "Attention was directed to the ___ [maxillary/mandibular] vestibule.",
-        "options": [
-          "R",
-          "L"
-        ],
-        "linkKey": "side"
-      },
-      {
-        "id": "extraction-simple:enumText:0",
-        "kind": "enumText",
-        "raw": "[maxillary/mandibular]",
-        "label": "Select",
-        "context": "Attention was directed to the [R/L] ___ vestibule.",
-        "options": [
-          "maxillary",
-          "mandibular"
-        ],
-        "hint": "maxillary/mandibular"
+        "id": "extraction-simple:optionalClause:0",
+        "kind": "optionalClause",
+        "raw": "[Inferior alveolar nerve blocks were administered for mandibular teeth.]",
+        "label": "Optional step",
+        "context": "Inferior alveolar nerve blocks were administered for mandibular teeth.",
+        "hint": "Inferior alveolar nerve blocks were administered for mandibular teeth."
       },
       {
         "id": "extraction-simple:toothNumber:0",
         "kind": "toothNumber",
         "raw": "[#__]",
         "label": "Tooth #",
-        "context": "Tooth ___ was tested for profound anesthesia."
+        "context": "Tooth #___ was tested for profound anesthesia."
       },
       {
-        "id": "extraction-simple:toothNumber:1",
-        "kind": "toothNumber",
-        "raw": "[#__]",
-        "label": "Tooth #",
-        "context": "Tooth ___ was luxated with straight and angled elevators to expand the socket and disrupt the periodontal ligament, then delivered atraumatically with forceps."
-      },
-      {
-        "id": "extraction-simple:optionalClause:0",
+        "id": "extraction-simple:optionalClause:1",
         "kind": "optionalClause",
         "raw": "[The site was closed with 3-0 chromic gut suture.]",
         "label": "Optional step",
@@ -1008,7 +967,7 @@
         "hint": "The site was closed with 3-0 chromic gut suture."
       },
       {
-        "id": "extraction-simple:enumText:1",
+        "id": "extraction-simple:enumText:0",
         "kind": "enumText",
         "raw": "[discarded per protocol / returned to the patient per request]",
         "label": "Select",
@@ -1024,6 +983,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-extraction-simple",
       "postop": [
         "post-op-instructions-extraction"
       ],
@@ -1032,11 +992,10 @@
       ],
       "est": "15 min"
     },
+    "repeat": "tooth",
     "tags": [],
-    "rawBody": "PROCEDURE: Extraction (simple)\n\nAttention was directed to the [R/L] [maxillary/mandibular] vestibule. 10 cc of 1% lidocaine with 1:100,000 epi was infiltrated locally [and an IAN block was performed for mandibular sites]. Tooth [#__] was tested for profound anesthesia. A periosteal elevator was used to reflect the gingival attachment circumferentially. Tooth [#__] was luxated with straight and angled elevators to expand the socket and disrupt the periodontal ligament, then delivered atraumatically with forceps. The socket was inspected and confirmed free of retained root tips. The socket was curetted of granulation tissue and irrigated with sterile saline. Sharp bony edges were smoothed and hemostasis was achieved with pressure. [The site was closed with 3-0 chromic gut suture.] The extracted tooth was [discarded per protocol / returned to the patient per request].\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
-    "warnings": [
-      "Unrecognized bracket kept inline: [and an IAN block was performed for mandibular sites]"
-    ]
+    "rawBody": "PROCEDURE: Extraction (simple)\n\nLocal anesthesia was achieved with 1% lidocaine with 1:100,000 epinephrine by local infiltration. [Inferior alveolar nerve blocks were administered for mandibular teeth.]\n\n=== PER TOOTH ===\n\nTooth #[#__] was tested for profound anesthesia. The gingival attachment was reflected circumferentially with a periosteal elevator, and the tooth was luxated with straight and angled elevators to expand the socket and disrupt the periodontal ligament, then delivered atraumatically with forceps. The socket was inspected and confirmed free of retained root tips, curetted of granulation tissue, and irrigated with sterile saline. Sharp bony edges were smoothed and hemostasis was achieved with pressure. [The site was closed with 3-0 chromic gut suture.] The extracted tooth was [discarded per protocol / returned to the patient per request].",
+    "warnings": []
   },
   {
     "id": "facelift-rhytidectomy",
@@ -1448,6 +1407,7 @@
   {
     "id": "implant-site-detail",
     "title": "Implant Site Detail",
+    "description": "Per-implant building block — add once per fixture (osteotomy, placement, torque, abutment). Each instance carries its own size and torque.",
     "category": "Dentoalveolar & Implant",
     "modes": [
       "atom",
@@ -1616,6 +1576,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-incision-and-drainage",
       "postop": [
         "post-op-instructions-id"
       ],
@@ -1699,6 +1660,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-inferior-turbinoplasty",
       "postop": [
         "post-op-instructions-rhinoplasty"
       ],
@@ -1875,6 +1837,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-lip-filler",
       "postop": [
         "post-op-instructions-filler"
       ],
@@ -1951,6 +1914,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-mandibular-tori-removal",
       "postop": [
         "post-op-instructions-oral-surgery"
       ],
@@ -2202,6 +2166,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-nasal-bone-reduction",
       "postop": [
         "post-op-instructions-rhinoplasty"
       ],
@@ -2972,6 +2937,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-orthognathic",
       "postop": [],
       "rx": [],
       "est": "10 min"
@@ -3056,6 +3022,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-otoplasty",
       "postop": [
         "post-op-instructions-facial-cosmetic"
       ],
@@ -3111,6 +3078,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-platysmaplasty",
       "postop": [
         "post-op-instructions-facial-cosmetic"
       ],
@@ -3412,6 +3380,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-septorhinoplasty",
       "postop": [
         "post-op-instructions-rhinoplasty"
       ],
@@ -3467,6 +3436,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-sialolithotomy",
       "postop": [
         "post-op-instructions-oral-surgery"
       ],
@@ -3548,6 +3518,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-sinus-augmentation",
       "postop": [
         "post-op-instructions-implant-graft"
       ],
@@ -3638,6 +3609,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-socket-ridge-graft",
       "postop": [
         "post-op-instructions-implant-graft"
       ],
@@ -3752,6 +3724,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-submandibular-gland-reduction",
       "postop": [
         "post-op-instructions-facial-cosmetic"
       ],
@@ -3796,6 +3769,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-submental-liposuction",
       "postop": [
         "post-op-instructions-facial-cosmetic"
       ],
@@ -3862,41 +3836,25 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Dentoalveolar & Implant/Surgical Extraction (impacted).md",
-    "bodyTemplate": "PROCEDURE: Surgical Extraction (impacted)\n\nAttention was directed to the surgical-extraction-impacted:side:0 surgical-extraction-impacted:enumText:0 vestibule. 10 cc of 1% lidocaine with 1:100,000 epi was infiltrated locally and an IAN block was performed. Using a #15 blade, a distal hockey stick incision was made to access impacted surgical-extraction-impacted:toothNumber:0 and carried forward in a sulcular fashion to the adjacent tooth. Using a periosteal elevator, a subperiosteal dissection was completed to expose the underlying bone. surgical-extraction-impacted:optionalClause:0 A 702 bur under copious irrigation was used to develop a buccal trough lateral to surgical-extraction-impacted:toothNumber:1 and remove overlying bone. The 702 bur was then used to section surgical-extraction-impacted:toothNumber:2, and the crown and root segments were elevated atraumatically. The socket was inspected for retained root tips, curetted of any follicular tissue, and irrigated with sterile saline. The associated soft-tissue/follicular lesion was removed with the specimen and submitted for pathologic examination. All sharp bone was reduced. The flap and surgical site were thoroughly irrigated and the incision was closed with 3-0 Vicryl suture, taking care to re-suspend the papilla.\n\n",
+    "bodyTemplate": "PROCEDURE: Surgical Extraction (impacted)\n\nLocal anesthesia was achieved with 1% lidocaine with 1:100,000 epinephrine by local infiltration. surgical-extraction-impacted:optionalClause:0\n\n=== PER TOOTH ===\n\nUsing a #15 blade, a distal hockey-stick incision was made to access impacted #surgical-extraction-impacted:toothNumber:0 and carried forward in a sulcular fashion to the adjacent tooth. A subperiosteal dissection was completed with a periosteal elevator to expose the underlying bone. surgical-extraction-impacted:optionalClause:1 surgical-extraction-impacted:optionalClause:2 A 702 bur under copious irrigation was used to develop a buccal trough lateral to the tooth and remove overlying bone; the tooth was then sectioned and the crown and root segments were elevated atraumatically. The socket was inspected for retained root tips, curetted of follicular tissue, and irrigated with sterile saline. surgical-extraction-impacted:optionalClause:3 All sharp bone was reduced, the flap and surgical site were thoroughly irrigated, and the incision was closed with 3-0 Vicryl suture, taking care to re-suspend the papilla.",
     "fields": [
       {
-        "id": "surgical-extraction-impacted:side:0",
-        "kind": "side",
-        "raw": "[R/L]",
-        "label": "Side",
-        "context": "Attention was directed to the ___ [maxillary/mandibular] vestibule.",
-        "options": [
-          "R",
-          "L"
-        ],
-        "linkKey": "side"
-      },
-      {
-        "id": "surgical-extraction-impacted:enumText:0",
-        "kind": "enumText",
-        "raw": "[maxillary/mandibular]",
-        "label": "Select",
-        "context": "Attention was directed to the [R/L] ___ vestibule.",
-        "options": [
-          "maxillary",
-          "mandibular"
-        ],
-        "hint": "maxillary/mandibular"
+        "id": "surgical-extraction-impacted:optionalClause:0",
+        "kind": "optionalClause",
+        "raw": "[Inferior alveolar nerve blocks were administered for mandibular teeth.]",
+        "label": "Optional step",
+        "context": "Inferior alveolar nerve blocks were administered for mandibular teeth.",
+        "hint": "Inferior alveolar nerve blocks were administered for mandibular teeth."
       },
       {
         "id": "surgical-extraction-impacted:toothNumber:0",
         "kind": "toothNumber",
         "raw": "[#__]",
         "label": "Tooth #",
-        "context": "Using a #15 blade, a distal hockey stick incision was made to access impacted ___ and carried forward in a sulcular fashion to the adjacent tooth."
+        "context": "Using a #15 blade, a distal hockey-stick incision was made to access impacted #___ and carried forward in a sulcular fashion to the adjacent tooth."
       },
       {
-        "id": "surgical-extraction-impacted:optionalClause:0",
+        "id": "surgical-extraction-impacted:optionalClause:1",
         "kind": "optionalClause",
         "raw": "[The mental nerve was visualized and protected.]",
         "label": "Optional step",
@@ -3904,24 +3862,27 @@
         "hint": "The mental nerve was visualized and protected."
       },
       {
-        "id": "surgical-extraction-impacted:toothNumber:1",
-        "kind": "toothNumber",
-        "raw": "[#__]",
-        "label": "Tooth #",
-        "context": "[The mental nerve was visualized and protected.] A 702 bur under copious irrigation was used to develop a buccal trough lateral to ___ and remove overlying bone"
+        "id": "surgical-extraction-impacted:optionalClause:2",
+        "kind": "optionalClause",
+        "raw": "[The inferior alveolar nerve was identified and protected.]",
+        "label": "Optional step",
+        "context": "The inferior alveolar nerve was identified and protected.",
+        "hint": "The inferior alveolar nerve was identified and protected."
       },
       {
-        "id": "surgical-extraction-impacted:toothNumber:2",
-        "kind": "toothNumber",
-        "raw": "[#__]",
-        "label": "Tooth #",
-        "context": "The 702 bur was then used to section ___, and the crown and root segments were elevated atraumatically."
+        "id": "surgical-extraction-impacted:optionalClause:3",
+        "kind": "optionalClause",
+        "raw": "[The associated follicular soft-tissue lesion was removed with the specimen and submitted for pathologic examination.]",
+        "label": "Optional step",
+        "context": "The associated follicular soft-tissue lesion was removed with the specimen and submitted for pathologic examination.",
+        "hint": "The associated follicular soft-tissue lesion was removed with the specimen and submitted for pathologic examination."
       }
     ],
     "flags": [],
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-surgical-extraction-impacted",
       "postop": [
         "post-op-instructions-extraction"
       ],
@@ -3930,8 +3891,9 @@
       ],
       "est": "30 min"
     },
+    "repeat": "tooth",
     "tags": [],
-    "rawBody": "PROCEDURE: Surgical Extraction (impacted)\n\nAttention was directed to the [R/L] [maxillary/mandibular] vestibule. 10 cc of 1% lidocaine with 1:100,000 epi was infiltrated locally and an IAN block was performed. Using a #15 blade, a distal hockey stick incision was made to access impacted [#__] and carried forward in a sulcular fashion to the adjacent tooth. Using a periosteal elevator, a subperiosteal dissection was completed to expose the underlying bone. [The mental nerve was visualized and protected.] A 702 bur under copious irrigation was used to develop a buccal trough lateral to [#__] and remove overlying bone. The 702 bur was then used to section [#__], and the crown and root segments were elevated atraumatically. The socket was inspected for retained root tips, curetted of any follicular tissue, and irrigated with sterile saline. The associated soft-tissue/follicular lesion was removed with the specimen and submitted for pathologic examination. All sharp bone was reduced. The flap and surgical site were thoroughly irrigated and the incision was closed with 3-0 Vicryl suture, taking care to re-suspend the papilla.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "rawBody": "PROCEDURE: Surgical Extraction (impacted)\n\nLocal anesthesia was achieved with 1% lidocaine with 1:100,000 epinephrine by local infiltration. [Inferior alveolar nerve blocks were administered for mandibular teeth.]\n\n=== PER TOOTH ===\n\nUsing a #15 blade, a distal hockey-stick incision was made to access impacted #[#__] and carried forward in a sulcular fashion to the adjacent tooth. A subperiosteal dissection was completed with a periosteal elevator to expose the underlying bone. [The mental nerve was visualized and protected.] [The inferior alveolar nerve was identified and protected.] A 702 bur under copious irrigation was used to develop a buccal trough lateral to the tooth and remove overlying bone; the tooth was then sectioned and the crown and root segments were elevated atraumatically. The socket was inspected for retained root tips, curetted of follicular tissue, and irrigated with sterile saline. [The associated follicular soft-tissue lesion was removed with the specimen and submitted for pathologic examination.] All sharp bone was reduced, the flap and surgical site were thoroughly irrigated, and the incision was closed with 3-0 Vicryl suture, taking care to re-suspend the papilla.",
     "warnings": []
   },
   {
@@ -4010,6 +3972,7 @@
     "includes": [],
     "smartlinks": [],
     "links": {
+      "pullSheet": "pull-sheet-tmj-arthrocentesis",
       "postop": [
         "post-op-instructions-tmj"
       ],
@@ -4025,22 +3988,22 @@
     ]
   },
   {
-    "id": "tmj-arthroscopic-discopexy",
-    "title": "TMJ Arthroscopic Discopexy",
+    "id": "tmj-arthroscopy",
+    "title": "TMJ Arthroscopy",
     "category": "TMJ",
     "modes": [
       "atom",
       "library"
     ],
-    "sourcePath": "Note Templates/Procedures/TMJ/TMJ Arthroscopic Discopexy.md",
-    "bodyTemplate": "PROCEDURE: TMJ Arthroscopic Discopexy\n\nThe tmj-arthroscopic-discopexy:side:0 external auditory canal was protected with an ear wick and otoscopic exam confirmed an intact tympanic membrane. tmj-arthroscopic-discopexy:measurement:0 mL of lactated Ringer's was injected into the superior joint space from an inferolateral approach with good plunger rebound. An operative cannula was inserted into the posterior recess with a sharp trocar, a [0]-degree arthroscope was introduced, and a [22] gauge outflow needle was placed; the irrigation fluid was lactated Ringer's with epinephrine added.\n\nDiagnostic arthroscopy was completed. A second cannula was placed into the anterolateral aspect of the joint and coblation was used to perform a superficial synovectomy with lysis and lavage and contraction of the retrodiscal tissue. A probe was used to reduce the disc over the condylar head; the disc was pierced with an 18 gauge needle and a 2-0 PDS suture was passed through it. The suture ends were directed to the preauricular area and passed to a transmeatal exit, a connecting incision was made between the exit points, and the suture was tied to fixate the disc. Fixation was evaluated arthroscopically and the disc confirmed to remain in anatomic position over the condyle.\n\nThe joint was irrigated with tmj-arthroscopic-discopexy:measurement:1 cc of multimodal solution and tmj-arthroscopic-discopexy:measurement:2 cc of injectable platelet-rich fibrin (i-PRF) was placed into the superior joint space under direct arthroscopic control. The arthroscope was removed and both puncture sites were closed with 5-0 fast-absorbing gut. The ear wick was removed and the tympanic membrane was reconfirmed intact.\n\n",
+    "sourcePath": "Note Templates/Procedures/TMJ/TMJ Arthroscopy.md",
+    "bodyTemplate": "PROCEDURE: TMJ Arthroscopy\n\nThe tmj-arthroscopy:side:0 external auditory canal was protected with a pledget and otoscopic exam confirmed an intact tympanic membrane. The canthal-tragal line and articular fossa were marked. The tmj-arthroscopy:side:1 superior joint space was insufflated with tmj-arthroscopy:measurement:0 cc of Lactated Ringer's from an inferolateral approach with free return, confirming intracapsular placement. A stab incision was made over the posterior puncture site and an operative cannula was introduced into the superior joint space with a sharp trocar. A tmj-arthroscopy:measurement:1-degree arthroscope was introduced and a tmj-arthroscopy:measurement:2-gauge outflow needle was placed to establish through-and-through flow with Lactated Ringer's.\n\nA diagnostic arthroscopic sweep of the superior joint space was performed, followed by lysis of adhesions and copious lavage with Lactated Ringer's.\n\ntmj-arthroscopy:optionalClause:0\n\ntmj-arthroscopy:optionalClause:1\n\ntmj-arthroscopy:optionalClause:2\n\nThe arthroscope and cannulae were withdrawn and hemostasis was achieved with manual pressure. The puncture sites were closed with 5-0 fast-absorbing gut. The pledget was removed and the tympanic membrane was reconfirmed intact.",
     "fields": [
       {
-        "id": "tmj-arthroscopic-discopexy:side:0",
+        "id": "tmj-arthroscopy:side:0",
         "kind": "side",
         "raw": "[R/L]",
         "label": "Side",
-        "context": "The ___ external auditory canal was protected with an ear wick and otoscopic exam confirmed an intact tympanic membrane.",
+        "context": "The ___ external auditory canal was protected with a pledget and otoscopic exam confirmed an intact tympanic membrane.",
         "options": [
           "R",
           "L"
@@ -4048,28 +4011,64 @@
         "linkKey": "side"
       },
       {
-        "id": "tmj-arthroscopic-discopexy:measurement:0",
+        "id": "tmj-arthroscopy:side:1",
+        "kind": "side",
+        "raw": "[R/L]",
+        "label": "Side",
+        "context": "The ___ superior joint space was insufflated with [X] cc of Lactated Ringer's from an inferolateral approach with free return, confirming intracapsular placemen",
+        "options": [
+          "R",
+          "L"
+        ],
+        "linkKey": "side"
+      },
+      {
+        "id": "tmj-arthroscopy:measurement:0",
+        "kind": "measurement",
+        "raw": "[X]",
+        "label": "Measurement (cc)",
+        "context": "The [R/L] superior joint space was insufflated with ___ cc of Lactated Ringer's from an inferolateral approach with free return, confirming intracapsular placem",
+        "unit": "cc"
+      },
+      {
+        "id": "tmj-arthroscopy:measurement:1",
         "kind": "measurement",
         "raw": "[X]",
         "label": "Measurement",
-        "context": "___ mL of lactated Ringer's was injected into the superior joint space from an inferolateral approach with good plunger rebound.",
+        "context": "A ___-degree arthroscope was introduced and a [X]-gauge outflow needle was placed to establish through-and-through flow with Lactated Ringer's.",
         "unit": null
       },
       {
-        "id": "tmj-arthroscopic-discopexy:measurement:1",
+        "id": "tmj-arthroscopy:measurement:2",
         "kind": "measurement",
         "raw": "[X]",
-        "label": "Measurement (cc)",
-        "context": "The joint was irrigated with ___ cc of multimodal solution and [X] cc of injectable platelet-rich fibrin (i-PRF) was placed into the superior joint space under ",
-        "unit": "cc"
+        "label": "Measurement",
+        "context": "A [X]-degree arthroscope was introduced and a ___-gauge outflow needle was placed to establish through-and-through flow with Lactated Ringer's.",
+        "unit": null
       },
       {
-        "id": "tmj-arthroscopic-discopexy:measurement:2",
-        "kind": "measurement",
-        "raw": "[X]",
-        "label": "Measurement (cc)",
-        "context": "The joint was irrigated with [X] cc of multimodal solution and ___ cc of injectable platelet-rich fibrin (i-PRF) was placed into the superior joint space under ",
-        "unit": "cc"
+        "id": "tmj-arthroscopy:optionalClause:0",
+        "kind": "optionalClause",
+        "raw": "[Level II operative arthroscopy was performed: adhesions within the anterior recess were further released with blunt instrumentation, fibrillated synovium was debrided, and a superficial synovectomy was completed with coblation.]",
+        "label": "Optional step",
+        "context": "Level II operative arthroscopy was performed: adhesions within the anterior recess were further released with blunt instrumentation, fibrillated synovium was debrided, and a superficial synovectomy was completed with coblation.",
+        "hint": "Level II operative arthroscopy was performed: adhesions within the anterior recess were further released with blunt instrumentation, fibrillated synovium was debrided, and a superficial synovectomy was completed with coblation."
+      },
+      {
+        "id": "tmj-arthroscopy:optionalClause:1",
+        "kind": "optionalClause",
+        "raw": "[Level III advanced arthroscopy was performed: an anterior release was completed and the disc was reduced over the condylar head, pierced with an 18-gauge needle, and fixated with a 2-0 PDS suture passed to a transmeatal exit and tied, with arthroscopic confirmation that the disc remained in anatomic position over the condyle.]",
+        "label": "Optional step",
+        "context": "Level III advanced arthroscopy was performed: an anterior release was completed and the disc was reduced over the condylar head, pierced with an 18-gauge needle, and fixated with a 2-0 PDS suture passed to a transmeatal exit and tied, with arthroscopic confirmation that the disc remained in anatomic position over the condyle.",
+        "hint": "Level III advanced arthroscopy was performed: an anterior release was completed and the disc was reduced over the condylar head, pierced with an 18-gauge needle, and fixated with a 2-0 PDS suture passed to a transmeatal exit and tied, with arthroscopic confirmation that the disc remained in anatomic position over the condyle."
+      },
+      {
+        "id": "tmj-arthroscopy:optionalClause:2",
+        "kind": "optionalClause",
+        "raw": "[Adjunct injectable platelet-rich fibrin (i-PRF) was instilled into the superior joint space under direct arthroscopic visualization.]",
+        "label": "Optional step",
+        "context": "Adjunct injectable platelet-rich fibrin (i-PRF) was instilled into the superior joint space under direct arthroscopic visualization.",
+        "hint": "Adjunct injectable platelet-rich fibrin (i-PRF) was instilled into the superior joint space under direct arthroscopic visualization."
       }
     ],
     "flags": [],
@@ -4083,102 +4082,10 @@
       "rx": [
         "post-op-rx-tmj"
       ],
-      "est": "90 min"
+      "est": "75 min"
     },
     "tags": [],
-    "rawBody": "PROCEDURE: TMJ Arthroscopic Discopexy\n\nThe [R/L] external auditory canal was protected with an ear wick and otoscopic exam confirmed an intact tympanic membrane. [X] mL of lactated Ringer's was injected into the superior joint space from an inferolateral approach with good plunger rebound. An operative cannula was inserted into the posterior recess with a sharp trocar, a [0]-degree arthroscope was introduced, and a [22] gauge outflow needle was placed; the irrigation fluid was lactated Ringer's with epinephrine added.\n\nDiagnostic arthroscopy was completed. A second cannula was placed into the anterolateral aspect of the joint and coblation was used to perform a superficial synovectomy with lysis and lavage and contraction of the retrodiscal tissue. A probe was used to reduce the disc over the condylar head; the disc was pierced with an 18 gauge needle and a 2-0 PDS suture was passed through it. The suture ends were directed to the preauricular area and passed to a transmeatal exit, a connecting incision was made between the exit points, and the suture was tied to fixate the disc. Fixation was evaluated arthroscopically and the disc confirmed to remain in anatomic position over the condyle.\n\nThe joint was irrigated with [X] cc of multimodal solution and [X] cc of injectable platelet-rich fibrin (i-PRF) was placed into the superior joint space under direct arthroscopic control. The arthroscope was removed and both puncture sites were closed with 5-0 fast-absorbing gut. The ear wick was removed and the tympanic membrane was reconfirmed intact.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
-    "warnings": [
-      "Unrecognized bracket kept inline: [0]",
-      "Unrecognized bracket kept inline: [22]"
-    ]
-  },
-  {
-    "id": "tmj-arthroscopy-lysis-lavage-prf",
-    "title": "TMJ Arthroscopy (Lysis and Lavage with PRF)",
-    "category": "TMJ",
-    "modes": [
-      "atom",
-      "library"
-    ],
-    "sourcePath": "Note Templates/Procedures/TMJ/TMJ Arthroscopy Lysis Lavage PRF.md",
-    "bodyTemplate": "PROCEDURE: TMJ Arthroscopy (Lysis and Lavage with PRF)\n\nPrior to induction, peripheral blood was drawn into PRF tubes and centrifuged per standard protocol to yield injectable PRF (i-PRF). The patient was placed supine and underwent nasal endotracheal intubation without incident. The tmj-arthroscopy-lysis-lavage-prf:side:0 face and ear were prepped and draped in standard sterile fashion, and a cotton pledget was placed in the tmj-arthroscopy-lysis-lavage-prf:side:1 external auditory meatus.\n\nThe canthal-tragal line and articular fossa landmarks were marked. The tmj-arthroscopy-lysis-lavage-prf:side:2 superior joint space was insufflated with tmj-arthroscopy-lysis-lavage-prf:measurement:0 cc of Lactated Ringer's using a 27-gauge needle, which returned freely, confirming intracapsular placement. A stab incision was made over the posterior puncture site, and the trocar and cannula were introduced into the superior joint space. The arthroscope was introduced and a diagnostic sweep was performed. An anterior portal was established using a triangulation technique. Thorough lysis of adhesions within the anterior recess and superior joint space was performed with blunt instrumentation, and the joint was copiously lavaged with approximately tmj-arthroscopy-lysis-lavage-prf:measurement:1 cc of Lactated Ringer's.\n\nFollowing successful lysis and lavage, the prepared liquid i-PRF (approximately tmj-arthroscopy-lysis-lavage-prf:measurement:2 cc) was injected into the superior joint space and retrodiscal tissues under direct visualization. The instruments were withdrawn and hemostasis was achieved with manual pressure. A single 6-0 Prolene suture was placed at the trocar site. The external auditory meatus pledget was removed and the ear was examined.\n\n",
-    "fields": [
-      {
-        "id": "tmj-arthroscopy-lysis-lavage-prf:side:0",
-        "kind": "side",
-        "raw": "[R/L]",
-        "label": "Side",
-        "context": "The ___ face and ear were prepped and draped in standard sterile fashion, and a cotton pledget was placed in the [R/L] external auditory meatus.",
-        "options": [
-          "R",
-          "L"
-        ],
-        "linkKey": "side"
-      },
-      {
-        "id": "tmj-arthroscopy-lysis-lavage-prf:side:1",
-        "kind": "side",
-        "raw": "[R/L]",
-        "label": "Side",
-        "context": "The [R/L] face and ear were prepped and draped in standard sterile fashion, and a cotton pledget was placed in the ___ external auditory meatus.",
-        "options": [
-          "R",
-          "L"
-        ],
-        "linkKey": "side"
-      },
-      {
-        "id": "tmj-arthroscopy-lysis-lavage-prf:side:2",
-        "kind": "side",
-        "raw": "[R/L]",
-        "label": "Side",
-        "context": "The ___ superior joint space was insufflated with [X] cc of Lactated Ringer's using a 27-gauge needle, which returned freely, confirming intracapsular placement",
-        "options": [
-          "R",
-          "L"
-        ],
-        "linkKey": "side"
-      },
-      {
-        "id": "tmj-arthroscopy-lysis-lavage-prf:measurement:0",
-        "kind": "measurement",
-        "raw": "[X]",
-        "label": "Measurement (cc)",
-        "context": "The [R/L] superior joint space was insufflated with ___ cc of Lactated Ringer's using a 27-gauge needle, which returned freely, confirming intracapsular placeme",
-        "unit": "cc"
-      },
-      {
-        "id": "tmj-arthroscopy-lysis-lavage-prf:measurement:1",
-        "kind": "measurement",
-        "raw": "[X]",
-        "label": "Measurement (cc)",
-        "context": "Thorough lysis of adhesions within the anterior recess and superior joint space was performed with blunt instrumentation, and the joint was copiously lavaged wi",
-        "unit": "cc"
-      },
-      {
-        "id": "tmj-arthroscopy-lysis-lavage-prf:measurement:2",
-        "kind": "measurement",
-        "raw": "[X]",
-        "label": "Measurement (cc)",
-        "context": "Following successful lysis and lavage, the prepared liquid i-PRF (approximately ___ cc) was injected into the superior joint space and retrodiscal tissues under",
-        "unit": "cc"
-      }
-    ],
-    "flags": [],
-    "includes": [],
-    "smartlinks": [],
-    "links": {
-      "pullSheet": "pull-sheet-arthroscopy",
-      "postop": [
-        "post-op-instructions-tmj"
-      ],
-      "rx": [
-        "post-op-rx-tmj"
-      ],
-      "est": "60 min"
-    },
-    "tags": [],
-    "rawBody": "PROCEDURE: TMJ Arthroscopy (Lysis and Lavage with PRF)\n\nPrior to induction, peripheral blood was drawn into PRF tubes and centrifuged per standard protocol to yield injectable PRF (i-PRF). The patient was placed supine and underwent nasal endotracheal intubation without incident. The [R/L] face and ear were prepped and draped in standard sterile fashion, and a cotton pledget was placed in the [R/L] external auditory meatus.\n\nThe canthal-tragal line and articular fossa landmarks were marked. The [R/L] superior joint space was insufflated with [X] cc of Lactated Ringer's using a 27-gauge needle, which returned freely, confirming intracapsular placement. A stab incision was made over the posterior puncture site, and the trocar and cannula were introduced into the superior joint space. The arthroscope was introduced and a diagnostic sweep was performed. An anterior portal was established using a triangulation technique. Thorough lysis of adhesions within the anterior recess and superior joint space was performed with blunt instrumentation, and the joint was copiously lavaged with approximately [X] cc of Lactated Ringer's.\n\nFollowing successful lysis and lavage, the prepared liquid i-PRF (approximately [X] cc) was injected into the superior joint space and retrodiscal tissues under direct visualization. The instruments were withdrawn and hemostasis was achieved with manual pressure. A single 6-0 Prolene suture was placed at the trocar site. The external auditory meatus pledget was removed and the ear was examined.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "rawBody": "PROCEDURE: TMJ Arthroscopy\n\nThe [R/L] external auditory canal was protected with a pledget and otoscopic exam confirmed an intact tympanic membrane. The canthal-tragal line and articular fossa were marked. The [R/L] superior joint space was insufflated with [X] cc of Lactated Ringer's from an inferolateral approach with free return, confirming intracapsular placement. A stab incision was made over the posterior puncture site and an operative cannula was introduced into the superior joint space with a sharp trocar. A [X]-degree arthroscope was introduced and a [X]-gauge outflow needle was placed to establish through-and-through flow with Lactated Ringer's.\n\nA diagnostic arthroscopic sweep of the superior joint space was performed, followed by lysis of adhesions and copious lavage with Lactated Ringer's.\n\n[Level II operative arthroscopy was performed: adhesions within the anterior recess were further released with blunt instrumentation, fibrillated synovium was debrided, and a superficial synovectomy was completed with coblation.]\n\n[Level III advanced arthroscopy was performed: an anterior release was completed and the disc was reduced over the condylar head, pierced with an 18-gauge needle, and fixated with a 2-0 PDS suture passed to a transmeatal exit and tied, with arthroscopic confirmation that the disc remained in anatomic position over the condyle.]\n\n[Adjunct injectable platelet-rich fibrin (i-PRF) was instilled into the superior joint space under direct arthroscopic visualization.]\n\nThe arthroscope and cannulae were withdrawn and hemostasis was achieved with manual pressure. The puncture sites were closed with 5-0 fast-absorbing gut. The pledget was removed and the tympanic membrane was reconfirmed intact.",
     "warnings": []
   },
   {

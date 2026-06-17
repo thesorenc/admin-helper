@@ -13,6 +13,88 @@
 
 import { UNFILLED_SENTINEL } from './assembler'
 
+/**
+ * EHR autofill tokens the source templates carry but that must never surface in this
+ * app's composed Rx/post-op output. The clinician builds the prescription here; the
+ * EHR's own discharge-med autofill ("pfs_discharge_medications") and its "Medications
+ * Given" header are noise in this context. Matched whitespace-insensitively inside the
+ * brackets. (The Library's raw-template view keeps them — there they ARE the EHR-ready
+ * token.)
+ */
+const SUPPRESSED_TOKEN_RE = /^\[\s*(?:pfs_discharge_medications|Medications Given)\s*\]$/i
+
+export function isSuppressedToken(line: string): boolean {
+  return SUPPRESSED_TOKEN_RE.test(line.trim())
+}
+
+/** Drop suppressed-token lines from an assembled block (post-op handouts). */
+export function stripSuppressedLines(text: string): string {
+  return text
+    .split('\n')
+    .filter((l) => !isSuppressedToken(l))
+    .join('\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim()
+}
+
+/** Drug identity for dedupe: the line up to the supply/quantity (" - #…"), normalized. */
+function rxSignature(line: string): string {
+  return line.split(/\s+-\s+#/)[0].toLowerCase().replace(/\s+/g, ' ').trim()
+}
+
+/**
+ * Merge multiple linked Rx component bodies into ONE prescription: a single "Rx:" header,
+ * then unique orders grouped under their sub-headers (e.g. "Antibiotic (…):"), so two
+ * procedures never print "Rx: …list… Rx: …list…". Orders are deduped per-header by drug
+ * signature (keeping the first occurrence's full text), suppressed tokens are dropped, and
+ * bracketed smartlinks are preserved verbatim for the downstream parseRx to reclassify.
+ */
+export function consolidateRx(texts: string[]): string {
+  const ROOT = 'Rx:'
+  const order: string[] = []
+  const groups = new Map<string, { lines: string[]; seen: Set<string> }>()
+  const ensure = (h: string) => {
+    let g = groups.get(h)
+    if (!g) {
+      g = { lines: [], seen: new Set() }
+      groups.set(h, g)
+      order.push(h)
+    }
+    return g
+  }
+  ensure(ROOT) // the single top-level header, always first
+  for (const text of texts) {
+    let current = ROOT
+    for (const raw of text.split('\n')) {
+      const t = raw.trim()
+      if (!t || isSuppressedToken(t)) continue
+      if (/^rx:$/i.test(t)) {
+        current = ROOT
+        continue
+      }
+      // A sub-header ends in ":" and is not a bracketed smartlink.
+      if (/:$/.test(t) && !/^\[.*\]$/.test(t)) {
+        current = t
+        ensure(t)
+        continue
+      }
+      const g = ensure(current)
+      const sig = rxSignature(t)
+      if (g.seen.has(sig)) continue
+      g.seen.add(sig)
+      g.lines.push(t)
+    }
+  }
+  const out: string[] = []
+  for (const h of order) {
+    const g = groups.get(h)
+    if (!g || !g.lines.length) continue // drop empty (sub-)headers
+    if (out.length) out.push('')
+    out.push(h, ...g.lines)
+  }
+  return out.join('\n').trim()
+}
+
 export type RxLine =
   | { kind: 'header'; text: string; alt: boolean }
   | { kind: 'smartlink'; text: string }
