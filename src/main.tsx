@@ -25,6 +25,7 @@ if (window.self !== window.top) {
   }
 }
 import { Library } from './routes/Library.tsx'
+import { ExamBuilder } from './routes/ExamBuilder.tsx'
 
 const router = createHashRouter([
   {
@@ -32,6 +33,7 @@ const router = createHashRouter([
     element: <App />,
     children: [
       { index: true, element: <CaseBuilder /> },
+      { path: 'exam', element: <ExamBuilder /> },
       { path: 'library', element: <Library /> },
     ],
   },

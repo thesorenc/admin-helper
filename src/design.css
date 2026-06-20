@@ -389,3 +389,49 @@ button{font-family:inherit;cursor:pointer}
   .doc-kv,.doc-kv-row,.doc-ul li,.sheet ul li,.doc-note{break-inside:avoid;page-break-inside:avoid}
   @page{margin:18mm}
 }
+
+/* ── Exam builder (physical exam + review of systems) ───────────────────────── */
+.seg.full{width:100%}
+.seg.full button{flex:1;justify-content:center}
+.proc-card .pc-norm{flex:0 0 auto;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--accent-2)}
+.exam-hero{display:flex;align-items:flex-start;gap:12px}
+.exam-hero .ch-text{flex:1;min-width:0}
+.normal-preview{font-size:13.5px;line-height:1.6;color:var(--ink-2);background:var(--accent-softer);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.normal-preview .np-tag{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-2);display:block;margin-bottom:5px}
+/* abnormal-finding detail row */
+.ex-detail{display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:var(--surface-2);border:1px solid var(--line);border-radius:11px;padding:10px 12px}
+.ex-detail .d-label{font-size:12px;font-weight:700;color:var(--ink-2)}
+.ex-detail .d-label b{color:var(--accent-ink);font-weight:800}
+.miniseg{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:2px;gap:2px}
+.miniseg button{border:none;background:none;padding:4px 10px;border-radius:6px;font-family:inherit;font-size:12px;font-weight:700;color:var(--muted)}
+.miniseg button.on{background:var(--accent-soft);color:var(--accent-ink)}
+.d-text{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:5px 9px;font-family:inherit;font-size:12.5px;font-weight:600;color:var(--ink);outline:none;min-width:130px}
+.d-text:focus{border-color:var(--accent-2);box-shadow:0 0 0 3px var(--accent-soft)}
+/* +/- element rows (shared by PE and ROS): − = pertinent negative, ＋ = positive */
+.exam-actions{display:flex;gap:8px}
+.exam-rows{display:flex;flex-direction:column;gap:8px}
+.exam-item{display:flex;flex-direction:column;gap:6px}
+.exam-row{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:5px 6px 5px 13px}
+.exam-row .rs-label{font-size:13px;font-weight:600;color:var(--ink-2)}
+.exam-row.pos .rs-label{color:var(--accent-ink);font-weight:700}
+.exam-row.neg .rs-label{color:var(--muted)}
+.exam-item .ex-detail{margin-left:14px}
+.ex-detail.col{flex-direction:column;align-items:stretch;gap:9px}
+.gcs-row{display:flex;align-items:center;gap:10px}
+.size-in{display:inline-flex;align-items:center;gap:6px}
+.exam-pm{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;flex:0 0 auto}
+.exam-pm button{width:34px;height:28px;border:none;background:var(--surface);font-size:15px;font-weight:800;color:var(--muted);line-height:1;display:grid;place-items:center}
+.exam-pm button + button{border-left:1px solid var(--line)}
+.exam-pm button.minus:hover{background:var(--rose-soft)}
+.exam-pm button.plus:hover{background:var(--accent-soft)}
+.exam-pm button.minus.on{background:var(--rose-soft);color:var(--rose)}
+.exam-pm button.plus.on{background:var(--accent);color:#fff}
+/* per-system free-text comment */
+.comment-wrap{display:flex;flex-direction:column}
+.comment-btn{align-self:flex-start}
+.comment-box{width:100%;min-height:62px;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:9px 11px;font-family:inherit;font-size:13px;line-height:1.5;color:var(--ink);outline:none;resize:vertical}
+.comment-box:focus{border-color:var(--accent-2);box-shadow:0 0 0 3px var(--accent-soft)}
+/* paste-ready exam output: section / system / abnormal emphasis inside .emr */
+.emr .sec{color:var(--accent-ink);font-weight:700}
+.emr .sys{color:var(--ink);font-weight:600}
+.emr .abn{color:#7a2e25}
