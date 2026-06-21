@@ -1,11 +1,13 @@
 // OMFS-tailored exam content as a typed repo config. Every system is a list of elements;
-// each element is toggled +/− . '−' emits a specific pertinent negative. '+' reveals a
-// control to specify the finding: a free-text `detail` (side/mm/text/tooth) OR a richer
-// `control` (select / multiselect / measure / teeth / gcs / trigeminal). Multi-value
-// controls encode into the flat detail map via `${id}.${subkey}` keys.
+// the editor renders each element's CHOICES as inline buttons (or a dropdown when many) —
+// the first choice is the pertinent negative ("Absent" / `normalLabel`). Under the hood an
+// element still resolves to a +/− mark plus a `detail` value, which the assembler turns into
+// note text. '+' may carry a free-text `detail` (side/mm/text/tooth) OR a richer `control`
+// (select / multiselect / measure / teeth / gcs / trigeminal); multi-value controls encode
+// into the flat detail map via `${id}.${subkey}` keys.
 //
-// Editing: tune freely. `neg` defaults to `no <label>` when omitted — set it for idiomatic
-// negatives (EOMI, PERRL, RRR, supple, ...). Clinical wording is the user's to vet.
+// Editing: tune freely. `neg` defaults to `no <label>`; set it for idiomatic negatives
+// (EOMI, PERRL, RRR, supple). `normalLabel` names the negative button for non-"Absent" cases.
 
 import type { ExamSystem } from './types'
 
@@ -14,7 +16,7 @@ const teeth = (v: string) => (v ? v.split(/,\s*/).filter(Boolean).map((t) => `#$
 export const PE_SYSTEMS: ExamSystem[] = [
   {
     id: 'gen', name: 'Constitutional', abbr: 'GEN', elements: [
-      { id: 'distress', label: 'Acute distress', control: 'select', options: [{ value: 'mild', label: 'Mild' }, { value: 'moderate', label: 'Moderate' }, { value: 'severe', label: 'Severe' }], build: (g) => `in ${g() || 'acute'} distress`, neg: 'no acute distress' },
+      { id: 'distress', label: 'Acute distress', control: 'select', normalLabel: 'None', options: [{ value: 'mild', label: 'Mild' }, { value: 'moderate', label: 'Moderate' }, { value: 'severe', label: 'Severe' }], build: (g) => `in ${g() || 'acute'} distress`, neg: 'no acute distress' },
       { id: 'appearance', label: 'General appearance', pos: () => 'ill-appearing', neg: 'well-appearing, well-nourished' },
       { id: 'febrile', label: 'Febrile', pos: () => 'febrile', neg: 'afebrile' },
     ],
@@ -36,7 +38,7 @@ export const PE_SYSTEMS: ExamSystem[] = [
       { id: 'pupils', label: 'Pupils', detail: 'text', hint: 'anisocoria / sluggish', pos: (v) => v || 'pupillary abnormality', neg: 'PERRL' },
       { id: 'va', label: 'Visual acuity', pos: () => 'decreased visual acuity', neg: 'visual acuity grossly intact' },
       { id: 'dipl', label: 'Diplopia', detail: 'text', hint: 'gaze', pos: (v) => `diplopia${v ? ` on ${v} gaze` : ''}`, neg: 'no diplopia' },
-      { id: 'globe', label: 'Globe position', control: 'select', side: true, options: [{ value: 'enophthalmos', label: 'Enophthalmos' }, { value: 'proptosis', label: 'Proptosis' }, { value: 'hypoglobus', label: 'Hypoglobus' }], build: (g) => `${g('side') ? `${g('side')} ` : ''}${g() || 'globe malposition'}`, neg: 'no enophthalmos or proptosis' },
+      { id: 'globe', label: 'Globe position', control: 'select', normalLabel: 'Normal', side: true, options: [{ value: 'enophthalmos', label: 'Enophthalmos' }, { value: 'proptosis', label: 'Proptosis' }, { value: 'hypoglobus', label: 'Hypoglobus' }], build: (g) => `${g('side') ? `${g('side')} ` : ''}${g() || 'globe malposition'}`, neg: 'no enophthalmos or proptosis' },
       { id: 'sclera', label: 'Sclera / conjunctiva', detail: 'side', pos: (s) => `${s} subconjunctival hemorrhage`, neg: 'sclera and conjunctiva clear' },
       { id: 'peri', label: 'Periorbital edema', detail: 'side', pos: (s) => `${s} periorbital edema`, neg: 'no periorbital edema' },
     ],
@@ -57,8 +59,8 @@ export const PE_SYSTEMS: ExamSystem[] = [
       { id: 'vest', label: 'Vestibular swelling', detail: 'text', hint: 'e.g. left mandibular buccal', pos: (v) => `swelling of the ${v || 'buccal'} vestibule`, neg: 'no vestibular swelling' },
       { id: 'fom', label: 'Floor of mouth', pos: () => 'floor-of-mouth elevation', neg: 'floor of mouth soft and non-tender' },
       { id: 'dentition', label: 'Dentition', detail: 'text', hint: 'caries / edentulous', pos: (v) => v || 'dental disease', neg: 'dentition intact' },
-      { id: 'fx', label: 'Tooth fracture', control: 'teeth', build: (g) => `fracture of ${teeth(g())}`, neg: 'no tooth fractures' },
-      { id: 'mob', label: 'Mobile dentition', control: 'teeth', build: (g) => `mobility of ${teeth(g())}`, neg: 'no mobile dentition' },
+      { id: 'fx', label: 'Tooth fracture', control: 'teeth', normalLabel: 'None', build: (g) => `fracture of ${teeth(g())}`, neg: 'no tooth fractures' },
+      { id: 'mob', label: 'Mobile dentition', control: 'teeth', normalLabel: 'None', build: (g) => `mobility of ${teeth(g())}`, neg: 'no mobile dentition' },
       { id: 'lesion', label: 'Mucosal lesion', detail: 'text', hint: 'site / size', pos: (v) => `mucosal lesion${v ? ` (${v})` : ''}`, neg: 'no mucosal lesions' },
       { id: 'pus', label: 'Purulent drainage', neg: 'no purulent drainage' },
       { id: 'bone', label: 'Exposed bone', detail: 'text', hint: 'site', pos: (v) => `exposed bone${v ? ` at the ${v}` : ''}`, neg: 'no exposed bone' },
@@ -66,16 +68,16 @@ export const PE_SYSTEMS: ExamSystem[] = [
   },
   {
     id: 'occ', name: 'Occlusion', abbr: 'OCC', elements: [
-      { id: 'angle', label: 'Angle class', control: 'select', side: true, options: [{ value: 'I', label: 'Class I' }, { value: 'II', label: 'Class II' }, { value: 'III', label: 'Class III' }], build: (g) => `${g('side') ? `${g('side')} ` : ''}Class ${g() || '__'} occlusion`, neg: 'occlusion reproducible and stable' },
-      { id: 'openbite', label: 'Anterior open bite', control: 'measure', unit: 'mm', build: (g) => `${g() || '__'} mm anterior open bite`, neg: 'no open bite' },
-      { id: 'crossbite', label: 'Crossbite', control: 'multiselect', options: [{ value: 'anterior', label: 'Anterior' }, { value: 'posterior right', label: 'Post. R' }, { value: 'posterior left', label: 'Post. L' }], build: (g) => `${g() || '__'} crossbite`, neg: 'no crossbite' },
+      { id: 'angle', label: 'Angle class', control: 'select', normalLabel: 'Class I', side: true, options: [{ value: 'II', label: 'Class II' }, { value: 'III', label: 'Class III' }], build: (g) => `${g('side') ? `${g('side')} ` : ''}Class ${g() || '__'} occlusion`, neg: 'Class I occlusion, reproducible and stable' },
+      { id: 'openbite', label: 'Anterior open bite', control: 'measure', normalLabel: 'None', unit: 'mm', build: (g) => `${g() || '__'} mm anterior open bite`, neg: 'no open bite' },
+      { id: 'crossbite', label: 'Crossbite', control: 'multiselect', normalLabel: 'None', options: [{ value: 'anterior', label: 'Anterior' }, { value: 'posterior right', label: 'Post. R' }, { value: 'posterior left', label: 'Post. L' }], build: (g) => `${g() || '__'} crossbite`, neg: 'no crossbite' },
       { id: 'prem', label: 'Premature contact', detail: 'text', hint: 'site', pos: (v) => `premature contact${v ? ` at ${v}` : ''}`, neg: 'no premature contacts' },
       { id: 'step', label: 'Step in occlusion', detail: 'text', hint: 'site', pos: (v) => `step in occlusion${v ? ` at ${v}` : ''}`, neg: 'no step in occlusion' },
     ],
   },
   {
     id: 'tmj', name: 'TMJ', abbr: 'TMJ', elements: [
-      { id: 'mio', label: 'Mouth opening (MIO)', control: 'measure', unit: 'mm', abnormalBelow: 35, build: (g) => { const n = parseInt(g(), 10); return `${Number.isFinite(n) && n < 35 ? 'limited opening, ' : ''}MIO ${g() || '__'} mm` }, neg: 'full range of motion' },
+      { id: 'mio', label: 'Mouth opening (MIO)', control: 'measure', normalLabel: 'Full ROM', unit: 'mm', abnormalBelow: 35, build: (g) => { const n = parseInt(g(), 10); return `${Number.isFinite(n) && n < 35 ? 'limited opening, ' : ''}MIO ${g() || '__'} mm` }, neg: 'full range of motion' },
       { id: 'tend', label: 'Pre-auricular tenderness', detail: 'side', pos: (s) => `${s} pre-auricular tenderness`, neg: 'TMJ non-tender' },
       { id: 'click', label: 'Clicking / popping', detail: 'side', pos: (s) => `${s} clicking`, neg: 'no clicking or popping' },
       { id: 'crep', label: 'Crepitus', detail: 'side', pos: (s) => `${s} crepitus`, neg: 'no crepitus' },
@@ -93,7 +95,7 @@ export const PE_SYSTEMS: ExamSystem[] = [
   },
   {
     id: 'neck', name: 'Neck', abbr: 'NK', elements: [
-      { id: 'lad', label: 'Lymphadenopathy', control: 'multiselect', side: true, size: true, options: [{ value: 'I', label: 'I' }, { value: 'II', label: 'II' }, { value: 'III', label: 'III' }, { value: 'IV', label: 'IV' }, { value: 'V', label: 'V' }, { value: 'VI', label: 'VI' }], build: (g) => `${g('size') ? `${g('size')} cm ` : ''}${g('side') ? `${g('side')} ` : ''}level ${g() || '__'} lymphadenopathy`, neg: 'no lymphadenopathy' },
+      { id: 'lad', label: 'Lymphadenopathy', control: 'multiselect', normalLabel: 'None', side: true, size: true, options: [{ value: 'I', label: 'I' }, { value: 'II', label: 'II' }, { value: 'III', label: 'III' }, { value: 'IV', label: 'IV' }, { value: 'V', label: 'V' }, { value: 'VI', label: 'VI' }], build: (g) => `${g('size') ? `${g('size')} cm ` : ''}${g('side') ? `${g('side')} ` : ''}level ${g() || '__'} lymphadenopathy`, neg: 'no lymphadenopathy' },
       { id: 'mass', label: 'Neck mass', detail: 'text', hint: 'location', pos: (v) => `neck mass${v ? ` (${v})` : ''}`, neg: 'no masses' },
       { id: 'tender', label: 'Tenderness', detail: 'text', hint: 'location', pos: (v) => `tenderness${v ? ` (${v})` : ''}`, neg: 'non-tender' },
       { id: 'rom', label: 'Range of motion', pos: () => 'limited range of motion', neg: 'supple, full range of motion' },
@@ -103,8 +105,8 @@ export const PE_SYSTEMS: ExamSystem[] = [
   },
   {
     id: 'cn', name: 'Cranial nerves', abbr: 'CN', elements: [
-      { id: 'sens', label: 'Trigeminal sensation', control: 'trigeminal', build: (g) => `${g('side') ? `${g('side')} ` : ''}${g('nerves') || 'trigeminal'} ${g('type') || 'paresthesia'}`, neg: 'facial sensation intact in V1–V3' },
-      { id: 'facial', label: 'Facial nerve (VII)', control: 'select', side: true, options: [{ value: 'II', label: 'II' }, { value: 'III', label: 'III' }, { value: 'IV', label: 'IV' }, { value: 'V', label: 'V' }, { value: 'VI', label: 'VI' }], build: (g) => `${g('side') ? `${g('side')} ` : ''}House-Brackmann ${g() || '__'} facial weakness`, neg: 'facial nerve symmetric, House-Brackmann I' },
+      { id: 'sens', label: 'Trigeminal sensation', control: 'trigeminal', normalLabel: 'Intact', build: (g) => `${g('side') ? `${g('side')} ` : ''}${g('nerves') || 'trigeminal'} ${g('type') || 'paresthesia'}`, neg: 'facial sensation intact in V1–V3' },
+      { id: 'facial', label: 'Facial nerve (VII)', control: 'select', normalLabel: 'Normal (HB I)', side: true, options: [{ value: 'II', label: 'HB II' }, { value: 'III', label: 'HB III' }, { value: 'IV', label: 'HB IV' }, { value: 'V', label: 'HB V' }, { value: 'VI', label: 'HB VI' }], build: (g) => `${g('side') ? `${g('side')} ` : ''}House-Brackmann ${g() || '__'} facial weakness`, neg: 'facial nerve symmetric, House-Brackmann I' },
       { id: 'cn12', label: 'Tongue (CN XII)', detail: 'side', pos: (s) => `tongue deviation to the ${s}`, neg: 'tongue midline' },
       { id: 'other', label: 'CN II–XII', detail: 'text', pos: (v) => `${v || 'cranial nerve'} deficit`, neg: 'CN II–XII otherwise grossly intact' },
     ],
@@ -122,7 +124,7 @@ export const PE_SYSTEMS: ExamSystem[] = [
       { id: 'ausc', label: 'Auscultation', detail: 'text', hint: 'wheezes / crackles', pos: (v) => v || 'abnormal breath sounds', neg: 'clear to auscultation bilaterally' },
       { id: 'distress', label: 'Respiratory distress', pos: () => 'respiratory distress', neg: 'no respiratory distress' },
       { id: 'stridor', label: 'Stridor', neg: 'no stridor' },
-      { id: 'airway', label: 'Airway', control: 'select', options: [{ value: 'at risk', label: 'At risk' }, { value: 'compromised', label: 'Compromised' }], build: (g) => `airway ${g() || 'compromised'}`, neg: 'airway patent' },
+      { id: 'airway', label: 'Airway', control: 'select', normalLabel: 'Patent', options: [{ value: 'at risk', label: 'At risk' }, { value: 'compromised', label: 'Compromised' }], build: (g) => `airway ${g() || 'compromised'}`, neg: 'airway patent' },
     ],
   },
   {
@@ -138,7 +140,7 @@ export const PE_SYSTEMS: ExamSystem[] = [
     id: 'neuro', name: 'Neuro / Psych', abbr: 'NP', elements: [
       { id: 'orient', label: 'Orientation', detail: 'text', hint: 'to ___', pos: (v) => `disoriented${v ? ` ${v}` : ''}`, neg: 'alert and oriented ×3' },
       { id: 'focal', label: 'Focal deficit', detail: 'text', hint: 'describe', pos: (v) => `focal deficit${v ? ` (${v})` : ''}`, neg: 'no focal neurologic deficit' },
-      { id: 'gcs', label: 'GCS', control: 'gcs', build: (g) => { const e = g('e'), v = g('v'), m = g('m'); const tot = (parseInt(e, 10) || 0) + (parseInt(v, 10) || 0) + (parseInt(m, 10) || 0); return tot ? `GCS ${tot} (E${e || '_'} V${v || '_'} M${m || '_'})` : 'GCS' }, neg: 'GCS 15' },
+      { id: 'gcs', label: 'GCS', control: 'gcs', normalLabel: 'GCS 15', build: (g) => { const e = g('e'), v = g('v'), m = g('m'); const tot = (parseInt(e, 10) || 0) + (parseInt(v, 10) || 0) + (parseInt(m, 10) || 0); return tot ? `GCS ${tot} (E${e || '_'} V${v || '_'} M${m || '_'})` : 'GCS' }, neg: 'GCS 15' },
       { id: 'mood', label: 'Mood / affect', detail: 'text', pos: (v) => v || 'abnormal mood/affect', neg: 'mood and affect appropriate' },
     ],
   },

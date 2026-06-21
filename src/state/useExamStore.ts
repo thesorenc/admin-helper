@@ -35,6 +35,8 @@ interface ExamState {
   ros: Record<string, ExamRecord>
   /** Toggle an element to '+' / '-'; clicking the active mark again clears it. */
   setMark: (section: Section, sysId: string, elemId: string, mark: Mark) => void
+  /** Set an element's exact mark ('+'/'-', or null to un-address) and optionally its detail. */
+  selectChoice: (section: Section, sysId: string, elemId: string, mark: Mark | null, value?: string) => void
   setDetail: (section: Section, sysId: string, elemId: string, value: string) => void
   setComment: (section: Section, sysId: string, value: string) => void
   /** Mark every element in the system a pertinent negative (explicit "rest normal"). */
@@ -60,6 +62,18 @@ export const useExamStore = create<ExamState>()(
           if (marks[elemId] === mark) delete marks[elemId]
           else marks[elemId] = mark
           return { [section]: { ...map, [sysId]: { ...r, marks } } } as Partial<ExamState>
+        }),
+      selectChoice: (section, sysId, elemId, mark, value) =>
+        set((s) => {
+          const map = s[section]
+          const r = map[sysId]
+          if (!r) return {}
+          const marks = { ...r.marks }
+          const detail = { ...r.detail }
+          if (mark === null) delete marks[elemId]
+          else marks[elemId] = mark
+          if (value !== undefined) detail[elemId] = value
+          return { [section]: { ...map, [sysId]: { ...r, marks, detail } } } as Partial<ExamState>
         }),
       setDetail: (section, sysId, elemId, value) =>
         set((s) => {

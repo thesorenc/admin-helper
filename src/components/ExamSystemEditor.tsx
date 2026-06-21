@@ -15,8 +15,11 @@ const toggleInList = (v: string, item: string) => {
   return a.join(', ')
 }
 
+type Mark = '+' | '-'
+type Follow = 'text' | 'mm' | 'teeth' | 'gcs' | 'trigeminal'
 type Getter = (sub?: string) => string
 type Setter = (sub: string | undefined, value: string) => void
+interface Choice { key: string; label: string; mark: Mark; value?: string }
 
 const GCS_PARTS = [
   { label: 'Eye', sub: 'e', range: [1, 2, 3, 4] },
@@ -32,14 +35,44 @@ const TRIG_TYPES: ExamOption[] = [
   { value: 'paresthesia', label: 'Paresthesia' }, { value: 'anesthesia', label: 'Anesthesia' }, { value: 'dysesthesia', label: 'Dysesthesia' },
 ]
 
-/** Middle pane: edits one active system as a list of +/- elements. A '+' element reveals
- *  its detail control (legacy side/mm/text/tooth, or a richer select/measure/teeth/etc.).
- *  Remounted per system (keyed by the route), so the comment-open flag resets on switch. */
+/** The choices shown as buttons for an element. choices[0] is always the pertinent
+ *  negative ('-'); the rest are positives ('+', some carrying a value, some a reveal). */
+function deriveChoices(el: ExamElement): { choices: Choice[]; multi: boolean; dropdown: boolean } {
+  const neg: Choice = { key: 'neg', label: el.normalLabel ?? 'Absent', mark: '-' }
+  let positives: Choice[]
+  let multi = false
+  if (el.control === 'select' || el.control === 'multiselect') {
+    multi = el.control === 'multiselect'
+    positives = (el.options ?? []).map((o) => ({ key: o.value, label: o.label, mark: '+', value: o.value }))
+  } else if (el.control === 'measure') positives = [{ key: 'pos', label: 'Value', mark: '+' }]
+  else if (el.control === 'teeth') positives = [{ key: 'pos', label: 'Teeth…', mark: '+' }]
+  else if (el.control === 'gcs') positives = [{ key: 'pos', label: 'Score…', mark: '+' }]
+  else if (el.control === 'trigeminal') positives = [{ key: 'pos', label: 'Deficit…', mark: '+' }]
+  else if (el.detail === 'side') positives = SIDES.map((s) => ({ key: s, label: cap(s), mark: '+', value: s }))
+  else if (el.detail === 'text' || el.detail === 'tooth' || el.detail === 'mm') positives = [{ key: 'pos', label: el.detail === 'mm' ? 'Value' : 'Present', mark: '+' }]
+  else positives = [{ key: 'pos', label: 'Present', mark: '+' }]
+  const choices = [neg, ...positives]
+  return { choices, multi, dropdown: el.dropdown ?? (!multi && choices.length > 5) }
+}
+
+function revealKind(el: ExamElement): Follow | null {
+  if (el.control === 'measure') return 'mm'
+  if (el.control === 'teeth') return 'teeth'
+  if (el.control === 'gcs') return 'gcs'
+  if (el.control === 'trigeminal') return 'trigeminal'
+  if (el.control === 'select' || el.control === 'multiselect') return null
+  if (el.detail === 'text' || el.detail === 'tooth') return 'text'
+  if (el.detail === 'mm') return 'mm'
+  return null
+}
+
+/** Middle pane: edits one active system. Each element is a row of choice buttons (or a
+ *  dropdown when there are many); '−' choices are pertinent negatives. Remounted per system. */
 export function ExamSystemEditor({ section, systemId }: { section: Section; systemId: string }) {
   const [commentOpen, setCommentOpen] = useState(false)
   const system = (section === 'pe' ? PE_SYSTEMS : ROS_SYSTEMS).find((s) => s.id === systemId)
   const rec = useExamStore((s) => s[section][systemId])
-  const setMark = useExamStore((s) => s.setMark)
+  const selectChoice = useExamStore((s) => s.selectChoice)
   const setDetail = useExamStore((s) => s.setDetail)
   const setComment = useExamStore((s) => s.setComment)
   const allNegative = useExamStore((s) => s.allNegative)
@@ -63,23 +96,16 @@ export function ExamSystemEditor({ section, systemId }: { section: Section; syst
         </div>
 
         <div className="exam-rows">
-          {system.elements.map((el) => {
-            const m = rec.marks[el.id]
-            const get: Getter = (sub) => rec.detail[sub ? `${el.id}.${sub}` : el.id] ?? ''
-            const set: Setter = (sub, value) => setDetail(section, systemId, sub ? `${el.id}.${sub}` : el.id, value)
-            return (
-              <div className="exam-item" key={el.id}>
-                <div className={'exam-row' + (m === '+' ? ' pos' : m === '-' ? ' neg' : '')}>
-                  <span className="rs-label">{el.label}</span>
-                  <span className="exam-pm">
-                    <button className={'minus' + (m === '-' ? ' on' : '')} aria-label={`${el.label}: negative`} aria-pressed={m === '-'} onClick={() => setMark(section, systemId, el.id, '-')}>−</button>
-                    <button className={'plus' + (m === '+' ? ' on' : '')} aria-label={`${el.label}: positive`} aria-pressed={m === '+'} onClick={() => setMark(section, systemId, el.id, '+')}>＋</button>
-                  </span>
-                </div>
-                {m === '+' && (el.control || el.detail) && <ElementControl element={el} get={get} set={set} />}
-              </div>
-            )
-          })}
+          {system.elements.map((el) => (
+            <ElementRow
+              key={el.id}
+              element={el}
+              mark={rec.marks[el.id]}
+              detail={rec.detail}
+              onSelect={(mark, value) => selectChoice(section, systemId, el.id, mark, value)}
+              onDetail={(sub, value) => setDetail(section, systemId, sub ? `${el.id}.${sub}` : el.id, value)}
+            />
+          ))}
         </div>
 
         <CommentField open={commentOpen || rec.comment.trim().length > 0} value={rec.comment} onOpen={() => setCommentOpen(true)} onChange={(v) => setComment(section, systemId, v)} />
@@ -88,45 +114,118 @@ export function ExamSystemEditor({ section, systemId }: { section: Section; syst
   )
 }
 
-function ElementControl({ element, get, set }: { element: ExamElement; get: Getter; set: Setter }) {
-  switch (element.control) {
-    case 'teeth':
-      return <div className="ex-detail col"><ToothPicker value={get()} onChange={(v) => set(undefined, v)} /></div>
-    case 'select':
-      return (
+function ElementRow({ element, mark, detail, onSelect, onDetail }: {
+  element: ExamElement
+  mark: Mark | undefined
+  detail: Record<string, string>
+  onSelect: (mark: Mark | null, value?: string) => void
+  onDetail: (sub: string | undefined, value: string) => void
+}) {
+  const { choices, multi, dropdown } = deriveChoices(element)
+  const get: Getter = (sub) => detail[sub ? `${element.id}.${sub}` : element.id] ?? ''
+  const val = get()
+  const reveal = revealKind(element)
+
+  return (
+    <div className="exam-item">
+      <div className="exam-choices">
+        <span className="rs-label">{element.label}</span>
+        {dropdown ? (
+          <DropdownChoices choices={choices} mark={mark} val={val} onSelect={onSelect} />
+        ) : multi ? (
+          <MultiChoices choices={choices} mark={mark} val={val} onSelect={onSelect} />
+        ) : (
+          <ButtonChoices choices={choices} mark={mark} val={val} onSelect={onSelect} />
+        )}
+      </div>
+
+      {mark === '+' && reveal === 'gcs' && <GcsControl get={get} set={onDetail} />}
+      {mark === '+' && reveal === 'trigeminal' && <TrigeminalControl get={get} set={onDetail} />}
+      {mark === '+' && (reveal === 'text' || reveal === 'mm' || reveal === 'teeth' || element.side || element.size) && (
         <div className="ex-detail wrap">
-          <ChipGroup options={element.options ?? []} value={get()} onChange={(v) => set(undefined, v)} />
-          {element.side && <SideSeg value={get('side')} onChange={(v) => set('side', v)} />}
-        </div>
-      )
-    case 'multiselect':
-      return (
-        <div className="ex-detail wrap">
-          <ChipGroup multi options={element.options ?? []} value={get()} onChange={(v) => set(undefined, v)} />
-          {element.side && <SideSeg value={get('side')} onChange={(v) => set('side', v)} />}
+          {reveal === 'text' && <input className="d-text" value={val} placeholder={element.hint ?? 'specify'} aria-label={element.label} onChange={(e) => onDetail(undefined, e.target.value)} />}
+          {reveal === 'mm' && (
+            <>
+              <Stepper value={val} onChange={(v) => onDetail(undefined, v)} ariaLabel={`${element.label} (${element.unit ?? 'mm'})`} />
+              <span className="d-label">{element.unit ?? 'mm'}</span>
+            </>
+          )}
+          {reveal === 'teeth' && <ToothPicker value={val} onChange={(v) => onDetail(undefined, v)} />}
+          {element.side && <SideSeg value={get('side')} onChange={(v) => onDetail('side', v)} />}
           {element.size && (
             <span className="size-in">
-              <input className="d-text" inputMode="decimal" style={{ minWidth: 56 }} placeholder="size" aria-label={`${element.label} size`} value={get('size')} onChange={(e) => set('size', e.target.value)} />
+              <input className="d-text" inputMode="decimal" style={{ minWidth: 56 }} placeholder="size" aria-label={`${element.label} size`} value={get('size')} onChange={(e) => onDetail('size', e.target.value)} />
               <span className="d-label">cm</span>
             </span>
           )}
         </div>
-      )
-    case 'measure':
-      return (
-        <div className="ex-detail wrap">
-          <Stepper value={get()} onChange={(v) => set(undefined, v)} ariaLabel={`${element.label}${element.unit ? ` (${element.unit})` : ''}`} />
-          {element.unit && <span className="d-label">{element.unit}</span>}
-          {element.side && <SideSeg value={get('side')} onChange={(v) => set('side', v)} />}
-        </div>
-      )
-    case 'gcs':
-      return <GcsControl get={get} set={set} />
-    case 'trigeminal':
-      return <TrigeminalControl get={get} set={set} />
-    default:
-      return <LegacyDetail element={element} value={get()} onChange={(v) => set(undefined, v)} />
-  }
+      )}
+    </div>
+  )
+}
+
+function ButtonChoices({ choices, mark, val, onSelect }: { choices: Choice[]; mark: Mark | undefined; val: string; onSelect: (mark: Mark | null, value?: string) => void }) {
+  return (
+    <div className="choice-row">
+      {choices.map((c) => {
+        const active = c.mark === '-' ? mark === '-' : c.value !== undefined ? mark === '+' && val === c.value : mark === '+'
+        return (
+          <button key={c.key} type="button" aria-pressed={active} className={'choice' + (active ? (c.mark === '-' ? ' neg-on' : ' on') : '')} onClick={() => (active ? onSelect(null) : onSelect(c.mark, c.value))}>
+            {c.label}
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
+function MultiChoices({ choices, mark, val, onSelect }: { choices: Choice[]; mark: Mark | undefined; val: string; onSelect: (mark: Mark | null, value?: string) => void }) {
+  const list = mark === '+' ? splitList(val) : []
+  const [neg, ...opts] = choices
+  return (
+    <div className="choice-row">
+      <button type="button" aria-pressed={mark === '-'} className={'choice' + (mark === '-' ? ' neg-on' : '')} onClick={() => (mark === '-' ? onSelect(null) : onSelect('-'))}>
+        {neg.label}
+      </button>
+      {opts.map((c) => {
+        const active = list.includes(c.value!)
+        return (
+          <button key={c.key} type="button" aria-pressed={active} className={'choice' + (active ? ' on' : '')} onClick={() => {
+            const next = toggleInList(mark === '+' ? val : '', c.value!)
+            if (!next) onSelect(null)
+            else onSelect('+', next)
+          }}>
+            {c.label}
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
+function DropdownChoices({ choices, mark, val, onSelect }: { choices: Choice[]; mark: Mark | undefined; val: string; onSelect: (mark: Mark | null, value?: string) => void }) {
+  let activeKey = ''
+  if (mark === '-') activeKey = 'neg'
+  else if (mark === '+') activeKey = choices.some((c) => c.value === val) ? val : 'pos'
+  return (
+    <span className="sel choice-dd">
+      <select
+        value={activeKey}
+        aria-label="finding"
+        onChange={(e) => {
+          const k = e.target.value
+          if (!k) return onSelect(null)
+          const c = choices.find((ch) => ch.key === k)
+          if (c) onSelect(c.mark, c.value)
+        }}
+      >
+        <option value="">— not addressed —</option>
+        {choices.map((c) => (
+          <option key={c.key} value={c.key}>{c.label}</option>
+        ))}
+      </select>
+    </span>
+  )
 }
 
 function ChipGroup({ options, value, onChange, multi }: { options: ExamOption[]; value: string; onChange: (v: string) => void; multi?: boolean }) {
@@ -181,9 +280,7 @@ function GcsControl({ get, set }: { get: Getter; set: Setter }) {
             {p.range.map((v) => {
               const on = get(p.sub) === String(v)
               return (
-                <button key={v} type="button" className={'chip' + (on ? ' on' : '')} aria-pressed={on} aria-label={`${p.label} ${v}`} onClick={() => set(p.sub, on ? '' : String(v))}>
-                  {v}
-                </button>
+                <button key={v} type="button" className={'chip' + (on ? ' on' : '')} aria-pressed={on} aria-label={`${p.label} ${v}`} onClick={() => set(p.sub, on ? '' : String(v))}>{v}</button>
               )
             })}
           </div>
@@ -206,37 +303,6 @@ function TrigeminalControl({ get, set }: { get: Getter; set: Setter }) {
         <ChipGroup options={TRIG_TYPES} value={get('type')} onChange={(v) => set('type', v)} />
       </div>
       <SideSeg value={get('side')} onChange={(v) => set('side', v)} />
-    </div>
-  )
-}
-
-function LegacyDetail({ element, value, onChange }: { element: ExamElement; value: string; onChange: (v: string) => void }) {
-  if (element.detail === 'side') {
-    const cur = value || 'right'
-    return (
-      <div className="ex-detail">
-        <span className="d-label">specify</span>
-        <span className="miniseg" role="radiogroup" aria-label={`${element.label} side`}>
-          {SIDES.map((o) => (
-            <button key={o} type="button" role="radio" aria-checked={cur === o} className={cur === o ? 'on' : ''} onClick={() => onChange(o)}>
-              {cap(o)}
-            </button>
-          ))}
-        </span>
-      </div>
-    )
-  }
-  if (element.detail === 'mm') {
-    return (
-      <div className="ex-detail">
-        <Stepper value={value} onChange={onChange} ariaLabel={`${element.label} (mm)`} />
-        <span className="d-label">mm</span>
-      </div>
-    )
-  }
-  return (
-    <div className="ex-detail">
-      <input className="d-text" value={value} placeholder={element.hint ?? (element.detail === 'tooth' ? '#__' : 'specify')} aria-label={element.label} onChange={(e) => onChange(e.target.value)} />
     </div>
   )
 }

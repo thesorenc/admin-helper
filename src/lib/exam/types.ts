@@ -30,6 +30,10 @@ export interface ExamElement {
   control?: ControlKind
   /** Options for select / multiselect controls. */
   options?: ExamOption[]
+  /** Label for the pertinent-negative choice button (defaults to "Absent"). */
+  normalLabel?: string
+  /** Force the choice row to render as a dropdown (else auto when > 5 choices). */
+  dropdown?: boolean
   /** Unit label for a measure control (e.g. 'mm', 'cm'). */
   unit?: string
   /** measure / multiselect also collect a laterality sub-control. */

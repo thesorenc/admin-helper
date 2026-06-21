@@ -426,6 +426,16 @@ button{font-family:inherit;cursor:pointer}
 .exam-pm button.plus:hover{background:var(--accent-soft)}
 .exam-pm button.minus.on{background:var(--rose-soft);color:var(--rose)}
 .exam-pm button.plus.on{background:var(--accent);color:#fff}
+/* hybrid: inline choice buttons per finding. green = normal asserted, rose = abnormal present */
+.exam-choices{display:flex;align-items:baseline;gap:8px 12px;flex-wrap:wrap}
+.exam-choices > .rs-label{flex:0 0 130px;font-size:13px;font-weight:600;color:var(--ink-2);line-height:1.7}
+.choice-row{display:flex;flex-wrap:wrap;gap:5px;flex:1 1 200px}
+.choice{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:8px;padding:4px 11px;font-size:12px;font-weight:600;font-family:inherit;transition:.1s}
+.choice:hover{border-color:var(--accent-2);color:var(--ink-2)}
+.choice.neg-on{background:var(--accent-soft);border-color:var(--accent-2);color:var(--accent-ink)}
+.choice.on{background:var(--rose-soft);border-color:var(--rose-line);color:#a23b30}
+.choice-dd{flex:0 1 240px}
+.choice-dd select{padding:7px 30px 7px 11px;font-size:12.5px}
 /* per-system free-text comment */
 .comment-wrap{display:flex;flex-direction:column}
 .comment-btn{align-self:flex-start}
