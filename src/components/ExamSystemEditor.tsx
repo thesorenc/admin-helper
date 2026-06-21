@@ -44,13 +44,13 @@ function deriveChoices(el: ExamElement): { choices: Choice[]; multi: boolean; dr
   if (el.control === 'select' || el.control === 'multiselect') {
     multi = el.control === 'multiselect'
     positives = (el.options ?? []).map((o) => ({ key: o.value, label: o.label, mark: '+', value: o.value }))
-  } else if (el.control === 'measure') positives = [{ key: 'pos', label: 'Value', mark: '+' }]
-  else if (el.control === 'teeth') positives = [{ key: 'pos', label: 'Teeth…', mark: '+' }]
-  else if (el.control === 'gcs') positives = [{ key: 'pos', label: 'Score…', mark: '+' }]
-  else if (el.control === 'trigeminal') positives = [{ key: 'pos', label: 'Deficit…', mark: '+' }]
+  } else if (el.control === 'measure') positives = [{ key: 'pos', label: el.posLabel ?? 'Value', mark: '+' }]
+  else if (el.control === 'teeth') positives = [{ key: 'pos', label: el.posLabel ?? 'Teeth…', mark: '+' }]
+  else if (el.control === 'gcs') positives = [{ key: 'pos', label: el.posLabel ?? 'Score…', mark: '+' }]
+  else if (el.control === 'trigeminal') positives = [{ key: 'pos', label: el.posLabel ?? 'Deficit…', mark: '+' }]
   else if (el.detail === 'side') positives = SIDES.map((s) => ({ key: s, label: cap(s), mark: '+', value: s }))
-  else if (el.detail === 'text' || el.detail === 'tooth' || el.detail === 'mm') positives = [{ key: 'pos', label: el.detail === 'mm' ? 'Value' : 'Present', mark: '+' }]
-  else positives = [{ key: 'pos', label: 'Present', mark: '+' }]
+  else if (el.detail === 'text' || el.detail === 'tooth' || el.detail === 'mm') positives = [{ key: 'pos', label: el.posLabel ?? (el.detail === 'mm' ? 'Value' : 'Present'), mark: '+' }]
+  else positives = [{ key: 'pos', label: el.posLabel ?? 'Present', mark: '+' }]
   const choices = [neg, ...positives]
   return { choices, multi, dropdown: el.dropdown ?? (!multi && choices.length > 5) }
 }

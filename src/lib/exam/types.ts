@@ -32,6 +32,9 @@ export interface ExamElement {
   options?: ExamOption[]
   /** Label for the pertinent-negative choice button (defaults to "Absent"). */
   normalLabel?: string
+  /** Label for the single positive choice button on binary/detail/measure/teeth elements
+   *  (defaults to "Present"/"Value"/"Teeth…"/etc.). Select/multiselect use `options` labels. */
+  posLabel?: string
   /** Force the choice row to render as a dropdown (else auto when > 5 choices). */
   dropdown?: boolean
   /** Unit label for a measure control (e.g. 'mm', 'cm'). */

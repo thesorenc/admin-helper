@@ -94,6 +94,28 @@ describe('assembleText', () => {
   })
 })
 
+describe('content review — relabeled multi-state findings', () => {
+  it('General appearance → well / ill / toxic', () => {
+    expect(peLine(peSys('gen'), rec({ marks: { appearance: '-' } }))?.text).toBe('Well-appearing, well-nourished.')
+    expect(peLine(peSys('gen'), rec({ marks: { appearance: '+' }, detail: { appearance: 'toxic' } }))?.text).toBe('Toxic-appearing.')
+  })
+  it('Occlusion → malocclusion / open-bite patterns', () => {
+    expect(peLine(peSys('io'), rec({ marks: { occ: '+' }, detail: { occ: 'aob' } }))?.text).toBe('Anterior open bite.')
+  })
+  it('Floor of mouth → elevated / indurated', () => {
+    expect(peLine(peSys('io'), rec({ marks: { fom: '+' }, detail: { fom: 'indur' } }))?.text).toBe('Floor-of-mouth induration.')
+  })
+  it('Midface mobility → Le Fort grade', () => {
+    expect(peLine(peSys('mf'), rec({ marks: { lefort: '+' }, detail: { lefort: '2' } }))?.text).toBe('Le Fort II mobility.')
+  })
+  it('CSF: emits "concerning for CSF leak", not a confirmed diagnosis', () => {
+    expect(peLine(peSys('nose'), rec({ marks: { csf: '+' } }))?.text).toBe('Clear rhinorrhea concerning for CSF leak.')
+  })
+  it('Neck ROM → limited / nuchal rigidity', () => {
+    expect(peLine(peSys('neck'), rec({ marks: { rom: '+' }, detail: { rom: 'nuchal' } }))?.text).toBe('Nuchal rigidity.')
+  })
+})
+
 describe('posPhrase', () => {
   it('legacy custom positive phrase with side detail (value getter)', () => {
     const swell = peSys('mf').elements.find((e) => e.id === 'swell')!
