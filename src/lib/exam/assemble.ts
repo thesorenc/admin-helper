@@ -38,10 +38,11 @@ export function negPhrase(el: ExamElement): string {
   return el.neg ?? `no ${el.label.toLowerCase()}`
 }
 
-function appendComment(text: string, comment: string): string {
+/** Comment goes at the START of the system's line (before the findings). */
+function withComment(text: string, comment: string): string {
   const c = comment.trim()
   if (!c) return text
-  return text ? `${text} ${c}` : c
+  return text ? `${c} ${text}` : c
 }
 
 /** PE: positives (with detail) then pertinent negatives, each a clause. */
@@ -54,7 +55,7 @@ export function peLine(system: ExamSystem, rec: ExamRecord | undefined): ExamLin
   const parts = [...positives, ...negatives]
   if (!parts.length && !rec.comment.trim()) return null
   const base = parts.length ? cap(parts.join('; ')) + '.' : ''
-  return { label: system.name, text: appendComment(base, rec.comment), abnormal: positives.length > 0 }
+  return { label: system.name, text: withComment(base, rec.comment), abnormal: positives.length > 0 }
 }
 
 /** ROS: conventional symptom-review phrasing. */
@@ -66,7 +67,7 @@ export function rosLine(system: ExamSystem, rec: ExamRecord | undefined): ExamLi
   const parts: string[] = []
   if (positives.length) parts.push(`Positive for ${positives.join(', ')}.`)
   if (negatives.length) parts.push(`Denies ${negatives.join(', ')}.`)
-  return { label: system.name, text: appendComment(parts.join(' '), rec.comment), abnormal: positives.length > 0 }
+  return { label: system.name, text: withComment(parts.join(' '), rec.comment), abnormal: positives.length > 0 }
 }
 
 /** Sectioned view for display. Empty sections are omitted. */

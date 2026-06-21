@@ -30,6 +30,11 @@ describe('peLine — defaults & legacy toggle', () => {
     expect(l?.text).toBe('Collar in place; exam deferred.')
     expect(l?.abnormal).toBe(false)
   })
+
+  it('comment is prepended to the start of the system line', () => {
+    const l = peLine(peSys('mf'), rec({ marks: { crep: '-' }, comment: 'Guarding noted.' }))
+    expect(l?.text).toBe('Guarding noted. No crepitus.')
+  })
 })
 
 describe('Tier-1 controls', () => {
@@ -68,9 +73,9 @@ describe('Tier-1 controls', () => {
     expect(l?.text).toBe('GCS 14 (E4 V4 M6).')
   })
 
-  it('Lymphadenopathy → cervical levels + side + size', () => {
-    const l = peLine(peSys('neck'), rec({ marks: { lad: '+' }, detail: { lad: 'II', 'lad.side': 'right', 'lad.size': '1.5' } }))
-    expect(l?.text).toBe('1.5 cm right level II lymphadenopathy.')
+  it('Lymphadenopathy → laterality only (no grades)', () => {
+    const l = peLine(peSys('neck'), rec({ marks: { lad: '+' }, detail: { lad: 'right' } }))
+    expect(l?.text).toBe('Right cervical lymphadenopathy.')
   })
 })
 
