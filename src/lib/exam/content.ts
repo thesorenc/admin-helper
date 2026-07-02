@@ -13,6 +13,13 @@ import type { ExamSystem } from './types'
 
 const teeth = (v: string) => (v ? v.split(/,\s*/).filter(Boolean).map((t) => `#${t}`).join(', ') : '#__')
 
+// Multiselect helpers: a multiselect's detail value is a comma-joined list; a value
+// stored by an older single-select session is just a one-item list, so builds that
+// use these stay backward-compatible.
+const list = (v: string) => v.split(/,\s*/).filter(Boolean)
+const joinAnd = (parts: string[]) =>
+  parts.length > 1 ? `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}` : (parts[0] ?? '')
+
 export const PE_SYSTEMS: ExamSystem[] = [
   {
     id: 'gen', name: 'General', abbr: 'GEN', elements: [
@@ -25,7 +32,7 @@ export const PE_SYSTEMS: ExamSystem[] = [
       { id: 'swell', label: 'Facial swelling', detail: 'side', normalLabel: 'None', pos: (s) => `${s} facial swelling`, neg: 'no facial swelling' },
       { id: 'ecchy', label: 'Ecchymosis', detail: 'side', normalLabel: 'None', pos: (s) => `${s} facial ecchymosis`, neg: 'no ecchymosis' },
       { id: 'step', label: 'Bony step-off', detail: 'text', normalLabel: 'Stable', posLabel: 'Step-off', hint: 'e.g. infraorbital rim', pos: (v) => `palpable step-off${v ? ` at the ${v}` : ''}`, neg: 'no bony step-offs; midface and mandible stable' },
-      { id: 'lefort', label: 'Midface mobility', control: 'select', normalLabel: 'Stable', options: [{ value: '1', label: 'Le Fort I' }, { value: '2', label: 'Le Fort II' }, { value: '3', label: 'Le Fort III' }], build: (g) => `Le Fort ${g() === '1' ? 'I' : g() === '2' ? 'II' : 'III'} mobility`, neg: 'midface stable to manipulation' },
+      { id: 'lefort', label: 'Midface mobility', control: 'multiselect', normalLabel: 'Stable', options: [{ value: '1', label: 'Le Fort I' }, { value: '2', label: 'Le Fort II' }, { value: '3', label: 'Le Fort III' }], build: (g) => { const ROMAN: Record<string, string> = { 1: 'I', 2: 'II', 3: 'III' }; const sel = list(g()).map((v) => ROMAN[v]).filter(Boolean); return `Le Fort ${sel.join('/') || '__'} mobility` }, neg: 'midface stable to manipulation' },
       { id: 'crep', label: 'Crepitus', normalLabel: 'None', posLabel: 'Crepitus', pos: () => 'crepitus', neg: 'no crepitus' },
       { id: 'tender', label: 'Tenderness', detail: 'text', normalLabel: 'Non-tender', posLabel: 'Tender', hint: 'e.g. left mandibular body', pos: (v) => `tenderness${v ? ` over the ${v}` : ''}`, neg: 'non-tender to palpation' },
       { id: 'lac', label: 'Skin', detail: 'text', normalLabel: 'Intact', posLabel: 'Laceration', hint: 'site / length', pos: (v) => `laceration${v ? ` (${v})` : ''}`, neg: 'overlying skin intact' },
@@ -35,11 +42,11 @@ export const PE_SYSTEMS: ExamSystem[] = [
   {
     id: 'eyes', name: 'Eyes', abbr: 'EYE', elements: [
       { id: 'eom', label: 'Extraocular movements', detail: 'side', normalLabel: 'EOMI', pos: (s) => `restricted extraocular motion, ${s}`, neg: 'EOMI' },
-      { id: 'pupils', label: 'Pupils', control: 'select', normalLabel: 'PERRL', options: [{ value: 'aniso', label: 'Anisocoria' }, { value: 'sluggish', label: 'Sluggish' }, { value: 'fixed', label: 'Fixed/dilated' }], build: (g) => (g() === 'aniso' ? 'anisocoria' : g() === 'sluggish' ? 'sluggishly reactive pupil' : 'fixed, dilated pupil'), neg: 'PERRL' },
+      { id: 'pupils', label: 'Pupils', control: 'multiselect', normalLabel: 'PERRL', options: [{ value: 'aniso', label: 'Anisocoria' }, { value: 'sluggish', label: 'Sluggish' }, { value: 'fixed', label: 'Fixed/dilated' }], build: (g) => { const WORD: Record<string, string> = { aniso: 'anisocoria', sluggish: 'sluggishly reactive pupil', fixed: 'fixed, dilated pupil' }; return joinAnd(list(g()).map((v) => WORD[v]).filter(Boolean)) || 'pupillary abnormality' }, neg: 'PERRL' },
       { id: 'apd', label: 'Afferent pupillary defect', detail: 'side', normalLabel: 'No APD', pos: (s) => `${s} afferent pupillary defect`, neg: 'no afferent pupillary defect' },
       { id: 'va', label: 'Visual acuity', normalLabel: 'Grossly intact', posLabel: 'Decreased', pos: () => 'decreased visual acuity', neg: 'visual acuity grossly intact' },
       { id: 'dipl', label: 'Diplopia', detail: 'text', normalLabel: 'None', posLabel: 'Diplopia', hint: 'gaze', pos: (v) => `diplopia${v ? ` on ${v} gaze` : ''}`, neg: 'no diplopia' },
-      { id: 'globe', label: 'Globe position', control: 'select', normalLabel: 'Normal', side: true, options: [{ value: 'enophthalmos', label: 'Enophthalmos' }, { value: 'proptosis', label: 'Proptosis' }, { value: 'hypoglobus', label: 'Hypoglobus' }], build: (g) => `${g('side') ? `${g('side')} ` : ''}${g() || 'globe malposition'}`, neg: 'no enophthalmos or proptosis' },
+      { id: 'globe', label: 'Globe position', control: 'multiselect', normalLabel: 'Normal', side: true, options: [{ value: 'enophthalmos', label: 'Enophthalmos' }, { value: 'proptosis', label: 'Proptosis' }, { value: 'hypoglobus', label: 'Hypoglobus' }], build: (g) => `${g('side') ? `${g('side')} ` : ''}${joinAnd(list(g())) || 'globe malposition'}`, neg: 'no enophthalmos or proptosis' },
       { id: 'sclera', label: 'Subconjunctival hemorrhage', detail: 'side', normalLabel: 'None', pos: (s) => `${s} subconjunctival hemorrhage`, neg: 'sclera and conjunctiva clear' },
       { id: 'peri', label: 'Periorbital edema', detail: 'side', normalLabel: 'None', pos: (s) => `${s} periorbital edema`, neg: 'no periorbital edema' },
       { id: 'periecc', label: 'Periorbital ecchymosis', detail: 'side', normalLabel: 'None', pos: (s) => `${s} periorbital ecchymosis`, neg: 'no periorbital ecchymosis' },
@@ -68,7 +75,7 @@ export const PE_SYSTEMS: ExamSystem[] = [
       { id: 'fom', label: 'Floor of mouth', control: 'multiselect', normalLabel: 'Soft', options: [{ value: 'elev', label: 'Elevated' }, { value: 'indur', label: 'Indurated' }], build: (g) => { const v = g(); const parts: string[] = []; if (v.includes('elev')) parts.push('elevation'); if (v.includes('indur')) parts.push('induration'); return `floor-of-mouth ${parts.join(' and ') || 'abnormality'}` }, neg: 'floor of mouth soft and non-tender' },
       { id: 'sublhem', label: 'Sublingual hematoma', normalLabel: 'None', posLabel: 'Present', pos: () => 'sublingual hematoma', neg: 'no sublingual hematoma' },
       { id: 'dentition', label: 'Dentition', detail: 'text', normalLabel: 'Intact', posLabel: 'Abnormal', hint: 'caries / edentulous', pos: (v) => v || 'dental disease', neg: 'dentition intact' },
-      { id: 'occ', label: 'Occlusion', control: 'select', normalLabel: 'Stable', side: true, options: [{ value: 'mal', label: 'Malocclusion' }, { value: 'aob', label: 'Ant. open bite' }, { value: 'pob', label: 'Post. open bite' }], build: (g) => { const v = g(), s = g('side'); if (v === 'aob') return 'anterior open bite'; if (v === 'pob') return `${s ? `${s} ` : ''}posterior open bite`; return 'malocclusion' }, neg: 'occlusion stable and reproducible' },
+      { id: 'occ', label: 'Occlusion', control: 'multiselect', normalLabel: 'Stable', side: true, options: [{ value: 'mal', label: 'Malocclusion' }, { value: 'aob', label: 'Ant. open bite' }, { value: 'pob', label: 'Post. open bite' }], build: (g) => { const s = g('side'); const WORD: Record<string, string> = { mal: 'malocclusion', aob: 'anterior open bite', pob: `${s ? `${s} ` : ''}posterior open bite` }; return joinAnd(list(g()).map((v) => WORD[v]).filter(Boolean)) || 'malocclusion' }, neg: 'occlusion stable and reproducible' },
       { id: 'fx', label: 'Tooth fracture', control: 'teeth', normalLabel: 'None', posLabel: 'Fractured teeth', build: (g) => `fracture of ${teeth(g())}`, neg: 'no tooth fractures' },
       { id: 'mob', label: 'Mobile dentition', control: 'teeth', normalLabel: 'None', posLabel: 'Mobile teeth', build: (g) => `mobility of ${teeth(g())}`, neg: 'no mobile dentition' },
       { id: 'lesion', label: 'Mucosal lesion', detail: 'text', normalLabel: 'None', posLabel: 'Lesion', hint: 'site / size', pos: (v) => `mucosal lesion${v ? ` (${v})` : ''}`, neg: 'no mucosal lesions' },
@@ -94,7 +101,7 @@ export const PE_SYSTEMS: ExamSystem[] = [
       { id: 'tender', label: 'Tenderness', detail: 'text', normalLabel: 'Non-tender', posLabel: 'Tender', hint: 'location', pos: (v) => `tenderness${v ? ` (${v})` : ''}`, neg: 'non-tender' },
       { id: 'rom', label: 'Range of motion', control: 'select', normalLabel: 'Supple', options: [{ value: 'lim', label: 'Limited' }, { value: 'nuchal', label: 'Nuchal rigidity' }], build: (g) => (g() === 'nuchal' ? 'nuchal rigidity' : 'limited range of motion'), neg: 'supple, full range of motion' },
       { id: 'trachea', label: 'Trachea', normalLabel: 'Midline', posLabel: 'Deviation', pos: () => 'tracheal deviation', neg: 'trachea midline' },
-      { id: 'salgland', label: 'Salivary glands', control: 'select', normalLabel: 'Non-tender', side: true, options: [{ value: 'parotid', label: 'Parotid swelling' }, { value: 'submand', label: 'Submandibular swelling' }, { value: 'stone', label: 'Sialolith' }], build: (g) => { const s = g('side') ? `${g('side')} ` : ''; return g() === 'stone' ? 'palpable submandibular sialolith' : g() === 'parotid' ? `${s}parotid swelling` : `${s}submandibular swelling` }, neg: 'parotid and submandibular glands non-tender' },
+      { id: 'salgland', label: 'Salivary glands', control: 'multiselect', normalLabel: 'Non-tender', side: true, options: [{ value: 'parotid', label: 'Parotid swelling' }, { value: 'submand', label: 'Submandibular swelling' }, { value: 'stone', label: 'Sialolith' }], build: (g) => { const s = g('side') ? `${g('side')} ` : ''; const WORD: Record<string, string> = { parotid: `${s}parotid swelling`, submand: `${s}submandibular swelling`, stone: 'palpable submandibular sialolith' }; return joinAnd(list(g()).map((v) => WORD[v]).filter(Boolean)) || 'salivary gland abnormality' }, neg: 'parotid and submandibular glands non-tender' },
     ],
   },
   {

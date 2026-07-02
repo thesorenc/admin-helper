@@ -109,6 +109,27 @@ describe('content review — relabeled multi-state findings', () => {
     expect(peLine(peSys('gen'), rec({ marks: { appearance: '-' } }))?.text).toBe('Well-appearing, well-nourished.')
     expect(peLine(peSys('gen'), rec({ marks: { appearance: '+' }, detail: { appearance: 'toxic' } }))?.text).toBe('Toxic-appearing.')
   })
+  it('multiselect: co-occurring findings compose with "and" (single values unchanged)', () => {
+    // Globe: the orbital-floor pattern — enophthalmos AND hypoglobus, one side.
+    expect(
+      peLine(peSys('eyes'), rec({ marks: { globe: '+' }, detail: { globe: 'enophthalmos, hypoglobus', 'globe.side': 'right' } }))?.text,
+    ).toBe('Right enophthalmos and hypoglobus.')
+    // Pupils: anisocoria with a sluggishly reactive pupil.
+    expect(
+      peLine(peSys('eyes'), rec({ marks: { pupils: '+' }, detail: { pupils: 'aniso, sluggish' } }))?.text,
+    ).toBe('Anisocoria and sluggishly reactive pupil.')
+    // Salivary glands: the classic sialolithiasis presentation keeps BOTH findings.
+    expect(
+      peLine(peSys('neck'), rec({ marks: { salgland: '+' }, detail: { salgland: 'submand, stone', 'salgland.side': 'left' } }))?.text,
+    ).toBe('Left submandibular swelling and palpable submandibular sialolith.')
+    // Le Fort: combined-level mobility uses the standard slash nomenclature.
+    expect(peLine(peSys('mf'), rec({ marks: { lefort: '+' }, detail: { lefort: '2, 3' } }))?.text).toBe('Le Fort II/III mobility.')
+    // Occlusion: anterior open bite plus a sided posterior open bite.
+    expect(
+      peLine(peSys('io'), rec({ marks: { occ: '+' }, detail: { occ: 'aob, pob', 'occ.side': 'right' } }))?.text,
+    ).toBe('Anterior open bite and right posterior open bite.')
+  })
+
   it('Occlusion → malocclusion / open-bite patterns', () => {
     expect(peLine(peSys('io'), rec({ marks: { occ: '+' }, detail: { occ: 'aob' } }))?.text).toBe('Anterior open bite.')
   })
