@@ -3,7 +3,10 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { CaseBuilder } from '../src/routes/CaseBuilder'
 import { Library } from '../src/routes/Library'
+import { ExamBuilder } from '../src/routes/ExamBuilder'
 import { useCaseStore } from '../src/state/useCaseStore'
+import { useExamStore } from '../src/state/useExamStore'
+import { PE_SYSTEMS } from '../src/lib/exam/content'
 
 describe('UI smoke', () => {
   it('Case builder: adding a procedure generates a document with Copy', () => {
@@ -29,6 +32,22 @@ describe('UI smoke', () => {
     expect(screen.getByRole('tab', { name: 'Pre-op' })).toBeInTheDocument()
     expect(screen.getByRole('tab', { name: 'Post-op' })).toBeInTheDocument()
     expect(screen.getByRole('tab', { name: 'Rx' })).toBeInTheDocument()
+  })
+
+  it('Exam builder: "All systems normal" marks every PE system and builds output', () => {
+    useExamStore.getState().reset()
+    render(
+      <MemoryRouter>
+        <ExamBuilder />
+      </MemoryRouter>,
+    )
+    fireEvent.click(screen.getByRole('button', { name: 'All systems normal' }))
+    const { pe } = useExamStore.getState()
+    for (const sys of PE_SYSTEMS) {
+      for (const el of sys.elements) expect(pe[sys.id].marks[el.id]).toBe('-')
+    }
+    expect(screen.getByText('PHYSICAL EXAMINATION')).toBeInTheDocument()
+    useExamStore.getState().reset()
   })
 
   it('Library renders items and a count', () => {
