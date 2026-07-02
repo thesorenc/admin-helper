@@ -9,12 +9,7 @@ import { OutputPanel } from '@/components/OutputPanel'
 import { RxPanel } from '@/components/RxPanel'
 import { EditableOutput } from '@/components/EditableOutput'
 import { EncounterBar } from '@/components/EncounterBar'
-
-function abbrev(title: string): string {
-  const words = title.replace(/[^A-Za-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean)
-  if (words.length >= 2) return (words[0][0] + words[1][0]).toUpperCase()
-  return (words[0] ?? title).slice(0, 3).toUpperCase()
-}
+import { abbrev } from '@/lib/text'
 
 const TABS: { kind: DocKind; label: string }[] = [
   { kind: 'opnote', label: 'Operative Note' },

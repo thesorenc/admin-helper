@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { downloadText } from '@/lib/export'
+import { useCopy } from '@/lib/useCopy'
 import type { FlagAnnotation } from '@/lib/types'
 import { parseRx, assembleSelected } from '@/lib/rx'
 import { FlagBanner } from './FlagBanner'
@@ -29,8 +30,7 @@ export function RxPanel({
   // and unfilled "[TO BE COMPLETED]" lines) start unchecked; first-line oral orders
   // (and opioids) start checked. The clinician opts into the rest.
   const [deselected, setDeselected] = useState<Set<number>>(() => new Set(defaultOffIdx))
-  const [copied, setCopied] = useState(false)
-  const [liveMsg, setLiveMsg] = useState('')
+  const { copied, liveMsg, copy } = useCopy('Prescription copied')
 
   // Reset selections whenever the composed Rx changes (procedure added/removed).
   // Adjusting state during render on a changed input is React's recommended idiom.
@@ -52,20 +52,6 @@ export function RxPanel({
     })
   }
 
-  async function copy() {
-    try {
-      await navigator.clipboard.writeText(selectedText)
-      setCopied(true)
-      setLiveMsg('Prescription copied')
-      setTimeout(() => {
-        setCopied(false)
-        setLiveMsg('')
-      }, 1500)
-    } catch {
-      window.prompt('Copy failed — select and copy manually:', selectedText)
-    }
-  }
-
   return (
     <>
       <div className="out-toolbar no-print">
@@ -74,7 +60,7 @@ export function RxPanel({
           {selectedCount} of {orderCount} orders selected
         </span>
         <span className="spacer" />
-        <button className={'btn-primary' + (copied ? ' copied' : '')} onClick={copy}>
+        <button className={'btn-primary' + (copied ? ' copied' : '')} onClick={() => copy(selectedText)}>
           {copied ? 'Copied' : 'Copy text'}
         </button>
         <button className="btn-sm" onClick={() => window.print()}>

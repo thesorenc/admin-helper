@@ -1,6 +1,6 @@
-import { useState } from 'react'
 import { downloadText } from '@/lib/export'
 import { UNFILLED_SENTINEL } from '@/lib/assembler'
+import { useCopy } from '@/lib/useCopy'
 import type { FlagAnnotation } from '@/lib/types'
 import { FlagBanner } from './FlagBanner'
 import { formatBlocks } from './DocFormat'
@@ -18,25 +18,10 @@ export function OutputPanel({
   filename?: string
   patientFacing?: boolean
 }) {
-  const [copied, setCopied] = useState(false)
-  const [liveMsg, setLiveMsg] = useState('')
+  const { copied, liveMsg, copy } = useCopy(patientFacing ? 'Handout copied' : 'Note copied')
   const unfilledCount = (
     text.match(new RegExp(UNFILLED_SENTINEL.replace(/[[\]]/g, '\\$&'), 'g')) ?? []
   ).length
-
-  async function copy() {
-    try {
-      await navigator.clipboard.writeText(text)
-      setCopied(true)
-      setLiveMsg(patientFacing ? 'Handout copied' : 'Note copied')
-      setTimeout(() => {
-        setCopied(false)
-        setLiveMsg('')
-      }, 1500)
-    } catch {
-      window.prompt('Copy failed — select and copy manually:', text)
-    }
-  }
 
   return (
     <>
@@ -46,7 +31,7 @@ export function OutputPanel({
           {patientFacing ? 'Printable handout' : 'Formatted · copies clean to EMR'}
         </span>
         <span className="spacer" />
-        <button className={'btn-primary' + (copied ? ' copied' : '')} onClick={copy}>
+        <button className={'btn-primary' + (copied ? ' copied' : '')} onClick={() => copy(text)}>
           {copied ? 'Copied' : 'Copy text'}
         </button>
         <button className="btn-sm" onClick={() => window.print()}>

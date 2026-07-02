@@ -1,6 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { formatHtml } from './DocFormat'
 import { downloadText } from '@/lib/export'
+import { normalizePlainText } from '@/lib/normalize'
+import { useCopy } from '@/lib/useCopy'
 
 /**
  * A formatted, EDITABLE document for the pull sheet: renders the assembled text as
@@ -11,27 +13,15 @@ import { downloadText } from '@/lib/export'
  */
 export function EditableOutput({ text, filename = 'pull-sheet.txt' }: { text: string; filename?: string }) {
   const ref = useRef<HTMLDivElement>(null)
-  const [copied, setCopied] = useState(false)
-  const [liveMsg, setLiveMsg] = useState('')
+  const { copied, liveMsg, copy } = useCopy('Pull sheet copied')
 
   useEffect(() => {
     if (ref.current) ref.current.innerHTML = formatHtml(text)
   }, [text])
 
-  const current = () => ref.current?.innerText ?? text
-  const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(current())
-      setCopied(true)
-      setLiveMsg('Pull sheet copied')
-      setTimeout(() => {
-        setCopied(false)
-        setLiveMsg('')
-      }, 1500)
-    } catch {
-      window.prompt('Copy failed — select and copy manually:', current())
-    }
-  }
+  // innerText serialization varies by browser (NBSPs, doubled blank lines, trailing
+  // spaces) — re-normalize on read so copied/downloaded text meets the output contract.
+  const current = () => normalizePlainText(ref.current?.innerText ?? text)
 
   return (
     <>
@@ -41,7 +31,7 @@ export function EditableOutput({ text, filename = 'pull-sheet.txt' }: { text: st
           Editable · click to edit, then print
         </span>
         <span className="spacer" />
-        <button className={'btn-primary' + (copied ? ' copied' : '')} onClick={copy}>
+        <button className={'btn-primary' + (copied ? ' copied' : '')} onClick={() => copy(current())}>
           {copied ? 'Copied' : 'Copy text'}
         </button>
         <button className="btn-sm" onClick={() => window.print()}>

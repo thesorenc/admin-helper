@@ -1,27 +1,13 @@
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
 import { downloadText } from '@/lib/export'
+import { useCopy } from '@/lib/useCopy'
 import type { ExamSection } from '@/lib/exam/assemble'
 
 /** Right pane: paste-ready PE/ROS as a clean mono block (.emr), copies clean to EMR.
  *  Display is derived from `sections`; Copy / Download / Print all use the raw `text`. */
 export function ExamOutput({ sections, text }: { sections: ExamSection[]; text: string }) {
-  const [copied, setCopied] = useState(false)
-  const [liveMsg, setLiveMsg] = useState('')
+  const { copied, liveMsg, copy } = useCopy('Exam copied')
   const empty = sections.length === 0
-
-  async function copy() {
-    try {
-      await navigator.clipboard.writeText(text)
-      setCopied(true)
-      setLiveMsg('Exam copied')
-      setTimeout(() => {
-        setCopied(false)
-        setLiveMsg('')
-      }, 1500)
-    } catch {
-      window.prompt('Copy failed — select and copy manually:', text)
-    }
-  }
 
   return (
     <>
@@ -31,7 +17,7 @@ export function ExamOutput({ sections, text }: { sections: ExamSection[]; text: 
           Formatted · copies clean to EMR
         </span>
         <span className="spacer" />
-        <button className={'btn-primary' + (copied ? ' copied' : '')} onClick={copy} disabled={empty}>
+        <button className={'btn-primary' + (copied ? ' copied' : '')} onClick={() => copy(text)} disabled={empty}>
           {copied ? 'Copied' : 'Copy text'}
         </button>
         <button className="btn-sm" onClick={() => window.print()} disabled={empty}>

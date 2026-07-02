@@ -1,19 +1,15 @@
 import { useEffect, useMemo, useState } from 'react'
 import { ALL_CONTENT } from '@/content'
 import { makeSearch } from '@/lib/search'
+import { abbrev } from '@/lib/text'
+import { useCopy } from '@/lib/useCopy'
 import { exportAutoText, exportMarkdown, downloadText } from '@/lib/export'
-
-function abbrev(title: string): string {
-  const words = title.replace(/[^A-Za-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean)
-  if (words.length >= 2) return (words[0][0] + words[1][0]).toUpperCase()
-  return (words[0] ?? title).slice(0, 3).toUpperCase()
-}
 
 export function Library() {
   const [q, setQ] = useState('')
   const [selectedId, setSelectedId] = useState<string>('')
   const [drawerOpen, setDrawerOpen] = useState(false)
-  const [liveMsg, setLiveMsg] = useState('')
+  const { copied, liveMsg, copy } = useCopy('Copied to clipboard')
   const fuse = useMemo(() => makeSearch(ALL_CONTENT), [])
   const results = q.trim() ? fuse.search(q).map((r) => r.item) : ALL_CONTENT
   const selected = ALL_CONTENT.find((c) => c.id === selectedId)
@@ -74,18 +70,10 @@ export function Library() {
               </span>
               <span className="spacer" />
               <button
-                className="btn-primary"
-                onClick={() =>
-                  navigator.clipboard
-                    .writeText(selected.rawBody)
-                    .then(() => {
-                      setLiveMsg('Copied to clipboard')
-                      setTimeout(() => setLiveMsg(''), 1500)
-                    })
-                    .catch(() => window.prompt('Copy manually:', selected.rawBody))
-                }
+                className={'btn-primary' + (copied ? ' copied' : '')}
+                onClick={() => copy(selected.rawBody)}
               >
-                Copy
+                {copied ? 'Copied' : 'Copy'}
               </button>
               <button className="btn-sm" onClick={() => downloadText(`${selected.id}.txt`, selected.rawBody)}>
                 .txt

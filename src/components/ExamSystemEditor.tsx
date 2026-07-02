@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { PE_SYSTEMS, ROS_SYSTEMS } from '@/lib/exam/content'
+import { cap } from '@/lib/text'
 import type { ExamElement, ExamOption } from '@/lib/exam/types'
 import { useExamStore, type Section } from '@/state/useExamStore'
 import { ToothPicker } from '@/components/FieldRenderer'
 
 const SIDES = ['right', 'left', 'bilateral'] as const
-const cap = (s: string) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s)
 const splitList = (v: string) => (v ? v.split(', ').filter(Boolean) : [])
 const toggleInList = (v: string, item: string) => {
   const a = splitList(v)
@@ -317,7 +317,13 @@ function ElemNote({ value, onChange }: { value: string; onChange: (v: string) =>
     return <input className="elem-note" value={value} placeholder="note…" aria-label="finding note" onChange={(e) => onChange(e.target.value)} />
   }
   return (
-    <button type="button" className="elem-note-btn" title="Add a note to this finding" onClick={() => setOpen(true)}>
+    <button
+      type="button"
+      className="elem-note-btn"
+      aria-label="Add a note to this finding"
+      title="Add a note to this finding"
+      onClick={() => setOpen(true)}
+    >
       ✎
     </button>
   )

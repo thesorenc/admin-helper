@@ -5,6 +5,7 @@
 // then pertinent negatives); ROS keeps the conventional "Positive for … / Denies …".
 
 import { PE_SYSTEMS, ROS_SYSTEMS } from './content'
+import { cap } from '../text'
 import type { ExamElement, ExamRecord, ExamSystem } from './types'
 
 export interface ExamLine {
@@ -18,7 +19,6 @@ export interface ExamSection {
   lines: ExamLine[]
 }
 
-const cap = (s: string) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s)
 const sideWord = (v: string) => v || 'right'
 
 /** Positive (abnormal) phrase for an element. `get()` returns the primary detail value,

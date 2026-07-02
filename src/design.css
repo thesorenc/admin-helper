@@ -449,4 +449,4 @@ button{font-family:inherit;cursor:pointer}
 /* paste-ready exam output: section / system / abnormal emphasis inside .emr */
 .emr .sec{color:var(--accent-ink);font-weight:700}
 .emr .sys{color:var(--ink);font-weight:600}
-.emr .abn{color:#7a2e25}
+.emr .abn{color:#7a2e25;font-weight:600} /* weight = non-color cue for abnormal lines */
