@@ -12,10 +12,13 @@ function stripDashes(s: string): string {
 /** Remove inline emphasis markers without touching list markers or word content. */
 function stripInlineEmphasis(s: string): string {
   // Bold/italic: **text**, __text__, *text*, _text_ (inline, single-line spans).
+  // Underscore spans must start/end on non-space and may not cross brackets:
+  // lone "_" blanks ("Graft _ / _ placed") and adjacent [#__] placeholders are
+  // fill-in artifacts, not emphasis, and must survive verbatim.
   s = s.replace(/\*\*([^\n*]+)\*\*/g, '$1')
-  s = s.replace(/(?<!\w)__([^\n_]+)__(?!\w)/g, '$1')
+  s = s.replace(/(?<!\w)__([^\s\n_[\]](?:[^\n_[\]]*[^\s\n_[\]])?)__(?!\w)/g, '$1')
   s = s.replace(/(?<![\w*])\*([^\n*]+)\*(?![\w*])/g, '$1')
-  s = s.replace(/(?<![\w_])_([^\n_]+)_(?![\w_])/g, '$1')
+  s = s.replace(/(?<![\w_])_([^\s\n_[\]](?:[^\n_[\]]*[^\s\n_[\]])?)_(?![\w_])/g, '$1')
   // Inline code backticks.
   s = s.replace(/`([^`\n]+)`/g, '$1')
   return s

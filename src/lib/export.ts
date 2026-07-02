@@ -6,8 +6,13 @@ export function downloadText(filename: string, content: string, mime = 'text/pla
   const a = document.createElement('a')
   a.href = url
   a.download = filename
+  // The anchor must be in the document (Firefox), and the URL must outlive the click
+  // (revoking synchronously can abort the download) — both fail silently otherwise.
+  a.style.display = 'none'
+  document.body.appendChild(a)
   a.click()
-  URL.revokeObjectURL(url)
+  a.remove()
+  setTimeout(() => URL.revokeObjectURL(url), 1000)
 }
 
 /** Re-serialize a component body to a downloadable .md (drop back into the vault). */

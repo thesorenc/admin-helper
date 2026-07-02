@@ -24,4 +24,20 @@ describe('normalizePlainText — CLAUDE.md output contract', () => {
     const input = 'a\n \n\n\n\nb'
     expect(normalizePlainText(input)).toBe('a\n\nb\n')
   })
+
+  it('still strips underscore emphasis on real word spans', () => {
+    expect(normalizePlainText('a _real italic_ span')).toBe('a real italic span\n')
+    expect(normalizePlainText('__bold__ text')).toBe('bold text\n')
+  })
+
+  it('does NOT eat lone-underscore fill-in blanks (they are not emphasis)', () => {
+    expect(normalizePlainText('Graft _ / _ placed')).toBe('Graft _ / _ placed\n')
+    expect(normalizePlainText('size _ x _ mm')).toBe('size _ x _ mm\n')
+  })
+
+  it('does NOT merge adjacent [#__] placeholders into a bold span', () => {
+    expect(normalizePlainText('Tooth [#__] and tooth [#__] were removed')).toBe(
+      'Tooth [#__] and tooth [#__] were removed\n',
+    )
+  })
 })
