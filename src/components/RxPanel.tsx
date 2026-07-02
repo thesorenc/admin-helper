@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { downloadText } from '@/lib/export'
-import { useCopy } from '@/lib/useCopy'
+import { useCopy, useCopyShortcut } from '@/lib/useCopy'
 import type { FlagAnnotation } from '@/lib/types'
 import { parseRx, assembleSelected } from '@/lib/rx'
 import { FlagBanner } from './FlagBanner'
@@ -42,6 +42,7 @@ export function RxPanel({
 
   const selectedText = useMemo(() => assembleSelected(lines, deselected), [lines, deselected])
   const selectedCount = orderCount - deselected.size
+  useCopyShortcut(() => copy(selectedText))
 
   function toggle(idx: number) {
     setDeselected((prev) => {
@@ -60,7 +61,7 @@ export function RxPanel({
           {selectedCount} of {orderCount} orders selected
         </span>
         <span className="spacer" />
-        <button className={'btn-primary' + (copied ? ' copied' : '')} onClick={() => copy(selectedText)}>
+        <button className={'btn-primary' + (copied ? ' copied' : '')} title="Copy (Ctrl/⌘+Enter)" onClick={() => copy(selectedText)}>
           {copied ? 'Copied' : 'Copy text'}
         </button>
         <button className="btn-sm" onClick={() => window.print()}>

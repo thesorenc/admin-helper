@@ -57,6 +57,25 @@ describe('useExamStore — state hygiene', () => {
     expect(rec.detail[`${el.id}.note`]).toBe('a note')
   })
 
+  it('allNegativeAll fills every unmarked element negative but preserves existing findings', () => {
+    const s = useExamStore.getState()
+    s.selectChoice('pe', sys.id, el.id, '+', 'positive finding')
+    useExamStore.getState().allNegativeAll('pe')
+    const state = useExamStore.getState()
+    // the documented positive survives, with its detail
+    expect(state.pe[sys.id].marks[el.id]).toBe('+')
+    expect(state.pe[sys.id].detail[el.id]).toBe('positive finding')
+    // everything else across ALL systems is a pertinent negative
+    for (const system of PE_SYSTEMS) {
+      for (const e of system.elements) {
+        if (system.id === sys.id && e.id === el.id) continue
+        expect(state.pe[system.id].marks[e.id]).toBe('-')
+      }
+    }
+    // ros untouched
+    expect(Object.values(state.ros).every((r) => Object.keys(r.marks).length === 0)).toBe(true)
+  })
+
   it('clearSystem clears marks, detail, AND the comment (matches the button label)', () => {
     const s = useExamStore.getState()
     s.selectChoice('pe', sys.id, el.id, '+', 'v')

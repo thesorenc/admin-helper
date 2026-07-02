@@ -1,6 +1,6 @@
 import { downloadText } from '@/lib/export'
 import { UNFILLED_SENTINEL } from '@/lib/assembler'
-import { useCopy } from '@/lib/useCopy'
+import { useCopy, useCopyShortcut } from '@/lib/useCopy'
 import type { FlagAnnotation } from '@/lib/types'
 import { FlagBanner } from './FlagBanner'
 import { formatBlocks } from './DocFormat'
@@ -19,6 +19,7 @@ export function OutputPanel({
   patientFacing?: boolean
 }) {
   const { copied, liveMsg, copy } = useCopy(patientFacing ? 'Handout copied' : 'Note copied')
+  useCopyShortcut(() => copy(text))
   const unfilledCount = (
     text.match(new RegExp(UNFILLED_SENTINEL.replace(/[[\]]/g, '\\$&'), 'g')) ?? []
   ).length
@@ -31,7 +32,7 @@ export function OutputPanel({
           {patientFacing ? 'Printable handout' : 'Formatted · copies clean to EMR'}
         </span>
         <span className="spacer" />
-        <button className={'btn-primary' + (copied ? ' copied' : '')} onClick={() => copy(text)}>
+        <button className={'btn-primary' + (copied ? ' copied' : '')} title="Copy (Ctrl/⌘+Enter)" onClick={() => copy(text)}>
           {copied ? 'Copied' : 'Copy text'}
         </button>
         <button className="btn-sm" onClick={() => window.print()}>

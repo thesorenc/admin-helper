@@ -27,3 +27,26 @@ export function useCopy(message: string) {
   }
   return { copied, liveMsg, copy }
 }
+
+/**
+ * Ctrl/Cmd+Enter fires `handler` while the owning output panel is mounted (the routes
+ * mount one output panel at a time, so the shortcut is unambiguous). Copy is the
+ * terminal action of every workflow — give it a keyboard path.
+ */
+export function useCopyShortcut(handler: () => void, enabled = true) {
+  const latest = useRef(handler)
+  useEffect(() => {
+    latest.current = handler
+  })
+  useEffect(() => {
+    if (!enabled) return
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+        e.preventDefault()
+        latest.current()
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [enabled])
+}

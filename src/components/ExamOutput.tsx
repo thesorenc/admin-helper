@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { downloadText } from '@/lib/export'
-import { useCopy } from '@/lib/useCopy'
+import { useCopy, useCopyShortcut } from '@/lib/useCopy'
 import type { ExamSection } from '@/lib/exam/assemble'
 
 /** Right pane: paste-ready PE/ROS as a clean mono block (.emr), copies clean to EMR.
@@ -8,6 +8,7 @@ import type { ExamSection } from '@/lib/exam/assemble'
 export function ExamOutput({ sections, text }: { sections: ExamSection[]; text: string }) {
   const { copied, liveMsg, copy } = useCopy('Exam copied')
   const empty = sections.length === 0
+  useCopyShortcut(() => copy(text), !empty)
 
   return (
     <>
@@ -17,7 +18,12 @@ export function ExamOutput({ sections, text }: { sections: ExamSection[]; text: 
           Formatted · copies clean to EMR
         </span>
         <span className="spacer" />
-        <button className={'btn-primary' + (copied ? ' copied' : '')} onClick={() => copy(text)} disabled={empty}>
+        <button
+          className={'btn-primary' + (copied ? ' copied' : '')}
+          title="Copy (Ctrl/⌘+Enter)"
+          onClick={() => copy(text)}
+          disabled={empty}
+        >
           {copied ? 'Copied' : 'Copy text'}
         </button>
         <button className="btn-sm" onClick={() => window.print()} disabled={empty}>

@@ -46,19 +46,34 @@ function clearElemDetail(detail: Record<string, string>, elemId: string, keepNot
   return out
 }
 
+export type Modality = 'PE' | 'ROS'
+
 interface ExamState {
   pe: Record<string, ExamRecord>
   ros: Record<string, ExamRecord>
+  /** UI position (persisted so tab switches / refreshes don't lose your place). */
+  modality: Modality
+  activePE: string
+  activeROS: string
+  setModality: (m: Modality) => void
+  setActive: (section: Section, sysId: string) => void
   /** Set an element's exact mark ('+'/'-', or null to un-address) and optionally its detail. */
   selectChoice: (section: Section, sysId: string, elemId: string, mark: Mark | null, value?: string) => void
   setDetail: (section: Section, sysId: string, elemId: string, value: string) => void
   setComment: (section: Section, sysId: string, value: string) => void
   /** Mark every element in the system a pertinent negative (explicit "rest normal"). */
   allNegative: (section: Section, sysId: string) => void
+  /**
+   * Mark every UNMARKED element of every system in the section negative — documents a
+   * fully normal exam / "otherwise negative" ROS without touching findings already marked.
+   */
+  allNegativeAll: (section: Section) => void
   /** Clear all marks (and detail) for the system. */
   clearSystem: (section: Section, sysId: string) => void
   reset: () => void
 }
+
+const DEFAULT_ACTIVE = { pe: 'mf', ros: 'rent' } as const
 
 // Persisted to sessionStorage so a refresh keeps the exam. NOT PHI: only marks, detail
 // values, and free-text comments are stored, and sessionStorage clears on tab close.
@@ -67,6 +82,11 @@ export const useExamStore = create<ExamState>()(
     (set) => ({
       pe: initRecords(PE_SYSTEMS),
       ros: initRecords(ROS_SYSTEMS),
+      modality: 'PE',
+      activePE: DEFAULT_ACTIVE.pe,
+      activeROS: DEFAULT_ACTIVE.ros,
+      setModality: (modality) => set({ modality }),
+      setActive: (section, sysId) => set(section === 'pe' ? { activePE: sysId } : { activeROS: sysId }),
       selectChoice: (section, sysId, elemId, mark, value) =>
         set((s) => {
           const map = s[section]
@@ -113,6 +133,18 @@ export const useExamStore = create<ExamState>()(
           for (const [k, v] of Object.entries(r.detail)) if (k.endsWith('.note')) detail[k] = v
           return { [section]: { ...map, [sysId]: { ...r, marks, detail } } } as Partial<ExamState>
         }),
+      allNegativeAll: (section) =>
+        set((s) => {
+          const map = { ...s[section] }
+          for (const sys of systemsFor(section)) {
+            const r = map[sys.id]
+            if (!r) continue
+            const marks = { ...r.marks }
+            for (const el of sys.elements) if (!marks[el.id]) marks[el.id] = '-'
+            map[sys.id] = { ...r, marks }
+          }
+          return { [section]: map } as Partial<ExamState>
+        }),
       clearSystem: (section, sysId) =>
         set((s) => {
           const map = s[section]
@@ -126,7 +158,14 @@ export const useExamStore = create<ExamState>()(
       name: 'omfs-exam',
       storage: createJSONStorage(() => sessionStorage),
       version: EXAM_VERSION,
-      partialize: (s) => ({ pe: s.pe, ros: s.ros, sig: CONTENT_SIG }),
+      partialize: (s) => ({
+        pe: s.pe,
+        ros: s.ros,
+        modality: s.modality,
+        activePE: s.activePE,
+        activeROS: s.activeROS,
+        sig: CONTENT_SIG,
+      }),
       migrate: () => undefined as unknown as ExamState,
       // Start from fresh records and overlay only valid persisted ones, so a malformed
       // or content-incompatible blob can never crash assembly or drop a system.
@@ -156,7 +195,14 @@ export const useExamStore = create<ExamState>()(
           }
           return out
         }
-        return { ...current, pe: hydrate(PE_SYSTEMS, p.pe), ros: hydrate(ROS_SYSTEMS, p.ros) }
+        return {
+          ...current,
+          pe: hydrate(PE_SYSTEMS, p.pe),
+          ros: hydrate(ROS_SYSTEMS, p.ros),
+          modality: p.modality === 'ROS' ? 'ROS' : 'PE',
+          activePE: PE_SYSTEMS.some((s) => s.id === p.activePE) ? p.activePE! : DEFAULT_ACTIVE.pe,
+          activeROS: ROS_SYSTEMS.some((s) => s.id === p.activeROS) ? p.activeROS! : DEFAULT_ACTIVE.ros,
+        }
       },
     },
   ),

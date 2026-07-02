@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { formatHtml } from './DocFormat'
 import { downloadText } from '@/lib/export'
 import { normalizePlainText } from '@/lib/normalize'
-import { useCopy } from '@/lib/useCopy'
+import { useCopy, useCopyShortcut } from '@/lib/useCopy'
 
 /**
  * A formatted, EDITABLE document for the pull sheet: renders the assembled text as
@@ -22,6 +22,7 @@ export function EditableOutput({ text, filename = 'pull-sheet.txt' }: { text: st
   // innerText serialization varies by browser (NBSPs, doubled blank lines, trailing
   // spaces) — re-normalize on read so copied/downloaded text meets the output contract.
   const current = () => normalizePlainText(ref.current?.innerText ?? text)
+  useCopyShortcut(() => copy(current()))
 
   return (
     <>
@@ -31,7 +32,7 @@ export function EditableOutput({ text, filename = 'pull-sheet.txt' }: { text: st
           Editable · click to edit, then print
         </span>
         <span className="spacer" />
-        <button className={'btn-primary' + (copied ? ' copied' : '')} onClick={() => copy(current())}>
+        <button className={'btn-primary' + (copied ? ' copied' : '')} title="Copy (Ctrl/⌘+Enter)" onClick={() => copy(current())}>
           {copied ? 'Copied' : 'Copy text'}
         </button>
         <button className="btn-sm" onClick={() => window.print()}>

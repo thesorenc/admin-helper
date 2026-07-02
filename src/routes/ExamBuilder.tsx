@@ -6,8 +6,6 @@ import { useExamStore } from '@/state/useExamStore'
 import { ExamSystemEditor } from '@/components/ExamSystemEditor'
 import { ExamOutput } from '@/components/ExamOutput'
 
-type Modality = 'PE' | 'ROS'
-
 /** Left-list badge: a count once the system has any marks (no subtitle text). */
 function badgeFor(rec: ExamRecord | undefined): ReactNode {
   const count = rec ? Object.values(rec.marks).filter((v) => v === '+' || v === '-').length : 0
@@ -17,17 +15,21 @@ function badgeFor(rec: ExamRecord | undefined): ReactNode {
 }
 
 export function ExamBuilder() {
-  const [modality, setModality] = useState<Modality>('PE')
-  const [activePE, setActivePE] = useState('mf')
-  const [activeROS, setActiveROS] = useState('rent')
   const [drawerOpen, setDrawerOpen] = useState(false)
 
   const pe = useExamStore((s) => s.pe)
   const ros = useExamStore((s) => s.ros)
+  // Position lives in the store so leaving the tab and coming back lands where you were.
+  const modality = useExamStore((s) => s.modality)
+  const activePE = useExamStore((s) => s.activePE)
+  const activeROS = useExamStore((s) => s.activeROS)
+  const setModality = useExamStore((s) => s.setModality)
+  const setActiveStore = useExamStore((s) => s.setActive)
+  const allNegativeAll = useExamStore((s) => s.allNegativeAll)
 
   const section = modality === 'PE' ? 'pe' : 'ros'
   const active = modality === 'PE' ? activePE : activeROS
-  const setActive = modality === 'PE' ? setActivePE : setActiveROS
+  const setActive = (sysId: string) => setActiveStore(section, sysId)
   const systems = modality === 'PE' ? PE_SYSTEMS : ROS_SYSTEMS
   const recordsForModality = modality === 'PE' ? pe : ros
 
@@ -79,6 +81,15 @@ export function ExamBuilder() {
                 ? 'Mark each element ＋ (abnormal finding) or − (pertinent negative); leave the rest untouched. Only what you mark enters the note. ＋ findings reveal a detail control. “All negative” fills the whole system as pertinent negatives.'
                 : 'Mark each symptom ＋ (positive) or − (denied). Only what you mark enters the note. “All negative” marks the whole system denied.'}
             </p>
+            <div className="exam-actions">
+              <button
+                className="btn-sm"
+                title="Marks every element you haven't touched as a pertinent negative; existing findings are kept."
+                onClick={() => allNegativeAll(section)}
+              >
+                {modality === 'PE' ? 'All systems normal' : 'All systems negative'}
+              </button>
+            </div>
           </div>
 
           <ExamSystemEditor key={section + ':' + active} section={section} systemId={active} />
