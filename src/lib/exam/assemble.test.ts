@@ -163,6 +163,24 @@ describe('content review — relabeled multi-state findings', () => {
     ).toBe('PERRL — limited by edema.')
   })
 
+  it('Periorbital group: collapses when fully negative, composes when mixed', () => {
+    expect(peLine(peSys('eyes'), rec({ marks: { peri: '-', periecc: '-' } }))?.text).toBe(
+      'No periorbital edema or ecchymosis.',
+    )
+    expect(
+      peLine(peSys('eyes'), rec({ marks: { peri: '+', periecc: '-' }, detail: { peri: 'left' } }))?.text,
+    ).toBe('Left periorbital edema; no periorbital ecchymosis.')
+  })
+
+  it('Dentition group: collapsed normal names all members; partial keeps per-finding negs', () => {
+    expect(peLine(peSys('io'), rec({ marks: { dentition: '-', fx: '-', mob: '-' } }))?.text).toBe(
+      'Dentition intact without fractures or mobility.',
+    )
+    expect(
+      peLine(peSys('io'), rec({ marks: { dentition: '-', fx: '+', mob: '-' }, detail: { fx: '8, 9' } }))?.text,
+    ).toBe('Fracture of #8, #9; dentition intact; no mobile dentition.')
+  })
+
   it('multiselect stays for multi-VALUE single findings: Le Fort II/III', () => {
     expect(peLine(peSys('mf'), rec({ marks: { lefort: '+' }, detail: { lefort: '2, 3' } }))?.text).toBe('Le Fort II/III mobility.')
   })
