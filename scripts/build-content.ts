@@ -259,6 +259,40 @@ function build() {
       if (!declaredDots.has(inc) && !ALIAS_DOTS.has(inc)) lintErrors.push(`${c.id}: include '${inc}' resolves to no dot_phrase`)
     }
   }
+  // Duplicate-id guard: slug() collapses punctuation, so "Foo Bar.md" and "Foo-Bar.md"
+  // share an id and the later one silently shadows the earlier in every id lookup.
+  //  - Same bucket: always an error.
+  //  - Across buckets: only the atom/op-template pairing is allowed — that's the
+  //    deliberate parallel-libraries model, and src/lib/procedures.ts resolves it
+  //    (atomById + atoms-last ordering). Any other cross-bucket collision would
+  //    shadow unpredictably in contentById, so it fails the build too.
+  const buckets: Array<[string, ParsedComponent[]]> = [
+    ['component', components],
+    ['opTemplate', opTemplates],
+    ['skeleton', skeletons],
+    ['pullSheet', pullSheets],
+    ['atom', atoms],
+  ]
+  const byIdEverywhere = new Map<string, Array<{ bucket: string; sourcePath: string }>>()
+  for (const [bucket, list] of buckets) {
+    for (const c of list) {
+      const entry = byIdEverywhere.get(c.id) ?? []
+      entry.push({ bucket, sourcePath: c.sourcePath })
+      byIdEverywhere.set(c.id, entry)
+    }
+  }
+  const ALLOWED_PAIR = new Set(['atom+opTemplate'])
+  for (const [id, entries] of byIdEverywhere) {
+    if (entries.length < 2) continue
+    const bucketsHit = [...new Set(entries.map((e) => e.bucket))].sort()
+    const sameBucketDup = bucketsHit.length < entries.length
+    const allowed = !sameBucketDup && ALLOWED_PAIR.has(bucketsHit.join('+'))
+    if (!allowed) {
+      lintErrors.push(
+        `duplicate id '${id}' (${entries.map((e) => `${e.bucket}: ${e.sourcePath}`).join(' | ')})`,
+      )
+    }
+  }
   if (lintErrors.length) {
     console.error('Content integrity errors (dangling links / unresolved includes):')
     for (const e of lintErrors) console.error(`  ${e}`)
