@@ -56,7 +56,25 @@ export function peLine(system: ExamSystem, rec: ExamRecord | undefined): ExamLin
   const positives = system.elements
     .filter((e) => rec.marks[e.id] === '+')
     .map((e) => posPhrase(e, (sub?: string) => rec.detail[sub ? `${e.id}.${sub}` : e.id] ?? '') + note(e.id))
-  const negatives = system.elements.filter((e) => rec.marks[e.id] === '-').map((e) => negPhrase(e) + note(e.id))
+  // Negatives: when EVERY member of a group is '-', the whole group collapses into its
+  // idiomatic neg phrase ("PERRL") instead of listing each member; a partially-negative
+  // group keeps the marked members' own negs ("left enophthalmos; no proptosis").
+  const negatives: string[] = []
+  const collapsed = new Set<string>()
+  for (const e of system.elements) {
+    if (rec.marks[e.id] !== '-') continue
+    const gdef = e.group ? system.groups?.[e.group] : undefined
+    if (e.group && gdef) {
+      if (collapsed.has(e.group)) continue
+      const members = system.elements.filter((m) => m.group === e.group)
+      if (members.every((m) => rec.marks[m.id] === '-')) {
+        collapsed.add(e.group)
+        negatives.push(gdef.neg + members.map((m) => note(m.id)).join(''))
+        continue
+      }
+    }
+    negatives.push(negPhrase(e) + note(e.id))
+  }
   const parts = [...positives, ...negatives]
   if (!parts.length && !rec.comment.trim()) return null
   const base = parts.length ? cap(parts.join('; ')) + '.' : ''

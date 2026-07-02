@@ -7,6 +7,27 @@ const peSys = (id: string) => PE_SYSTEMS.find((s) => s.id === id)!
 const rosSys = (id: string) => ROS_SYSTEMS.find((s) => s.id === id)!
 const rec = (over: Partial<ExamRecord> = {}): ExamRecord => ({ marks: {}, detail: {}, comment: '', ...over })
 
+describe('content integrity — group wiring', () => {
+  it('every group reference resolves, has ≥2 members, and ids are unique per system', () => {
+    for (const sys of [...PE_SYSTEMS, ...ROS_SYSTEMS]) {
+      const ids = sys.elements.map((e) => e.id)
+      expect(new Set(ids).size, `${sys.id}: duplicate element ids`).toBe(ids.length)
+      for (const el of sys.elements) {
+        if (!el.group) continue
+        expect(sys.groups?.[el.group], `${sys.id}/${el.id}: group '${el.group}' undefined`).toBeTruthy()
+      }
+      for (const gid of Object.keys(sys.groups ?? {})) {
+        const members = sys.elements.filter((e) => e.group === gid)
+        expect(members.length, `${sys.id}: group '${gid}' needs ≥2 members`).toBeGreaterThanOrEqual(2)
+        // members must be consecutive: the editor renders a group as one cluster
+        const first = sys.elements.findIndex((e) => e.group === gid)
+        const slice = sys.elements.slice(first, first + members.length)
+        expect(slice.every((e) => e.group === gid), `${sys.id}: group '${gid}' members not consecutive`).toBe(true)
+      }
+    }
+  })
+})
+
 describe('peLine — defaults & legacy toggle', () => {
   it('is empty by default', () => {
     expect(peLine(peSys('mf'), rec())).toBeNull()
@@ -20,8 +41,8 @@ describe('peLine — defaults & legacy toggle', () => {
   })
 
   it('idiomatic negatives, not "no <label>"', () => {
-    const l = peLine(peSys('eyes'), rec({ marks: { eom: '-', pupils: '-' } }))
-    expect(l?.text).toBe('EOMI; PERRL.')
+    const l = peLine(peSys('eyes'), rec({ marks: { eom: '-', aniso: '-', sluggish: '-', fixed: '-' } }))
+    expect(l?.text).toBe('EOMI; PERRL.') // fully-negative pupils group collapses to PERRL
     expect(l?.abnormal).toBe(false)
   })
 
@@ -54,8 +75,10 @@ describe('Tier-1 controls', () => {
   })
 
   it('Occlusion (folded into Mouth) → stable vs malocclusion', () => {
-    expect(peLine(peSys('io'), rec({ marks: { occ: '-' } }))?.text).toBe('Occlusion stable and reproducible.')
-    expect(peLine(peSys('io'), rec({ marks: { occ: '+' }, detail: { occ: 'mal' } }))?.text).toBe('Malocclusion.')
+    expect(peLine(peSys('io'), rec({ marks: { occmal: '-', occaob: '-', occpob: '-' } }))?.text).toBe(
+      'Occlusion stable and reproducible.',
+    )
+    expect(peLine(peSys('io'), rec({ marks: { occmal: '+' } }))?.text).toBe('Malocclusion.')
   })
 
   it('Tooth fracture → multi-tooth list', () => {
@@ -109,32 +132,47 @@ describe('content review — relabeled multi-state findings', () => {
     expect(peLine(peSys('gen'), rec({ marks: { appearance: '-' } }))?.text).toBe('Well-appearing, well-nourished.')
     expect(peLine(peSys('gen'), rec({ marks: { appearance: '+' }, detail: { appearance: 'toxic' } }))?.text).toBe('Toxic-appearing.')
   })
-  it('multiselect: co-occurring findings compose with "and" (single values unchanged)', () => {
-    // Globe: the orbital-floor pattern — enophthalmos AND hypoglobus, one side.
+  it('groups: co-occurring findings are independent elements', () => {
+    // Globe: the orbital-floor pattern — enophthalmos AND hypoglobus, same side.
     expect(
-      peLine(peSys('eyes'), rec({ marks: { globe: '+' }, detail: { globe: 'enophthalmos, hypoglobus', 'globe.side': 'right' } }))?.text,
-    ).toBe('Right enophthalmos and hypoglobus.')
-    // Pupils: anisocoria with a sluggishly reactive pupil.
+      peLine(peSys('eyes'), rec({ marks: { enoph: '+', hypo: '+' }, detail: { enoph: 'right', hypo: 'right' } }))?.text,
+    ).toBe('Right enophthalmos; right hypoglobus.')
+    // Bilateral trauma: DIFFERENT sides per finding (inexpressible before groups).
     expect(
-      peLine(peSys('eyes'), rec({ marks: { pupils: '+' }, detail: { pupils: 'aniso, sluggish' } }))?.text,
-    ).toBe('Anisocoria and sluggishly reactive pupil.')
+      peLine(peSys('eyes'), rec({ marks: { enoph: '+', propt: '+' }, detail: { enoph: 'right', propt: 'left' } }))?.text,
+    ).toBe('Right enophthalmos; left proptosis.')
     // Salivary glands: the classic sialolithiasis presentation keeps BOTH findings.
     expect(
-      peLine(peSys('neck'), rec({ marks: { salgland: '+' }, detail: { salgland: 'submand, stone', 'salgland.side': 'left' } }))?.text,
-    ).toBe('Left submandibular swelling and palpable submandibular sialolith.')
-    // Le Fort: combined-level mobility uses the standard slash nomenclature.
-    expect(peLine(peSys('mf'), rec({ marks: { lefort: '+' }, detail: { lefort: '2, 3' } }))?.text).toBe('Le Fort II/III mobility.')
+      peLine(peSys('neck'), rec({ marks: { submand: '+', stone: '+' }, detail: { submand: 'left' } }))?.text,
+    ).toBe('Left submandibular swelling; palpable submandibular sialolith.')
     // Occlusion: anterior open bite plus a sided posterior open bite.
     expect(
-      peLine(peSys('io'), rec({ marks: { occ: '+' }, detail: { occ: 'aob, pob', 'occ.side': 'right' } }))?.text,
-    ).toBe('Anterior open bite and right posterior open bite.')
+      peLine(peSys('io'), rec({ marks: { occaob: '+', occpob: '+' }, detail: { occpob: 'right' } }))?.text,
+    ).toBe('Anterior open bite; right posterior open bite.')
   })
 
-  it('Occlusion → malocclusion / open-bite patterns', () => {
-    expect(peLine(peSys('io'), rec({ marks: { occ: '+' }, detail: { occ: 'aob' } }))?.text).toBe('Anterior open bite.')
+  it('groups: mixed positive + explicit negatives ("Normal, then tap the finding")', () => {
+    expect(
+      peLine(peSys('eyes'), rec({ marks: { enoph: '+', propt: '-', hypo: '-' }, detail: { enoph: 'left' } }))?.text,
+    ).toBe('Left enophthalmos; no proptosis; no hypoglobus.')
   })
-  it('Floor of mouth → elevated / indurated', () => {
-    expect(peLine(peSys('io'), rec({ marks: { fom: '+' }, detail: { fom: 'indur' } }))?.text).toBe('Floor-of-mouth induration.')
+
+  it('groups: a per-finding note survives the collapsed group negative', () => {
+    expect(
+      peLine(peSys('eyes'), rec({ marks: { aniso: '-', sluggish: '-', fixed: '-' }, detail: { 'sluggish.note': 'limited by edema' } }))?.text,
+    ).toBe('PERRL — limited by edema.')
+  })
+
+  it('multiselect stays for multi-VALUE single findings: Le Fort II/III', () => {
+    expect(peLine(peSys('mf'), rec({ marks: { lefort: '+' }, detail: { lefort: '2, 3' } }))?.text).toBe('Le Fort II/III mobility.')
+  })
+
+  it('Occlusion → open-bite pattern', () => {
+    expect(peLine(peSys('io'), rec({ marks: { occaob: '+' } }))?.text).toBe('Anterior open bite.')
+  })
+  it('Floor of mouth → indurated alone; soft when whole group negative', () => {
+    expect(peLine(peSys('io'), rec({ marks: { fomind: '+' } }))?.text).toBe('Floor-of-mouth induration.')
+    expect(peLine(peSys('io'), rec({ marks: { fomelev: '-', fomind: '-' } }))?.text).toBe('Floor of mouth soft and non-tender.')
   })
   it('Midface mobility → Le Fort grade', () => {
     expect(peLine(peSys('mf'), rec({ marks: { lefort: '+' }, detail: { lefort: '2' } }))?.text).toBe('Le Fort II mobility.')

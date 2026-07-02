@@ -55,6 +55,18 @@ function deriveChoices(el: ExamElement): { choices: Choice[]; multi: boolean; dr
   return { choices, multi, dropdown: el.dropdown ?? (!multi && choices.length > 5) }
 }
 
+/** Split a system's elements into render clusters: consecutive members of the same
+ *  group become one cluster (rendered under a shared header); everything else is solo. */
+function clusterElements(elements: ExamElement[]): Array<{ group?: string; elements: ExamElement[] }> {
+  const out: Array<{ group?: string; elements: ExamElement[] }> = []
+  for (const el of elements) {
+    const last = out[out.length - 1]
+    if (el.group && last?.group === el.group) last.elements.push(el)
+    else out.push({ group: el.group, elements: [el] })
+  }
+  return out
+}
+
 function revealKind(el: ExamElement): Follow | null {
   if (el.control === 'measure') return 'mm'
   if (el.control === 'teeth') return 'teeth'
@@ -96,17 +108,42 @@ export function ExamSystemEditor({ section, systemId }: { section: Section; syst
         </div>
 
         <div className="exam-rows">
-          {system.elements.map((el) => (
-            <ElementRow
-              key={el.id}
-              element={el}
-              mark={rec.marks[el.id]}
-              detail={rec.detail}
-              onSelect={(mark, value) => selectChoice(section, systemId, el.id, mark, value)}
-              onDetail={(sub, value) => setDetail(section, systemId, sub ? `${el.id}.${sub}` : el.id, value)}
-              allowNote={section === 'pe'}
-            />
-          ))}
+          {clusterElements(system.elements).map((cluster) => {
+            const rows = cluster.elements.map((el) => (
+              <ElementRow
+                key={el.id}
+                element={el}
+                mark={rec.marks[el.id]}
+                detail={rec.detail}
+                onSelect={(mark, value) => selectChoice(section, systemId, el.id, mark, value)}
+                onDetail={(sub, value) => setDetail(section, systemId, sub ? `${el.id}.${sub}` : el.id, value)}
+                allowNote={section === 'pe'}
+              />
+            ))
+            if (!cluster.group) return rows
+            const gdef = system.groups?.[cluster.group]
+            if (!gdef) return rows
+            const allNeg = cluster.elements.every((el) => rec.marks[el.id] === '-')
+            return (
+              <div className="exam-group" key={`group:${cluster.group}`}>
+                <div className="exam-group-head">
+                  <span className="rs-label">{gdef.label}</span>
+                  <button
+                    type="button"
+                    className={'choice' + (allNeg ? ' neg-on' : '')}
+                    aria-pressed={allNeg}
+                    title={allNeg ? 'Un-address the whole group' : 'Mark every finding in this group normal'}
+                    onClick={() =>
+                      cluster.elements.forEach((el) => selectChoice(section, systemId, el.id, allNeg ? null : '-'))
+                    }
+                  >
+                    {gdef.normalLabel}
+                  </button>
+                </div>
+                <div className="exam-group-body">{rows}</div>
+              </div>
+            )
+          })}
         </div>
 
         <CommentField open={commentOpen || rec.comment.trim().length > 0} value={rec.comment} onOpen={() => setCommentOpen(true)} onChange={(v) => setComment(section, systemId, v)} />

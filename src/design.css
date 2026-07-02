@@ -412,6 +412,12 @@ button{font-family:inherit;cursor:pointer}
 .exam-actions{display:flex;gap:8px}
 .exam-rows{display:flex;flex-direction:column;gap:8px}
 .exam-item{display:flex;flex-direction:column;gap:6px}
+/* Finding group: shared header + one-tap Normal; members indented beneath */
+.exam-group{display:flex;flex-direction:column;gap:6px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2)}
+.exam-group-head{display:flex;align-items:center;gap:8px}
+.exam-group-head > .rs-label{flex:0 0 130px;font-size:13px;font-weight:700;color:var(--ink-2)}
+.exam-group-body{display:flex;flex-direction:column;gap:6px;margin-left:14px}
+.exam-group-body .exam-choices > .rs-label{flex-basis:116px;font-weight:500}
 .exam-row{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:5px 6px 5px 13px}
 .exam-row .rs-label{font-size:13px;font-weight:600;color:var(--ink-2)}
 .exam-row.pos .rs-label{color:var(--accent-ink);font-weight:700}

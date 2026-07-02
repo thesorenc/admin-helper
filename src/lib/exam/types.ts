@@ -25,6 +25,11 @@ export interface ExamElement {
   id: string
   /** Neutral element name shown in the UI (e.g. "Extraocular movements", "Crepitus"). */
   label: string
+  /** Membership in an ExamGroup (key into the system's `groups`). Group members are
+   *  ordinary independent elements — own mark, side, detail, note — but render under a
+   *  shared header with a one-tap Normal, and their pertinent negatives COLLAPSE into
+   *  the group's idiomatic `neg` phrase when every member is marked '-'. */
+  group?: string
   // ── '+' control: pick ONE of `control` or `detail` (control wins) ──
   /** Richer control revealed when '+'. */
   control?: ControlKind
@@ -59,12 +64,29 @@ export interface ExamElement {
   neg?: string
 }
 
+/**
+ * A cluster of related-but-INDEPENDENT findings that share one clinical "normal"
+ * (e.g. Globe position = enophthalmos / proptosis / hypoglobus). Contrast with a
+ * `multiselect` element, which is ONE finding with multiple values (e.g. Le Fort
+ * levels). Groups give every finding its own +/-, laterality, and note.
+ */
+export interface ExamGroup {
+  /** Shared header label, e.g. "Globe position". */
+  label: string
+  /** Label for the one-tap all-normal button, e.g. "Normal", "PERRL". */
+  normalLabel: string
+  /** Collapsed idiomatic negative emitted when EVERY member is '-'. */
+  neg: string
+}
+
 export interface ExamSystem {
   id: string
   name: string
   /** Mono badge abbreviation, e.g. 'MF'. */
   abbr: string
   elements: ExamElement[]
+  /** Group definitions referenced by elements' `group` keys. */
+  groups?: Record<string, ExamGroup>
 }
 
 // ── per-encounter state (persisted to sessionStorage, session-only, zero-PHI) ──
