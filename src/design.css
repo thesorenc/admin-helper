@@ -385,8 +385,9 @@ button{font-family:inherit;cursor:pointer}
   .out-scroll{padding:0;overflow:visible}
   .sheet,.emr,.doc{border:none;box-shadow:none;max-width:none;padding:0}
   /* keep headings with their content and avoid splitting list items / kv rows across pages */
-  .doc-h,.sheet h3{break-after:avoid;page-break-after:avoid}
-  .doc-kv,.doc-kv-row,.doc-ul li,.sheet ul li,.doc-note{break-inside:avoid;page-break-inside:avoid}
+  /* -moz-column-break-*: what autoprefixer emitted before the PostCSS layer was dropped */
+  .doc-h,.sheet h3{-moz-column-break-after:avoid;break-after:avoid;page-break-after:avoid}
+  .doc-kv,.doc-kv-row,.doc-ul li,.sheet ul li,.doc-note{-moz-column-break-inside:avoid;break-inside:avoid;page-break-inside:avoid}
   @page{margin:18mm}
 }
 
