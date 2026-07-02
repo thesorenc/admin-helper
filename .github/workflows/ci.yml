@@ -2,13 +2,19 @@ name: CI
 
 on:
   push:
+    branches: [main]
   pull_request:
 
 permissions:
   contents: read
 
+# Cancel superseded runs on the same ref (a PR push mid-run kills the older run).
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  build:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
@@ -17,11 +23,14 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      # Fail on known-high-severity advisories in the dependency tree (supply-chain gate).
-      - run: npm audit --audit-level=high
       - run: npm run lint
       - run: npm test
-      # Vault is not present in CI; build:content --check skips drift and the build
-      # uses the committed JSON. (Run build:content locally when templates change.)
+      # Vault absent in CI; --check skips drift and validates the committed JSON/index.
       - run: npm run build:content -- --check
-      - run: npm run build
+      - run: npm run build # tsc -b (typecheck) + vite build
+      # Prod-only supply-chain gate: blocks ONLY on high/critical advisories in
+      # dependencies that actually ship to the browser. Dev/build-tool advisories
+      # are surfaced by the scheduled security-audit workflow, not here, so an
+      # unrelated devDep advisory can't red a code PR. Non-shipping for a static
+      # site, so keep it last (never masks lint/test/build signal).
+      - run: npm audit --omit=dev --audit-level=high

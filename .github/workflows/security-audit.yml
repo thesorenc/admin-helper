@@ -1,0 +1,25 @@
+name: Security Audit
+
+# Full-tree advisory visibility WITHOUT gating merges or deploys. Runs weekly and
+# on demand; a new transitive advisory (incl. build-only devDeps) surfaces here as
+# a failed scheduled run + optional issue, never as a red PR on unrelated work.
+on:
+  schedule:
+    - cron: '0 13 * * 1' # Mondays 13:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Audit (full tree, high+)
+        run: npm audit --audit-level=high

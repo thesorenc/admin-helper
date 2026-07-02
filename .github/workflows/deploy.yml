@@ -24,10 +24,14 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      # Same gates as CI, so a broken main can never publish. build:content --check
+      # skips drift when the vault is absent but still validates the committed JSON.
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build:content -- --check
       - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
-      - run: npm run build
+      - run: npm run build # tsc -b (typecheck) + vite build
         env:
-          # Project Pages serve under /<repo>/; the hash router handles in-app routes.
           DEPLOY_BASE: /admin-helper/
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
