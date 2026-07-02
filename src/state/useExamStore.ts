@@ -30,11 +30,25 @@ function initRecords(systems: ExamSystem[]): Record<string, ExamRecord> {
 }
 const systemsFor = (section: Section) => (section === 'pe' ? PE_SYSTEMS : ROS_SYSTEMS)
 
+/**
+ * Drop an element's primary detail value and its `${id}.*` sub-keys. `keepNote`
+ * preserves `${id}.note` — a note may annotate a negative clause, so flipping a
+ * finding to '-' keeps it, while un-addressing the finding drops everything.
+ */
+function clearElemDetail(detail: Record<string, string>, elemId: string, keepNote = false): Record<string, string> {
+  const prefix = `${elemId}.`
+  const out: Record<string, string> = {}
+  for (const [k, v] of Object.entries(detail)) {
+    if (k === elemId) continue
+    if (k.startsWith(prefix) && !(keepNote && k === `${elemId}.note`)) continue
+    out[k] = v
+  }
+  return out
+}
+
 interface ExamState {
   pe: Record<string, ExamRecord>
   ros: Record<string, ExamRecord>
-  /** Toggle an element to '+' / '-'; clicking the active mark again clears it. */
-  setMark: (section: Section, sysId: string, elemId: string, mark: Mark) => void
   /** Set an element's exact mark ('+'/'-', or null to un-address) and optionally its detail. */
   selectChoice: (section: Section, sysId: string, elemId: string, mark: Mark | null, value?: string) => void
   setDetail: (section: Section, sysId: string, elemId: string, value: string) => void
@@ -53,26 +67,23 @@ export const useExamStore = create<ExamState>()(
     (set) => ({
       pe: initRecords(PE_SYSTEMS),
       ros: initRecords(ROS_SYSTEMS),
-      setMark: (section, sysId, elemId, mark) =>
-        set((s) => {
-          const map = s[section]
-          const r = map[sysId]
-          if (!r) return {}
-          const marks = { ...r.marks }
-          if (marks[elemId] === mark) delete marks[elemId]
-          else marks[elemId] = mark
-          return { [section]: { ...map, [sysId]: { ...r, marks } } } as Partial<ExamState>
-        }),
       selectChoice: (section, sysId, elemId, mark, value) =>
         set((s) => {
           const map = s[section]
           const r = map[sysId]
           if (!r) return {}
           const marks = { ...r.marks }
-          const detail = { ...r.detail }
-          if (mark === null) delete marks[elemId]
-          else marks[elemId] = mark
-          if (value !== undefined) detail[elemId] = value
+          let detail: Record<string, string>
+          if (mark === null) {
+            // Un-address: drop the element's data so a later re-mark starts clean.
+            delete marks[elemId]
+            detail = clearElemDetail(r.detail, elemId)
+          } else {
+            marks[elemId] = mark
+            // A '-' never carries positive detail; keep only the note.
+            detail = mark === '-' ? clearElemDetail(r.detail, elemId, true) : { ...r.detail }
+            if (value !== undefined) detail[elemId] = value
+          }
           return { [section]: { ...map, [sysId]: { ...r, marks, detail } } } as Partial<ExamState>
         }),
       setDetail: (section, sysId, elemId, value) =>
@@ -97,14 +108,17 @@ export const useExamStore = create<ExamState>()(
           if (!r || !sys) return {}
           const marks = { ...r.marks }
           for (const el of sys.elements) marks[el.id] = '-'
-          return { [section]: { ...map, [sysId]: { ...r, marks } } } as Partial<ExamState>
+          // Every element is now '-': positive detail values are stale; notes survive.
+          const detail: Record<string, string> = {}
+          for (const [k, v] of Object.entries(r.detail)) if (k.endsWith('.note')) detail[k] = v
+          return { [section]: { ...map, [sysId]: { ...r, marks, detail } } } as Partial<ExamState>
         }),
       clearSystem: (section, sysId) =>
         set((s) => {
           const map = s[section]
           const r = map[sysId]
           if (!r) return {}
-          return { [section]: { ...map, [sysId]: { ...r, marks: {}, detail: {} } } } as Partial<ExamState>
+          return { [section]: { ...map, [sysId]: { marks: {}, detail: {}, comment: '' } } } as Partial<ExamState>
         }),
       reset: () => set({ pe: initRecords(PE_SYSTEMS), ros: initRecords(ROS_SYSTEMS) }),
     }),
@@ -129,9 +143,13 @@ export const useExamStore = create<ExamState>()(
               if (r.marks && typeof r.marks === 'object') {
                 for (const [mk, mv] of Object.entries(r.marks)) if (mv === '+' || mv === '-') marks[mk] = mv
               }
+              const detail: Record<string, string> = {}
+              if (r.detail && typeof r.detail === 'object') {
+                for (const [dk, dv] of Object.entries(r.detail)) if (typeof dv === 'string') detail[dk] = dv
+              }
               out[k] = {
                 marks,
-                detail: r.detail && typeof r.detail === 'object' ? (r.detail as Record<string, string>) : {},
+                detail,
                 comment: typeof r.comment === 'string' ? r.comment : '',
               }
             }

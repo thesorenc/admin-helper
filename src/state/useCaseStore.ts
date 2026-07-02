@@ -95,8 +95,10 @@ export const useCaseStore = create<CaseState>()(
                 !!i && typeof i.instanceId === 'string' && typeof i.procedureId === 'string',
             )
           : []
-        const values =
-          p.values && typeof p.values === 'object' ? (p.values as Record<string, string>) : {}
+        const values: Record<string, string> = {}
+        if (p.values && typeof p.values === 'object') {
+          for (const [k, v] of Object.entries(p.values)) if (typeof v === 'string') values[k] = v
+        }
         const encounter: Encounter = { ...defaultEncounter(), ...(p.encounter ?? {}) }
         if (!Array.isArray(encounter.residents) || encounter.residents.length === 0) {
           encounter.residents = ['']
