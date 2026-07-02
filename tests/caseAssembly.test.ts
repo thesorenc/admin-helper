@@ -1,7 +1,9 @@
 import { describe, it, expect } from 'vitest'
-import { PROCEDURES, contentById } from '../src/lib/procedures'
-import { buildDocument } from '../src/lib/caseAssembly'
+import { PROCEDURES, contentById, atomById } from '../src/lib/procedures'
+import { assembleAtomBody, buildDocument } from '../src/lib/caseAssembly'
 import { defaultEncounter } from '../src/lib/encounter'
+import type { ParsedComponent } from '../src/lib/types'
+import { SENTINEL_OPEN, SENTINEL_CLOSE } from '../src/lib/types'
 import type { CaseItem } from '../src/state/useCaseStore'
 
 const enc = defaultEncounter()
@@ -114,6 +116,61 @@ describe('caseAssembly — documents', () => {
     const { text } = buildDocument([{ instanceId: 'a', procedureId: proc!.id }], {}, enc, 'pullsheet')
     expect(text.toUpperCase()).toContain('PULL SHEET')
     expect(text.toUpperCase()).toContain('CONSUMABLES')
+  })
+
+  it('no atom snippet leaks its own PROCEDURE: title line (the heading names the block)', () => {
+    // Sweep every atom, repeat and non-repeat alike: the assembled snippet must never
+    // start a line with "PROCEDURE:" — that duplicates the "Name - #n" block heading.
+    for (const proc of PROCEDURES) {
+      const op = atomById(proc.opTemplateId)
+      if (!op) continue
+      const { text } = assembleAtomBody(op, {})
+      expect(text, `${op.id} leaked a PROCEDURE line`).not.toMatch(/^PROCEDURE:/im)
+    }
+  })
+
+  it('PROCEDURE strip still works when the UNRESOLVED reviewer banner is prepended', () => {
+    const comp: ParsedComponent = {
+      id: 'flagged-atom',
+      title: 'Flagged atom',
+      category: 'test',
+      modes: ['opnote'],
+      sourcePath: 'synthetic',
+      bodyTemplate: 'PROCEDURE: Flagged atom\n\nThe procedure was performed.',
+      fields: [],
+      flags: [{ type: 'CONFIRM', text: 'verify approach' }],
+      includes: [],
+      smartlinks: [],
+      tags: [],
+      rawBody: '',
+      warnings: [],
+    }
+    const { text } = assembleAtomBody(comp, {})
+    expect(text).toContain('=== UNRESOLVED') // banner survives
+    expect(text).toContain('verify approach')
+    expect(text).not.toMatch(/^PROCEDURE:/im) // title line stripped behind the banner
+    expect(text).toContain('The procedure was performed.')
+  })
+
+  it('a .sacX include inside an assembled atom resolves instead of degrading to [insert …]', () => {
+    const comp: ParsedComponent = {
+      id: 'inc-atom',
+      title: 'Include atom',
+      category: 'test',
+      modes: ['opnote'],
+      sourcePath: 'synthetic',
+      bodyTemplate: `Closing paragraph.\n\n${SENTINEL_OPEN}include:.sacsign${SENTINEL_CLOSE}`,
+      fields: [],
+      flags: [],
+      includes: ['.sacsign'],
+      smartlinks: [],
+      tags: [],
+      rawBody: '',
+      warnings: [],
+    }
+    const { text } = assembleAtomBody(comp, {})
+    expect(text).not.toContain('[insert .sacsign]')
+    expect(text.length).toBeGreaterThan('Closing paragraph.'.length + 10) // signature body inlined
   })
 
   it('smartlinks list does not include unfilled app fields', () => {

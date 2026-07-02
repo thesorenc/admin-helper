@@ -1,5 +1,6 @@
 import type { FlagAnnotation, ParsedComponent } from './types'
 import { assemble } from './assembler'
+import { resolveInclude } from './resolve'
 import { normalizePlainText } from './normalize'
 import { procedureById, contentById, atomById } from './procedures'
 import { operativeHeader, type Encounter } from './encounter'
@@ -42,6 +43,19 @@ function siteValues(scoped: Record<string, string>, tooth: string): Record<strin
 }
 
 /**
+ * Strip the snippet's own "PROCEDURE:" title line and authoring [TEMPLATE: ...] markers
+ * so the preview and the op note read identically (the document names the block by
+ * heading). The PROCEDURE line may sit after the UNRESOLVED reviewer banner when
+ * surfaceFlags prepended one, so it is matched past an optional banner, not just at `^`.
+ */
+function stripAtomArtifacts(text: string): string {
+  return text
+    .replace(/^((?:=== UNRESOLVED[^\n]*===\n[\s\S]*?=== END UNRESOLVED ===\n+)?)PROCEDURE:[^\n]*\n+/i, '$1')
+    .replace(/\[TEMPLATE:[^\]]*\]\s*/gi, '')
+    .trim()
+}
+
+/**
  * Assemble one atom's op-note snippet. For a `repeat: tooth | site` atom, the preamble
  * (before `=== PER TOOTH ===`) and closure (after `=== END PER TOOTH ===`) are stated once,
  * and the per-item body is emitted once per selected tooth. 'tooth' shares field values
@@ -53,8 +67,8 @@ export function assembleAtomBody(
   scoped: Record<string, string>,
 ): { text: string; flags: FlagAnnotation[]; smartlinks: string[] } {
   if (op.repeat !== 'tooth' && op.repeat !== 'site') {
-    const r = assemble(op, scoped, { surfaceFlags: true })
-    return { text: r.text, flags: r.flags, smartlinks: r.smartlinks }
+    const r = assemble(op, scoped, { surfaceFlags: true }, resolveInclude)
+    return { text: stripAtomArtifacts(r.text), flags: r.flags, smartlinks: r.smartlinks }
   }
   const independent = op.repeat === 'site'
   const teeth = parseTeethList(scoped[TEETH_KEY])
@@ -65,9 +79,12 @@ export function assembleAtomBody(
   const parts: string[] = []
 
   if (hasPreamble) {
-    const pr = assemble(subComponent(op, preTemplate, { keepFlags: true }), scoped, {
-      surfaceFlags: true,
-    })
+    const pr = assemble(
+      subComponent(op, preTemplate, { keepFlags: true }),
+      scoped,
+      { surfaceFlags: true },
+      resolveInclude,
+    )
     flags.push(...pr.flags)
     pr.smartlinks.forEach((s) => smartlinks.add(s))
     if (pr.text.trim()) parts.push(pr.text.trim())
@@ -81,28 +98,24 @@ export function assembleAtomBody(
     const itemComp = subComponent(op, itemTemplate, { keepFlags })
     const tv = independent ? siteValues(scoped, tooth) : { ...scoped }
     for (const f of itemComp.fields) if (f.kind === 'toothNumber') tv[f.id] = tooth
-    const tr = assemble(itemComp, tv, { surfaceFlags: keepFlags })
+    const tr = assemble(itemComp, tv, { surfaceFlags: keepFlags }, resolveInclude)
     if (keepFlags) flags.push(...tr.flags)
     tr.smartlinks.forEach((s) => smartlinks.add(s))
     if (tr.text.trim()) parts.push(tr.text.trim())
   })
 
   if (closeTemplate.trim()) {
-    const cr = assemble(subComponent(op, closeTemplate, { keepFlags: false }), scoped, {
-      surfaceFlags: false,
-    })
+    const cr = assemble(
+      subComponent(op, closeTemplate, { keepFlags: false }),
+      scoped,
+      { surfaceFlags: false },
+      resolveInclude,
+    )
     cr.smartlinks.forEach((s) => smartlinks.add(s))
     if (cr.text.trim()) parts.push(cr.text.trim())
   }
 
-  // Strip the snippet's own "PROCEDURE:" line and authoring [TEMPLATE: ...] markers so the
-  // preview and the op note read identically (the document names the block by heading).
-  const text = parts
-    .join('\n\n')
-    .trim()
-    .replace(/^PROCEDURE:.*\n+/i, '')
-    .replace(/\[TEMPLATE:[^\]]*\]\s*/gi, '')
-    .trim()
+  const text = stripAtomArtifacts(parts.join('\n\n').trim())
   return { text, flags, smartlinks: [...smartlinks] }
 }
 
@@ -146,7 +159,7 @@ export function buildDocument(
     for (const id of ids) {
       const comp = contentById(id)
       if (!comp) continue
-      const r = assemble(comp, {}, { surfaceFlags: true })
+      const r = assemble(comp, {}, { surfaceFlags: true }, resolveInclude)
       flags.push(...r.flags)
       r.smartlinks.forEach((s) => smartlinks.add(s))
       blocks.push(r.text.trim())
@@ -192,13 +205,18 @@ export function buildDocument(
     for (const id of ids) {
       const comp = contentById(id)
       if (!comp) continue
-      const r = assemble(comp, {}, {
-        // Rx and post-op both use the visible [TO BE COMPLETED] marker for unfilled
-        // fields. For Rx this means a half-specified order (e.g. a steroid taper with
-        // blank doses) is clearly flagged and starts unchecked, never copyable as raw "___".
-        unfilledPolicy: 'sentinel',
-        surfaceFlags: true,
-      })
+      const r = assemble(
+        comp,
+        {},
+        {
+          // Rx and post-op both use the visible [TO BE COMPLETED] marker for unfilled
+          // fields. For Rx this means a half-specified order (e.g. a steroid taper with
+          // blank doses) is clearly flagged and starts unchecked, never copyable as raw "___".
+          unfilledPolicy: 'sentinel',
+          surfaceFlags: true,
+        },
+        resolveInclude,
+      )
       flags.push(...r.flags)
       // Drop EHR-autofill tokens from the "Left for the EHR to fill" list.
       r.smartlinks.forEach((s) => {
