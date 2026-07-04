@@ -78,13 +78,13 @@ export function ExamBuilder() {
             <h1>{modality === 'PE' ? 'Physical exam' : 'Review of systems'}</h1>
             <p>
               {modality === 'PE'
-                ? 'Mark each element ＋ (abnormal finding) or − (pertinent negative); leave the rest untouched. Only what you mark enters the note. ＋ findings reveal a detail control. “All negative” fills the whole system as pertinent negatives.'
-                : 'Mark each symptom ＋ (positive) or − (denied). Only what you mark enters the note. “All negative” marks the whole system denied.'}
+                ? 'Mark each element ＋ (abnormal finding) or − (pertinent negative); leave the rest untouched. Only what you mark enters the note. ＋ findings reveal a detail control. “All negative” marks every untouched element as a pertinent negative.'
+                : 'Mark each symptom ＋ (positive) or − (denied). Only what you mark enters the note. “All negative” marks every untouched symptom denied.'}
             </p>
             <div className="exam-actions">
               <button
                 className="btn-sm"
-                title="Marks every element you haven't touched as a pertinent negative; existing findings are kept."
+                title="Marks every element you haven't touched as a pertinent negative; existing findings are kept. Maneuver-specific items (GCS, hemotympanum, salivary flow) are skipped — mark those explicitly."
                 onClick={() => allNegativeAll(section)}
               >
                 {modality === 'PE' ? 'All systems normal' : 'All systems negative'}

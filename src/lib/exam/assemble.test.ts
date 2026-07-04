@@ -59,14 +59,14 @@ describe('peLine — defaults & legacy toggle', () => {
 
   it('a per-finding note trails that finding only', () => {
     const l = peLine(peSys('mf'), rec({ marks: { swell: '+', crep: '-' }, detail: { swell: 'left', 'swell.note': 'extends to orbit' } }))
-    expect(l?.text).toBe('Left facial swelling — extends to orbit; no crepitus.')
+    expect(l?.text).toBe('Left facial swelling - extends to orbit; no crepitus.')
   })
 })
 
 describe('Tier-1 controls', () => {
   it('Facial nerve → House-Brackmann grade + side', () => {
     const l = peLine(peSys('neuro'), rec({ marks: { facial: '+' }, detail: { facial: 'IV', 'facial.side': 'left' } }))
-    expect(l?.text).toBe('Left House-Brackmann IV facial weakness.')
+    expect(l?.text).toBe('Left facial weakness (House-Brackmann IV).')
   })
 
   it('Facial nerve "−" emits HB I pertinent negative', () => {
@@ -101,6 +101,26 @@ describe('Tier-1 controls', () => {
     expect(l?.text).toBe('GCS 14 (E4 V4 M6).')
   })
 
+  it('GCS → a PARTIAL entry never asserts a (falsely low) total', () => {
+    expect(peLine(peSys('neuro'), rec({ marks: { gcs: '+' }, detail: { 'gcs.e': '4' } }))?.text).toBe('GCS (E4 V_ M_).')
+    expect(peLine(peSys('neuro'), rec({ marks: { gcs: '+' } }))?.text).toBe('GCS __.')
+  })
+
+  it('Trigeminal deficit with no type chosen stays neutral — never a defaulted "paresthesia"', () => {
+    const l = peLine(peSys('neuro'), rec({ marks: { sens: '+' }, detail: { 'sens.nerves': 'V3', 'sens.side': 'left' } }))
+    expect(l?.text).toBe('Left V3 sensory deficit.')
+  })
+
+  it('a normal-range measure does not flag the line abnormal; a low one does', () => {
+    expect(peLine(peSys('tmj'), rec({ marks: { mio: '+' }, detail: { mio: '42' } }))?.abnormal).toBe(false)
+    expect(peLine(peSys('tmj'), rec({ marks: { mio: '+' }, detail: { mio: '22' } }))?.abnormal).toBe(true)
+  })
+
+  it('a system comment leads as its own sentence, capitalized and punctuated', () => {
+    const l = peLine(peSys('mf'), rec({ marks: { crep: '-' }, comment: 'c-collar in place' }))
+    expect(l?.text).toBe('C-collar in place. No crepitus.')
+  })
+
   it('Lymphadenopathy → laterality only (no grades)', () => {
     const l = peLine(peSys('neck'), rec({ marks: { lad: '+' }, detail: { lad: 'right' } }))
     expect(l?.text).toBe('Right cervical lymphadenopathy.')
@@ -129,7 +149,7 @@ describe('assembleText', () => {
 
 describe('content review — relabeled multi-state findings', () => {
   it('General appearance → well / ill / toxic', () => {
-    expect(peLine(peSys('gen'), rec({ marks: { appearance: '-' } }))?.text).toBe('Well-appearing, well-nourished.')
+    expect(peLine(peSys('gen'), rec({ marks: { appearance: '-' } }))?.text).toBe('Well-appearing.')
     expect(peLine(peSys('gen'), rec({ marks: { appearance: '+' }, detail: { appearance: 'toxic' } }))?.text).toBe('Toxic-appearing.')
   })
   it('groups: co-occurring findings are independent elements', () => {
@@ -160,7 +180,7 @@ describe('content review — relabeled multi-state findings', () => {
   it('groups: a per-finding note survives the collapsed group negative', () => {
     expect(
       peLine(peSys('eyes'), rec({ marks: { aniso: '-', sluggish: '-', fixed: '-' }, detail: { 'sluggish.note': 'limited by edema' } }))?.text,
-    ).toBe('PERRL — limited by edema.')
+    ).toBe('PERRL (Sluggish pupil: limited by edema).')
   })
 
   it('Periorbital group: collapses when fully negative, composes when mixed', () => {
@@ -190,7 +210,7 @@ describe('content review — relabeled multi-state findings', () => {
   })
   it('Floor of mouth → indurated alone; soft when whole group negative', () => {
     expect(peLine(peSys('io'), rec({ marks: { fomind: '+' } }))?.text).toBe('Floor-of-mouth induration.')
-    expect(peLine(peSys('io'), rec({ marks: { fomelev: '-', fomind: '-' } }))?.text).toBe('Floor of mouth soft and non-tender.')
+    expect(peLine(peSys('io'), rec({ marks: { fomelev: '-', fomind: '-' } }))?.text).toBe('Floor of mouth soft, not elevated or indurated.')
   })
   it('Midface mobility → Le Fort grade', () => {
     expect(peLine(peSys('mf'), rec({ marks: { lefort: '+' }, detail: { lefort: '2' } }))?.text).toBe('Le Fort II mobility.')

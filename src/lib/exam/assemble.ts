@@ -6,6 +6,7 @@
 
 import { PE_SYSTEMS, ROS_SYSTEMS } from './content'
 import { cap } from '../text'
+import { normalizePlainText } from '../normalize'
 import type { ExamElement, ExamRecord, ExamSystem } from './types'
 
 export interface ExamLine {
@@ -19,7 +20,8 @@ export interface ExamSection {
   lines: ExamLine[]
 }
 
-const sideWord = (v: string) => v || 'right'
+// An unset side must NEVER default to a real laterality — '__' flags the gap instead.
+const sideWord = (v: string) => v || '__'
 
 /** Positive (abnormal) phrase for an element. `get()` returns the primary detail value,
  *  `get(sub)` a sub-value (detail[`${id}.${sub}`]) used by multi-value controls. */
@@ -38,11 +40,13 @@ export function negPhrase(el: ExamElement): string {
   return el.neg ?? `no ${el.label.toLowerCase()}`
 }
 
-/** Comment goes at the START of the system's line (before the findings). */
+/** Comment goes at the START of the system's line (before the findings), as its own
+ *  sentence — capitalized, terminal punctuation added if missing. */
 function withComment(text: string, comment: string): string {
   const c = comment.trim()
   if (!c) return text
-  return text ? `${c} ${text}` : c
+  const lead = cap(c) + (/[.!?:;]$/.test(c) ? '' : '.')
+  return text ? `${lead} ${text}` : lead
 }
 
 /** PE: positives (with detail) then pertinent negatives, each a clause. */
@@ -51,7 +55,7 @@ export function peLine(system: ExamSystem, rec: ExamRecord | undefined): ExamLin
   // A per-element note (detail[`${id}.note`]) trails that finding's own clause.
   const note = (id: string) => {
     const n = (rec.detail[`${id}.note`] ?? '').trim()
-    return n ? ` — ${n}` : ''
+    return n ? ` - ${n}` : ''
   }
   const positives = system.elements
     .filter((e) => rec.marks[e.id] === '+')
@@ -69,7 +73,12 @@ export function peLine(system: ExamSystem, rec: ExamRecord | undefined): ExamLin
       const members = system.elements.filter((m) => m.group === e.group)
       if (members.every((m) => rec.marks[m.id] === '-')) {
         collapsed.add(e.group)
-        negatives.push(gdef.neg + members.map((m) => note(m.id)).join(''))
+        // Member notes keep their attribution — "PERRL (Anisocoria: …)" — instead of
+        // being blindly concatenated onto the collapsed phrase.
+        const notes = members
+          .map((m) => { const n = (rec.detail[`${m.id}.note`] ?? '').trim(); return n ? `${m.label}: ${n}` : '' })
+          .filter(Boolean)
+        negatives.push(gdef.neg + (notes.length ? ` (${notes.join('; ')})` : ''))
         continue
       }
     }
@@ -78,14 +87,25 @@ export function peLine(system: ExamSystem, rec: ExamRecord | undefined): ExamLin
   const parts = [...positives, ...negatives]
   if (!parts.length && !rec.comment.trim()) return null
   const base = parts.length ? cap(parts.join('; ')) + '.' : ''
-  return { label: system.name, text: withComment(base, rec.comment), abnormal: positives.length > 0 }
+  // A measure inside its normal range (value >= abnormalBelow) is a documented value,
+  // not an abnormal finding — it must not flag the line red.
+  const abnormal = system.elements.some((e) => {
+    if (rec.marks[e.id] !== '+') return false
+    if (e.abnormalBelow != null) {
+      const n = parseInt(rec.detail[e.id] ?? '', 10)
+      if (Number.isFinite(n) && n >= e.abnormalBelow) return false
+    }
+    return true
+  })
+  return { label: system.name, text: withComment(base, rec.comment), abnormal }
 }
 
 /** ROS: conventional symptom-review phrasing. */
 export function rosLine(system: ExamSystem, rec: ExamRecord | undefined): ExamLine | null {
   if (!rec) return null
-  const positives = system.elements.filter((e) => rec.marks[e.id] === '+').map((e) => e.label.toLowerCase())
-  const negatives = system.elements.filter((e) => rec.marks[e.id] === '-').map((e) => e.label.toLowerCase())
+  const phrase = (e: ExamElement) => (e.phrase ?? e.label).toLowerCase()
+  const positives = system.elements.filter((e) => rec.marks[e.id] === '+').map(phrase)
+  const negatives = system.elements.filter((e) => rec.marks[e.id] === '-').map(phrase)
   if (!positives.length && !negatives.length && !rec.comment.trim()) return null
   const parts: string[] = []
   if (positives.length) parts.push(`Positive for ${positives.join(', ')}.`)
@@ -103,9 +123,11 @@ export function buildSections(pe: Record<string, ExamRecord>, ros: Record<string
   return sections
 }
 
-/** Flat plain-text used by Copy / Download / Print. */
+/** Flat plain-text used by Copy / Download / Print. Runs the same ASCII/plain-text
+ *  normalization pass as the Case builder so nothing typographic reaches the EMR. */
 export function assembleText(pe: Record<string, ExamRecord>, ros: Record<string, ExamRecord>): string {
-  return buildSections(pe, ros)
+  const raw = buildSections(pe, ros)
     .map((sec) => `${sec.title}\n${sec.lines.map((l) => `${l.label}: ${l.text}`).join('\n')}`)
     .join('\n\n')
+  return raw ? normalizePlainText(raw).trimEnd() : raw
 }

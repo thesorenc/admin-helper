@@ -54,6 +54,16 @@ export interface ExamElement {
   detail?: DetailKind
   /** Placeholder for 'text' / 'tooth' detail inputs. */
   hint?: string
+  /** Side-detail elements whose phrase is directional ("deviation toward the …") —
+   *  'bilateral' would read as nonsense, so the choice row offers right/left only. */
+  noBilateral?: boolean
+  /** Exclude from the global "All systems normal" sweep (claims that need a specific
+   *  maneuver/instrument — otoscopy, gland expression, GCS — stay one explicit tap away
+   *  via their own button or the per-system All negative). */
+  sweep?: boolean
+  /** ROS: emitted noun phrase when the label isn't one ("Bite feels off" →
+   *  "bite feeling off"). Defaults to the lowercased label. */
+  phrase?: string
   // ── phrasing ──
   /** Legacy positive phrase from a single detail value (for 'side' it's the laterality word). */
   pos?: (value: string) => string

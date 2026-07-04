@@ -99,9 +99,14 @@ export const useExamStore = create<ExamState>()(
             delete marks[elemId]
             detail = clearElemDetail(r.detail, elemId)
           } else {
+            // A note authored under the OPPOSITE mark must not ride the flip — "worse
+            // today" written on a '+' cannot trail the pertinent negative (and vice
+            // versa). Notes survive only while the mark's sign is unchanged.
+            const flipped = r.marks[elemId] !== undefined && r.marks[elemId] !== mark
             marks[elemId] = mark
-            // A '-' never carries positive detail; keep only the note.
-            detail = mark === '-' ? clearElemDetail(r.detail, elemId, true) : { ...r.detail }
+            // A '-' never carries positive detail; keep only a same-sign note.
+            detail = mark === '-' ? clearElemDetail(r.detail, elemId, !flipped) : { ...r.detail }
+            if (mark === '+' && flipped) delete detail[`${elemId}.note`]
             if (value !== undefined) detail[elemId] = value
           }
           return { [section]: { ...map, [sysId]: { ...r, marks, detail } } } as Partial<ExamState>
@@ -126,12 +131,11 @@ export const useExamStore = create<ExamState>()(
           const r = map[sysId]
           const sys = systemsFor(section).find((x) => x.id === sysId)
           if (!r || !sys) return {}
+          // Same semantics as the global sweep: fill only UNTOUCHED elements. A recorded
+          // positive must never silently flip into a false normal.
           const marks = { ...r.marks }
-          for (const el of sys.elements) marks[el.id] = '-'
-          // Every element is now '-': positive detail values are stale; notes survive.
-          const detail: Record<string, string> = {}
-          for (const [k, v] of Object.entries(r.detail)) if (k.endsWith('.note')) detail[k] = v
-          return { [section]: { ...map, [sysId]: { ...r, marks, detail } } } as Partial<ExamState>
+          for (const el of sys.elements) if (!marks[el.id]) marks[el.id] = '-'
+          return { [section]: { ...map, [sysId]: { ...r, marks } } } as Partial<ExamState>
         }),
       allNegativeAll: (section) =>
         set((s) => {
@@ -140,7 +144,10 @@ export const useExamStore = create<ExamState>()(
             const r = map[sys.id]
             if (!r) continue
             const marks = { ...r.marks }
-            for (const el of sys.elements) if (!marks[el.id]) marks[el.id] = '-'
+            // sweep:false elements (maneuver-specific claims — GCS, otoscopy, gland
+            // expression) are excluded from the ONE-TAP global sweep; they stay a single
+            // explicit tap away via their own button or the per-system All negative.
+            for (const el of sys.elements) if (!marks[el.id] && el.sweep !== false) marks[el.id] = '-'
             map[sys.id] = { ...r, marks }
           }
           return { [section]: map } as Partial<ExamState>

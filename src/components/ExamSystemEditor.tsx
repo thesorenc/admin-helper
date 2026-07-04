@@ -48,7 +48,7 @@ function deriveChoices(el: ExamElement): { choices: Choice[]; multi: boolean; dr
   else if (el.control === 'teeth') positives = [{ key: 'pos', label: el.posLabel ?? 'Teeth…', mark: '+' }]
   else if (el.control === 'gcs') positives = [{ key: 'pos', label: el.posLabel ?? 'Score…', mark: '+' }]
   else if (el.control === 'trigeminal') positives = [{ key: 'pos', label: el.posLabel ?? 'Deficit…', mark: '+' }]
-  else if (el.detail === 'side') positives = SIDES.map((s) => ({ key: s, label: cap(s), mark: '+', value: s }))
+  else if (el.detail === 'side') positives = SIDES.filter((s) => !(el.noBilateral && s === 'bilateral')).map((s) => ({ key: s, label: cap(s), mark: '+', value: s }))
   else if (el.detail === 'text' || el.detail === 'tooth' || el.detail === 'mm') positives = [{ key: 'pos', label: el.posLabel ?? (el.detail === 'mm' ? 'Value' : 'Present'), mark: '+' }]
   else positives = [{ key: 'pos', label: el.posLabel ?? 'Present', mark: '+' }]
   const choices = [neg, ...positives]
@@ -132,9 +132,14 @@ export function ExamSystemEditor({ section, systemId }: { section: Section; syst
                     type="button"
                     className={'choice' + (allNeg ? ' neg-on' : '')}
                     aria-pressed={allNeg}
-                    title={allNeg ? 'Un-address the whole group' : 'Mark every finding in this group normal'}
+                    title={allNeg ? 'Un-address the whole group' : 'Mark each untouched finding in this group normal; recorded findings are kept'}
                     onClick={() =>
-                      cluster.elements.forEach((el) => selectChoice(section, systemId, el.id, allNeg ? null : '-'))
+                      cluster.elements.forEach((el) => {
+                        // Parity with the sweeps: never flip a recorded finding into a
+                        // false normal — fill only untouched members.
+                        if (allNeg) selectChoice(section, systemId, el.id, null)
+                        else if (!rec.marks[el.id]) selectChoice(section, systemId, el.id, '-')
+                      })
                     }
                   >
                     {gdef.normalLabel}
@@ -373,7 +378,7 @@ function CommentField({ open, value, onOpen, onChange }: { open: boolean; value:
   return (
     <div className="comment-wrap">
       <label className="np-label" style={{ marginBottom: 6 }}>Comment</label>
-      <textarea className="comment-box" value={value} placeholder="Free text — appended to this system's note line" onChange={(e) => onChange(e.target.value)} />
+      <textarea className="comment-box" value={value} placeholder="Free text — leads this system's note line" onChange={(e) => onChange(e.target.value)} />
     </div>
   )
 }

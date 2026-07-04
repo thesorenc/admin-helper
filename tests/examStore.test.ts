@@ -24,15 +24,34 @@ describe('useExamStore — state hygiene', () => {
     expect(rec.detail[`${el.id}.side`]).toBeUndefined()
   })
 
-  it('flipping to negative drops stale positive detail but keeps the note', () => {
+  it('flipping to negative drops stale positive detail AND the positive-context note', () => {
     const s = useExamStore.getState()
     s.selectChoice('pe', sys.id, el.id, '+', 'some value')
-    s.setDetail('pe', sys.id, `${el.id}.note`, 'a note')
+    s.setDetail('pe', sys.id, `${el.id}.note`, 'a note about the positive')
     useExamStore.getState().selectChoice('pe', sys.id, el.id, '-')
     const rec = useExamStore.getState().pe[sys.id]
     expect(rec.marks[el.id]).toBe('-')
     expect(rec.detail[el.id]).toBeUndefined() // no resurfacing on later re-mark
-    expect(rec.detail[`${el.id}.note`]).toBe('a note') // notes annotate negatives too
+    // a note authored under '+' must not trail the pertinent negative
+    expect(rec.detail[`${el.id}.note`]).toBeUndefined()
+  })
+
+  it('a note authored while negative survives re-selecting the negative', () => {
+    const s = useExamStore.getState()
+    s.selectChoice('pe', sys.id, el.id, '-')
+    s.setDetail('pe', sys.id, `${el.id}.note`, 'resolved since last visit')
+    useExamStore.getState().selectChoice('pe', sys.id, el.id, '-')
+    expect(useExamStore.getState().pe[sys.id].detail[`${el.id}.note`]).toBe('resolved since last visit')
+  })
+
+  it('flipping to positive drops a note authored under the negative', () => {
+    const s = useExamStore.getState()
+    s.selectChoice('pe', sys.id, el.id, '-')
+    s.setDetail('pe', sys.id, `${el.id}.note`, 'a note about the negative')
+    useExamStore.getState().selectChoice('pe', sys.id, el.id, '+', 'v')
+    const rec = useExamStore.getState().pe[sys.id]
+    expect(rec.marks[el.id]).toBe('+')
+    expect(rec.detail[`${el.id}.note`]).toBeUndefined()
   })
 
   it('un-addressing one finding leaves its neighbors untouched', () => {
@@ -46,18 +65,21 @@ describe('useExamStore — state hygiene', () => {
     expect(rec.detail[other.id]).toBe('v2')
   })
 
-  it('allNegative clears positive detail but keeps notes', () => {
+  it('allNegative fills only untouched elements — a recorded positive is never flipped', () => {
     const s = useExamStore.getState()
     s.selectChoice('pe', sys.id, el.id, '+', 'some value')
     s.setDetail('pe', sys.id, `${el.id}.note`, 'a note')
     useExamStore.getState().allNegative('pe', sys.id)
     const rec = useExamStore.getState().pe[sys.id]
-    for (const e of sys.elements) expect(rec.marks[e.id]).toBe('-')
-    expect(rec.detail[el.id]).toBeUndefined()
+    // the documented positive survives, detail and note intact
+    expect(rec.marks[el.id]).toBe('+')
+    expect(rec.detail[el.id]).toBe('some value')
     expect(rec.detail[`${el.id}.note`]).toBe('a note')
+    // every other element in the system becomes a pertinent negative
+    for (const e of sys.elements) if (e.id !== el.id) expect(rec.marks[e.id]).toBe('-')
   })
 
-  it('allNegativeAll fills every unmarked element negative but preserves existing findings', () => {
+  it('allNegativeAll fills every unmarked sweepable element but preserves findings and skips sweep:false', () => {
     const s = useExamStore.getState()
     s.selectChoice('pe', sys.id, el.id, '+', 'positive finding')
     useExamStore.getState().allNegativeAll('pe')
@@ -65,13 +87,19 @@ describe('useExamStore — state hygiene', () => {
     // the documented positive survives, with its detail
     expect(state.pe[sys.id].marks[el.id]).toBe('+')
     expect(state.pe[sys.id].detail[el.id]).toBe('positive finding')
-    // everything else across ALL systems is a pertinent negative
+    // everything else across ALL systems is a pertinent negative — EXCEPT
+    // maneuver-specific claims (sweep:false), which the one-tap sweep must not assert
     for (const system of PE_SYSTEMS) {
       for (const e of system.elements) {
         if (system.id === sys.id && e.id === el.id) continue
-        expect(state.pe[system.id].marks[e.id]).toBe('-')
+        if (e.sweep === false) expect(state.pe[system.id].marks[e.id]).toBeUndefined()
+        else expect(state.pe[system.id].marks[e.id]).toBe('-')
       }
     }
+    // the exclusion list is intentional and exact: GCS, hemotympanum, salivary flow
+    expect(
+      PE_SYSTEMS.flatMap((sy) => sy.elements.filter((e) => e.sweep === false).map((e) => e.id)).sort(),
+    ).toEqual(['gcs', 'hemo', 'salflow'])
     // ros untouched
     expect(Object.values(state.ros).every((r) => Object.keys(r.marks).length === 0)).toBe(true)
   })

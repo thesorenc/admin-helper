@@ -44,7 +44,11 @@ describe('UI smoke', () => {
     fireEvent.click(screen.getByRole('button', { name: 'All systems normal' }))
     const { pe } = useExamStore.getState()
     for (const sys of PE_SYSTEMS) {
-      for (const el of sys.elements) expect(pe[sys.id].marks[el.id]).toBe('-')
+      // sweep:false elements (maneuver-specific claims) are deliberately left untouched
+      for (const el of sys.elements) {
+        if (el.sweep === false) expect(pe[sys.id].marks[el.id]).toBeUndefined()
+        else expect(pe[sys.id].marks[el.id]).toBe('-')
+      }
     }
     expect(screen.getByText('PHYSICAL EXAMINATION')).toBeInTheDocument()
     useExamStore.getState().reset()
