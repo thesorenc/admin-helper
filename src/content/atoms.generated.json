@@ -8,7 +8,7 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Pathology & Reconstruction/AICBG.md",
-    "bodyTemplate": "PROCEDURE: AICBG (anterior iliac crest bone graft)\n\nAttention was directed to the aicbg:side:0 anterior hip, prepped and draped as a separate sterile field with care taken not to cross-contaminate the recipient site. A cutaneous and subcutaneous incision was made with a #15 blade along the aicbg:side:1 anterior iliac crest, 2.0 cm posterior and lateral to the anterior superior iliac spine, measuring approximately aicbg:text:0 cm. Electrocautery carried the incision down to periosteum through Scarpa's fascia and the investing fascia of the external oblique and tensor fascia lata, taking care not to dissect off the tensor fascia lata. The iliac crest periosteum was incised and subperiosteal dissection performed along the length of the incision and medially down the anterior iliac crest. Malleable and Cobra retractors were placed to protect the abdominal contents. Using pre-planned segments to template the graft, a reciprocating saw made the vertical osteotomies and a piezotome the horizontal osteotomy under copious irrigation, and chisel osteotomes were used to free the tricortical block. Spoon curettes were then used to harvest medullary bone from the anterior iliac crest. The harvest site was irrigated thoroughly, packed with Arista and thrombin-soaked Gelfoam, and hemostasis confirmed. The hip was closed in layers, with 3-0 Vicryl approximating periosteum and muscular aponeurosis, 4-0 Vicryl for deep dermal closure, and running subcuticular skin closure reinforced with tacking 5-0 plain gut. Dermabond was applied and an island gauze and Tegaderm pressure dressing placed. At the recipient site, the bony margins were smoothed and the tricortical block contoured for passive fit, then fixated with aicbg:toothNumber:0 monocortical screws and a trimmed aicbg:text:1 titanium mesh. The harvested medullary bone was packed along the defect mixed with PRF. A aicbg:enumText:0 membrane was draped over the graft, and the flap was closed tension-free with horizontal mattress and interrupted 3-0 dyed Monocryl sutures after subperiosteal releasing incisions.\n\n",
+    "bodyTemplate": "PROCEDURE: AICBG (anterior iliac crest bone graft)\n\nAttention was directed to the aicbg:side:0 anterior hip, prepped and draped as a separate sterile field with care taken not to cross-contaminate the recipient site. A cutaneous and subcutaneous incision was made with a #15 blade along the aicbg:side:1 anterior iliac crest, 2.0 cm posterior and lateral to the anterior superior iliac spine, measuring approximately aicbg:text:0 cm. Electrocautery carried the incision down to periosteum through Scarpa's fascia and the investing fascia of the external oblique and tensor fascia lata, taking care not to dissect off the tensor fascia lata. The iliac crest periosteum was incised and subperiosteal dissection performed along the length of the incision and medially down the anterior iliac crest. Malleable and Cobra retractors were placed to protect the abdominal contents. Using pre-planned segments to template the graft, a reciprocating saw made the vertical osteotomies and a piezotome the horizontal osteotomy under copious irrigation, and chisel osteotomes were used to free the tricortical block. Spoon curettes were then used to harvest medullary bone from the anterior iliac crest. The harvest site was irrigated thoroughly, packed with Arista and thrombin-soaked Gelfoam, and hemostasis confirmed. The hip was closed in layers, with 3-0 Vicryl approximating periosteum and muscular aponeurosis, 4-0 Vicryl for deep dermal closure, and running subcuticular skin closure reinforced with tacking 5-0 plain gut. Dermabond was applied and an island gauze and Tegaderm pressure dressing placed. At the recipient site, the bony margins were smoothed and the tricortical block contoured for passive fit, then fixated with aicbg:hardwareCount:0 monocortical screws and a trimmed aicbg:text:1 titanium mesh. The harvested medullary bone was packed along the defect mixed with PRF. A aicbg:enumText:0 membrane was draped over the graft, and the flap was closed tension-free with horizontal mattress and interrupted 3-0 dyed Monocryl sutures after subperiosteal releasing incisions.\n\n",
     "fields": [
       {
         "id": "aicbg:side:0",
@@ -42,10 +42,10 @@
         "context": "A cutaneous and subcutaneous incision was made with a #15 blade along the [R/L] anterior iliac crest, 2.0 cm posterior and lateral to the anterior superior ilia"
       },
       {
-        "id": "aicbg:toothNumber:0",
-        "kind": "toothNumber",
-        "raw": "[#__]",
-        "label": "Tooth #",
+        "id": "aicbg:hardwareCount:0",
+        "kind": "hardwareCount",
+        "raw": "[#]",
+        "label": "Count",
         "context": "At the recipient site, the bony margins were smoothed and the tricortical block contoured for passive fit, then fixated with ___ monocortical screws and a trimm"
       },
       {
@@ -53,7 +53,7 @@
         "kind": "text",
         "raw": "[profile]",
         "label": "Value",
-        "context": "At the recipient site, the bony margins were smoothed and the tricortical block contoured for passive fit, then fixated with [#__] monocortical screws and a tri"
+        "context": "At the recipient site, the bony margins were smoothed and the tricortical block contoured for passive fit, then fixated with [#] monocortical screws and a trimm"
       },
       {
         "id": "aicbg:enumText:0",
@@ -83,7 +83,7 @@
       "est": "120 min"
     },
     "tags": [],
-    "rawBody": "PROCEDURE: AICBG (anterior iliac crest bone graft)\n\nAttention was directed to the [R/L] anterior hip, prepped and draped as a separate sterile field with care taken not to cross-contaminate the recipient site. A cutaneous and subcutaneous incision was made with a #15 blade along the [R/L] anterior iliac crest, 2.0 cm posterior and lateral to the anterior superior iliac spine, measuring approximately [incision] cm. Electrocautery carried the incision down to periosteum through Scarpa's fascia and the investing fascia of the external oblique and tensor fascia lata, taking care not to dissect off the tensor fascia lata. The iliac crest periosteum was incised and subperiosteal dissection performed along the length of the incision and medially down the anterior iliac crest. Malleable and Cobra retractors were placed to protect the abdominal contents. Using pre-planned segments to template the graft, a reciprocating saw made the vertical osteotomies and a piezotome the horizontal osteotomy under copious irrigation, and chisel osteotomes were used to free the tricortical block. Spoon curettes were then used to harvest medullary bone from the anterior iliac crest. The harvest site was irrigated thoroughly, packed with Arista and thrombin-soaked Gelfoam, and hemostasis confirmed. The hip was closed in layers, with 3-0 Vicryl approximating periosteum and muscular aponeurosis, 4-0 Vicryl for deep dermal closure, and running subcuticular skin closure reinforced with tacking 5-0 plain gut. Dermabond was applied and an island gauze and Tegaderm pressure dressing placed. At the recipient site, the bony margins were smoothed and the tricortical block contoured for passive fit, then fixated with [#__] monocortical screws and a trimmed [profile] titanium mesh. The harvested medullary bone was packed along the defect mixed with PRF. A [Membrane: PTFE / collagen] membrane was draped over the graft, and the flap was closed tension-free with horizontal mattress and interrupted 3-0 dyed Monocryl sutures after subperiosteal releasing incisions.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "rawBody": "PROCEDURE: AICBG (anterior iliac crest bone graft)\n\nAttention was directed to the [R/L] anterior hip, prepped and draped as a separate sterile field with care taken not to cross-contaminate the recipient site. A cutaneous and subcutaneous incision was made with a #15 blade along the [R/L] anterior iliac crest, 2.0 cm posterior and lateral to the anterior superior iliac spine, measuring approximately [incision] cm. Electrocautery carried the incision down to periosteum through Scarpa's fascia and the investing fascia of the external oblique and tensor fascia lata, taking care not to dissect off the tensor fascia lata. The iliac crest periosteum was incised and subperiosteal dissection performed along the length of the incision and medially down the anterior iliac crest. Malleable and Cobra retractors were placed to protect the abdominal contents. Using pre-planned segments to template the graft, a reciprocating saw made the vertical osteotomies and a piezotome the horizontal osteotomy under copious irrigation, and chisel osteotomes were used to free the tricortical block. Spoon curettes were then used to harvest medullary bone from the anterior iliac crest. The harvest site was irrigated thoroughly, packed with Arista and thrombin-soaked Gelfoam, and hemostasis confirmed. The hip was closed in layers, with 3-0 Vicryl approximating periosteum and muscular aponeurosis, 4-0 Vicryl for deep dermal closure, and running subcuticular skin closure reinforced with tacking 5-0 plain gut. Dermabond was applied and an island gauze and Tegaderm pressure dressing placed. At the recipient site, the bony margins were smoothed and the tricortical block contoured for passive fit, then fixated with [#] monocortical screws and a trimmed [profile] titanium mesh. The harvested medullary bone was packed along the defect mixed with PRF. A [Membrane: PTFE / collagen] membrane was draped over the graft, and the flap was closed tension-free with horizontal mattress and interrupted 3-0 dyed Monocryl sutures after subperiosteal releasing incisions.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
     "warnings": []
   },
   {
@@ -95,7 +95,7 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Dentoalveolar & Implant/Anterior Maxilla Bone Graft.md",
-    "bodyTemplate": "PROCEDURE: Anterior Maxilla Bone Graft\n\nAttention was directed to the anterior maxilla, which was anesthetized with 1% lidocaine with 1:100,000 epi. A #15 blade was used to make a sulcular incision from anterior-maxilla-bone-graft:toothNumber:0 to anterior-maxilla-bone-graft:toothNumber:1, and a full thickness mucoperiosteal flap was elevated with subperiosteal dissection up to the piriform rim to expose the defect. anterior-maxilla-bone-graft:optionalClause:0 The site was copiously irrigated, with no fluid return through the nares confirmed. anterior-maxilla-bone-graft:measurement:0 cc of particulate allograft (anterior-maxilla-bone-graft:enumText:0) was placed into the defect and a anterior-maxilla-bone-graft:enumText:1 membrane was placed over the graft. Subperiosteal releasing incisions were developed along the buccal flap to allow tension-free closure, and the site was closed with 3-0 anterior-maxilla-bone-graft:enumText:2 suture in a combination of interrupted and horizontal mattress fashion for a watertight closure. Hemostasis was confirmed and the site was copiously irrigated.\n\n",
+    "bodyTemplate": "PROCEDURE: Anterior Maxilla Bone Graft\n\nAttention was directed to the anterior maxilla, which was anesthetized with 1% lidocaine with 1:100,000 epinephrine. A #15 blade was used to make a sulcular incision from anterior-maxilla-bone-graft:toothNumber:0 to anterior-maxilla-bone-graft:toothNumber:1, and a full thickness mucoperiosteal flap was elevated with subperiosteal dissection up to the piriform rim to expose the defect. anterior-maxilla-bone-graft:optionalClause:0 The site was copiously irrigated, with no fluid return through the nares confirmed. anterior-maxilla-bone-graft:measurement:0 cc of particulate allograft (anterior-maxilla-bone-graft:enumText:0) was placed into the defect and a anterior-maxilla-bone-graft:enumText:1 membrane was placed over the graft. Subperiosteal releasing incisions were developed along the buccal flap to allow tension-free closure, and the site was closed with 3-0 anterior-maxilla-bone-graft:enumText:2 suture in a combination of interrupted and horizontal mattress fashion for a watertight closure. Hemostasis was confirmed and the site was copiously irrigated.\n\n",
     "fields": [
       {
         "id": "anterior-maxilla-bone-graft:toothNumber:0",
@@ -179,7 +179,7 @@
       "est": "45 min"
     },
     "tags": [],
-    "rawBody": "PROCEDURE: Anterior Maxilla Bone Graft\n\nAttention was directed to the anterior maxilla, which was anesthetized with 1% lidocaine with 1:100,000 epi. A #15 blade was used to make a sulcular incision from [#__] to [#__], and a full thickness mucoperiosteal flap was elevated with subperiosteal dissection up to the piriform rim to expose the defect. [Any existing cystic lining was completely enucleated with curettes and dropped in a specimen cup for permanent pathology review.] The site was copiously irrigated, with no fluid return through the nares confirmed. [volume] cc of particulate allograft ([Graft: DBX putty / DBM]) was placed into the defect and a [Membrane: collagen / PTFE] membrane was placed over the graft. Subperiosteal releasing incisions were developed along the buccal flap to allow tension-free closure, and the site was closed with 3-0 [Suture: Vicryl / Monocryl] suture in a combination of interrupted and horizontal mattress fashion for a watertight closure. Hemostasis was confirmed and the site was copiously irrigated.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "rawBody": "PROCEDURE: Anterior Maxilla Bone Graft\n\nAttention was directed to the anterior maxilla, which was anesthetized with 1% lidocaine with 1:100,000 epinephrine. A #15 blade was used to make a sulcular incision from [#__] to [#__], and a full thickness mucoperiosteal flap was elevated with subperiosteal dissection up to the piriform rim to expose the defect. [Any existing cystic lining was completely enucleated with curettes and dropped in a specimen cup for permanent pathology review.] The site was copiously irrigated, with no fluid return through the nares confirmed. [volume] cc of particulate allograft ([Graft: DBX putty / DBM]) was placed into the defect and a [Membrane: collagen / PTFE] membrane was placed over the graft. Subperiosteal releasing incisions were developed along the buccal flap to allow tension-free closure, and the site was closed with 3-0 [Suture: Vicryl / Monocryl] suture in a combination of interrupted and horizontal mattress fashion for a watertight closure. Hemostasis was confirmed and the site was copiously irrigated.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
     "warnings": []
   },
   {
@@ -269,8 +269,20 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Cosmetic & Facial/Canthopexy.md",
-    "bodyTemplate": "PROCEDURE: Canthopexy\n\nAttention was drawn to the lateral right upper eyelid. canthopexy:measurement:0 cc of 2% lidocaine with 1:100,000 epinephrine was injected. A lateral upper eyelid incision approximately 1 cm in length was made to approach the lateral orbital rim, and the superior lateral orbital rim was identified through this approach. While protecting the orbital contents, a wire-passing bur was used to create a transosseous drill hole through the lateral orbital rim. The lateral canthal tendon was identified and canthopexy was performed using 3-0 Prolene suture in a superior vector. Good lift was noted and the procedure was repeated on the contralateral side with symmetry noted. The site was closed with 6-0 plain gut to approximate the orbicularis oculi followed by running 6-0 plain gut for skin closure.\n\n",
+    "bodyTemplate": "PROCEDURE: Canthopexy\n\nAttention was drawn to the lateral canthopexy:side:0 upper eyelid. canthopexy:measurement:0 cc of 2% lidocaine with 1:100,000 epinephrine was injected. A lateral upper eyelid incision approximately 1 cm in length was made to approach the lateral orbital rim, and the superior lateral orbital rim was identified through this approach. While protecting the orbital contents, a wire-passing bur was used to create a transosseous drill hole through the lateral orbital rim. The lateral canthal tendon was identified and canthopexy was performed using 3-0 Prolene suture in a superior vector. Good lift was noted. canthopexy:optionalClause:0 The site was closed with 6-0 plain gut to approximate the orbicularis oculi followed by running 6-0 plain gut for skin closure.\n\n",
     "fields": [
+      {
+        "id": "canthopexy:side:0",
+        "kind": "side",
+        "raw": "[R/L]",
+        "label": "Side",
+        "context": "Attention was drawn to the lateral ___ upper eyelid.",
+        "options": [
+          "R",
+          "L"
+        ],
+        "linkKey": "side"
+      },
       {
         "id": "canthopexy:measurement:0",
         "kind": "measurement",
@@ -279,6 +291,14 @@
         "context": "___ cc of 2% lidocaine with 1:100,000 epinephrine was injected.",
         "unit": "cc",
         "hint": "volume"
+      },
+      {
+        "id": "canthopexy:optionalClause:0",
+        "kind": "optionalClause",
+        "raw": "[The procedure was repeated on the contralateral side with symmetry noted.]",
+        "label": "Optional step",
+        "context": "The procedure was repeated on the contralateral side with symmetry noted.",
+        "hint": "The procedure was repeated on the contralateral side with symmetry noted."
       }
     ],
     "flags": [],
@@ -295,7 +315,7 @@
       "est": "30 min"
     },
     "tags": [],
-    "rawBody": "PROCEDURE: Canthopexy\n\nAttention was drawn to the lateral right upper eyelid. [volume] cc of 2% lidocaine with 1:100,000 epinephrine was injected. A lateral upper eyelid incision approximately 1 cm in length was made to approach the lateral orbital rim, and the superior lateral orbital rim was identified through this approach. While protecting the orbital contents, a wire-passing bur was used to create a transosseous drill hole through the lateral orbital rim. The lateral canthal tendon was identified and canthopexy was performed using 3-0 Prolene suture in a superior vector. Good lift was noted and the procedure was repeated on the contralateral side with symmetry noted. The site was closed with 6-0 plain gut to approximate the orbicularis oculi followed by running 6-0 plain gut for skin closure.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "rawBody": "PROCEDURE: Canthopexy\n\nAttention was drawn to the lateral [R/L] upper eyelid. [volume] cc of 2% lidocaine with 1:100,000 epinephrine was injected. A lateral upper eyelid incision approximately 1 cm in length was made to approach the lateral orbital rim, and the superior lateral orbital rim was identified through this approach. While protecting the orbital contents, a wire-passing bur was used to create a transosseous drill hole through the lateral orbital rim. The lateral canthal tendon was identified and canthopexy was performed using 3-0 Prolene suture in a superior vector. Good lift was noted. [The procedure was repeated on the contralateral side with symmetry noted.] The site was closed with 6-0 plain gut to approximate the orbicularis oculi followed by running 6-0 plain gut for skin closure.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
     "warnings": []
   },
   {
@@ -345,7 +365,7 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Dentoalveolar & Implant/Dental Implant.md",
-    "bodyTemplate": "PROCEDURE: Dental Implant\n\nThe surgical site was anesthetized with 1% lidocaine with 1:100,000 epinephrine via local infiltration. dental-implant:optionalClause:0 Crestal incisions were made over the edentulous ridge and full-thickness mucoperiosteal flaps were raised to expose the alveolar crest.\n\n=== PER TOOTH ===\n\nAt site #dental-implant:toothNumber:0, the dental-implant:text:0 implant system was followed to develop an underprepared dental-implant:hardwareDim:0 mm osteotomy under copious irrigation, with confirmation of intact bony walls. A dental-implant:enumText:0 dental-implant:hardwareDim:1 mm implant (REF dental-implant:text:1, LOT dental-implant:text:2) was placed and torqued to dental-implant:measurement:0 Ncm. A dental-implant:enumText:1 was placed; if restored at placement, a multi-unit abutment (dental-implant:enumText:2, dental-implant:measurement:1 mm cuff height) was placed and torqued to 15 Ncm.\n\n=== END PER TOOTH ===\n\nThe sites were irrigated with sterile saline and the flaps were reapproximated and closed with 3-0 dental-implant:enumText:3 suture. Hemostasis was confirmed.",
+    "bodyTemplate": "PROCEDURE: Dental Implant\n\nThe surgical site was anesthetized with 1% lidocaine with 1:100,000 epinephrine via local infiltration. dental-implant:optionalClause:0 Crestal incisions were made over the edentulous ridge and full-thickness mucoperiosteal flaps were raised to expose the alveolar crest.\n\n=== PER TOOTH ===\n\nAt site #dental-implant:toothNumber:0, the dental-implant:text:0 implant system was followed to develop an underprepared dental-implant:hardwareDim:0 mm osteotomy under copious irrigation, with confirmation of intact bony walls. A dental-implant:enumText:0 dental-implant:hardwareDim:1 mm implant (REF dental-implant:text:1, LOT dental-implant:text:2) was placed and torqued to dental-implant:measurement:0 Ncm. A dental-implant:enumText:1 was placed. dental-implant:optionalClause:1\n\n=== END PER TOOTH ===\n\nThe sites were irrigated with sterile saline and the flaps were reapproximated and closed with 3-0 dental-implant:enumText:2 suture. Hemostasis was confirmed.",
     "fields": [
       {
         "id": "dental-implant:optionalClause:0",
@@ -450,39 +470,28 @@
       {
         "id": "dental-implant:enumText:1",
         "kind": "enumText",
-        "raw": "[Closure: cover screw / healing abutment]",
+        "raw": "[Closure: cover screw / healing abutment / straight multi-unit abutment / 17 degree multi-unit abutment / 30 degree multi-unit abutment]",
         "label": "Select",
-        "context": "A ___ was placed; if restored at placement, a multi-unit abutment ([Abutment angle: straight / 17 degree / 30 degree], [cuff] mm cuff height) was placed and tor",
+        "context": "A ___ was placed.",
         "options": [
           "cover screw",
-          "healing abutment"
+          "healing abutment",
+          "straight multi-unit abutment",
+          "17 degree multi-unit abutment",
+          "30 degree multi-unit abutment"
         ],
-        "hint": "cover screw / healing abutment"
+        "hint": "cover screw / healing abutment / straight multi-unit abutment / 17 degree multi-unit abutment / 30 degree multi-unit abutment"
+      },
+      {
+        "id": "dental-implant:optionalClause:1",
+        "kind": "optionalClause",
+        "raw": "[The multi-unit abutment was torqued to 15 Ncm.]",
+        "label": "Optional step",
+        "context": "The multi-unit abutment was torqued to 15 Ncm.",
+        "hint": "The multi-unit abutment was torqued to 15 Ncm."
       },
       {
         "id": "dental-implant:enumText:2",
-        "kind": "enumText",
-        "raw": "[Abutment angle: straight / 17 degree / 30 degree]",
-        "label": "Select",
-        "context": "cover screw / healing abutment] was placed; if restored at placement, a multi-unit abutment (___, [cuff] mm cuff height) was placed and torqued to 15 Ncm.",
-        "options": [
-          "straight",
-          "17 degree",
-          "30 degree"
-        ],
-        "hint": "straight / 17 degree / 30 degree"
-      },
-      {
-        "id": "dental-implant:measurement:1",
-        "kind": "measurement",
-        "raw": "[cuff]",
-        "label": "Measurement (mm)",
-        "context": "straight / 17 degree / 30 degree], ___ mm cuff height) was placed and torqued to 15 Ncm.",
-        "unit": "mm",
-        "hint": "cuff"
-      },
-      {
-        "id": "dental-implant:enumText:3",
         "kind": "enumText",
         "raw": "[Suture: Vicryl / chromic]",
         "label": "Select",
@@ -509,7 +518,7 @@
     },
     "repeat": "site",
     "tags": [],
-    "rawBody": "PROCEDURE: Dental Implant\n\nThe surgical site was anesthetized with 1% lidocaine with 1:100,000 epinephrine via local infiltration. [Inferior alveolar nerve blocks were administered for mandibular sites.] Crestal incisions were made over the edentulous ridge and full-thickness mucoperiosteal flaps were raised to expose the alveolar crest.\n\n=== PER TOOTH ===\n\nAt site #[#__], the [system] implant system was followed to develop an underprepared [diameter]x[length] mm osteotomy under copious irrigation, with confirmation of intact bony walls. A [Platform: RP / NP / WP] [diameter]x[length] mm implant (REF [ref], LOT [lot]) was placed and torqued to [torque] Ncm. A [Closure: cover screw / healing abutment] was placed; if restored at placement, a multi-unit abutment ([Abutment angle: straight / 17 degree / 30 degree], [cuff] mm cuff height) was placed and torqued to 15 Ncm.\n\n=== END PER TOOTH ===\n\nThe sites were irrigated with sterile saline and the flaps were reapproximated and closed with 3-0 [Suture: Vicryl / chromic] suture. Hemostasis was confirmed.",
+    "rawBody": "PROCEDURE: Dental Implant\n\nThe surgical site was anesthetized with 1% lidocaine with 1:100,000 epinephrine via local infiltration. [Inferior alveolar nerve blocks were administered for mandibular sites.] Crestal incisions were made over the edentulous ridge and full-thickness mucoperiosteal flaps were raised to expose the alveolar crest.\n\n=== PER TOOTH ===\n\nAt site #[#__], the [system] implant system was followed to develop an underprepared [diameter]x[length] mm osteotomy under copious irrigation, with confirmation of intact bony walls. A [Platform: RP / NP / WP] [diameter]x[length] mm implant (REF [ref], LOT [lot]) was placed and torqued to [torque] Ncm. A [Closure: cover screw / healing abutment / straight multi-unit abutment / 17 degree multi-unit abutment / 30 degree multi-unit abutment] was placed. [The multi-unit abutment was torqued to 15 Ncm.]\n\n=== END PER TOOTH ===\n\nThe sites were irrigated with sterile saline and the flaps were reapproximated and closed with 3-0 [Suture: Vicryl / chromic] suture. Hemostasis was confirmed.",
     "warnings": []
   },
   {
@@ -765,14 +774,14 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Pathology & Reconstruction/Excisional Biopsy Soft-tissue Excision.md",
-    "bodyTemplate": "PROCEDURE: Excisional Biopsy / Soft-tissue Excision\n\nAttention was directed to the excisional-biopsy-soft-tissue-excision:side:0 excisional-biopsy-soft-tissue-excision:text:0 where the excisional-biopsy-soft-tissue-excision:text:1 cm lesion was identified and its margins marked. The area was anesthetized with local infiltration of lidocaine with epinephrine, taking care to inject peripheral to rather than into the lesion. Using a #15 blade, an elliptical incision was made circumferentially around the lesion with a margin of clinically normal tissue as indicated by the lesion's character. The lesion was excised in toto with sharp and blunt dissection at an appropriate depth, and a excisional-biopsy-soft-tissue-excision:enumText:0 was placed to denote excisional-biopsy-soft-tissue-excision:text:2. The specimen was placed in formalin and submitted for permanent pathologic examination. The base and margins of the surgical bed were inspected. Hemostasis was achieved with pressure and judicious electrocautery. The wound was irrigated with sterile saline and closed primarily with excisional-biopsy-soft-tissue-excision:enumText:1 excisional-biopsy-soft-tissue-excision:enumText:2 in excisional-biopsy-soft-tissue-excision:enumText:3 fashion after appropriate undermining for tension-free approximation. Specimen: excisional-biopsy-soft-tissue-excision:text:3 to permanent pathology.\n\n",
+    "bodyTemplate": "PROCEDURE: Excisional Biopsy / Soft-tissue Excision\n\nAttention was directed to the excisional-biopsy-soft-tissue-excision:side:0 excisional-biopsy-soft-tissue-excision:text:0 where the excisional-biopsy-soft-tissue-excision:measurement:0 cm lesion was identified and its margins marked. The area was anesthetized with local infiltration of lidocaine with epinephrine, taking care to inject peripheral to rather than into the lesion. Using a #15 blade, an elliptical incision was made circumferentially around the lesion with a margin of clinically normal tissue as indicated by the lesion's character. The lesion was excised in toto with sharp and blunt dissection at an appropriate depth, and a excisional-biopsy-soft-tissue-excision:enumText:0 was placed to denote excisional-biopsy-soft-tissue-excision:text:1. The specimen was placed in formalin and submitted for permanent pathologic examination. The base and margins of the surgical bed were inspected. Hemostasis was achieved with pressure and judicious electrocautery. The wound was irrigated with sterile saline and closed primarily with excisional-biopsy-soft-tissue-excision:enumText:1 excisional-biopsy-soft-tissue-excision:enumText:2 in excisional-biopsy-soft-tissue-excision:enumText:3 fashion after appropriate undermining for tension-free approximation. Specimen: excisional-biopsy-soft-tissue-excision:text:2 to permanent pathology.\n\n",
     "fields": [
       {
         "id": "excisional-biopsy-soft-tissue-excision:side:0",
         "kind": "side",
         "raw": "[R/L]",
         "label": "Side",
-        "context": "Attention was directed to the ___ [site] where the [lesion] cm lesion was identified and its margins marked.",
+        "context": "Attention was directed to the ___ [site] where the [X] cm lesion was identified and its margins marked.",
         "options": [
           "R",
           "L"
@@ -784,14 +793,16 @@
         "kind": "text",
         "raw": "[site]",
         "label": "Value",
-        "context": "Attention was directed to the [R/L] ___ where the [lesion] cm lesion was identified and its margins marked."
+        "context": "Attention was directed to the [R/L] ___ where the [X] cm lesion was identified and its margins marked."
       },
       {
-        "id": "excisional-biopsy-soft-tissue-excision:text:1",
-        "kind": "text",
-        "raw": "[lesion]",
-        "label": "Value",
-        "context": "Attention was directed to the [R/L] [site] where the ___ cm lesion was identified and its margins marked."
+        "id": "excisional-biopsy-soft-tissue-excision:measurement:0",
+        "kind": "measurement",
+        "raw": "[X]",
+        "label": "Measurement",
+        "context": "Attention was directed to the [R/L] [site] where the ___ cm lesion was identified and its margins marked.",
+        "unit": null,
+        "hint": "X"
       },
       {
         "id": "excisional-biopsy-soft-tissue-excision:enumText:0",
@@ -806,7 +817,7 @@
         "hint": "marking suture / orientation note"
       },
       {
-        "id": "excisional-biopsy-soft-tissue-excision:text:2",
+        "id": "excisional-biopsy-soft-tissue-excision:text:1",
         "kind": "text",
         "raw": "[orientation]",
         "label": "Value",
@@ -849,9 +860,9 @@
         "hint": "interrupted / running"
       },
       {
-        "id": "excisional-biopsy-soft-tissue-excision:text:3",
+        "id": "excisional-biopsy-soft-tissue-excision:text:2",
         "kind": "text",
-        "raw": "[lesion]",
+        "raw": "[specimen]",
         "label": "Value",
         "context": "___ to permanent pathology."
       }
@@ -870,7 +881,7 @@
       "est": "60 min"
     },
     "tags": [],
-    "rawBody": "PROCEDURE: Excisional Biopsy / Soft-tissue Excision\n\nAttention was directed to the [R/L] [site] where the [lesion] cm lesion was identified and its margins marked. The area was anesthetized with local infiltration of lidocaine with epinephrine, taking care to inject peripheral to rather than into the lesion. Using a #15 blade, an elliptical incision was made circumferentially around the lesion with a margin of clinically normal tissue as indicated by the lesion's character. The lesion was excised in toto with sharp and blunt dissection at an appropriate depth, and a [Marker: marking suture / orientation note] was placed to denote [orientation]. The specimen was placed in formalin and submitted for permanent pathologic examination. The base and margins of the surgical bed were inspected. Hemostasis was achieved with pressure and judicious electrocautery. The wound was irrigated with sterile saline and closed primarily with [Suture: 3-0 / 4-0] [Suture: chromic gut / Vicryl] in [Closure: interrupted / running] fashion after appropriate undermining for tension-free approximation. Specimen: [lesion] to permanent pathology.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "rawBody": "PROCEDURE: Excisional Biopsy / Soft-tissue Excision\n\nAttention was directed to the [R/L] [site] where the [X] cm lesion was identified and its margins marked. The area was anesthetized with local infiltration of lidocaine with epinephrine, taking care to inject peripheral to rather than into the lesion. Using a #15 blade, an elliptical incision was made circumferentially around the lesion with a margin of clinically normal tissue as indicated by the lesion's character. The lesion was excised in toto with sharp and blunt dissection at an appropriate depth, and a [Marker: marking suture / orientation note] was placed to denote [orientation]. The specimen was placed in formalin and submitted for permanent pathologic examination. The base and margins of the surgical bed were inspected. Hemostasis was achieved with pressure and judicious electrocautery. The wound was irrigated with sterile saline and closed primarily with [Suture: 3-0 / 4-0] [Suture: chromic gut / Vicryl] in [Closure: interrupted / running] fashion after appropriate undermining for tension-free approximation. Specimen: [specimen] to permanent pathology.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
     "warnings": []
   },
   {
@@ -882,7 +893,7 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Dentoalveolar & Implant/Exposure and Bonding.md",
-    "bodyTemplate": "PROCEDURE: Exposure and Bonding (impacted tooth)\n\nAttention was directed to the exposure-and-bonding:side:0 exposure-and-bonding:enumText:0 exposure-and-bonding:text:0. The site was anesthetized with 1% lidocaine with 1:100,000 epi via local infiltration [and an IAN block for mandibular sites]. A exposure-and-bonding:enumText:1 incision was made overlying impacted exposure-and-bonding:toothNumber:0 and a full thickness mucoperiosteal flap was raised to expose the overlying bone. Bone overlying the crown was removed with a round bur under copious irrigation until adequate enamel surface was exposed, taking care to preserve the cementoenamel junction. The exposed enamel was cleaned, etched, rinsed, and dried, and an orthodontic bracket with a gold chain was bonded to the crown. The chain was secured and routed exposure-and-bonding:enumText:2. The site was irrigated and the flap was repositioned and closed with 3-0 exposure-and-bonding:enumText:3 suture, leaving the chain accessible for orthodontic traction.\n\n",
+    "bodyTemplate": "PROCEDURE: Exposure and Bonding (impacted tooth)\n\nAttention was directed to the exposure-and-bonding:side:0 exposure-and-bonding:enumText:0 exposure-and-bonding:text:0. The site was anesthetized with 1% lidocaine with 1:100,000 epinephrine via local infiltration [and an IAN block for mandibular sites]. A exposure-and-bonding:enumText:1 incision was made overlying impacted exposure-and-bonding:toothNumber:0 and a full thickness mucoperiosteal flap was raised to expose the overlying bone. Bone overlying the crown was removed with a round bur under copious irrigation until adequate enamel surface was exposed, taking care to preserve the cementoenamel junction. The exposed enamel was cleaned, etched, rinsed, and dried, and an orthodontic bracket with a gold chain was bonded to the crown. The chain was secured and routed exposure-and-bonding:enumText:2. The site was irrigated and the flap was repositioned and closed with 3-0 exposure-and-bonding:enumText:3 suture, leaving the chain accessible for orthodontic traction.\n\n",
     "fields": [
       {
         "id": "exposure-and-bonding:side:0",
@@ -973,7 +984,7 @@
       "est": "30 min"
     },
     "tags": [],
-    "rawBody": "PROCEDURE: Exposure and Bonding (impacted tooth)\n\nAttention was directed to the [R/L] [Arch: maxillary / mandibular] [region]. The site was anesthetized with 1% lidocaine with 1:100,000 epi via local infiltration [and an IAN block for mandibular sites]. A [Incision: crestal / sulcular] incision was made overlying impacted [#__] and a full thickness mucoperiosteal flap was raised to expose the overlying bone. Bone overlying the crown was removed with a round bur under copious irrigation until adequate enamel surface was exposed, taking care to preserve the cementoenamel junction. The exposed enamel was cleaned, etched, rinsed, and dried, and an orthodontic bracket with a gold chain was bonded to the crown. The chain was secured and routed [Chain routing: to emerge through the flap / under the flap to the alveolar crest]. The site was irrigated and the flap was repositioned and closed with 3-0 [Suture: Vicryl / chromic] suture, leaving the chain accessible for orthodontic traction.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "rawBody": "PROCEDURE: Exposure and Bonding (impacted tooth)\n\nAttention was directed to the [R/L] [Arch: maxillary / mandibular] [region]. The site was anesthetized with 1% lidocaine with 1:100,000 epinephrine via local infiltration [and an IAN block for mandibular sites]. A [Incision: crestal / sulcular] incision was made overlying impacted [#__] and a full thickness mucoperiosteal flap was raised to expose the overlying bone. Bone overlying the crown was removed with a round bur under copious irrigation until adequate enamel surface was exposed, taking care to preserve the cementoenamel junction. The exposed enamel was cleaned, etched, rinsed, and dried, and an orthodontic bracket with a gold chain was bonded to the crown. The chain was secured and routed [Chain routing: to emerge through the flap / under the flap to the alveolar crest]. The site was irrigated and the flap was repositioned and closed with 3-0 [Suture: Vicryl / chromic] suture, leaving the chain accessible for orthodontic traction.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
     "warnings": [
       "Unrecognized bracket kept inline: [and an IAN block for mandibular sites]"
     ]
@@ -1607,7 +1618,7 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Pathology & Reconstruction/Incision and Drainage.md",
-    "bodyTemplate": "PROCEDURE: Incision and Drainage\n\nAttention was directed to the incision-and-drainage:side:0 submandibular region. An incision was planned greater than incision-and-drainage:text:0 cm below the inferior border of the mandible to protect the marginal mandibular branch of the facial nerve, and 4 cc of 1% lidocaine with 1:100,000 epinephrine was infiltrated in a subdermal plane. A incision-and-drainage:text:1 cm incision was made with a #15 blade at the planned site, carried through dermis, subcutaneous fat, platysma, and underlying fascia. Blunt dissection was carried out with a curved hemostat in the closed position down to the inferior border of the mandible, then opened to explore the involved space. The fluid collection on the medial surface of the posterior mandible was entered and drainage expressed. The drainage was sampled on a sterile cotton-tipped applicator and sent for Gram stain and aerobic and anaerobic culture and sensitivity. The space was thoroughly irrigated with sterile saline. A 0.25 inch Penrose drain was placed into the dependent portion of the wound and secured to the skin with a 2-0 nylon suture. A sterile 4x4 dressing was placed over the drain. The site was hemostatic with minimal drainage. The offending tooth was extracted to achieve source control.\n\n",
+    "bodyTemplate": "PROCEDURE: Incision and Drainage\n\nAttention was directed to the incision-and-drainage:side:0 submandibular region. An incision was planned greater than incision-and-drainage:text:0 cm below the inferior border of the mandible to protect the marginal mandibular branch of the facial nerve, and 4 cc of 1% lidocaine with 1:100,000 epinephrine was infiltrated in a subdermal plane. A incision-and-drainage:text:1 cm incision was made with a #15 blade at the planned site, carried through dermis, subcutaneous fat, platysma, and underlying fascia. Blunt dissection was carried out with a curved hemostat in the closed position down to the inferior border of the mandible, then opened to explore the involved space. The fluid collection on the medial surface of the posterior mandible was entered and drainage expressed. The drainage was sampled on a sterile cotton-tipped applicator and sent for Gram stain and aerobic and anaerobic culture and sensitivity. The space was thoroughly irrigated with sterile saline. A 0.25 inch Penrose drain was placed into the dependent portion of the wound and secured to the skin with a 2-0 nylon suture. A sterile 4x4 dressing was placed over the drain. The site was hemostatic with minimal drainage. incision-and-drainage:optionalClause:0\n\n",
     "fields": [
       {
         "id": "incision-and-drainage:side:0",
@@ -1634,6 +1645,14 @@
         "raw": "[incision]",
         "label": "Value",
         "context": "A ___ cm incision was made with a #15 blade at the planned site, carried through dermis, subcutaneous fat, platysma, and underlying fascia."
+      },
+      {
+        "id": "incision-and-drainage:optionalClause:0",
+        "kind": "optionalClause",
+        "raw": "[The offending tooth was extracted to achieve source control.]",
+        "label": "Optional step",
+        "context": "The offending tooth was extracted to achieve source control.",
+        "hint": "The offending tooth was extracted to achieve source control."
       }
     ],
     "flags": [],
@@ -1651,7 +1670,7 @@
       "est": "60 min"
     },
     "tags": [],
-    "rawBody": "PROCEDURE: Incision and Drainage\n\nAttention was directed to the [R/L] submandibular region. An incision was planned greater than [distance] cm below the inferior border of the mandible to protect the marginal mandibular branch of the facial nerve, and 4 cc of 1% lidocaine with 1:100,000 epinephrine was infiltrated in a subdermal plane. A [incision] cm incision was made with a #15 blade at the planned site, carried through dermis, subcutaneous fat, platysma, and underlying fascia. Blunt dissection was carried out with a curved hemostat in the closed position down to the inferior border of the mandible, then opened to explore the involved space. The fluid collection on the medial surface of the posterior mandible was entered and drainage expressed. The drainage was sampled on a sterile cotton-tipped applicator and sent for Gram stain and aerobic and anaerobic culture and sensitivity. The space was thoroughly irrigated with sterile saline. A 0.25 inch Penrose drain was placed into the dependent portion of the wound and secured to the skin with a 2-0 nylon suture. A sterile 4x4 dressing was placed over the drain. The site was hemostatic with minimal drainage. The offending tooth was extracted to achieve source control.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "rawBody": "PROCEDURE: Incision and Drainage\n\nAttention was directed to the [R/L] submandibular region. An incision was planned greater than [distance] cm below the inferior border of the mandible to protect the marginal mandibular branch of the facial nerve, and 4 cc of 1% lidocaine with 1:100,000 epinephrine was infiltrated in a subdermal plane. A [incision] cm incision was made with a #15 blade at the planned site, carried through dermis, subcutaneous fat, platysma, and underlying fascia. Blunt dissection was carried out with a curved hemostat in the closed position down to the inferior border of the mandible, then opened to explore the involved space. The fluid collection on the medial surface of the posterior mandible was entered and drainage expressed. The drainage was sampled on a sterile cotton-tipped applicator and sent for Gram stain and aerobic and anaerobic culture and sensitivity. The space was thoroughly irrigated with sterile saline. A 0.25 inch Penrose drain was placed into the dependent portion of the wound and secured to the skin with a 2-0 nylon suture. A sterile 4x4 dressing was placed over the drain. The site was hemostatic with minimal drainage. [The offending tooth was extracted to achieve source control.]\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
     "warnings": []
   },
   {
@@ -2188,7 +2207,7 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Trauma/MMF Closed Reduction.md",
-    "bodyTemplate": "PROCEDURE: MMF / Closed Reduction\n\nThe oral cavity was suctioned free of secretions and debris and a throat pack was placed. 10 cc of 1% lidocaine with 1:100,000 epi was infiltrated into the maxillary and mandibular vestibules. Using 24-gauge wire, a bridle wire was placed from tooth mmf-closed-reduction:toothNumber:0 to level the mandibular occlusion. Maxillary and mandibular arch bars were placed with 24-gauge wire from second premolar to second premolar. Alternatively, mmf-closed-reduction:hardwareCount:0 mmf-closed-reduction:measurement:0-mm IMF screws were placed into the mandible and maxilla with even distribution. The fractures were reduced and the arches placed tightly into maxillomandibular fixation (MMF) with 24-gauge wires looped between fixation points. Occlusion was thoroughly evaluated and verified to be native, stable, and repeatable. The fracture reduction was confirmed satisfactory. The throat pack was removed and the oropharynx irrigated and suctioned free of debris. The patient was placed in guiding elastics.\n\n",
+    "bodyTemplate": "PROCEDURE: MMF / Closed Reduction\n\nThe oral cavity was suctioned free of secretions and debris and a throat pack was placed. 10 cc of 1% lidocaine with 1:100,000 epinephrine was infiltrated into the maxillary and mandibular vestibules. Using 24-gauge wire, a bridle wire was placed from tooth mmf-closed-reduction:toothNumber:0 to level the mandibular occlusion. mmf-closed-reduction:optionalClause:0 mmf-closed-reduction:optionalClause:1 The fractures were reduced and the arches placed tightly into maxillomandibular fixation (MMF) with 24-gauge wires looped between fixation points. Occlusion was thoroughly evaluated and verified to be native, stable, and repeatable. The fracture reduction was confirmed satisfactory. The throat pack was removed and the oropharynx irrigated and suctioned free of debris. The patient was placed in guiding elastics.\n\n",
     "fields": [
       {
         "id": "mmf-closed-reduction:toothNumber:0",
@@ -2198,21 +2217,20 @@
         "context": "Using 24-gauge wire, a bridle wire was placed from tooth ___ to level the mandibular occlusion."
       },
       {
-        "id": "mmf-closed-reduction:hardwareCount:0",
-        "kind": "hardwareCount",
-        "raw": "[# screws]",
-        "label": "Count",
-        "context": "Alternatively, ___ [length]-mm IMF screws were placed into the mandible and maxilla with even distribution.",
-        "hint": "screws"
+        "id": "mmf-closed-reduction:optionalClause:0",
+        "kind": "optionalClause",
+        "raw": "[Maxillary and mandibular arch bars were placed with 24-gauge wire from second premolar to second premolar.]",
+        "label": "Optional step",
+        "context": "Maxillary and mandibular arch bars were placed with 24-gauge wire from second premolar to second premolar.",
+        "hint": "Maxillary and mandibular arch bars were placed with 24-gauge wire from second premolar to second premolar."
       },
       {
-        "id": "mmf-closed-reduction:measurement:0",
-        "kind": "measurement",
-        "raw": "[length]",
-        "label": "Measurement (mm)",
-        "context": "Alternatively, [# screws] ___-mm IMF screws were placed into the mandible and maxilla with even distribution.",
-        "unit": "mm",
-        "hint": "length"
+        "id": "mmf-closed-reduction:optionalClause:1",
+        "kind": "optionalClause",
+        "raw": "[IMF screws were placed into the mandible and maxilla with even distribution.]",
+        "label": "Optional step",
+        "context": "IMF screws were placed into the mandible and maxilla with even distribution.",
+        "hint": "IMF screws were placed into the mandible and maxilla with even distribution."
       }
     ],
     "flags": [],
@@ -2231,7 +2249,7 @@
       "est": "60 min"
     },
     "tags": [],
-    "rawBody": "PROCEDURE: MMF / Closed Reduction\n\nThe oral cavity was suctioned free of secretions and debris and a throat pack was placed. 10 cc of 1% lidocaine with 1:100,000 epi was infiltrated into the maxillary and mandibular vestibules. Using 24-gauge wire, a bridle wire was placed from tooth [#__] to level the mandibular occlusion. Maxillary and mandibular arch bars were placed with 24-gauge wire from second premolar to second premolar. Alternatively, [# screws] [length]-mm IMF screws were placed into the mandible and maxilla with even distribution. The fractures were reduced and the arches placed tightly into maxillomandibular fixation (MMF) with 24-gauge wires looped between fixation points. Occlusion was thoroughly evaluated and verified to be native, stable, and repeatable. The fracture reduction was confirmed satisfactory. The throat pack was removed and the oropharynx irrigated and suctioned free of debris. The patient was placed in guiding elastics.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "rawBody": "PROCEDURE: MMF / Closed Reduction\n\nThe oral cavity was suctioned free of secretions and debris and a throat pack was placed. 10 cc of 1% lidocaine with 1:100,000 epinephrine was infiltrated into the maxillary and mandibular vestibules. Using 24-gauge wire, a bridle wire was placed from tooth [#__] to level the mandibular occlusion. [Maxillary and mandibular arch bars were placed with 24-gauge wire from second premolar to second premolar.] [IMF screws were placed into the mandible and maxilla with even distribution.] The fractures were reduced and the arches placed tightly into maxillomandibular fixation (MMF) with 24-gauge wires looped between fixation points. Occlusion was thoroughly evaluated and verified to be native, stable, and repeatable. The fracture reduction was confirmed satisfactory. The throat pack was removed and the oropharynx irrigated and suctioned free of debris. The patient was placed in guiding elastics.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
     "warnings": []
   },
   {
@@ -2379,14 +2397,14 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Trauma/ORIF Le Fort.md",
-    "bodyTemplate": "PROCEDURE: ORIF Le Fort\n\nLidocaine 1% with 1:200,000 epi was infiltrated into the maxillary vestibule. Attention was directed intraorally. A maxillary Keen incision was made 5 mm superior to the mucogingival junction with Bovie from first molar to first molar, with care not to disturb Stensen's duct, and carried through periosteum. A subperiosteal dissection was carried superiorly to expose the bilateral infraorbital foramina and lateral to the zygomaxillary sutures, exposing the Le Fort fractures bilaterally. The infraorbital nerves were visualized and protected throughout. The orif-le-fort:side:0 zygomaxillary fracture was confirmed properly reduced and stable, and fixated with a orif-le-fort:text:0 orif-le-fort:hardwareCount:0-hole L-plate using orif-le-fort:hardwareCount:1 orif-le-fort:measurement:0-mm screws. The contralateral zygomaticomaxillary fracture was fixated in identical fashion. The orif-le-fort:side:1 piriform rim was reduced and fixated with a orif-le-fort:text:1 orif-le-fort:hardwareCount:2-hole L-plate and orif-le-fort:hardwareCount:3 orif-le-fort:measurement:1-mm screws, and the contralateral piriform rim fixated in identical fashion. The maxilla was confirmed stable and the occlusion native and repeatable. All surgical sites were copiously irrigated with sterile saline and hemostasis confirmed. The intraoral incision was closed with 3-0 chromic gut in a running fashion.\n\n",
+    "bodyTemplate": "PROCEDURE: ORIF Le Fort\n\nLidocaine 1% with 1:200,000 epi was infiltrated into the maxillary vestibule. Attention was directed intraorally. A maxillary Keen incision was made 5 mm superior to the mucogingival junction with Bovie from first molar to first molar, with care not to disturb Stensen's duct, and carried through periosteum. A subperiosteal dissection was carried superiorly to expose the bilateral infraorbital foramina and lateral to the zygomaticomaxillary sutures, exposing the Le Fort fractures bilaterally. The infraorbital nerves were visualized and protected throughout. The orif-le-fort:side:0 zygomaticomaxillary fracture was confirmed properly reduced and stable, and fixated with a orif-le-fort:text:0 orif-le-fort:hardwareCount:0-hole L-plate using orif-le-fort:hardwareCount:1 orif-le-fort:measurement:0-mm screws. The contralateral zygomaticomaxillary fracture was fixated in identical fashion. The orif-le-fort:side:1 piriform rim was reduced and fixated with a orif-le-fort:text:1 orif-le-fort:hardwareCount:2-hole L-plate and orif-le-fort:hardwareCount:3 orif-le-fort:measurement:1-mm screws, and the contralateral piriform rim fixated in identical fashion. The maxilla was confirmed stable and the occlusion native and repeatable. All surgical sites were copiously irrigated with sterile saline and hemostasis confirmed. The intraoral incision was closed with 3-0 chromic gut in a running fashion.\n\n",
     "fields": [
       {
         "id": "orif-le-fort:side:0",
         "kind": "side",
         "raw": "[R/L]",
         "label": "Side",
-        "context": "The ___ zygomaxillary fracture was confirmed properly reduced and stable, and fixated with a [profile] [# holes]-hole L-plate using [# screws] [length]-mm screw",
+        "context": "The ___ zygomaticomaxillary fracture was confirmed properly reduced and stable, and fixated with a [profile] [# holes]-hole L-plate using [# screws] [length]-mm",
         "options": [
           "R",
           "L"
@@ -2398,14 +2416,14 @@
         "kind": "text",
         "raw": "[profile]",
         "label": "Value",
-        "context": "The [R/L] zygomaxillary fracture was confirmed properly reduced and stable, and fixated with a ___ [# holes]-hole L-plate using [# screws] [length]-mm screws."
+        "context": "The [R/L] zygomaticomaxillary fracture was confirmed properly reduced and stable, and fixated with a ___ [# holes]-hole L-plate using [# screws] [length]-mm scr"
       },
       {
         "id": "orif-le-fort:hardwareCount:0",
         "kind": "hardwareCount",
         "raw": "[# holes]",
         "label": "Count",
-        "context": "The [R/L] zygomaxillary fracture was confirmed properly reduced and stable, and fixated with a [profile] ___-hole L-plate using [# screws] [length]-mm screws.",
+        "context": "The [R/L] zygomaticomaxillary fracture was confirmed properly reduced and stable, and fixated with a [profile] ___-hole L-plate using [# screws] [length]-mm scr",
         "hint": "holes"
       },
       {
@@ -2413,7 +2431,7 @@
         "kind": "hardwareCount",
         "raw": "[# screws]",
         "label": "Count",
-        "context": "The [R/L] zygomaxillary fracture was confirmed properly reduced and stable, and fixated with a [profile] [# holes]-hole L-plate using ___ [length]-mm screws.",
+        "context": "The [R/L] zygomaticomaxillary fracture was confirmed properly reduced and stable, and fixated with a [profile] [# holes]-hole L-plate using ___ [length]-mm scre",
         "hint": "screws"
       },
       {
@@ -2421,7 +2439,7 @@
         "kind": "measurement",
         "raw": "[length]",
         "label": "Measurement (mm)",
-        "context": "The [R/L] zygomaxillary fracture was confirmed properly reduced and stable, and fixated with a [profile] [# holes]-hole L-plate using [# screws] ___-mm screws.",
+        "context": "The [R/L] zygomaticomaxillary fracture was confirmed properly reduced and stable, and fixated with a [profile] [# holes]-hole L-plate using [# screws] ___-mm sc",
         "unit": "mm",
         "hint": "length"
       },
@@ -2486,7 +2504,7 @@
       "est": "120 min"
     },
     "tags": [],
-    "rawBody": "PROCEDURE: ORIF Le Fort\n\nLidocaine 1% with 1:200,000 epi was infiltrated into the maxillary vestibule. Attention was directed intraorally. A maxillary Keen incision was made 5 mm superior to the mucogingival junction with Bovie from first molar to first molar, with care not to disturb Stensen's duct, and carried through periosteum. A subperiosteal dissection was carried superiorly to expose the bilateral infraorbital foramina and lateral to the zygomaxillary sutures, exposing the Le Fort fractures bilaterally. The infraorbital nerves were visualized and protected throughout. The [R/L] zygomaxillary fracture was confirmed properly reduced and stable, and fixated with a [profile] [# holes]-hole L-plate using [# screws] [length]-mm screws. The contralateral zygomaticomaxillary fracture was fixated in identical fashion. The [R/L] piriform rim was reduced and fixated with a [profile] [# holes]-hole L-plate and [# screws] [length]-mm screws, and the contralateral piriform rim fixated in identical fashion. The maxilla was confirmed stable and the occlusion native and repeatable. All surgical sites were copiously irrigated with sterile saline and hemostasis confirmed. The intraoral incision was closed with 3-0 chromic gut in a running fashion.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "rawBody": "PROCEDURE: ORIF Le Fort\n\nLidocaine 1% with 1:200,000 epi was infiltrated into the maxillary vestibule. Attention was directed intraorally. A maxillary Keen incision was made 5 mm superior to the mucogingival junction with Bovie from first molar to first molar, with care not to disturb Stensen's duct, and carried through periosteum. A subperiosteal dissection was carried superiorly to expose the bilateral infraorbital foramina and lateral to the zygomaticomaxillary sutures, exposing the Le Fort fractures bilaterally. The infraorbital nerves were visualized and protected throughout. The [R/L] zygomaticomaxillary fracture was confirmed properly reduced and stable, and fixated with a [profile] [# holes]-hole L-plate using [# screws] [length]-mm screws. The contralateral zygomaticomaxillary fracture was fixated in identical fashion. The [R/L] piriform rim was reduced and fixated with a [profile] [# holes]-hole L-plate and [# screws] [length]-mm screws, and the contralateral piriform rim fixated in identical fashion. The maxilla was confirmed stable and the occlusion native and repeatable. All surgical sites were copiously irrigated with sterile saline and hemostasis confirmed. The intraoral incision was closed with 3-0 chromic gut in a running fashion.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
     "warnings": []
   },
   {
@@ -3042,7 +3060,7 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Orthognathic/Orthognathic Closing.md",
-    "bodyTemplate": "PROCEDURE: Orthognathic Closing (occlusion, elastics, Exparel)\n\nThe throat pack was removed and the oropharynx was suctioned free of debris. An orogastric tube was passed to decompress the stomach. Final occlusion was verified to be stable, reproducible, and consistent with the planned position. The patient was placed into orthognathic-closing:enumText:0 guiding elastics, and the final orthodontic bracket and surgical lug count was confirmed correct. orthognathic-closing:measurement:0 cc of Exparel was infiltrated at the surgical sites for postoperative analgesia.\n\n",
+    "bodyTemplate": "PROCEDURE: Orthognathic Closing (occlusion, elastics, Exparel)\n\nThe throat pack, if present, was removed and the oropharynx was suctioned free of debris. An orogastric tube was passed to decompress the stomach. Final occlusion was verified to be stable, reproducible, and consistent with the planned position. The patient was placed into orthognathic-closing:enumText:0 guiding elastics, and the final orthodontic bracket and surgical lug count was confirmed correct. orthognathic-closing:measurement:0 cc of Exparel was infiltrated at the surgical sites for postoperative analgesia.\n\n",
     "fields": [
       {
         "id": "orthognathic-closing:enumText:0",
@@ -3077,7 +3095,7 @@
       "est": "10 min"
     },
     "tags": [],
-    "rawBody": "PROCEDURE: Orthognathic Closing (occlusion, elastics, Exparel)\n\nThe throat pack was removed and the oropharynx was suctioned free of debris. An orogastric tube was passed to decompress the stomach. Final occlusion was verified to be stable, reproducible, and consistent with the planned position. The patient was placed into [Elastics: box / Class II / Class III] guiding elastics, and the final orthodontic bracket and surgical lug count was confirmed correct. [volume] cc of Exparel was infiltrated at the surgical sites for postoperative analgesia.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use. Stack ONCE at the end of an orthognathic case.]",
+    "rawBody": "PROCEDURE: Orthognathic Closing (occlusion, elastics, Exparel)\n\nThe throat pack, if present, was removed and the oropharynx was suctioned free of debris. An orogastric tube was passed to decompress the stomach. Final occlusion was verified to be stable, reproducible, and consistent with the planned position. The patient was placed into [Elastics: box / Class II / Class III] guiding elastics, and the final orthodontic bracket and surgical lug count was confirmed correct. [volume] cc of Exparel was infiltrated at the surgical sites for postoperative analgesia.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use. Stack ONCE at the end of an orthognathic case.]",
     "warnings": []
   },
   {
@@ -3240,7 +3258,7 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Pathology & Reconstruction/Reconstruction Plate.md",
-    "bodyTemplate": "PROCEDURE: Reconstruction Plate\n\nAttention was directed to the reconstruction-plate:side:0 mandibular defect spanning [region __ to __]. The proximal and distal native bone segments were exposed subperiosteally and the defect length confirmed. The reconstruction-plate:enumText:0 nerve was reconstruction-plate:enumText:1. A reconstruction-plate:text:0 reconstruction plate was selected and adapted to the residual mandible, restoring the pre-resection arch form and occlusal relationship reconstruction-plate:enumText:2. The plate was seated passively and secured with bicortical locking screws, reconstruction-plate:toothNumber:0 in the proximal segment and reconstruction-plate:toothNumber:1 in the distal segment, placed under copious irrigation away from the IAN and tooth roots. Plate adaptation, screw purchase, and occlusion were verified. The construct was confirmed stable and the hardware seated passively without rocking. The site was copiously irrigated with sterile saline and hemostasis confirmed. reconstruction-plate:optionalClause:0\n\n",
+    "bodyTemplate": "PROCEDURE: Reconstruction Plate\n\nAttention was directed to the reconstruction-plate:side:0 mandibular defect spanning [region __ to __]. The proximal and distal native bone segments were exposed subperiosteally and the defect length confirmed. The reconstruction-plate:enumText:0 nerve was reconstruction-plate:enumText:1. A reconstruction-plate:text:0 reconstruction plate was selected and adapted to the residual mandible, restoring the pre-resection arch form and occlusal relationship reconstruction-plate:enumText:2. The plate was seated passively and secured with bicortical locking screws, reconstruction-plate:hardwareCount:0 in the proximal segment and reconstruction-plate:hardwareCount:1 in the distal segment, placed under copious irrigation away from the IAN and tooth roots. Plate adaptation, screw purchase, and occlusion were verified. The construct was confirmed stable and the hardware seated passively without rocking. The site was copiously irrigated with sterile saline and hemostasis confirmed. reconstruction-plate:optionalClause:0\n\n",
     "fields": [
       {
         "id": "reconstruction-plate:side:0",
@@ -3298,18 +3316,18 @@
         "hint": "with the patient in MMF / against the preserved pre-resection contour"
       },
       {
-        "id": "reconstruction-plate:toothNumber:0",
-        "kind": "toothNumber",
-        "raw": "[#__]",
-        "label": "Tooth #",
-        "context": "The plate was seated passively and secured with bicortical locking screws, ___ in the proximal segment and [#__] in the distal segment, placed under copious irr"
+        "id": "reconstruction-plate:hardwareCount:0",
+        "kind": "hardwareCount",
+        "raw": "[#]",
+        "label": "Count",
+        "context": "The plate was seated passively and secured with bicortical locking screws, ___ in the proximal segment and [#] in the distal segment, placed under copious irrig"
       },
       {
-        "id": "reconstruction-plate:toothNumber:1",
-        "kind": "toothNumber",
-        "raw": "[#__]",
-        "label": "Tooth #",
-        "context": "The plate was seated passively and secured with bicortical locking screws, [#__] in the proximal segment and ___ in the distal segment, placed under copious irr"
+        "id": "reconstruction-plate:hardwareCount:1",
+        "kind": "hardwareCount",
+        "raw": "[#]",
+        "label": "Count",
+        "context": "The plate was seated passively and secured with bicortical locking screws, [#] in the proximal segment and ___ in the distal segment, placed under copious irrig"
       },
       {
         "id": "reconstruction-plate:optionalClause:0",
@@ -3334,7 +3352,7 @@
       "est": "120 min"
     },
     "tags": [],
-    "rawBody": "PROCEDURE: Reconstruction Plate\n\nAttention was directed to the [R/L] mandibular defect spanning [region __ to __]. The proximal and distal native bone segments were exposed subperiosteally and the defect length confirmed. The [Nerve: IAN / mental] nerve was [Status: identified and protected / noted within the prior resection field]. A [profile] reconstruction plate was selected and adapted to the residual mandible, restoring the pre-resection arch form and occlusal relationship [Reference: with the patient in MMF / against the preserved pre-resection contour]. The plate was seated passively and secured with bicortical locking screws, [#__] in the proximal segment and [#__] in the distal segment, placed under copious irrigation away from the IAN and tooth roots. Plate adaptation, screw purchase, and occlusion were verified. The construct was confirmed stable and the hardware seated passively without rocking. The site was copiously irrigated with sterile saline and hemostasis confirmed. [The wound was closed in layers over a drain as separately documented.]\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "rawBody": "PROCEDURE: Reconstruction Plate\n\nAttention was directed to the [R/L] mandibular defect spanning [region __ to __]. The proximal and distal native bone segments were exposed subperiosteally and the defect length confirmed. The [Nerve: IAN / mental] nerve was [Status: identified and protected / noted within the prior resection field]. A [profile] reconstruction plate was selected and adapted to the residual mandible, restoring the pre-resection arch form and occlusal relationship [Reference: with the patient in MMF / against the preserved pre-resection contour]. The plate was seated passively and secured with bicortical locking screws, [#] in the proximal segment and [#] in the distal segment, placed under copious irrigation away from the IAN and tooth roots. Plate adaptation, screw purchase, and occlusion were verified. The construct was confirmed stable and the hardware seated passively without rocking. The site was copiously irrigated with sterile saline and hemostasis confirmed. [The wound was closed in layers over a drain as separately documented.]\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
     "warnings": [
       "Unrecognized bracket kept inline: [region __ to __]"
     ]
@@ -3598,7 +3616,7 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/Dentoalveolar & Implant/Sinus Augmentation.md",
-    "bodyTemplate": "PROCEDURE: Sinus Augmentation\n\nAttention was directed to the sinus-augmentation:side:0 posterior maxilla. The site was anesthetized with 1% lidocaine with 1:100,000 epi via local infiltration. A crestal incision with distal release was made over the edentulous ridge at sinus-augmentation:toothNumber:0 and a full thickness mucoperiosteal flap was raised to expose the lateral maxillary sinus wall. A lateral window osteotomy was outlined with a round bur under copious irrigation and the bony window was carefully infractured. The Schneiderian membrane was elevated off the sinus floor and medial wall with sinus elevators, taking care to keep the membrane intact. No perforation was noted. sinus-augmentation:measurement:0 cc of sinus-augmentation:text:0 (REF sinus-augmentation:blank:0, LOT sinus-augmentation:blank:1) was placed and condensed beneath the elevated membrane to augment the sinus floor. A collagen membrane was placed over the lateral window. The flap was repositioned and closed primarily with 3-0 sinus-augmentation:enumText:0 suture. Sinus precautions were reviewed with the patient.\n\n",
+    "bodyTemplate": "PROCEDURE: Sinus Augmentation\n\nAttention was directed to the sinus-augmentation:side:0 posterior maxilla. The site was anesthetized with 1% lidocaine with 1:100,000 epinephrine via local infiltration. A crestal incision with distal release was made over the edentulous ridge at sinus-augmentation:toothNumber:0 and a full thickness mucoperiosteal flap was raised to expose the lateral maxillary sinus wall. A lateral window osteotomy was outlined with a round bur under copious irrigation and the bony window was carefully infractured. The Schneiderian membrane was elevated off the sinus floor and medial wall with sinus elevators, taking care to keep the membrane intact. No perforation was noted. sinus-augmentation:measurement:0 cc of sinus-augmentation:text:0 (REF sinus-augmentation:text:1, LOT sinus-augmentation:text:2) was placed and condensed beneath the elevated membrane to augment the sinus floor. A collagen membrane was placed over the lateral window. The flap was repositioned and closed primarily with 3-0 sinus-augmentation:enumText:0 suture. Sinus precautions were reviewed with the patient.\n\n",
     "fields": [
       {
         "id": "sinus-augmentation:side:0",
@@ -3624,7 +3642,7 @@
         "kind": "measurement",
         "raw": "[volume]",
         "label": "Measurement (cc)",
-        "context": "___ cc of [graft] (REF [__], LOT [__]) was placed and condensed beneath the elevated membrane to augment the sinus floor.",
+        "context": "___ cc of [graft] (REF [ref], LOT [lot]) was placed and condensed beneath the elevated membrane to augment the sinus floor.",
         "unit": "cc",
         "hint": "volume"
       },
@@ -3633,21 +3651,21 @@
         "kind": "text",
         "raw": "[graft]",
         "label": "Value",
-        "context": "[volume] cc of ___ (REF [__], LOT [__]) was placed and condensed beneath the elevated membrane to augment the sinus floor."
+        "context": "[volume] cc of ___ (REF [ref], LOT [lot]) was placed and condensed beneath the elevated membrane to augment the sinus floor."
       },
       {
-        "id": "sinus-augmentation:blank:0",
-        "kind": "blank",
-        "raw": "[__]",
-        "label": "Field",
-        "context": "[volume] cc of [graft] (REF ___, LOT [__]) was placed and condensed beneath the elevated membrane to augment the sinus floor."
+        "id": "sinus-augmentation:text:1",
+        "kind": "text",
+        "raw": "[ref]",
+        "label": "Value",
+        "context": "[volume] cc of [graft] (REF ___, LOT [lot]) was placed and condensed beneath the elevated membrane to augment the sinus floor."
       },
       {
-        "id": "sinus-augmentation:blank:1",
-        "kind": "blank",
-        "raw": "[__]",
-        "label": "Field",
-        "context": "[volume] cc of [graft] (REF [__], LOT ___) was placed and condensed beneath the elevated membrane to augment the sinus floor."
+        "id": "sinus-augmentation:text:2",
+        "kind": "text",
+        "raw": "[lot]",
+        "label": "Value",
+        "context": "[volume] cc of [graft] (REF [ref], LOT ___) was placed and condensed beneath the elevated membrane to augment the sinus floor."
       },
       {
         "id": "sinus-augmentation:enumText:0",
@@ -3676,7 +3694,7 @@
       "est": "60 min"
     },
     "tags": [],
-    "rawBody": "PROCEDURE: Sinus Augmentation\n\nAttention was directed to the [R/L] posterior maxilla. The site was anesthetized with 1% lidocaine with 1:100,000 epi via local infiltration. A crestal incision with distal release was made over the edentulous ridge at [#__] and a full thickness mucoperiosteal flap was raised to expose the lateral maxillary sinus wall. A lateral window osteotomy was outlined with a round bur under copious irrigation and the bony window was carefully infractured. The Schneiderian membrane was elevated off the sinus floor and medial wall with sinus elevators, taking care to keep the membrane intact. No perforation was noted. [volume] cc of [graft] (REF [__], LOT [__]) was placed and condensed beneath the elevated membrane to augment the sinus floor. A collagen membrane was placed over the lateral window. The flap was repositioned and closed primarily with 3-0 [Suture: Vicryl / chromic] suture. Sinus precautions were reviewed with the patient.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "rawBody": "PROCEDURE: Sinus Augmentation\n\nAttention was directed to the [R/L] posterior maxilla. The site was anesthetized with 1% lidocaine with 1:100,000 epinephrine via local infiltration. A crestal incision with distal release was made over the edentulous ridge at [#__] and a full thickness mucoperiosteal flap was raised to expose the lateral maxillary sinus wall. A lateral window osteotomy was outlined with a round bur under copious irrigation and the bony window was carefully infractured. The Schneiderian membrane was elevated off the sinus floor and medial wall with sinus elevators, taking care to keep the membrane intact. No perforation was noted. [volume] cc of [graft] (REF [ref], LOT [lot]) was placed and condensed beneath the elevated membrane to augment the sinus floor. A collagen membrane was placed over the lateral window. The flap was repositioned and closed primarily with 3-0 [Suture: Vicryl / chromic] suture. Sinus precautions were reviewed with the patient.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
     "warnings": []
   },
   {
@@ -4361,7 +4379,7 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/TMJ/TMJ Discopexy Mitek Anchor.md",
-    "bodyTemplate": "PROCEDURE: Discopexy (Mitek Anchor)\n\nThe patient was placed supine and underwent nasal endotracheal intubation without incident. The patient was prepped and draped in standard sterile fashion and the tmj-discopexy-mitek-anchor:side:0 external auditory canal was protected with a Betadine-soaked kittner. An Ioban was placed over the oral cavity to isolate the sterile field.\n\nAttention was directed to the tmj-discopexy-mitek-anchor:side:1 TMJ. The endaural incision was marked and infiltrated with 3 cc of 2% lidocaine with 1:100,000 epinephrine. Using a #15 blade, the endaural incision was made through dermis to subcutaneous tissue and continued anteriorly following the tragal cartilage. Blunt dissection continued above the zygomatic arch to identify the temporalis fascia, where a circumferential plane was created and connected to the avascular plane below the zygomatic arch. The zygomatic arch was identified and Bovie electrocautery was used to incise the periosteum. Subperiosteal dissection was carried over the arch and the lateral joint capsule was visualized with a #9 Molt elevator.\n\nThe superior joint space was insufflated with 1 cc of 2% lidocaine with 1:100,000 epinephrine. An incision was made between the lateral joint space and the glenoid fossa to enter the superior joint space, which was explored with a Freer and freed of adhesions from the meniscus to the glenoid fossa and articular eminence. A #15 blade was used to incise over the condylar head to enter the inferior joint space, which was explored. The disc was [medially and anteriorly] displaced without perforation, with hyperemia and inflammation of the retrodiscal tissue. A curved Freer was used to free the articular disc from the glenoid and condyle and reposition it over the condyle. Inflamed retrodiscal tissue was excised.\n\nA Mitek anchor was placed within the posterior-lateral aspect of the condyle. The attached braided suture was secured to the medial and posterior aspects of the articular disc. The mandible was manipulated to confirm appropriate disc position with the condyle in function. The surgical site was copiously irrigated with sterile saline and confirmed hemostatic.\n\nClosure was performed with deep 3-0 Vicryl in simple interrupted fashion, 4-0 Monocryl in the deep dermal layer in simple interrupted fashion, and tension-free skin closure with 5-0 Prolene in a running subcuticular fashion.\n\n",
+    "bodyTemplate": "PROCEDURE: Discopexy (Mitek Anchor)\n\nThe patient was placed supine and underwent nasal endotracheal intubation without incident. The patient was prepped and draped in standard sterile fashion and the tmj-discopexy-mitek-anchor:side:0 external auditory canal was protected with a Betadine-soaked kittner. An Ioban was placed over the oral cavity to isolate the sterile field.\n\nAttention was directed to the tmj-discopexy-mitek-anchor:side:1 TMJ. The endaural incision was marked and infiltrated with 3 cc of 2% lidocaine with 1:100,000 epinephrine. Using a #15 blade, the endaural incision was made through dermis to subcutaneous tissue and continued anteriorly following the tragal cartilage. Blunt dissection continued above the zygomatic arch to identify the temporalis fascia, where a circumferential plane was created and connected to the avascular plane below the zygomatic arch. The zygomatic arch was identified and Bovie electrocautery was used to incise the periosteum. Subperiosteal dissection was carried over the arch and the lateral joint capsule was visualized with a #9 Molt elevator.\n\nThe superior joint space was insufflated with 1 cc of 2% lidocaine with 1:100,000 epinephrine. An incision was made between the lateral joint space and the glenoid fossa to enter the superior joint space, which was explored with a Freer and freed of adhesions from the meniscus to the glenoid fossa and articular eminence. A #15 blade was used to incise over the condylar head to enter the inferior joint space, which was explored. The disc was medially and anteriorly displaced without perforation, with hyperemia and inflammation of the retrodiscal tissue. A curved Freer was used to free the articular disc from the glenoid and condyle and reposition it over the condyle. Inflamed retrodiscal tissue was excised.\n\nA Mitek anchor was placed within the posterior-lateral aspect of the condyle. The attached braided suture was secured to the medial and posterior aspects of the articular disc. The mandible was manipulated to confirm appropriate disc position with the condyle in function. The surgical site was copiously irrigated with sterile saline and confirmed hemostatic.\n\nClosure was performed with deep 3-0 Vicryl in simple interrupted fashion, 4-0 Monocryl in the deep dermal layer in simple interrupted fashion, and tension-free skin closure with 5-0 Prolene in a running subcuticular fashion.\n\n",
     "fields": [
       {
         "id": "tmj-discopexy-mitek-anchor:side:0",
@@ -4402,10 +4420,8 @@
       "est": "120 min"
     },
     "tags": [],
-    "rawBody": "PROCEDURE: Discopexy (Mitek Anchor)\n\nThe patient was placed supine and underwent nasal endotracheal intubation without incident. The patient was prepped and draped in standard sterile fashion and the [R/L] external auditory canal was protected with a Betadine-soaked kittner. An Ioban was placed over the oral cavity to isolate the sterile field.\n\nAttention was directed to the [R/L] TMJ. The endaural incision was marked and infiltrated with 3 cc of 2% lidocaine with 1:100,000 epinephrine. Using a #15 blade, the endaural incision was made through dermis to subcutaneous tissue and continued anteriorly following the tragal cartilage. Blunt dissection continued above the zygomatic arch to identify the temporalis fascia, where a circumferential plane was created and connected to the avascular plane below the zygomatic arch. The zygomatic arch was identified and Bovie electrocautery was used to incise the periosteum. Subperiosteal dissection was carried over the arch and the lateral joint capsule was visualized with a #9 Molt elevator.\n\nThe superior joint space was insufflated with 1 cc of 2% lidocaine with 1:100,000 epinephrine. An incision was made between the lateral joint space and the glenoid fossa to enter the superior joint space, which was explored with a Freer and freed of adhesions from the meniscus to the glenoid fossa and articular eminence. A #15 blade was used to incise over the condylar head to enter the inferior joint space, which was explored. The disc was [medially and anteriorly] displaced without perforation, with hyperemia and inflammation of the retrodiscal tissue. A curved Freer was used to free the articular disc from the glenoid and condyle and reposition it over the condyle. Inflamed retrodiscal tissue was excised.\n\nA Mitek anchor was placed within the posterior-lateral aspect of the condyle. The attached braided suture was secured to the medial and posterior aspects of the articular disc. The mandible was manipulated to confirm appropriate disc position with the condyle in function. The surgical site was copiously irrigated with sterile saline and confirmed hemostatic.\n\nClosure was performed with deep 3-0 Vicryl in simple interrupted fashion, 4-0 Monocryl in the deep dermal layer in simple interrupted fashion, and tension-free skin closure with 5-0 Prolene in a running subcuticular fashion.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
-    "warnings": [
-      "Unrecognized bracket kept inline: [medially and anteriorly]"
-    ]
+    "rawBody": "PROCEDURE: Discopexy (Mitek Anchor)\n\nThe patient was placed supine and underwent nasal endotracheal intubation without incident. The patient was prepped and draped in standard sterile fashion and the [R/L] external auditory canal was protected with a Betadine-soaked kittner. An Ioban was placed over the oral cavity to isolate the sterile field.\n\nAttention was directed to the [R/L] TMJ. The endaural incision was marked and infiltrated with 3 cc of 2% lidocaine with 1:100,000 epinephrine. Using a #15 blade, the endaural incision was made through dermis to subcutaneous tissue and continued anteriorly following the tragal cartilage. Blunt dissection continued above the zygomatic arch to identify the temporalis fascia, where a circumferential plane was created and connected to the avascular plane below the zygomatic arch. The zygomatic arch was identified and Bovie electrocautery was used to incise the periosteum. Subperiosteal dissection was carried over the arch and the lateral joint capsule was visualized with a #9 Molt elevator.\n\nThe superior joint space was insufflated with 1 cc of 2% lidocaine with 1:100,000 epinephrine. An incision was made between the lateral joint space and the glenoid fossa to enter the superior joint space, which was explored with a Freer and freed of adhesions from the meniscus to the glenoid fossa and articular eminence. A #15 blade was used to incise over the condylar head to enter the inferior joint space, which was explored. The disc was medially and anteriorly displaced without perforation, with hyperemia and inflammation of the retrodiscal tissue. A curved Freer was used to free the articular disc from the glenoid and condyle and reposition it over the condyle. Inflamed retrodiscal tissue was excised.\n\nA Mitek anchor was placed within the posterior-lateral aspect of the condyle. The attached braided suture was secured to the medial and posterior aspects of the articular disc. The mandible was manipulated to confirm appropriate disc position with the condyle in function. The surgical site was copiously irrigated with sterile saline and confirmed hemostatic.\n\nClosure was performed with deep 3-0 Vicryl in simple interrupted fashion, 4-0 Monocryl in the deep dermal layer in simple interrupted fashion, and tension-free skin closure with 5-0 Prolene in a running subcuticular fashion.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "warnings": []
   },
   {
     "id": "tmj-eminectomy",
@@ -4595,7 +4611,7 @@
       "library"
     ],
     "sourcePath": "Note Templates/Procedures/TMJ/TMJ Total Joint Replacement.md",
-    "bodyTemplate": "PROCEDURE: Total Joint Replacement (TMJ)\n\nThe patient was placed supine, secured with a security strap, and SCDs were placed with pressure points padded. General anesthesia was induced and nasal endotracheal intubation was achieved. A head wrap was used to protect the scalp and secure the tube, the eyes were lubricated and taped closed, and otoscopic exam confirmed intact tympanic membranes. A throat pack was placed and the mouth was disinfected with chlorhexidine. tmj-total-joint-replacement:hardwareCount:0 tmj-total-joint-replacement:measurement:0-mm IMF screws were placed in the maxilla and mandible in an evenly distributed manner. The head and neck were prepped with Betadine and an Ioban was placed over the mouth to maintain a sterile field. The bilateral TMJ surgical sites were irrigated with vancomycin solution throughout the procedure.\n\nAttention was directed to the tmj-total-joint-replacement:side:0 TMJ. The endaural incision was infiltrated with 2% lidocaine with 1:100,000 epinephrine and a #15 blade was used to incise from the earlobe to the root of the helix. Sharp dissection proceeded anterior to the tragal cartilage in the supraperichondrial plane to the zygomatic arch, and the periosteum was incised with subperiosteal dissection to the anterior arch. The lateral capsule was incised and the condylar head visualized. The lateral condyle and ramus were bluntly dissected in a subperiosteal plane. A tmj-total-joint-replacement:side:1 retromandibular/submandibular incision was then performed: a #15 blade was used through skin and platysma, with blunt dissection to the angle deep to the parotid, the marginal mandibular branch protected superiorly, and a facial nerve stimulator at 0.5 mA used throughout. The pterygomasseteric sling was incised and subperiosteal dissection connected the preauricular and retromandibular spaces.\n\nThe condylar cutting guide was placed and tmj-total-joint-replacement:measurement:1 mm of condylar height was removed with the Piezo; the osteotomy was completed with a T-handle osteotome and the condyle removed. The disc was separated from the lateral pterygoid and retrodiscal tissue with electrocautery, and the condyle and disc were submitted for histologic analysis. A lateral ramus reduction guide was placed and the osseous recontouring performed with a power rasp and copious irrigation to create a flat lateral surface. Fossa reduction and drill guides were used to recontour the articular eminence and pre-drill the fossa holes. A tmj-total-joint-replacement:enumText:0 fossa component was placed and a stable fit confirmed with matching of the pre-drilled holes, then secured with tmj-total-joint-replacement:hardwareCount:1 tmj-total-joint-replacement:measurement:2-mm screws.\n\nThe lateral ramus was contoured to fit the condylar component. A tmj-total-joint-replacement:enumText:1 condylar component was placed through the neck incision and seated into the fossa component with the mandible fully seated, then secured with tmj-total-joint-replacement:hardwareCount:2 tmj-total-joint-replacement:measurement:3-mm bicortical screws.\n\nThe same procedure was performed on the contralateral side as indicated by the operative plan, with placement of the tmj-total-joint-replacement:enumText:2 fossa and condylar components secured with tmj-total-joint-replacement:hardwareCount:3 tmj-total-joint-replacement:measurement:4-mm screws.\n\nThe mouth was entered through the Ioban and MMF was completed. The occlusion was confirmed stable and coincident with the pre-operative plan, then released and re-verified. Abdominal fat was harvested from an infraumbilical incision (approximately tmj-total-joint-replacement:text:0 cm block) and tmj-total-joint-replacement:measurement:5 cc was packed around each prosthesis through the endaural incisions under vancomycin irrigation; the abdominal donor site was closed in layers and dressed with Dermabond.\n\nThe pterygomasseteric sling and platysma were re-approximated with 3-0 Vicryl, the deep dermal layer closed with 4-0 Monocryl, and the skin closed with tmj-total-joint-replacement:enumText:3. Incisions were dressed with Dermabond. The Ioban and throat pack were removed, the occlusion re-verified, guiding elastics placed as indicated, and a JawBra compression dressing applied.\n\n",
+    "bodyTemplate": "PROCEDURE: Total Joint Replacement (TMJ)\n\nThe patient was placed supine, secured with a security strap, and SCDs were placed with pressure points padded. General anesthesia was induced and nasal endotracheal intubation was achieved. A head wrap was used to protect the scalp and secure the tube, the eyes were lubricated and taped closed, and otoscopic exam confirmed intact tympanic membranes. A throat pack was placed and the mouth was disinfected with chlorhexidine. tmj-total-joint-replacement:hardwareCount:0 tmj-total-joint-replacement:measurement:0-mm IMF screws were placed in the maxilla and mandible in an evenly distributed manner. The head and neck were prepped with Betadine and an Ioban was placed over the mouth to maintain a sterile field. The bilateral TMJ surgical sites were irrigated with vancomycin solution throughout the procedure.\n\nAttention was directed to the tmj-total-joint-replacement:side:0 TMJ. The endaural incision was infiltrated with 2% lidocaine with 1:100,000 epinephrine and a #15 blade was used to incise from the earlobe to the root of the helix. Sharp dissection proceeded anterior to the tragal cartilage in the supraperichondrial plane to the zygomatic arch, and the periosteum was incised with subperiosteal dissection to the anterior arch. The lateral capsule was incised and the condylar head visualized. The lateral condyle and ramus were bluntly dissected in a subperiosteal plane. A tmj-total-joint-replacement:side:1 retromandibular/submandibular incision was then performed: a #15 blade was used through skin and platysma, with blunt dissection to the angle deep to the parotid, the marginal mandibular branch protected superiorly, and a facial nerve stimulator at 0.5 mA used throughout. The pterygomasseteric sling was incised and subperiosteal dissection connected the preauricular and retromandibular spaces.\n\nThe condylar cutting guide was placed and tmj-total-joint-replacement:measurement:1 mm of condylar height was removed with the Piezo; the osteotomy was completed with a T-handle osteotome and the condyle removed. The disc was separated from the lateral pterygoid and retrodiscal tissue with electrocautery, and the condyle and disc were submitted for histologic analysis. A lateral ramus reduction guide was placed and the osseous recontouring performed with a power rasp and copious irrigation to create a flat lateral surface. Fossa reduction and drill guides were used to recontour the articular eminence and pre-drill the fossa holes. A tmj-total-joint-replacement:text:0 fossa component was placed and a stable fit confirmed with matching of the pre-drilled holes, then secured with tmj-total-joint-replacement:hardwareCount:1 tmj-total-joint-replacement:measurement:2-mm screws.\n\nThe lateral ramus was contoured to fit the condylar component. A tmj-total-joint-replacement:text:1 condylar component was placed through the neck incision and seated into the fossa component with the mandible fully seated, then secured with tmj-total-joint-replacement:hardwareCount:2 tmj-total-joint-replacement:measurement:3-mm bicortical screws.\n\nThe same procedure was performed on the contralateral side as indicated by the operative plan, with placement of the tmj-total-joint-replacement:text:2 fossa and condylar components secured with tmj-total-joint-replacement:hardwareCount:3 tmj-total-joint-replacement:measurement:4-mm screws.\n\nThe mouth was entered through the Ioban and MMF was completed. The occlusion was confirmed stable and coincident with the pre-operative plan, then released and re-verified. Abdominal fat was harvested from an infraumbilical incision (approximately tmj-total-joint-replacement:text:3 cm block) and tmj-total-joint-replacement:measurement:5 cc was packed around each prosthesis through the endaural incisions under vancomycin irrigation; the abdominal donor site was closed in layers and dressed with Dermabond.\n\nThe pterygomasseteric sling and platysma were re-approximated with 3-0 Vicryl, the deep dermal layer closed with 4-0 Monocryl, and the skin closed with tmj-total-joint-replacement:enumText:0. Incisions were dressed with Dermabond. The Ioban and throat pack were removed, the occlusion re-verified, guiding elastics placed as indicated, and a JawBra compression dressing applied.\n\n",
     "fields": [
       {
         "id": "tmj-total-joint-replacement:hardwareCount:0",
@@ -4648,23 +4664,18 @@
         "hint": "reduction"
       },
       {
-        "id": "tmj-total-joint-replacement:enumText:0",
-        "kind": "enumText",
-        "raw": "[Component: manufacturer / size]",
-        "label": "Select",
-        "context": "A ___ fossa component was placed and a stable fit confirmed with matching of the pre-drilled holes, then secured with [# screws] [length]-mm screws.",
-        "options": [
-          "manufacturer",
-          "size"
-        ],
-        "hint": "manufacturer / size"
+        "id": "tmj-total-joint-replacement:text:0",
+        "kind": "text",
+        "raw": "[component]",
+        "label": "Value",
+        "context": "A ___ fossa component was placed and a stable fit confirmed with matching of the pre-drilled holes, then secured with [# screws] [length]-mm screws."
       },
       {
         "id": "tmj-total-joint-replacement:hardwareCount:1",
         "kind": "hardwareCount",
         "raw": "[# screws]",
         "label": "Count",
-        "context": "manufacturer / size] fossa component was placed and a stable fit confirmed with matching of the pre-drilled holes, then secured with ___ [length]-mm screws.",
+        "context": "A [component] fossa component was placed and a stable fit confirmed with matching of the pre-drilled holes, then secured with ___ [length]-mm screws.",
         "hint": "screws"
       },
       {
@@ -4672,28 +4683,23 @@
         "kind": "measurement",
         "raw": "[length]",
         "label": "Measurement (mm)",
-        "context": "manufacturer / size] fossa component was placed and a stable fit confirmed with matching of the pre-drilled holes, then secured with [# screws] ___-mm screws.",
+        "context": "A [component] fossa component was placed and a stable fit confirmed with matching of the pre-drilled holes, then secured with [# screws] ___-mm screws.",
         "unit": "mm",
         "hint": "length"
       },
       {
-        "id": "tmj-total-joint-replacement:enumText:1",
-        "kind": "enumText",
-        "raw": "[Component: manufacturer / size]",
-        "label": "Select",
-        "context": "A ___ condylar component was placed through the neck incision and seated into the fossa component with the mandible fully seated, then secured with [# screws] [",
-        "options": [
-          "manufacturer",
-          "size"
-        ],
-        "hint": "manufacturer / size"
+        "id": "tmj-total-joint-replacement:text:1",
+        "kind": "text",
+        "raw": "[component]",
+        "label": "Value",
+        "context": "A ___ condylar component was placed through the neck incision and seated into the fossa component with the mandible fully seated, then secured with [# screws] ["
       },
       {
         "id": "tmj-total-joint-replacement:hardwareCount:2",
         "kind": "hardwareCount",
         "raw": "[# screws]",
         "label": "Count",
-        "context": "manufacturer / size] condylar component was placed through the neck incision and seated into the fossa component with the mandible fully seated, then secured wi",
+        "context": "A [component] condylar component was placed through the neck incision and seated into the fossa component with the mandible fully seated, then secured with ___ ",
         "hint": "screws"
       },
       {
@@ -4701,28 +4707,23 @@
         "kind": "measurement",
         "raw": "[length]",
         "label": "Measurement (mm)",
-        "context": "manufacturer / size] condylar component was placed through the neck incision and seated into the fossa component with the mandible fully seated, then secured wi",
+        "context": "A [component] condylar component was placed through the neck incision and seated into the fossa component with the mandible fully seated, then secured with [# s",
         "unit": "mm",
         "hint": "length"
       },
       {
-        "id": "tmj-total-joint-replacement:enumText:2",
-        "kind": "enumText",
-        "raw": "[Component: manufacturer / size]",
-        "label": "Select",
-        "context": "The same procedure was performed on the contralateral side as indicated by the operative plan, with placement of the ___ fossa and condylar components secured w",
-        "options": [
-          "manufacturer",
-          "size"
-        ],
-        "hint": "manufacturer / size"
+        "id": "tmj-total-joint-replacement:text:2",
+        "kind": "text",
+        "raw": "[component]",
+        "label": "Value",
+        "context": "The same procedure was performed on the contralateral side as indicated by the operative plan, with placement of the ___ fossa and condylar components secured w"
       },
       {
         "id": "tmj-total-joint-replacement:hardwareCount:3",
         "kind": "hardwareCount",
         "raw": "[# screws]",
         "label": "Count",
-        "context": "manufacturer / size] fossa and condylar components secured with ___ [length]-mm screws.",
+        "context": "The same procedure was performed on the contralateral side as indicated by the operative plan, with placement of the [component] fossa and condylar components s",
         "hint": "screws"
       },
       {
@@ -4730,12 +4731,12 @@
         "kind": "measurement",
         "raw": "[length]",
         "label": "Measurement (mm)",
-        "context": "manufacturer / size] fossa and condylar components secured with [# screws] ___-mm screws.",
+        "context": "The same procedure was performed on the contralateral side as indicated by the operative plan, with placement of the [component] fossa and condylar components s",
         "unit": "mm",
         "hint": "length"
       },
       {
-        "id": "tmj-total-joint-replacement:text:0",
+        "id": "tmj-total-joint-replacement:text:3",
         "kind": "text",
         "raw": "[size]",
         "label": "Value",
@@ -4751,7 +4752,7 @@
         "hint": "volume"
       },
       {
-        "id": "tmj-total-joint-replacement:enumText:3",
+        "id": "tmj-total-joint-replacement:enumText:0",
         "kind": "enumText",
         "raw": "[Closure: 5-0 plain gut running / 5-0 Prolene subcuticular]",
         "label": "Select",
@@ -4777,7 +4778,7 @@
       "est": "240 min"
     },
     "tags": [],
-    "rawBody": "PROCEDURE: Total Joint Replacement (TMJ)\n\nThe patient was placed supine, secured with a security strap, and SCDs were placed with pressure points padded. General anesthesia was induced and nasal endotracheal intubation was achieved. A head wrap was used to protect the scalp and secure the tube, the eyes were lubricated and taped closed, and otoscopic exam confirmed intact tympanic membranes. A throat pack was placed and the mouth was disinfected with chlorhexidine. [# screws] [length]-mm IMF screws were placed in the maxilla and mandible in an evenly distributed manner. The head and neck were prepped with Betadine and an Ioban was placed over the mouth to maintain a sterile field. The bilateral TMJ surgical sites were irrigated with vancomycin solution throughout the procedure.\n\nAttention was directed to the [R/L] TMJ. The endaural incision was infiltrated with 2% lidocaine with 1:100,000 epinephrine and a #15 blade was used to incise from the earlobe to the root of the helix. Sharp dissection proceeded anterior to the tragal cartilage in the supraperichondrial plane to the zygomatic arch, and the periosteum was incised with subperiosteal dissection to the anterior arch. The lateral capsule was incised and the condylar head visualized. The lateral condyle and ramus were bluntly dissected in a subperiosteal plane. A [R/L] retromandibular/submandibular incision was then performed: a #15 blade was used through skin and platysma, with blunt dissection to the angle deep to the parotid, the marginal mandibular branch protected superiorly, and a facial nerve stimulator at 0.5 mA used throughout. The pterygomasseteric sling was incised and subperiosteal dissection connected the preauricular and retromandibular spaces.\n\nThe condylar cutting guide was placed and [reduction] mm of condylar height was removed with the Piezo; the osteotomy was completed with a T-handle osteotome and the condyle removed. The disc was separated from the lateral pterygoid and retrodiscal tissue with electrocautery, and the condyle and disc were submitted for histologic analysis. A lateral ramus reduction guide was placed and the osseous recontouring performed with a power rasp and copious irrigation to create a flat lateral surface. Fossa reduction and drill guides were used to recontour the articular eminence and pre-drill the fossa holes. A [Component: manufacturer / size] fossa component was placed and a stable fit confirmed with matching of the pre-drilled holes, then secured with [# screws] [length]-mm screws.\n\nThe lateral ramus was contoured to fit the condylar component. A [Component: manufacturer / size] condylar component was placed through the neck incision and seated into the fossa component with the mandible fully seated, then secured with [# screws] [length]-mm bicortical screws.\n\nThe same procedure was performed on the contralateral side as indicated by the operative plan, with placement of the [Component: manufacturer / size] fossa and condylar components secured with [# screws] [length]-mm screws.\n\nThe mouth was entered through the Ioban and MMF was completed. The occlusion was confirmed stable and coincident with the pre-operative plan, then released and re-verified. Abdominal fat was harvested from an infraumbilical incision (approximately [size] cm block) and [volume] cc was packed around each prosthesis through the endaural incisions under vancomycin irrigation; the abdominal donor site was closed in layers and dressed with Dermabond.\n\nThe pterygomasseteric sling and platysma were re-approximated with 3-0 Vicryl, the deep dermal layer closed with 4-0 Monocryl, and the skin closed with [Closure: 5-0 plain gut running / 5-0 Prolene subcuticular]. Incisions were dressed with Dermabond. The Ioban and throat pack were removed, the occlusion re-verified, guiding elastics placed as indicated, and a JawBra compression dressing applied.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
+    "rawBody": "PROCEDURE: Total Joint Replacement (TMJ)\n\nThe patient was placed supine, secured with a security strap, and SCDs were placed with pressure points padded. General anesthesia was induced and nasal endotracheal intubation was achieved. A head wrap was used to protect the scalp and secure the tube, the eyes were lubricated and taped closed, and otoscopic exam confirmed intact tympanic membranes. A throat pack was placed and the mouth was disinfected with chlorhexidine. [# screws] [length]-mm IMF screws were placed in the maxilla and mandible in an evenly distributed manner. The head and neck were prepped with Betadine and an Ioban was placed over the mouth to maintain a sterile field. The bilateral TMJ surgical sites were irrigated with vancomycin solution throughout the procedure.\n\nAttention was directed to the [R/L] TMJ. The endaural incision was infiltrated with 2% lidocaine with 1:100,000 epinephrine and a #15 blade was used to incise from the earlobe to the root of the helix. Sharp dissection proceeded anterior to the tragal cartilage in the supraperichondrial plane to the zygomatic arch, and the periosteum was incised with subperiosteal dissection to the anterior arch. The lateral capsule was incised and the condylar head visualized. The lateral condyle and ramus were bluntly dissected in a subperiosteal plane. A [R/L] retromandibular/submandibular incision was then performed: a #15 blade was used through skin and platysma, with blunt dissection to the angle deep to the parotid, the marginal mandibular branch protected superiorly, and a facial nerve stimulator at 0.5 mA used throughout. The pterygomasseteric sling was incised and subperiosteal dissection connected the preauricular and retromandibular spaces.\n\nThe condylar cutting guide was placed and [reduction] mm of condylar height was removed with the Piezo; the osteotomy was completed with a T-handle osteotome and the condyle removed. The disc was separated from the lateral pterygoid and retrodiscal tissue with electrocautery, and the condyle and disc were submitted for histologic analysis. A lateral ramus reduction guide was placed and the osseous recontouring performed with a power rasp and copious irrigation to create a flat lateral surface. Fossa reduction and drill guides were used to recontour the articular eminence and pre-drill the fossa holes. A [component] fossa component was placed and a stable fit confirmed with matching of the pre-drilled holes, then secured with [# screws] [length]-mm screws.\n\nThe lateral ramus was contoured to fit the condylar component. A [component] condylar component was placed through the neck incision and seated into the fossa component with the mandible fully seated, then secured with [# screws] [length]-mm bicortical screws.\n\nThe same procedure was performed on the contralateral side as indicated by the operative plan, with placement of the [component] fossa and condylar components secured with [# screws] [length]-mm screws.\n\nThe mouth was entered through the Ioban and MMF was completed. The occlusion was confirmed stable and coincident with the pre-operative plan, then released and re-verified. Abdominal fat was harvested from an infraumbilical incision (approximately [size] cm block) and [volume] cc was packed around each prosthesis through the endaural incisions under vancomycin irrigation; the abdominal donor site was closed in layers and dressed with Dermabond.\n\nThe pterygomasseteric sling and platysma were re-approximated with 3-0 Vicryl, the deep dermal layer closed with 4-0 Monocryl, and the skin closed with [Closure: 5-0 plain gut running / 5-0 Prolene subcuticular]. Incisions were dressed with Dermabond. The Ioban and throat pack were removed, the occlusion re-verified, guiding elastics placed as indicated, and a JawBra compression dressing applied.\n\n[TEMPLATE: atomic snippet adapted from prior notes; review before use.]",
     "warnings": []
   },
   {
