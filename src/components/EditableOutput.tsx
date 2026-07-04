@@ -13,15 +13,29 @@ import { useCopy, useCopyShortcut } from '@/lib/useCopy'
  */
 export function EditableOutput({ text, filename = 'pull-sheet.txt' }: { text: string; filename?: string }) {
   const ref = useRef<HTMLDivElement>(null)
+  const edited = useRef(false)
   const { copied, liveMsg, copy } = useCopy('Pull sheet copied')
 
   useEffect(() => {
     if (ref.current) ref.current.innerHTML = formatHtml(text)
+    edited.current = false
   }, [text])
 
-  // innerText serialization varies by browser (NBSPs, doubled blank lines, trailing
-  // spaces) — re-normalize on read so copied/downloaded text meets the output contract.
-  const current = () => normalizePlainText(ref.current?.innerText ?? text)
+  // The rendered DOM drops the "- " list markers, so a naive innerText read copies
+  // markerless lines. Unedited, the assembled `text` IS the document — copy it verbatim.
+  // After a manual edit, serialize the DOM block-by-block, restoring "- " on list items,
+  // and re-normalize (innerText whitespace varies by browser).
+  const serialize = () => {
+    const root = ref.current
+    if (!root) return text
+    const lines: string[] = []
+    for (const el of root.querySelectorAll<HTMLElement>('h1, h2, h3, h4, p, li')) {
+      const t = (el.innerText ?? '').trim()
+      if (t) lines.push(el.tagName === 'LI' ? `- ${t}` : t)
+    }
+    return lines.length ? lines.join('\n') : (root.innerText ?? text)
+  }
+  const current = () => (edited.current ? normalizePlainText(serialize()) : text)
   useCopyShortcut(() => copy(current()))
 
   return (
@@ -45,6 +59,7 @@ export function EditableOutput({ text, filename = 'pull-sheet.txt' }: { text: st
           className="btn-sm"
           onClick={() => {
             if (ref.current) ref.current.innerHTML = formatHtml(text)
+            edited.current = false
           }}
         >
           Reset
@@ -61,6 +76,9 @@ export function EditableOutput({ text, filename = 'pull-sheet.txt' }: { text: st
           spellCheck={false}
           aria-label="Editable pull sheet — click to edit, then print"
           ref={ref}
+          onInput={() => {
+            edited.current = true
+          }}
         />
       </div>
     </>

@@ -52,11 +52,11 @@ function rxSignature(line: string): string {
 export function consolidateRx(texts: string[]): string {
   const ROOT = 'Rx:'
   const order: string[] = []
-  const groups = new Map<string, { lines: string[]; seen: Set<string> }>()
+  const groups = new Map<string, { lines: string[]; seen: Map<string, number> }>()
   const ensure = (h: string) => {
     let g = groups.get(h)
     if (!g) {
-      g = { lines: [], seen: new Set() }
+      g = { lines: [], seen: new Map() }
       groups.set(h, g)
       order.push(h)
     }
@@ -80,8 +80,18 @@ export function consolidateRx(texts: string[]): string {
       }
       const g = ensure(current)
       const sig = rxSignature(t)
-      if (g.seen.has(sig)) continue
-      g.seen.add(sig)
+      const prev = g.seen.get(sig)
+      if (prev !== undefined) {
+        // Same drug/dose/frequency from two procedures but a different dispensed
+        // quantity: keep the LARGER quantity instead of silently dropping the second.
+        const qty = (l: string) => {
+          const m = l.match(/#\s*(\d+)/)
+          return m ? parseInt(m[1], 10) : -1
+        }
+        if (qty(t) > qty(g.lines[prev])) g.lines[prev] = t
+        continue
+      }
+      g.seen.set(sig, g.lines.length)
       g.lines.push(t)
     }
   }
@@ -117,6 +127,10 @@ function orderDefaultsOff(line: string, headerText: string): boolean {
   if (/\bOR\b/.test(line)) return true // an "OR" alternative ("pick one of")
   if (/^(pre-?op|intra-?op|inpatient|outpatient|if\b|consider|severe|tetanus|through-and-through|open wound)/i.test(line))
     return true
+  // A scenario HEADER makes every order under it contingent — "Through-and-through
+  // laceration:" must not ship its orders in the default prescription just because
+  // the individual line carries no scenario word itself.
+  if (/fracture|laceration|wound|contaminated|sinus involvement|prophylaxis|tetanus/i.test(headerText)) return true
   if (/penicillin|allerg/i.test(headerText) || /penicillin|allerg/i.test(line)) return true
   return false
 }

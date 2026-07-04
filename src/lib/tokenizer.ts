@@ -164,10 +164,12 @@ function classifyBrackets(brackets: BracketSpan[], full: string, warnings: strin
       continue
     }
     // Markdown task checkbox at a list-item start: "- [ ] ...", "- [x] ...". Keep inline.
-    // Guarded by an actual list marker so a leading "[X] mm" measurement is unaffected.
+    // Guarded by an actual list marker AND trailing whitespace so a measurement that
+    // happens to start a bullet ("- [X]-0 suture") still tokenizes as a field.
     if (/^[xX ]?$/.test(b.content)) {
       const linePrefix = full.slice(full.lastIndexOf('\n', b.start - 1) + 1, b.start)
-      if (/^\s*[-*]\s+$/.test(linePrefix)) {
+      const after = full[b.end] ?? ''
+      if (/^\s*[-*]\s+$/.test(linePrefix) && (after === '' || /\s/.test(after))) {
         tokens.push({ start: b.start, end: b.end, kind: 'flag', raw, flagType: 'NOTE', strip: false, surface: false })
         continue
       }
@@ -403,11 +405,19 @@ export function tokenize(rawBodyInput: string, componentId: string): TokenizeRes
     claimed.push([start, end])
     const hint = m[2]?.trim()
     if (hint && hint.includes('/')) {
+      // Same discipline as the bracketed enum path: when the hint uses SPACED slashes,
+      // only those delimit options ("N/A" stays one option, never "N" and "A"); and an
+      // option carrying its own fill-ins (":", "__", unbalanced parens) means this is a
+      // structured hint, not a flat choice list — keep it a plain blank with the hint.
+      const spaced = /\s\/\s/.test(hint)
       const options = hint
-        .split('/')
+        .split(spaced ? /\s\/\s/ : '/')
         .map((o) => o.trim())
         .filter(Boolean)
-      if (options.length >= 2) {
+      const structured = options.some(
+        (o) => o.includes(':') || o.includes('__') || (o.match(/\(/g) ?? []).length !== (o.match(/\)/g) ?? []).length,
+      )
+      if (options.length >= 2 && !structured) {
         tokens.push({ start, end, kind: 'enumText', raw: m[0], options, hint })
         continue
       }

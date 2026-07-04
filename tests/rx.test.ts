@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { parseRx, assembleSelected, type RxLine } from '../src/lib/rx'
+import { parseRx, assembleSelected, consolidateRx, type RxLine } from '../src/lib/rx'
 import { PROCEDURES } from '../src/lib/procedures'
 import { buildDocument } from '../src/lib/caseAssembly'
 import { defaultEncounter } from '../src/lib/encounter'
@@ -131,5 +131,27 @@ describe('rx clinical-safety defaults (contingent orders start unchecked)', () =
     expect(out).not.toMatch(/\bIV\b/) // no parenteral pre-op dose in the discharge Rx
     expect(out).not.toContain('TO BE COMPLETED')
     expect((out.match(/Amoxicillin/g) ?? []).length).toBeLessThanOrEqual(1) // no duplicate menus
+  })
+
+  it('a scenario HEADER makes its orders contingent — laceration-group Peridex is not in the default Rx', () => {
+    const { text } = buildDocument(
+      [{ instanceId: 'a', procedureId: 'hardware-removal' }],
+      {},
+      defaultEncounter(),
+      'rx',
+    )
+    const parsed = parseRx(text)
+    const out = assembleSelected(parsed.lines, new Set(parsed.defaultOffIdx))
+    // The line itself carries no scenario word ("Peridex 0.12% rinse BID for intraoral
+    // component") — only its "Through-and-through laceration:" header does.
+    expect(out).not.toMatch(/through-and-through/i)
+    expect(out).not.toMatch(/Peridex.*intraoral component/i)
+  })
+
+  it('consolidateRx: same drug/sig from two procedures keeps the LARGER dispensed quantity', () => {
+    const a = 'Rx:\nIbuprofen 600 mg PO q6h PRN pain x 5 days - #20, 0 refills'
+    const b = 'Rx:\nIbuprofen 600 mg PO q6h PRN pain x 5 days - #30, 0 refills'
+    expect(consolidateRx([a, b])).toContain('#30')
+    expect(consolidateRx([b, a])).toContain('#30')
   })
 })

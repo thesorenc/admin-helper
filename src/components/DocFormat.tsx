@@ -51,7 +51,9 @@ export function formatHtml(text: string): string {
         const rows = lines
           .map((l) => {
             const i = l.indexOf(':')
-            return `<div class="doc-kv-row"><span class="k">${esc(l.slice(0, i))}</span><span class="v">${esc(l.slice(i + 1).trim())}</span></div>`
+            // Colon + space live in the text (not CSS) so an innerText/serialized copy
+            // reads "Key: value", never "Keyvalue".
+            return `<div class="doc-kv-row"><span class="k">${esc(l.slice(0, i))}:</span> <span class="v">${esc(l.slice(i + 1).trim())}</span></div>`
           })
           .join('')
         out.push(`<div class="doc-kv">${rows}</div>`)
