@@ -157,10 +157,10 @@ function build() {
   // Required source subtrees. If the vault root exists but a subtree is missing (e.g. an
   // iCloud-synced vault that hasn't fully downloaded), fail loudly rather than silently
   // emitting truncated JSON that could then be committed as authoritative.
-  const compDir = join(VAULT, 'Note Templates', 'Components')
+  const compDir = join(VAULT, 'Templates', 'Components')
   const nwDir = join(VAULT, 'Note Writing')
-  const psDir = join(VAULT, 'Note Templates', 'Pull Sheets')
-  const atomDir = join(VAULT, 'Note Templates', 'Procedures')
+  const psDir = join(VAULT, 'Templates', 'Pull Sheets')
+  const atomDir = join(VAULT, 'Templates', 'Procedures')
   const required: Array<[string, string]> = [
     ['Components', compDir],
     ['Note Writing', nwDir],
